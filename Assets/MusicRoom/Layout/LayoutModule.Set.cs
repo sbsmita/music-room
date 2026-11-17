@@ -34,6 +34,7 @@ namespace MusicRoom.Layout
         /// <summary>Where each displayed instrument is right now (its spot, a spare; null = hidden: blocked or not displayed).</summary>
         readonly StowPlan.Spot[] _shownAt = new StowPlan.Spot[InstrumentIds.KindCount];
         readonly bool[] _blockedLogged = new bool[InstrumentIds.KindCount];
+        readonly bool[] _homeLogged = new bool[InstrumentIds.KindCount];
         readonly RigGlide[] _glides = new RigGlide[InstrumentIds.KindCount];
         readonly double[] _lastPlayedAt = new double[InstrumentIds.KindCount];
         readonly List<StowPlan.Spot> _displayList = new List<StowPlan.Spot>(10);
@@ -209,7 +210,12 @@ namespace MusicRoom.Layout
                 InstrumentDescriptor d = all[i];
                 StowPlan.Spot s = StowPlan.Spot.From(d);
                 if (s == null) continue;
-                if (TryParseStow(_app.Settings.GetStow(d.Id), out double x, out double z, out double yaw)) s = s.MovedToRoom(x, z, yaw);   // saved in room coordinates
+                if (TryParseStow(_app.Settings.GetStow(d.Id), out double x, out double z, out double yaw))
+                {
+                    StowPlan.Spot own = s;
+                    s = s.MovedToRoom(x, z, yaw);   // saved in room coordinates
+                    s.Home = own;   // where it goes back to while the seat's instruments take the saved spot
+                }
                 _spots[(int)d.Kind] = s;
             }
         }
@@ -274,9 +280,16 @@ namespace MusicRoom.Layout
                 if (res.Spot == null && !_blockedLogged[k])
                 {
                     _blockedLogged[k] = true;
-                    Debug.Log("[Layout] display blocked: " + (_app.Registry?.IdOf(res.Kind) ?? res.Kind.ToString()));
+                    StowPlan.Spot own = k < _spots.Length ? _spots[k] : null;
+                    Debug.Log("[Layout] display blocked: " + (_app.Registry?.IdOf(res.Kind) ?? res.Kind.ToString()) +
+                              (own != null ? $" (its {(own.Home != null ? "saved" : "own")} spot {own.Id} at ({own.X:F2}, {own.Z:F2}) is taken by the seat's instruments, no spare is free)" : ""));
                 }
                 else if (res.Spot != null) _blockedLogged[k] = false;
+                if (res.Spot != null && k < _spots.Length && _spots[k] != null && res.Spot == _spots[k].Home && !_homeLogged[k])
+                {
+                    _homeLogged[k] = true;
+                    Debug.Log($"[Layout] display: {_app.Registry?.IdOf(res.Kind) ?? res.Kind.ToString()}'s saved spot ({_spots[k].X:F2}, {_spots[k].Z:F2}) is taken by the seat's instruments: back at its own spot {res.Spot.Id}");
+                }
             }
             for (int i = 0; i < _rigs.Count; i++)
             {

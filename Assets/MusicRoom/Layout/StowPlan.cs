@@ -93,6 +93,11 @@ namespace MusicRoom.Layout
             public Box[] Boxes = Array.Empty<Box>();
             /// <summary>The play centre (rig-local xz) for the distance rule.</summary>
             public double PlayX, PlayZ;
+            /// <summary>A spot the player moved (musicroom.stow; set by Layout, kept by MovedTo): the descriptor's own spot it came
+            /// from, else null. When the moved
+            /// spot is blocked by what stands at the seat now, the instrument goes back to this one before any spare
+            /// (2026-11-17: "why i cant see drums placed near wall": a kit moved on display once was hidden from then on).</summary>
+            public Spot Home;
 
             public Pose2 Pose2 => new Pose2(X, Z, Yaw);
 
@@ -126,6 +131,7 @@ namespace MusicRoom.Layout
             public Spot MovedTo(double x, double z, double yaw) => new Spot
             {
                 Kind = Kind, Id = Id, Mount = Mount, X = x, Y = Y, Z = z, Yaw = yaw, Boxes = Boxes, PlayX = PlayX, PlayZ = PlayZ,
+                Home = Home,
             };
 
             /// <summary>Moved to a ROOM-frame pose (a saved musicroom.stow value), turned into the world.</summary>
@@ -238,6 +244,18 @@ namespace MusicRoom.Layout
             {
                 if (Results[i].Placement != Placement.Hidden) continue;
                 Spot s = spots[i];
+                if (s.Home != null)
+                {
+                    // a moved spot that is blocked: back at the instrument's own spot when that is clear
+                    _scratch.Clear();
+                    s.Home.WorldBoxes(_scratch);
+                    if (!Hits(_scratch, atSeat, Gap) && !Hits(_scratch, _taken, Gap))
+                    {
+                        Results[i] = new Result(s.Kind, Placement.Spot, s.Home);
+                        _taken.AddRange(_scratch);
+                        continue;
+                    }
+                }
                 for (int k = 0; k < Spares.Length; k++)
                 {
                     Spot at = s.At(Spares[k]);

@@ -198,7 +198,9 @@ namespace MusicRoom.Layout
                 bool moved = System.Math.Abs(s.X - _displayStart.X) > 1e-4 || System.Math.Abs(s.Z - _displayStart.Z) > 1e-4;
                 if (moved)
                 {
-                    _spots[(int)k] = _spots[(int)k].MovedTo(s.X, s.Z, s.Yaw);
+                    StowPlan.Spot was = _spots[(int)k];
+                    _spots[(int)k] = was.MovedTo(s.X, s.Z, s.Yaw);
+                    if (_spots[(int)k].Home == null) _spots[(int)k].Home = was;   // its own spot, for when the seat takes this one
                     _spots[(int)k].RoomPose(out double rx, out double rz, out double ryaw);   // saved in room coordinates
                     _app.Settings.SetStow(_app.Registry.IdOf(k), FormatStow(rx, rz, ryaw));
                     _app.Settings.Save();
