@@ -1,0 +1,52 @@
+{
+ "tip_marimba_arrive": {
+  "file": "tip_marimba_arrive.wav",
+  "seconds": 1.774,
+  "rate": 22050
+ },
+ "tip_marimba_fingers": {
+  "file": "tip_marimba_fingers.wav",
+  "seconds": 3.215,
+  "rate": 22050
+ },
+ "tip_marimba_mallets": {
+  "file": "tip_marimba_mallets.wav",
+  "seconds": 3.294,
+  "rate": 22050
+ },
+ "tip_marimba_drop": {
+  "file": "tip_marimba_drop.wav",
+  "seconds": 2.194,
+  "rate": 22050
+ },
+ "tip_marimba_centre": {
+  "file": "tip_marimba_centre.wav",
+  "seconds": 2.398,
+  "rate": 22050
+ },
+ "tip_marimba_roll": {
+  "file": "tip_marimba_roll.wav",
+  "seconds": 3.77,
+  "rate": 22050
+ },
+ "tip_marimba_dead": {
+  "file": "tip_marimba_dead.wav",
+  "seconds": 3.367,
+  "rate": 22050
+ },
+ "tip_marimba_damp": {
+  "file": "tip_marimba_damp.wav",
+  "seconds": 3.251,
+  "rate": 22050
+ },
+ "tip_marimba_back": {
+  "file": "tip_marimba_back.wav",
+  "seconds": 3.398,
+  "rate": 22050
+ },
+ "tip_marimba_lesson": {
+  "file": "tip_marimba_lesson.wav",
+  "seconds": 2.377,
+  "rate": 22050
+ }
+}

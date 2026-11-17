@@ -1,0 +1,17 @@
+{
+    "name": "MusicRoom.Core",
+    "rootNamespace": "MusicRoom.Core",
+    "references": [
+        "MusicRoom.Hands",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

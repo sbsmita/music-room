@@ -1,0 +1,22 @@
+{
+    "name": "MusicRoom.Bowls",
+    "rootNamespace": "MusicRoom.Bowls",
+    "references": [
+        "MusicRoom.Core",
+        "MusicRoom.Hands",
+        "MusicRoom.Audio",
+        "Unity.TextMeshPro",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

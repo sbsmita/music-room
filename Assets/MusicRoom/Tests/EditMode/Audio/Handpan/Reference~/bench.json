@@ -1,0 +1,161 @@
+{
+ "machine": "Apple M5 Pro, Node v26.7.0",
+ "block": 256,
+ "results": [
+  {
+   "name": "one note ringing (A3 mf)",
+   "blocks": 1125,
+   "nodeMeanUs": 80.9,
+   "nodeP99Us": 128.7,
+   "nodeMaxUs": 146.4,
+   "lanesRenderedMean": 48,
+   "lanesRenderedMax": 88,
+   "questUsFromNode": {
+    "mean": 8.1,
+    "p99": 12.9,
+    "max": 14.6
+   },
+   "questUsFromModel": {
+    "mean": 7.7,
+    "max": 14.1
+   }
+  },
+  {
+   "name": "lesson: a note every 0.6 s for 20 s",
+   "blocks": 3750,
+   "nodeMeanUs": 182.7,
+   "nodeP99Us": 249.2,
+   "nodeMaxUs": 379.7,
+   "lanesRenderedMean": 102,
+   "lanesRenderedMax": 144,
+   "questUsFromNode": {
+    "mean": 18.3,
+    "p99": 24.9,
+    "max": 38
+   },
+   "questUsFromModel": {
+    "mean": 16.3,
+    "max": 23
+   }
+  },
+  {
+   "name": "groove: ding slaps, taks and notes, 8 per second, 12 s",
+   "blocks": 2250,
+   "nodeMeanUs": 197.6,
+   "nodeP99Us": 246.4,
+   "nodeMaxUs": 343.6,
+   "lanesRenderedMean": 116,
+   "lanesRenderedMax": 140,
+   "questUsFromNode": {
+    "mean": 19.8,
+    "p99": 24.6,
+    "max": 34.4
+   },
+   "questUsFromModel": {
+    "mean": 18.5,
+    "max": 22.4
+   }
+  },
+  {
+   "name": "worst: every field ff every 60 ms (10-finger roll), 8 s",
+   "blocks": 1500,
+   "nodeMeanUs": 348.1,
+   "nodeP99Us": 379.5,
+   "nodeMaxUs": 523.3,
+   "lanesRenderedMean": 216,
+   "lanesRenderedMax": 216,
+   "questUsFromNode": {
+    "mean": 34.8,
+    "p99": 38,
+    "max": 52.3
+   },
+   "questUsFromModel": {
+    "mean": 34.5,
+    "max": 34.5
+   }
+  },
+  {
+   "name": "palm mutes while ringing (damp churn), 6 s",
+   "blocks": 1125,
+   "nodeMeanUs": 97.9,
+   "nodeP99Us": 148.7,
+   "nodeMaxUs": 155.8,
+   "lanesRenderedMean": 61,
+   "lanesRenderedMax": 88,
+   "questUsFromNode": {
+    "mean": 9.8,
+    "p99": 14.9,
+    "max": 15.6
+   },
+   "questUsFromModel": {
+    "mean": 9.7,
+    "max": 14.1
+   }
+  },
+  {
+   "name": "idle (after everything decayed)",
+   "blocks": 375,
+   "nodeMeanUs": 1.1,
+   "nodeP99Us": 1.5,
+   "nodeMaxUs": 9.7,
+   "lanesRenderedMean": 0,
+   "lanesRenderedMax": 0,
+   "questUsFromNode": {
+    "mean": 0.1,
+    "p99": 0.2,
+    "max": 1
+   },
+   "questUsFromModel": {
+    "mean": 0,
+    "max": 0
+   }
+  },
+  {
+   "name": "measured voice: every field ff every 60 ms, 8 s",
+   "blocks": 1500,
+   "nodeMeanUs": 348.3,
+   "nodeP99Us": 381.3,
+   "nodeMaxUs": 542.9,
+   "lanesRenderedMean": 216,
+   "lanesRenderedMax": 216,
+   "questUsFromNode": {
+    "mean": 34.8,
+    "p99": 38.1,
+    "max": 54.3
+   },
+   "questUsFromModel": {
+    "mean": 34.5,
+    "max": 34.5
+   }
+  },
+  {
+   "name": "measured voice: groove",
+   "blocks": 2250,
+   "nodeMeanUs": 197,
+   "nodeP99Us": 233.9,
+   "nodeMaxUs": 266.4,
+   "lanesRenderedMean": 116,
+   "lanesRenderedMax": 140,
+   "questUsFromNode": {
+    "mean": 19.7,
+    "p99": 23.4,
+    "max": 26.6
+   },
+   "questUsFromModel": {
+    "mean": 18.5,
+    "max": 22.4
+   }
+  }
+ ],
+ "memory": {
+  "groups": 54,
+  "bankBytes": 5184,
+  "poles": 1728,
+  "gi": 864,
+  "scratchFloats": 30720,
+  "scratchFloatsAt256": 7680,
+  "note": "state arrays at MAX_FRAMES 1024; 256 on the device",
+  "totalKiBAt256": 41.6,
+  "totalKiB": 131.6
+ }
+}

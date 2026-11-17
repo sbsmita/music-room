@@ -1,0 +1,52 @@
+{
+ "tip_handdrums_arrive": {
+  "file": "tip_handdrums_arrive.wav",
+  "seconds": 1.786,
+  "rate": 22050
+ },
+ "tip_handdrums_open": {
+  "file": "tip_handdrums_open.wav",
+  "seconds": 2.946,
+  "rate": 22050
+ },
+ "tip_handdrums_bass": {
+  "file": "tip_handdrums_bass.wav",
+  "seconds": 2.341,
+  "rate": 22050
+ },
+ "tip_handdrums_slap": {
+  "file": "tip_handdrums_slap.wav",
+  "seconds": 3.429,
+  "rate": 22050
+ },
+ "tip_handdrums_mute": {
+  "file": "tip_handdrums_mute.wav",
+  "seconds": 2.24,
+  "rate": 22050
+ },
+ "tip_handdrums_heeltoe": {
+  "file": "tip_handdrums_heeltoe.wav",
+  "seconds": 3.148,
+  "rate": 22050
+ },
+ "tip_handdrums_quiet": {
+  "file": "tip_handdrums_quiet.wav",
+  "seconds": 2.482,
+  "rate": 22050
+ },
+ "tip_handdrums_roll": {
+  "file": "tip_handdrums_roll.wav",
+  "seconds": 2.381,
+  "rate": 22050
+ },
+ "tip_handdrums_dynamics": {
+  "file": "tip_handdrums_dynamics.wav",
+  "seconds": 3.338,
+  "rate": 22050
+ },
+ "tip_handdrums_lesson": {
+  "file": "tip_handdrums_lesson.wav",
+  "seconds": 2.395,
+  "rate": 22050
+ }
+}

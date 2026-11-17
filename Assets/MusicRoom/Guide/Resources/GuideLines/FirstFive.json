@@ -1,0 +1,469 @@
+{
+ "lines": [
+  {
+   "id": "start_help",
+   "text": "Hi, I'm Sunny! Poke a button with one finger.",
+   "spoken": "Hi, I'm Sunny! Poke a button with one finger."
+  },
+  {
+   "id": "tour_quick",
+   "text": "Here's a quick tour.",
+   "spoken": "Here's a quick tour."
+  },
+  {
+   "id": "tour_sunny_off",
+   "text": "Don't want my tips? Turn off Tips while I play.",
+   "spoken": "Don't want my tips? Turn off Tips while I play."
+  },
+  {
+   "id": "tour_sunny_on",
+   "text": "Turn it back on to bring me back.",
+   "spoken": "Turn it back on to bring me back."
+  },
+  {
+   "id": "tour_set",
+   "text": "Poke My set to bring them all back.",
+   "spoken": "Poke My set to bring them all back."
+  },
+  {
+   "id": "tour_rec",
+   "text": "Press REC to record.",
+   "spoken": "Press rec to record."
+  },
+  {
+   "id": "tour_stop",
+   "text": "Press STOP to finish.",
+   "spoken": "Press stop to finish."
+  },
+  {
+   "id": "tour_lessons",
+   "text": "Lessons are here. Pick a song and play along.",
+   "spoken": "Lessons are here. Pick a song and play along."
+  },
+  {
+   "id": "bye_first",
+   "text": "That's the tour! Find me in the menu anytime.",
+   "spoken": "That's the tour! Find me in the menu anytime."
+  },
+  {
+   "id": "fast_snow",
+   "text": "Flip SNOW for snow all around you. FIRE and WIND too!",
+   "spoken": "Flip snow for snow all around you. Fire and wind too!"
+  },
+  {
+   "id": "fast_move",
+   "text": "Turn on Move instruments, then pinch one and drag it.",
+   "spoken": "Turn on Move instruments, then pinch one and drag it."
+  },
+  {
+   "id": "fast_set",
+   "text": "Poke tiles to choose My set, or try One alone.",
+   "spoken": "Poke tiles to choose My set, or try One alone."
+  },
+  {
+   "id": "fast_rec",
+   "text": "Press REC to record, then PLAY to hear it.",
+   "spoken": "Press rec to record, then play to hear it."
+  },
+  {
+   "id": "fast_saved",
+   "text": "Your recordings are saved here.",
+   "spoken": "Your recordings are saved here."
+  },
+  {
+   "id": "fast_recenter",
+   "text": "Recenter with Reset view or pinch and hold both hands.",
+   "spoken": "Recenter with Reset view or pinch and hold both hands."
+  },
+  {
+   "id": "fast_bye",
+   "text": "Press GUIDE for a one-minute song. Have fun!",
+   "spoken": "Press guide for a one-minute song. Have fun!"
+  },
+  {
+   "id": "poke_me",
+   "text": "Tip: poke me anytime to skip.",
+   "spoken": "Tip: poke me anytime to skip."
+  },
+  {
+   "id": "drum_vr",
+   "text": "Now tap the drum on your right.",
+   "spoken": "Now tap the drum on your right."
+  },
+  {
+   "id": "drum_again",
+   "text": "Tap the top of the drum, like this.",
+   "spoken": "Tap the top of the drum, like this."
+  },
+  {
+   "id": "nod_again",
+   "text": "Nod your head, like me.",
+   "spoken": "Nod your head, like me."
+  },
+  {
+   "id": "harp_vr",
+   "text": "Now sweep your fingers across the harp strings.",
+   "spoken": "Now sweep your fingers across the harp strings."
+  },
+  {
+   "id": "harp_again",
+   "text": "Slide your fingers through the strings, like this.",
+   "spoken": "Slide your fingers through the strings, like this."
+  },
+  {
+   "id": "open_again",
+   "text": "Palm toward your face, like this.",
+   "spoken": "Palm toward your face, like this."
+  },
+  {
+   "id": "close_again",
+   "text": "Show your palm again, like this.",
+   "spoken": "Show your palm again, like this."
+  },
+  {
+   "id": "bye_more",
+   "text": "Want more? Point at an instrument and pinch.",
+   "spoken": "Want more? Point at an instrument and pinch."
+  },
+  {
+   "id": "bye_more_menu",
+   "text": "You can also bring them from Instruments in the menu.",
+   "spoken": "You can also bring them from Instruments in the menu."
+  },
+  {
+   "id": "tip_middle_c",
+   "text": "That's middle C. Every key shows its letter.",
+   "spoken": "That's middle C. Every key shows its letter."
+  },
+  {
+   "id": "tip_sticks",
+   "text": "Pinch a stick on the snare to pick it up.",
+   "spoken": "Pinch a stick on the snare to pick it up."
+  },
+  {
+   "id": "tip_sticks_drop",
+   "text": "Open your hand to put the stick back.",
+   "spoken": "Open your hand to put the stick back."
+  },
+  {
+   "id": "tip_hihat",
+   "text": "Pinch the hi-hat stand to open it.",
+   "spoken": "Pinch the hi hat stand to open it."
+  },
+  {
+   "id": "tip_choke",
+   "text": "Hold a ringing cymbal to stop it.",
+   "spoken": "Hold a ringing cymbal to stop it."
+  },
+  {
+   "id": "tip_harp_colors",
+   "text": "Red strings are C. Blue strings are F.",
+   "spoken": "Red strings are C. Blue strings are F."
+  },
+  {
+   "id": "tip_harp_damp",
+   "text": "Rest your hand on the strings to quiet them.",
+   "spoken": "Rest your hand on the strings to quiet them."
+  },
+  {
+   "id": "tip_switches",
+   "text": "Flip these switches for fire, wind and snow.",
+   "spoken": "Flip these switches for fire, wind and snow."
+  },
+  {
+   "id": "tip_room_snow",
+   "text": "It's snowing inside! Flip SNOW off any time.",
+   "spoken": "It's snowing inside! Flip snow off any time."
+  },
+  {
+   "id": "tip_mr_fire",
+   "text": "Press FIRE and a fireplace lights up in your room.",
+   "spoken": "Press fire and a fireplace lights up in your room."
+  },
+  {
+   "id": "tip_deck",
+   "text": "This tape deck records what you play.",
+   "spoken": "This tape deck records what you play."
+  },
+  {
+   "id": "tip_rec",
+   "text": "Recording! Play something, then press STOP.",
+   "spoken": "Recording! Play something, then press stop."
+  },
+  {
+   "id": "tip_loop_layer",
+   "text": "Press LOOP again to add a layer on top.",
+   "spoken": "Press loop again to add a layer on top."
+  },
+  {
+   "id": "tip_loop_clear",
+   "text": "Press CLEAR again to erase the loop.",
+   "spoken": "Press clear again to erase the loop."
+  },
+  {
+   "id": "tip_loop_tempo",
+   "text": "Pick a tempo and a length before you press LOOP.",
+   "spoken": "Pick a tempo and a length before you press loop."
+  },
+  {
+   "id": "tip_loop_click",
+   "text": "Press CLICK to keep a steady beat.",
+   "spoken": "Press click to keep a steady beat."
+  },
+  {
+   "id": "tip_loop_tidy",
+   "text": "TIDY gently evens out your timing.",
+   "spoken": "Tidy gently evens out your timing."
+  },
+  {
+   "id": "tip_loop_saved",
+   "text": "Your loop is saved in Recordings.",
+   "spoken": "Your loop is saved in Recordings."
+  },
+  {
+   "id": "tip_deck_guide",
+   "text": "Press GUIDE and we'll make a magic song together.",
+   "spoken": "Press guide and we'll make a magic song together."
+  },
+  {
+   "id": "quick_snow",
+   "text": "Let's make magic! Flip the SNOW switch.",
+   "spoken": "Let's make magic! Flip the snow switch."
+  },
+  {
+   "id": "quick_play",
+   "text": "Saved! Now press PLAY and watch the magic.",
+   "spoken": "Saved! Now press play and watch the magic."
+  },
+  {
+   "id": "quick_wow",
+   "text": "Wow! Look, your song fills the whole room.",
+   "spoken": "Wow! Look, your song fills the whole room."
+  },
+  {
+   "id": "tip_listen_back",
+   "text": "Sit back and watch the butterflies dance to your song.",
+   "spoken": "Sit back and watch the butterflies dance to your song."
+  },
+  {
+   "id": "tip_record_glow",
+   "text": "Keep playing! The room comes alive while you record.",
+   "spoken": "Keep playing! The room comes alive while you record."
+  },
+  {
+   "id": "tip_play_brings",
+   "text": "Your recording brings its instruments to you.",
+   "spoken": "Your recording brings its instruments to you."
+  },
+  {
+   "id": "tip_window_show",
+   "text": "Even the snow and the sky dance to your song.",
+   "spoken": "Even the snow and the sky dance to your song."
+  },
+  {
+   "id": "tip_song_stars",
+   "text": "Look up! Your song is drawing its own stars.",
+   "spoken": "Look up! Your song is drawing its own stars."
+  },
+  {
+   "id": "tip_paint_walls",
+   "text": "Look! Your song paints flowers, trees and birds.",
+   "spoken": "Look! Your song paints flowers, trees and birds."
+  },
+  {
+   "id": "tip_paint_keep",
+   "text": "Like it? Turn on Keep painting in Recordings.",
+   "spoken": "Like it? Turn on Keep painting in Recordings."
+  },
+  {
+   "id": "tip_paint_throw",
+   "text": "Flick your hand at a wall to throw some paint!",
+   "spoken": "Flick your hand at a wall to throw some paint!"
+  },
+  {
+   "id": "tip_paint_gallery",
+   "text": "Your song is now a painting on the wall.",
+   "spoken": "Your song is now a painting on the wall."
+  },
+  {
+   "id": "tip_ghost_hands",
+   "text": "Those are your hands from before, playing your song.",
+   "spoken": "Those are your hands from before, playing your song."
+  },
+  {
+   "id": "tip_record_on_top",
+   "text": "Press REC while it plays to add a part on top.",
+   "spoken": "Press rec while it plays to add a part on top."
+  },
+  {
+   "id": "swipe_again",
+   "text": "Swipe fast, with your palm facing sideways.",
+   "spoken": "Swipe fast, with your palm facing sideways."
+  },
+  {
+   "id": "tip_seat_turn",
+   "text": "Pinch the air and pull sideways to turn your seat.",
+   "spoken": "Pinch the air and pull sideways to turn your seat."
+  },
+  {
+   "id": "tip_summon",
+   "text": "Pinch both hands and hold still to bring them back.",
+   "spoken": "Pinch both hands and hold still to bring them back."
+  },
+  {
+   "id": "tip_reset_view",
+   "text": "Or poke Reset view in the menu.",
+   "spoken": "Or poke Reset view in the menu."
+  },
+  {
+   "id": "tip_arrange_ray",
+   "text": "Far away? Point at it and pinch.",
+   "spoken": "Far away? Point at it and pinch."
+  },
+  {
+   "id": "tip_turn",
+   "text": "Turn your wrist to spin it all the way round.",
+   "spoken": "Turn your wrist to spin it all the way round."
+  },
+  {
+   "id": "tip_turn_two",
+   "text": "Or hold it with both hands and twist.",
+   "spoken": "Or hold it with both hands and twist."
+  },
+  {
+   "id": "tip_move_height",
+   "text": "Lift or lower it to your height.",
+   "spoken": "Lift or lower it to your height."
+  },
+  {
+   "id": "tip_arrange_done",
+   "text": "Poke Done to play again. Reset starts over.",
+   "spoken": "Poke Done to play again. Reset starts over."
+  },
+  {
+   "id": "tip_arrange_saved",
+   "text": "I'll remember this setup next time.",
+   "spoken": "I'll remember this setup next time."
+  },
+  {
+   "id": "tip_panel_move",
+   "text": "Pinch and hold the menu's edge to move it.",
+   "spoken": "Pinch and hold the menu's edge to move it."
+  },
+  {
+   "id": "tip_move_turn_on",
+   "text": "To move one, turn on Move instruments in the menu.",
+   "spoken": "To move one, turn on Move instruments in the menu."
+  },
+  {
+   "id": "tip_move_quiet",
+   "text": "Instruments are quiet while moving. Poke Done to play.",
+   "spoken": "Instruments are quiet while moving. Poke Done to play."
+  },
+  {
+   "id": "tip_scroll",
+   "text": "Drag the list up or down to see more.",
+   "spoken": "Drag the list up or down to see more."
+  },
+  {
+   "id": "tip_back",
+   "text": "Poke the title to go back.",
+   "spoken": "Poke the title to go back."
+  },
+  {
+   "id": "tip_lessons",
+   "text": "Pick an instrument, then a song.",
+   "spoken": "Pick an instrument, then a song."
+  },
+  {
+   "id": "tip_lesson_play",
+   "text": "Play each block as it lands. It waits for you.",
+   "spoken": "Play each block as it lands. It waits for you."
+  },
+  {
+   "id": "tip_lesson_kick",
+   "text": "For the kick, nod your head or tap the pad.",
+   "spoken": "For the kick, nod your head or tap the pad."
+  },
+  {
+   "id": "tip_lesson_harp",
+   "text": "Pluck the string where the block lands.",
+   "spoken": "Pluck the string where the block lands."
+  },
+  {
+   "id": "tip_lesson_done",
+   "text": "Well done! Poke Next, or play it again.",
+   "spoken": "Well done! Poke Next, or play it again."
+  },
+  {
+   "id": "tip_instruments",
+   "text": "Poke One alone to play just one instrument.",
+   "spoken": "Poke One alone to play just one instrument."
+  },
+  {
+   "id": "tip_options",
+   "text": "Poke Options on a tile to change how it sounds.",
+   "spoken": "Poke Options on a tile to change how it sounds."
+  },
+  {
+   "id": "tip_recordings",
+   "text": "Poke a recording to play it. The bin deletes it.",
+   "spoken": "Poke a recording to play it. The bin deletes it."
+  },
+  {
+   "id": "tip_delete",
+   "text": "Poke Delete again within three seconds to remove it.",
+   "spoken": "Poke Delete again within three seconds to remove it."
+  },
+  {
+   "id": "tip_exit",
+   "text": "Tap it again to close the app.",
+   "spoken": "Tap it again to close the app."
+  },
+  {
+   "id": "tip_hide_sunny",
+   "text": "You can hide me from the menu.",
+   "spoken": "You can hide me from the menu."
+  },
+  {
+   "id": "tip_mr_table",
+   "text": "This is your room! The piano is on your table.",
+   "spoken": "This is your room! The piano is on your table."
+  },
+  {
+   "id": "tip_mr_permission",
+   "text": "Allow spatial data in settings so I can see your room.",
+   "spoken": "Allow spatial data in settings so I can see your room."
+  },
+  {
+   "id": "tip_mr_setup",
+   "text": "Set up my room, in the menu, finds your walls.",
+   "spoken": "Set up my room, in the menu, finds your walls."
+  },
+  {
+   "id": "tip_mr_anchor",
+   "text": "Your instruments always open right in front of you.",
+   "spoken": "Your instruments always open right in front of you."
+  },
+  {
+   "id": "tip_mr_hands",
+   "text": "In Instruments, poke Real hands to see your own hands.",
+   "spoken": "In Instruments, poke Real hands to see your own hands."
+  },
+  {
+   "id": "tip_mr_leave",
+   "text": "Music room, in the menu, takes you back.",
+   "spoken": "Music room, in the menu, takes you back."
+  },
+  {
+   "id": "tip_bowl_sing",
+   "text": "Rub the rim slowly and steadily to make the bowl sing.",
+   "spoken": "Rub the rim slowly and steadily to make the bowl sing."
+  },
+  {
+   "id": "tip_look_pinch",
+   "text": "Look at something and pinch to choose it.",
+   "spoken": "Look at something and pinch to choose it."
+  }
+ ]
+}

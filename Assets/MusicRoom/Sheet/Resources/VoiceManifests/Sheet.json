@@ -1,0 +1,42 @@
+{
+ "tip_book": {
+  "file": "tip_book.wav",
+  "seconds": 3.088,
+  "rate": 22050
+ },
+ "tip_book_marker": {
+  "file": "tip_book_marker.wav",
+  "seconds": 2.801,
+  "rate": 22050
+ },
+ "tip_book_contents": {
+  "file": "tip_book_contents.wav",
+  "seconds": 2.47,
+  "rate": 22050
+ },
+ "tip_book_contents_desk": {
+  "file": "tip_book_contents_desk.wav",
+  "seconds": 2.517,
+  "rate": 22050
+ },
+ "tip_book_turn": {
+  "file": "tip_book_turn.wav",
+  "seconds": 2.834,
+  "rate": 22050
+ },
+ "tip_book_turn_desk": {
+  "file": "tip_book_turn_desk.wav",
+  "seconds": 2.881,
+  "rate": 22050
+ },
+ "tip_book_ribbon": {
+  "file": "tip_book_ribbon.wav",
+  "seconds": 2.823,
+  "rate": 22050
+ },
+ "tip_book_ribbon_desk": {
+  "file": "tip_book_ribbon_desk.wav",
+  "seconds": 2.818,
+  "rate": 22050
+ }
+}

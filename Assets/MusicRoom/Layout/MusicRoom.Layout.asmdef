@@ -1,0 +1,19 @@
+{
+    "name": "MusicRoom.Layout",
+    "rootNamespace": "MusicRoom.Layout",
+    "references": [
+        "MusicRoom.Core",
+        "MusicRoom.Hands",
+        "MusicRoom.Audio",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

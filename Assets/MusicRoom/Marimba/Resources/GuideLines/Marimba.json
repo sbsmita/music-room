@@ -1,0 +1,54 @@
+{
+ "lines": [
+  {
+   "id": "tip_marimba_arrive",
+   "text": "Pinch a mallet to pick it up.",
+   "spoken": "Pinch a mallet to pick it up."
+  },
+  {
+   "id": "tip_marimba_fingers",
+   "text": "Fingertips play the bars too, a little softer.",
+   "spoken": "Fingertips play the bars too, a little softer."
+  },
+  {
+   "id": "tip_marimba_mallets",
+   "text": "Mallets sound fuller. Pinch one from the tray.",
+   "spoken": "Mallets sound fuller. Pinch one from the tray."
+  },
+  {
+   "id": "tip_marimba_drop",
+   "text": "Open your hand to put a mallet back.",
+   "spoken": "Open your hand to put a mallet back."
+  },
+  {
+   "id": "tip_marimba_centre",
+   "text": "Strike near the middle of a bar for warmth.",
+   "spoken": "Strike near the middle of a bar for warmth."
+  },
+  {
+   "id": "tip_marimba_roll",
+   "text": "For long notes, alternate mallets quickly on one bar.",
+   "spoken": "For long notes, alternate mallets quickly on one bar."
+  },
+  {
+   "id": "tip_marimba_dead",
+   "text": "Strike, then hold the mallet down for a short note.",
+   "spoken": "Strike, then hold the mallet down for a short note."
+  },
+  {
+   "id": "tip_marimba_damp",
+   "text": "Quiet a bar: rest a hand or mallet on it.",
+   "spoken": "Quiet a bar: rest a hand or mallet on it."
+  },
+  {
+   "id": "tip_marimba_back",
+   "text": "Sharps are the back row. Strike their nearest tip.",
+   "spoken": "Sharps are the back row. Strike their nearest tip."
+  },
+  {
+   "id": "tip_marimba_lesson",
+   "text": "Strike each bar as its block lands.",
+   "spoken": "Strike each bar as its block lands."
+  }
+ ]
+}

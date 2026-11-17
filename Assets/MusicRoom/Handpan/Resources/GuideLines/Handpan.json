@@ -1,0 +1,94 @@
+{
+ "about": "Sunny lines of the handpan (Docs/12-new-instruments/handpan.md 8.2). lineSeconds = seconds + the 0.14 s lead.",
+ "voice": {
+  "voice": "en-us+Annie",
+  "speed": 150,
+  "pitch": 55,
+  "range": 70,
+  "gap": 0,
+  "amplitude": 120
+ },
+ "lines": [
+  {
+   "id": "tip_handpan_arrive",
+   "text": "Tap the round notes gently with your fingertips.",
+   "spoken": "Tap the round notes gently with your fingertips.",
+   "file": "tip_handpan_arrive.wav",
+   "seconds": 2.926,
+   "lineSeconds": 3.066,
+   "words": 8
+  },
+  {
+   "id": "tip_handpan_lift",
+   "text": "Tap, then lift quickly so the note rings.",
+   "spoken": "Tap, then lift quickly so the note rings.",
+   "file": "tip_handpan_lift.wav",
+   "seconds": 2.985,
+   "lineSeconds": 3.125,
+   "words": 8
+  },
+  {
+   "id": "tip_handpan_ding",
+   "text": "The deep note in the middle is the ding.",
+   "spoken": "The deep note in the middle is the ding.",
+   "file": "tip_handpan_ding.wav",
+   "seconds": 2.081,
+   "lineSeconds": 2.221,
+   "words": 9
+  },
+  {
+   "id": "tip_handpan_gentle",
+   "text": "Gentle taps sound sweeter, hard taps brighter.",
+   "spoken": "Gentle taps sound sweeter, hard taps brighter.",
+   "file": "tip_handpan_gentle.wav",
+   "seconds": 3.413,
+   "lineSeconds": 3.553,
+   "words": 7
+  },
+  {
+   "id": "tip_handpan_spot",
+   "text": "Tap near a dimple's edge for a richer note.",
+   "spoken": "Tap near a dimple's edge for a richer note.",
+   "file": "tip_handpan_spot.wav",
+   "seconds": 2.5,
+   "lineSeconds": 2.64,
+   "words": 9
+  },
+  {
+   "id": "tip_handpan_mute",
+   "text": "Rest your hand on the steel to quiet it.",
+   "spoken": "Rest your hand on the steel to quiet it.",
+   "file": "tip_handpan_mute.wav",
+   "seconds": 2.424,
+   "lineSeconds": 2.564,
+   "words": 9
+  },
+  {
+   "id": "tip_handpan_slap",
+   "text": "Slap the middle with a flat hand for a boom.",
+   "spoken": "Slap the middle with a flat hand for a boom.",
+   "file": "tip_handpan_slap.wav",
+   "seconds": 2.678,
+   "lineSeconds": 2.818,
+   "words": 10
+  },
+  {
+   "id": "tip_handpan_tak",
+   "text": "Tap between the notes for a soft click.",
+   "spoken": "Tap between the notes for a soft click.",
+   "file": "tip_handpan_tak.wav",
+   "seconds": 2.49,
+   "lineSeconds": 2.63,
+   "words": 8
+  },
+  {
+   "id": "tip_handpan_loop",
+   "text": "Play the handpan over your loop. It's in tune.",
+   "spoken": "Play the hand pan over your loop. It's in tune.",
+   "file": "tip_handpan_loop.wav",
+   "seconds": 3.171,
+   "lineSeconds": 3.311,
+   "words": 9
+  }
+ ]
+}

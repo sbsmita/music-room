@@ -1,0 +1,54 @@
+{
+ "lines": [
+  {
+   "id": "tip_handdrums_arrive",
+   "text": "Hit the drums with your hands.",
+   "spoken": "Hit the drums with your hands."
+  },
+  {
+   "id": "tip_handdrums_open",
+   "text": "Fingers flat at the edge, then bounce off.",
+   "spoken": "Fingers flat at the edge, then bounce off."
+  },
+  {
+   "id": "tip_handdrums_bass",
+   "text": "Flat palm in the middle for the deep bass.",
+   "spoken": "Flat palm in the middle for the deep bass."
+  },
+  {
+   "id": "tip_handdrums_slap",
+   "text": "At the edge, cup your fingers and snap the tips.",
+   "spoken": "At the edge, cup your fingers and snap the tips."
+  },
+  {
+   "id": "tip_handdrums_mute",
+   "text": "Leave your fingers on the drum to mute it.",
+   "spoken": "Leave your fingers on the drum to mute it."
+  },
+  {
+   "id": "tip_handdrums_heeltoe",
+   "text": "Rock your hand: heel, then fingertips.",
+   "spoken": "Rock your hand: heel, then fingertips."
+  },
+  {
+   "id": "tip_handdrums_quiet",
+   "text": "Lay a hand on a ringing drum to quiet it.",
+   "spoken": "Lay a hand on a ringing drum to quiet it."
+  },
+  {
+   "id": "tip_handdrums_roll",
+   "text": "Alternate your hands quickly for a roll.",
+   "spoken": "Alternate your hands quickly for a roll."
+  },
+  {
+   "id": "tip_handdrums_dynamics",
+   "text": "Hit softer for a quiet tap, harder for louder.",
+   "spoken": "Hit softer for a quiet tap, harder for louder."
+  },
+  {
+   "id": "tip_handdrums_lesson",
+   "text": "Play the stroke the hand print shows.",
+   "spoken": "Play the stroke the hand print shows."
+  }
+ ]
+}

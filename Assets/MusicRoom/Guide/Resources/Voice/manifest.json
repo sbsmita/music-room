@@ -1,0 +1,192 @@
+{
+ "intro_vr": {
+  "file": "intro_vr.wav",
+  "seconds": 3.102,
+  "rate": 22050
+ },
+ "intro_desk": {
+  "file": "intro_desk.wav",
+  "seconds": 3.102,
+  "rate": 22050
+ },
+ "open_vr": {
+  "file": "open_vr.wav",
+  "seconds": 3.46,
+  "rate": 22050
+ },
+ "open_desk": {
+  "file": "open_desk.wav",
+  "seconds": 4.255,
+  "rate": 22050
+ },
+ "poke_vr": {
+  "file": "poke_vr.wav",
+  "seconds": 2.051,
+  "rate": 22050
+ },
+ "poke_desk": {
+  "file": "poke_desk.wav",
+  "seconds": 3.59,
+  "rate": 22050
+ },
+ "close_vr": {
+  "file": "close_vr.wav",
+  "seconds": 1.901,
+  "rate": 22050
+ },
+ "close_desk": {
+  "file": "close_desk.wav",
+  "seconds": 3.589,
+  "rate": 22050
+ },
+ "swipe_vr": {
+  "file": "swipe_vr.wav",
+  "seconds": 3.752,
+  "rate": 22050
+ },
+ "swipe_desk": {
+  "file": "swipe_desk.wav",
+  "seconds": 5.033,
+  "rate": 22050
+ },
+ "swipe_skip": {
+  "file": "swipe_skip.wav",
+  "seconds": 1.966,
+  "rate": 22050
+ },
+ "nod_vr": {
+  "file": "nod_vr.wav",
+  "seconds": 2.199,
+  "rate": 22050
+ },
+ "nod_desk": {
+  "file": "nod_desk.wav",
+  "seconds": 4.267,
+  "rate": 22050
+ },
+ "nod_skip": {
+  "file": "nod_skip.wav",
+  "seconds": 2.372,
+  "rate": 22050
+ },
+ "skip": {
+  "file": "skip.wav",
+  "seconds": 1.213,
+  "rate": 22050
+ },
+ "praise_0": {
+  "file": "praise_0.wav",
+  "seconds": 0.539,
+  "rate": 22050
+ },
+ "praise_1": {
+  "file": "praise_1.wav",
+  "seconds": 0.444,
+  "rate": 22050
+ },
+ "praise_2": {
+  "file": "praise_2.wav",
+  "seconds": 0.763,
+  "rate": 22050
+ },
+ "praise_3": {
+  "file": "praise_3.wav",
+  "seconds": 0.686,
+  "rate": 22050
+ },
+ "praise_4": {
+  "file": "praise_4.wav",
+  "seconds": 0.572,
+  "rate": 22050
+ },
+ "bye": {
+  "file": "bye.wav",
+  "seconds": 0.752,
+  "rate": 22050
+ },
+ "leave": {
+  "file": "leave.wav",
+  "seconds": 0.471,
+  "rate": 22050
+ },
+ "tip_arrange": {
+  "file": "tip_arrange.wav",
+  "seconds": 2.896,
+  "rate": 22050
+ },
+ "tip_loop_start": {
+  "file": "tip_loop_start.wav",
+  "seconds": 3.416,
+  "rate": 22050
+ },
+ "deck_guide_intro": {
+  "file": "deck_guide_intro.wav",
+  "seconds": 3.178,
+  "rate": 22050
+ },
+ "deck_guide_rec": {
+  "file": "deck_guide_rec.wav",
+  "seconds": 2.368,
+  "rate": 22050
+ },
+ "deck_guide_stop": {
+  "file": "deck_guide_stop.wav",
+  "seconds": 1.115,
+  "rate": 22050
+ },
+ "deck_guide_auto": {
+  "file": "deck_guide_auto.wav",
+  "seconds": 1.172,
+  "rate": 22050
+ },
+ "deck_guide_saved": {
+  "file": "deck_guide_saved.wav",
+  "seconds": 3.447,
+  "rate": 22050
+ },
+ "deck_guide_keep": {
+  "file": "deck_guide_keep.wav",
+  "seconds": 3.155,
+  "rate": 22050
+ },
+ "tip_take": {
+  "file": "tip_take.wav",
+  "seconds": 2.394,
+  "rate": 22050
+ },
+ "lay_drums": {
+  "file": "lay_drums.wav",
+  "seconds": 3.534,
+  "rate": 22050
+ },
+ "lay_harp": {
+  "file": "lay_harp.wav",
+  "seconds": 2.695,
+  "rate": 22050
+ },
+ "lay_piano": {
+  "file": "lay_piano.wav",
+  "seconds": 3.038,
+  "rate": 22050
+ },
+ "lay_done": {
+  "file": "lay_done.wav",
+  "seconds": 2.151,
+  "rate": 22050
+ },
+ "tip_loop_mute": {
+  "file": "tip_loop_mute.wav",
+  "seconds": 1.807,
+  "rate": 22050
+ },
+ "tip_loop_undo": {
+  "file": "tip_loop_undo.wav",
+  "seconds": 1.963,
+  "rate": 22050
+ },
+ "again": {
+  "file": "again.wav",
+  "seconds": 0.783,
+  "rate": 22050
+ }
+}

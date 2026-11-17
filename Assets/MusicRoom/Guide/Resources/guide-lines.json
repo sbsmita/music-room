@@ -1,0 +1,526 @@
+{
+ "generatedFrom": [
+  "Guide/Tools~/sunny-lines.mjs",
+  "Guide/Tools~/render-voice.mjs",
+  "Guide/Tools~/espeak-voice.mjs"
+ ],
+ "sourceSha1": {
+  "sunny-lines.mjs": "1d8cd531d2747b317a36cdb40d564a26a2cbe374"
+ },
+ "generatedAt": "2026-10-25T06:43:31.938Z",
+ "lineCount": 38,
+ "lines": [
+  {
+   "id": "intro_vr",
+   "text": "Hi, I'm Sunny! Let me show you around.",
+   "spoken": "Hi, I'm Sunny! Let me show you around.",
+   "file": "intro_vr.m4a",
+   "seconds": 3.102,
+   "lineSeconds": 3.242
+  },
+  {
+   "id": "intro_desk",
+   "text": "Hi, I'm Sunny! Let me show you around.",
+   "spoken": "Hi, I'm Sunny! Let me show you around.",
+   "file": "intro_desk.m4a",
+   "seconds": 3.102,
+   "lineSeconds": 3.242
+  },
+  {
+   "id": "open_vr",
+   "text": "Hold your open palm toward your face to open the menu",
+   "spoken": "Hold your open palm toward your face to open the menu",
+   "file": "open_vr.m4a",
+   "seconds": 3.46,
+   "lineSeconds": 3.6
+  },
+  {
+   "id": "open_desk",
+   "text": "Press M to open the menu (in VR, show your palm like this)",
+   "spoken": "Press M to open the menu (in VR, show your palm like this)",
+   "file": "open_desk.m4a",
+   "seconds": 4.255,
+   "lineSeconds": 4.395
+  },
+  {
+   "id": "poke_vr",
+   "text": "Poke a row with your index finger",
+   "spoken": "Poke a row with your index finger",
+   "file": "poke_vr.m4a",
+   "seconds": 2.051,
+   "lineSeconds": 2.1910000000000003
+  },
+  {
+   "id": "poke_desk",
+   "text": "Click a row in the menu (in VR, poke it like this)",
+   "spoken": "Click a row in the menu (in VR, poke it like this)",
+   "file": "poke_desk.m4a",
+   "seconds": 3.59,
+   "lineSeconds": 3.73
+  },
+  {
+   "id": "close_vr",
+   "text": "Show your palm again to hide it",
+   "spoken": "Show your palm again to hide it",
+   "file": "close_vr.m4a",
+   "seconds": 1.901,
+   "lineSeconds": 2.041
+  },
+  {
+   "id": "close_desk",
+   "text": "Press M again to hide it (in VR, your palm again)",
+   "spoken": "Press M again to hide it (in VR, your palm again)",
+   "file": "close_desk.m4a",
+   "seconds": 3.589,
+   "lineSeconds": 3.729
+  },
+  {
+   "id": "swipe_vr",
+   "text": "Swipe your open hand sideways to turn to another instrument",
+   "spoken": "Swipe your open hand sideways to turn to another instrument",
+   "file": "swipe_vr.m4a",
+   "seconds": 3.752,
+   "lineSeconds": 3.892
+  },
+  {
+   "id": "swipe_desk",
+   "text": "In VR, swipe an open hand sideways like this to turn to another instrument",
+   "spoken": "In VR, swipe an open hand sideways like this to turn to another instrument",
+   "file": "swipe_desk.m4a",
+   "seconds": 5.033,
+   "lineSeconds": 5.173
+  },
+  {
+   "id": "swipe_skip",
+   "text": "Or pick an instrument in the menu.",
+   "spoken": "Or pick an instrument in the menu.",
+   "file": "swipe_skip.m4a",
+   "seconds": 1.966,
+   "lineSeconds": 2.106
+  },
+  {
+   "id": "nod_vr",
+   "text": "Nod your head to play the kick drum",
+   "spoken": "Nod your head to play the kick drum",
+   "file": "nod_vr.m4a",
+   "seconds": 2.199,
+   "lineSeconds": 2.339
+  },
+  {
+   "id": "nod_desk",
+   "text": "Click the kick pad beside the snare (in VR, nod like this)",
+   "spoken": "Click the kick pad beside the snare (in VR, nod like this)",
+   "file": "nod_desk.m4a",
+   "seconds": 4.267,
+   "lineSeconds": 4.407
+  },
+  {
+   "id": "nod_skip",
+   "text": "The kick pad by the snare plays it too",
+   "spoken": "The kick pad by the snare plays it too",
+   "file": "nod_skip.m4a",
+   "seconds": 2.372,
+   "lineSeconds": 2.512
+  },
+  {
+   "id": "skip",
+   "text": "Let us move on",
+   "spoken": "Let us move on",
+   "file": "skip.m4a",
+   "seconds": 1.213,
+   "lineSeconds": 1.3530000000000002
+  },
+  {
+   "id": "praise_0",
+   "text": "Nice!",
+   "spoken": "Nice!",
+   "file": "praise_0.m4a",
+   "seconds": 0.539,
+   "lineSeconds": 0.679
+  },
+  {
+   "id": "praise_1",
+   "text": "Great!",
+   "spoken": "Great!",
+   "file": "praise_1.m4a",
+   "seconds": 0.444,
+   "lineSeconds": 0.5840000000000001
+  },
+  {
+   "id": "praise_2",
+   "text": "You got it!",
+   "spoken": "You got it!",
+   "file": "praise_2.m4a",
+   "seconds": 0.763,
+   "lineSeconds": 0.903
+  },
+  {
+   "id": "praise_3",
+   "text": "Perfect!",
+   "spoken": "Perfect!",
+   "file": "praise_3.m4a",
+   "seconds": 0.686,
+   "lineSeconds": 0.8260000000000001
+  },
+  {
+   "id": "praise_4",
+   "text": "Lovely!",
+   "spoken": "Lovely!",
+   "file": "praise_4.m4a",
+   "seconds": 0.572,
+   "lineSeconds": 0.712
+  },
+  {
+   "id": "bye",
+   "text": "Have fun!",
+   "spoken": "Have fun!",
+   "file": "bye.m4a",
+   "seconds": 0.752,
+   "lineSeconds": 0.892
+  },
+  {
+   "id": "leave",
+   "text": "Bye!",
+   "spoken": "Bye!",
+   "file": "leave.m4a",
+   "seconds": 0.471,
+   "lineSeconds": 0.611
+  },
+  {
+   "id": "tip_arrange",
+   "text": "Pinch an instrument and drag it where you like.",
+   "spoken": "Pinch an instrument and drag it where you like.",
+   "file": "tip_arrange.wav",
+   "seconds": 2.896,
+   "lineSeconds": 3.036
+  },
+  {
+   "id": "tip_loop_start",
+   "text": "Listen to the count, then play. It will repeat.",
+   "spoken": "Listen to the count, then play. It will repeat.",
+   "file": "tip_loop_start.wav",
+   "seconds": 3.416,
+   "lineSeconds": 3.556
+  },
+  {
+   "id": "deck_guide_intro",
+   "text": "Let me show you the tape deck. Follow my hand.",
+   "spoken": "Let me show you the tape deck. Follow my hand.",
+   "file": "deck_guide_intro.wav",
+   "seconds": 3.178,
+   "lineSeconds": 3.318
+  },
+  {
+   "id": "deck_guide_rec",
+   "text": "Press REC, then play a few notes.",
+   "spoken": "Press rec, then play a few notes.",
+   "file": "deck_guide_rec.wav",
+   "seconds": 2.368,
+   "lineSeconds": 2.508
+  },
+  {
+   "id": "deck_guide_stop",
+   "text": "Now press STOP.",
+   "spoken": "Now press stop.",
+   "file": "deck_guide_stop.wav",
+   "seconds": 1.115,
+   "lineSeconds": 1.255
+  },
+  {
+   "id": "deck_guide_auto",
+   "text": "I'll press it for you.",
+   "spoken": "I'll press it for you.",
+   "file": "deck_guide_auto.wav",
+   "seconds": 1.172,
+   "lineSeconds": 1.312
+  },
+  {
+   "id": "deck_guide_saved",
+   "text": "Your songs are saved in Recordings, in your palm menu.",
+   "spoken": "Your songs are saved in Recordings, in your palm menu.",
+   "file": "deck_guide_saved.wav",
+   "seconds": 3.447,
+   "lineSeconds": 3.587
+  },
+  {
+   "id": "deck_guide_keep",
+   "text": "Keep this loop, or press CLEAR twice to erase it.",
+   "spoken": "Keep this loop, or press clear twice to erase it.",
+   "file": "deck_guide_keep.wav",
+   "seconds": 3.155,
+   "lineSeconds": 3.295
+  },
+  {
+   "id": "tip_take",
+   "text": "Saved! Press PLAY to hear it.",
+   "spoken": "Saved! Press play to hear it.",
+   "file": "tip_take.wav",
+   "seconds": 2.394,
+   "lineSeconds": 2.534
+  },
+  {
+   "id": "lay_drums",
+   "text": "First a beat: press LOOP, then tap the drums.",
+   "spoken": "First a beat: press loop, then tap the drums.",
+   "file": "lay_drums.wav",
+   "seconds": 3.534,
+   "lineSeconds": 3.674
+  },
+  {
+   "id": "lay_harp",
+   "text": "Now press LOOP again and sweep the harp.",
+   "spoken": "Now press loop again and sweep the harp.",
+   "file": "lay_harp.wav",
+   "seconds": 2.695,
+   "lineSeconds": 2.835
+  },
+  {
+   "id": "lay_piano",
+   "text": "Last layer: press LOOP and play the piano.",
+   "spoken": "Last layer: press loop and play the piano.",
+   "file": "lay_piano.wav",
+   "seconds": 3.038,
+   "lineSeconds": 3.178
+  },
+  {
+   "id": "lay_done",
+   "text": "That's your own song, in layers!",
+   "spoken": "That's your own song, in layers!",
+   "file": "lay_done.wav",
+   "seconds": 2.151,
+   "lineSeconds": 2.291
+  },
+  {
+   "id": "tip_loop_mute",
+   "text": "Touch a layer's light to mute it.",
+   "spoken": "Touch a layer's light to mute it.",
+   "file": "tip_loop_mute.wav",
+   "seconds": 1.807,
+   "lineSeconds": 1.947
+  },
+  {
+   "id": "tip_loop_undo",
+   "text": "UNDO takes away the last layer.",
+   "spoken": "Undo takes away the last layer.",
+   "file": "tip_loop_undo.wav",
+   "seconds": 1.963,
+   "lineSeconds": 2.103
+  },
+  {
+   "id": "again",
+   "text": "Like this.",
+   "spoken": "Like this.",
+   "file": "again.wav",
+   "seconds": 0.783,
+   "lineSeconds": 0.923
+  }
+ ],
+ "praise": [
+  "praise_0",
+  "praise_1",
+  "praise_2",
+  "praise_3",
+  "praise_4"
+ ],
+ "steps": [
+  {
+   "id": "open",
+   "demo": "palm",
+   "vr": "open_vr",
+   "desk": "open_desk",
+   "timeout": null,
+   "skip": null,
+   "completes": "the menu panel opens (panel 'open' event, or panel shown while polling)"
+  },
+  {
+   "id": "poke",
+   "demo": "poke",
+   "vr": "poke_vr",
+   "desk": "poke_desk",
+   "timeout": null,
+   "skip": null,
+   "completes": "the panel's screen changes from the one showing when the step began ('screen' event)"
+  },
+  {
+   "id": "close",
+   "demo": "palm",
+   "vr": "close_vr",
+   "desk": "close_desk",
+   "timeout": null,
+   "skip": null,
+   "completes": "the panel closes ('close' event, or not shown while polling)"
+  },
+  {
+   "id": "swipe",
+   "demo": "swipe",
+   "vr": "swipe_vr",
+   "desk": "swipe_desk",
+   "timeout": 12,
+   "skip": "swipe_skip",
+   "completes": "in single-instrument mode, layout.current differs from the instrument seen first during the step"
+  },
+  {
+   "id": "nod",
+   "demo": "nod",
+   "vr": "nod_vr",
+   "desk": "nod_desk",
+   "timeout": 12,
+   "skip": "nod_skip",
+   "completes": "the nod kick fired, or (desktop) any kick event, or (headset) a kick event with every hand pointer > 0.2 m from the kick pad; never during playback"
+  }
+ ],
+ "timing": {
+  "RADIUS": 0.045,
+  "FOLLOW": 3,
+  "STEP_TIMEOUT": 12,
+  "INTRO_T": 3.2,
+  "PRAISE_T": 1.7,
+  "SKIP_T": 3.2,
+  "BYE_T": 2.6,
+  "LEAVE_T": 0.8,
+  "LEAVE_RISE": 0.2,
+  "PAD_FAR": 0.2,
+  "BLINK_T": 0.13,
+  "GAP": 0.3,
+  "LATE": 1.2,
+  "holdPadSeconds": 0.45,
+  "offset": {
+   "ahead": 0.55,
+   "left": 0.25,
+   "down": 0.1
+  },
+  "bob": {
+   "amp": 0.012,
+   "rateHz": 1.4
+  },
+  "mouth": {
+   "open": 0.35,
+   "close": 0.2,
+   "floor": 0.01,
+   "decayPerSecond": 1.2
+  }
+ },
+ "robot": {
+  "rate": 1,
+  "dry": 0.92,
+  "ring": 0.08,
+  "ringHz": 80,
+  "combMs": 5,
+  "feedback": 0.3,
+  "comb": 0.12,
+  "hp": 120,
+  "bandHz": 2500,
+  "bandQ": 0.8,
+  "bandDb": 2,
+  "out": 1,
+  "lead": 0.14
+ },
+ "chirps": {
+  "open": [
+   {
+    "at": 0.01,
+    "type": "square",
+    "f0": 880,
+    "f1": 1320,
+    "slide": 0.04,
+    "peak": 0.022,
+    "decay": 0.06,
+    "lp": 5000
+   },
+   {
+    "at": 0.075,
+    "type": "square",
+    "f0": 1320,
+    "f1": 700,
+    "slide": 0.05,
+    "peak": 0.018,
+    "decay": 0.07,
+    "lp": 5000
+   }
+  ],
+  "close": [
+   {
+    "at": 0.02,
+    "type": "square",
+    "f0": 1100,
+    "f1": 560,
+    "slide": 0.05,
+    "peak": 0.018,
+    "decay": 0.06,
+    "lp": 5000
+   },
+   {
+    "at": 0.085,
+    "type": "square",
+    "f0": 700,
+    "f1": 420,
+    "slide": 0.05,
+    "peak": 0.015,
+    "decay": 0.07,
+    "lp": 5000
+   }
+  ],
+  "envelope": "gain set to peak at `at`, exponential ramp to 0.0005 at at+decay, oscillator stops at at+decay+0.05; frequency f0 at `at`, exponential ramp to f1 at at+slide"
+ },
+ "voice": {
+  "engine": "eSpeak NG (offline, open source); only the rendered audio ships",
+  "settings": {
+   "voice": "en-us+Annie",
+   "speed": 150,
+   "pitch": 55,
+   "range": 70,
+   "gap": 0,
+   "amplitude": 120
+  },
+  "espeakArgs": [
+   "-v",
+   "en-us+Annie",
+   "-s",
+   "150",
+   "-p",
+   "55",
+   "-P",
+   "70",
+   "-g",
+   "0",
+   "-a",
+   "120",
+   "-w",
+   "<out.wav>",
+   "<text>"
+  ],
+  "tidy": {
+   "peak": 0.89,
+   "padSeconds": 0.03,
+   "silenceFloorOfPeak": 0.02,
+   "fadeSeconds": 0.005
+  },
+  "encode": {
+   "container": "m4a",
+   "codec": "AAC-LC",
+   "bitrate": 32000,
+   "tool": "afconvert -f m4af -d aac -b <bitrate> in.wav out.m4a"
+  }
+ },
+ "tips": [
+  {
+   "id": "tip_arrange",
+   "trigger": "the first time Move instruments turns on (ArrangeModeEvent Active), never over the tour",
+   "success": "an arrange-mode grab",
+   "persisted": "musicroom.tipsSeen",
+   "source": "Docs/11-first-five/sunny-tour.md 3.2 and 5.3"
+  },
+  {
+   "id": "tip_loop_start",
+   "trigger": "the first LOOP press ever on the tape deck (IGuide.Tip); the clicks wait for the line",
+   "success": "the line heard to the end",
+   "persisted": "musicroom.tipsSeen",
+   "source": "Docs/11-first-five/sunny-tour.md 5.3"
+  }
+ ],
+ "unityLines": [
+  "tip_arrange: the Move instruments tip (u-arrange), the wording of Docs/11-first-five/sunny-tour.md section 5.3.",
+  "tip_loop_start: the looper's first-use tip; tip_take, lay_*, tip_loop_mute, tip_loop_undo, again: the agreed wording of Docs/11-first-five/sunny-tour.md section 5.3; deck_guide_*: the tape deck walkthrough (Lessons' GUIDE button). Rendered with Guide/Tools~/espeak-voice.mjs render() into Guide/Resources/Voice; spoken differs from text only where an all-caps button name would be spelled out.",
+  "first five: intro_vr / intro_desk / swipe_skip reworded (sunny-tour.md 5.1); the first-run script and every contextual tip are the module line file GuideLines/FirstFive.json (+ VoiceManifests/FirstFive.json). Table: Guide/Tools~/sunny-lines.mjs; rendered by Guide/Tools~/render-voice.mjs with Guide/Tools~/espeak-voice.mjs render()."
+ ]
+}

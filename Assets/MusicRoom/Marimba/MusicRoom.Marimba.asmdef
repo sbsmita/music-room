@@ -1,0 +1,22 @@
+{
+    "name": "MusicRoom.Marimba",
+    "rootNamespace": "MusicRoom.Marimba",
+    "references": [
+        "MusicRoom.Core",
+        "MusicRoom.Hands",
+        "MusicRoom.Audio",
+        "Unity.TextMeshPro",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

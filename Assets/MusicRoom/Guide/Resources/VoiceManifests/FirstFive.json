@@ -1,0 +1,467 @@
+{
+ "start_help": {
+  "file": "start_help.wav",
+  "seconds": 3.57,
+  "rate": 22050
+ },
+ "tour_quick": {
+  "file": "tour_quick.wav",
+  "seconds": 1.304,
+  "rate": 22050
+ },
+ "tour_sunny_off": {
+  "file": "tour_sunny_off.wav",
+  "seconds": 3.687,
+  "rate": 22050
+ },
+ "tour_sunny_on": {
+  "file": "tour_sunny_on.wav",
+  "seconds": 2.046,
+  "rate": 22050
+ },
+ "tour_set": {
+  "file": "tour_set.wav",
+  "seconds": 2.192,
+  "rate": 22050
+ },
+ "tour_rec": {
+  "file": "tour_rec.wav",
+  "seconds": 1.36,
+  "rate": 22050
+ },
+ "tour_stop": {
+  "file": "tour_stop.wav",
+  "seconds": 1.412,
+  "rate": 22050
+ },
+ "tour_lessons": {
+  "file": "tour_lessons.wav",
+  "seconds": 3.468,
+  "rate": 22050
+ },
+ "bye_first": {
+  "file": "bye_first.wav",
+  "seconds": 3.123,
+  "rate": 22050
+ },
+ "fast_snow": {
+  "file": "fast_snow.wav",
+  "seconds": 3.866,
+  "rate": 22050
+ },
+ "fast_move": {
+  "file": "fast_move.wav",
+  "seconds": 3.784,
+  "rate": 22050
+ },
+ "fast_set": {
+  "file": "fast_set.wav",
+  "seconds": 3.31,
+  "rate": 22050
+ },
+ "fast_rec": {
+  "file": "fast_rec.wav",
+  "seconds": 2.902,
+  "rate": 22050
+ },
+ "fast_saved": {
+  "file": "fast_saved.wav",
+  "seconds": 1.884,
+  "rate": 22050
+ },
+ "fast_recenter": {
+  "file": "fast_recenter.wav",
+  "seconds": 3.755,
+  "rate": 22050
+ },
+ "fast_bye": {
+  "file": "fast_bye.wav",
+  "seconds": 3.21,
+  "rate": 22050
+ },
+ "poke_me": {
+  "file": "poke_me.wav",
+  "seconds": 2.319,
+  "rate": 22050
+ },
+ "drum_vr": {
+  "file": "drum_vr.wav",
+  "seconds": 1.785,
+  "rate": 22050
+ },
+ "drum_again": {
+  "file": "drum_again.wav",
+  "seconds": 2.485,
+  "rate": 22050
+ },
+ "nod_again": {
+  "file": "nod_again.wav",
+  "seconds": 1.751,
+  "rate": 22050
+ },
+ "harp_vr": {
+  "file": "harp_vr.wav",
+  "seconds": 2.958,
+  "rate": 22050
+ },
+ "harp_again": {
+  "file": "harp_again.wav",
+  "seconds": 3.086,
+  "rate": 22050
+ },
+ "open_again": {
+  "file": "open_again.wav",
+  "seconds": 2.425,
+  "rate": 22050
+ },
+ "close_again": {
+  "file": "close_again.wav",
+  "seconds": 2.265,
+  "rate": 22050
+ },
+ "bye_more": {
+  "file": "bye_more.wav",
+  "seconds": 3.4,
+  "rate": 22050
+ },
+ "bye_more_menu": {
+  "file": "bye_more_menu.wav",
+  "seconds": 3.107,
+  "rate": 22050
+ },
+ "tip_middle_c": {
+  "file": "tip_middle_c.wav",
+  "seconds": 3.109,
+  "rate": 22050
+ },
+ "tip_sticks": {
+  "file": "tip_sticks.wav",
+  "seconds": 2.325,
+  "rate": 22050
+ },
+ "tip_sticks_drop": {
+  "file": "tip_sticks_drop.wav",
+  "seconds": 2.235,
+  "rate": 22050
+ },
+ "tip_hihat": {
+  "file": "tip_hihat.wav",
+  "seconds": 2.289,
+  "rate": 22050
+ },
+ "tip_choke": {
+  "file": "tip_choke.wav",
+  "seconds": 2.062,
+  "rate": 22050
+ },
+ "tip_harp_colors": {
+  "file": "tip_harp_colors.wav",
+  "seconds": 2.862,
+  "rate": 22050
+ },
+ "tip_harp_damp": {
+  "file": "tip_harp_damp.wav",
+  "seconds": 2.738,
+  "rate": 22050
+ },
+ "tip_switches": {
+  "file": "tip_switches.wav",
+  "seconds": 3.146,
+  "rate": 22050
+ },
+ "tip_room_snow": {
+  "file": "tip_room_snow.wav",
+  "seconds": 3.428,
+  "rate": 22050
+ },
+ "tip_mr_fire": {
+  "file": "tip_mr_fire.wav",
+  "seconds": 3.049,
+  "rate": 22050
+ },
+ "tip_deck": {
+  "file": "tip_deck.wav",
+  "seconds": 2.251,
+  "rate": 22050
+ },
+ "tip_rec": {
+  "file": "tip_rec.wav",
+  "seconds": 3.49,
+  "rate": 22050
+ },
+ "tip_loop_layer": {
+  "file": "tip_loop_layer.wav",
+  "seconds": 2.402,
+  "rate": 22050
+ },
+ "tip_loop_clear": {
+  "file": "tip_loop_clear.wav",
+  "seconds": 2.123,
+  "rate": 22050
+ },
+ "tip_loop_tempo": {
+  "file": "tip_loop_tempo.wav",
+  "seconds": 2.881,
+  "rate": 22050
+ },
+ "tip_loop_click": {
+  "file": "tip_loop_click.wav",
+  "seconds": 2.108,
+  "rate": 22050
+ },
+ "tip_loop_tidy": {
+  "file": "tip_loop_tidy.wav",
+  "seconds": 2.214,
+  "rate": 22050
+ },
+ "tip_loop_saved": {
+  "file": "tip_loop_saved.wav",
+  "seconds": 1.997,
+  "rate": 22050
+ },
+ "tip_deck_guide": {
+  "file": "tip_deck_guide.wav",
+  "seconds": 3.055,
+  "rate": 22050
+ },
+ "quick_snow": {
+  "file": "quick_snow.wav",
+  "seconds": 2.965,
+  "rate": 22050
+ },
+ "quick_play": {
+  "file": "quick_play.wav",
+  "seconds": 3.36,
+  "rate": 22050
+ },
+ "quick_wow": {
+  "file": "quick_wow.wav",
+  "seconds": 3.344,
+  "rate": 22050
+ },
+ "tip_listen_back": {
+  "file": "tip_listen_back.wav",
+  "seconds": 3.379,
+  "rate": 22050
+ },
+ "tip_record_glow": {
+  "file": "tip_record_glow.wav",
+  "seconds": 3.669,
+  "rate": 22050
+ },
+ "tip_play_brings": {
+  "file": "tip_play_brings.wav",
+  "seconds": 2.542,
+  "rate": 22050
+ },
+ "tip_window_show": {
+  "file": "tip_window_show.wav",
+  "seconds": 2.886,
+  "rate": 22050
+ },
+ "tip_song_stars": {
+  "file": "tip_song_stars.wav",
+  "seconds": 3.256,
+  "rate": 22050
+ },
+ "tip_paint_walls": {
+  "file": "tip_paint_walls.wav",
+  "seconds": 3.782,
+  "rate": 22050
+ },
+ "tip_paint_keep": {
+  "file": "tip_paint_keep.wav",
+  "seconds": 3.306,
+  "rate": 22050
+ },
+ "tip_paint_throw": {
+  "file": "tip_paint_throw.wav",
+  "seconds": 2.664,
+  "rate": 22050
+ },
+ "tip_paint_gallery": {
+  "file": "tip_paint_gallery.wav",
+  "seconds": 2.173,
+  "rate": 22050
+ },
+ "tip_ghost_hands": {
+  "file": "tip_ghost_hands.wav",
+  "seconds": 3.166,
+  "rate": 22050
+ },
+ "tip_record_on_top": {
+  "file": "tip_record_on_top.wav",
+  "seconds": 2.985,
+  "rate": 22050
+ },
+ "swipe_again": {
+  "file": "swipe_again.wav",
+  "seconds": 3.055,
+  "rate": 22050
+ },
+ "tip_seat_turn": {
+  "file": "tip_seat_turn.wav",
+  "seconds": 3.091,
+  "rate": 22050
+ },
+ "tip_summon": {
+  "file": "tip_summon.wav",
+  "seconds": 3.589,
+  "rate": 22050
+ },
+ "tip_reset_view": {
+  "file": "tip_reset_view.wav",
+  "seconds": 1.932,
+  "rate": 22050
+ },
+ "tip_arrange_ray": {
+  "file": "tip_arrange_ray.wav",
+  "seconds": 2.784,
+  "rate": 22050
+ },
+ "tip_turn": {
+  "file": "tip_turn.wav",
+  "seconds": 2.48,
+  "rate": 22050
+ },
+ "tip_turn_two": {
+  "file": "tip_turn_two.wav",
+  "seconds": 2.594,
+  "rate": 22050
+ },
+ "tip_move_height": {
+  "file": "tip_move_height.wav",
+  "seconds": 1.717,
+  "rate": 22050
+ },
+ "tip_arrange_done": {
+  "file": "tip_arrange_done.wav",
+  "seconds": 3.393,
+  "rate": 22050
+ },
+ "tip_arrange_saved": {
+  "file": "tip_arrange_saved.wav",
+  "seconds": 2.381,
+  "rate": 22050
+ },
+ "tip_panel_move": {
+  "file": "tip_panel_move.wav",
+  "seconds": 2.583,
+  "rate": 22050
+ },
+ "tip_move_turn_on": {
+  "file": "tip_move_turn_on.wav",
+  "seconds": 3.248,
+  "rate": 22050
+ },
+ "tip_move_quiet": {
+  "file": "tip_move_quiet.wav",
+  "seconds": 3.889,
+  "rate": 22050
+ },
+ "tip_scroll": {
+  "file": "tip_scroll.wav",
+  "seconds": 2.372,
+  "rate": 22050
+ },
+ "tip_back": {
+  "file": "tip_back.wav",
+  "seconds": 1.663,
+  "rate": 22050
+ },
+ "tip_lessons": {
+  "file": "tip_lessons.wav",
+  "seconds": 2.193,
+  "rate": 22050
+ },
+ "tip_lesson_play": {
+  "file": "tip_lesson_play.wav",
+  "seconds": 3.205,
+  "rate": 22050
+ },
+ "tip_lesson_kick": {
+  "file": "tip_lesson_kick.wav",
+  "seconds": 2.939,
+  "rate": 22050
+ },
+ "tip_lesson_harp": {
+  "file": "tip_lesson_harp.wav",
+  "seconds": 2.377,
+  "rate": 22050
+ },
+ "tip_lesson_done": {
+  "file": "tip_lesson_done.wav",
+  "seconds": 3.301,
+  "rate": 22050
+ },
+ "tip_instruments": {
+  "file": "tip_instruments.wav",
+  "seconds": 2.734,
+  "rate": 22050
+ },
+ "tip_options": {
+  "file": "tip_options.wav",
+  "seconds": 3.184,
+  "rate": 22050
+ },
+ "tip_recordings": {
+  "file": "tip_recordings.wav",
+  "seconds": 3.246,
+  "rate": 22050
+ },
+ "tip_delete": {
+  "file": "tip_delete.wav",
+  "seconds": 3.152,
+  "rate": 22050
+ },
+ "tip_exit": {
+  "file": "tip_exit.wav",
+  "seconds": 1.916,
+  "rate": 22050
+ },
+ "tip_hide_sunny": {
+  "file": "tip_hide_sunny.wav",
+  "seconds": 1.772,
+  "rate": 22050
+ },
+ "tip_mr_table": {
+  "file": "tip_mr_table.wav",
+  "seconds": 2.96,
+  "rate": 22050
+ },
+ "tip_mr_permission": {
+  "file": "tip_mr_permission.wav",
+  "seconds": 3.185,
+  "rate": 22050
+ },
+ "tip_mr_setup": {
+  "file": "tip_mr_setup.wav",
+  "seconds": 3.496,
+  "rate": 22050
+ },
+ "tip_mr_anchor": {
+  "file": "tip_mr_anchor.wav",
+  "seconds": 2.953,
+  "rate": 22050
+ },
+ "tip_mr_hands": {
+  "file": "tip_mr_hands.wav",
+  "seconds": 3.709,
+  "rate": 22050
+ },
+ "tip_mr_leave": {
+  "file": "tip_mr_leave.wav",
+  "seconds": 3.05,
+  "rate": 22050
+ },
+ "tip_bowl_sing": {
+  "file": "tip_bowl_sing.wav",
+  "seconds": 3.345,
+  "rate": 22050
+ },
+ "tip_look_pinch": {
+  "file": "tip_look_pinch.wav",
+  "seconds": 2.575,
+  "rate": 22050
+ }
+}

@@ -1,0 +1,283 @@
+# MusicRoom.Harp (stage 3: implemented, review round 1 fixed; 10-upgrade physical harp wired)
+
+The 22-string lever harp. It has a frame (soundbox, soundboard, rib,
+pillar, cap, tapered Catmull-Rom neck, base, feet, brass pins) and 22 strings that bend under a finger and ring
+visibly. It implements the catch / bend / slip pluck, resting tips and palm damping, glows, hover, the desktop click and
+drag, and the harp's audio source.
+Specs: `Docs/05-instruments.md` section 5 (`harp`, `harp.build`, `curves.harpVelocityOf`);
+ARCHITECTURE.md 15.3 (checklist), 0 (desktop model), 3.3 (XR gates), 3.4, 7, 8, 14 (rendering, draw budgets), 16, 17;
+the harp's reference checks (`HarpReferenceCheckTests`). References `MusicRoom.Core`, `MusicRoom.Hands`,
+`MusicRoom.Audio` only. Built against the revised foundation (section 21); see `CONTRACT-REQUESTS.md` for the merge notes.
+
+## Public contract
+
+| What | Value |
+|---|---|
+| Module | `MusicRoom.Harp.HarpModule`, Order 32 (`HarpModule.Harp` = the instrument) |
+| Registers | `IInstrument` (Kind Harp, TickOrder 20, no stick pointers), `IHarpApi`, `Rig` (RigId.Harp), `IMaterialTemplateProvider` (`HarpMaterials`, editor) |
+| Scene | `World/Harp` (= `Rig.Group`, origin on the floor, strings in local z = 0): `Frame/` (12 invisible handle parts + 4 drawn meshes), `Strings` (one mesh), `StringsHitPlane` (collider only); the floor blob is Room's (`RigShadows`, integration) |
+| Rig | Priority 2; HomeAll (-0.78, 0, -0.2) yaw 83; HomeSingle (mean string-midpoint x = -0.2966, 0, 0.45) yaw 180; `Handles` = the 12 frame-part renderers, an `IReadOnlyList<Renderer>` filled once in `Init` (never the strings, the blob or the hit plane); `Zone` = the strings' play zone |
+| `PlaySurfaceAt(world)` | `HarpStrings` when present and within 5 cm of the string plane and 4 cm (in the plane) of a string segment |
+| `PlayedParts` | the one strings renderer |
+| Audio | `SourceId.Harp` parented at harp-local (-0.33, 0.8, 0). An isolated pluck (poke, slip, lift-off, desktop click, playback) plays ASAP (`when = 0`). The members of a sweep share `FrameNow + one DSP block + glissando delay` (15.3, 17) |
+| Recorder | every pluck `TakeEvent.Harp(i, vel, u, speed, mode)` ("through"/"across"), every damp of a ringing string `TakeEvent.HarpDamp(i)`; `IRecorder` resolved lazily (Lessons is Order 40) |
+| `LastPlayMs` | stamped on a pluck, a catch and a resting hand, so the grab guards read play, not a grab |
+| Desktop | while `!App.IsPresenting`: a left press whose nearest `Layers.PlaySurface` hit is the harp's `StringsHitPlane` |
+
+`IHarpApi` (harp-local values): `StringCount` 22; `MidiOf(i)` = 48 + 12(i/7) + [0,2,4,5,7,9,11][i%7] (C3..C6, static
+table, -1 out of range); `StringStart/End(i)` = a (soundboard end) / b (neck end); `PlayPoint(i)` =
+lerp(a, b, clamp((.95 - a.y)/(b.y - a.y), .3, .4)) (10-upgrade harp.md 5.2; the clamp was .3-.7 before); `Highlight(i, k)` = a lesson target glows the lesson cue's purple #9e4dff (`LessonCue`) x (.35 + .65 k)
+while it was highlighted this frame or the last; `PlaybackPluck(i, vel, u, speed, mode)` replays the whole stroke (the 70 ms
+retrigger guard applies); `PlaybackDamp(i)`.
+Extra public surface for tests and tools: `HarpInstrument.Play` (the `HarpPlay` logic), `StringsMesh`, `StringsRenderer`,
+`VertexStart(i)`, `VerticesPerString`, `RestLocal(i, k)`, `ShownGlow(i)`, `FrameRenderers` (handles),
+`FrameDrawRenderers` (the 4 draws), `Blob`, `HitCollider`, `DesktopPress/DesktopDrag/EndDesktopDrag/RayOnPlane`,
+`ScriptedMouse/Button/Ray`.
+
+## Files
+
+| File | Role |
+|---|---|
+| `HarpModule.cs` | the `IAppModule`: builds `World/Harp`, logs `[Harp] ready` |
+| `HarpInstrument.cs` | MonoBehaviour: `IInstrument` + `IHarpApi`. Builds the meshes (frame combined per material, one strings mesh), uploads deformation and glow once per frame, draws hover glows, owns the desktop click/drag, makes the materials |
+| `HarpPlay.cs` | the play logic (update / rest / stroke / letGo / pluck / damp / animate / paint / hover / desktopDown), plain C#, allocation-free |
+| `HarpGeometry.cs` | string table, play points, the 12 frame parts (right-handed build, one conversion), string meshes |
+| `CatmullRomCurve.cs` | centripetal Catmull-Rom curve with `getPoint`, arc-length `getPointAt`, tangents (double) |
+| `PrimitiveMeshes.cs` | Cylinder / Sphere / Box / Tube meshes, `ToNonIndexed`, `ComputeVertexNormals`, `MeshData` (clone, transform with inverse-transpose normals, append, `ToMesh`) |
+| `HarpSound.cs` | `IHarpSound` (what the harp asks of audio) and `EngineSound` over `IAudioEngine` |
+| `HarpMaterials.cs` | `IMaterialTemplateProvider`: template `Harp/Strings` on `MusicRoom/HarpStrings` |
+| `Shaders/HarpStrings.shader` | `MusicRoom/HarpStrings`: unlit-style URP forward pass with per-vertex light (SH + main + additional lights, wrap diffuse), base colour from `COLOR`, glow from `TEXCOORD1`; SRP-Batcher shaped, single-pass instanced |
+| `Resources/MaterialTemplates/Harp/Strings.mat` | generated by `Tools/unity.sh render-setup` |
+| `CONTRACT-REQUESTS.md` | foundation bugs found (Audio start-up race, LitEmissive keyword), an optional `BlockSeconds`, merge notes |
+
+## Behaviour (constants)
+
+- **Layout.** Soundboard line sb0 (-.55, .17) to sb1 (0, 1.1); the neck is a centripetal Catmull-Rom through (-.68, 1.3),
+  (-.5, 1.43), (-.25, 1.39), (-.06, 1.25), (0, 1.12). String i (t = i/21): a = lerp(sb0, sb1, .045 + .82t),
+  b = neck.getPoint(.075 + .805t) (curve parameter), radius .0016 - .0005t, 5 sides x 16 segments, open ended. C strings
+  are red #c52323, F blue #1f3fa6, the others cream #f1e9d6. Soundbox = flat-shaded 5-sided frustum (r .1 -> .055) from
+  sb0 + .093 out to sb1 + .057 out, turned pi/10. Soundboard strip = a cylinder (.011, .016) scaled 4x through the
+  plane, 1.2 cm out. Walnut rib on the board line. Pillar (-.7, .02) -> (-.68, 1.3) r .035; cap r .045; neck tube
+  40 x 12 r .04 tapering to x .6 past t .55 (arc length); base .95 x .04 x .22; 4 feet; 22 brass pins (r .004, .02 long)
+  at Unity z -.03.
+- **Pointers.** Hand pointers only (plus the harp's own desktop mouse pointer). **Pointers of the desktop mouse hand
+  (`Pointer.FromMouse`) never catch, pluck or rest**, because the click path plays (section 0). They still show a hover
+  glow. A pointer leaves (dwell reset, a held string returns silently) when it was inactive this frame or the last, or
+  when it is outside |z| <= .08, .1 <= y <= 1.5, -.75 <= x <= .12. A repeated pose changes nothing. Speeds use the
+  pointer's learned sample interval (`SampleDt`, else dt, >= 1 ms).
+- **Rest.** A tip dwells when it is between 5 mm short of the plane (on the side it came from) and 3 cm through it,
+  slower than .12 m/s, and within 2 cm of a string (u in [.02, .98]). After 150 ms within a 1 cm drift it counts for its
+  hand. A settling or resting tip never plucks.
+- **Stroke.** Each string is a line, and the move is read in the (across, through) plane square to it. A string is
+  caught when the path crosses its line faster than .2 m/s within 12 mm (sweep, `across`) or 9 mm (poke, `through`;
+  only the nearest string), at u in [.03, .97]. Crossed strings are handled in crossing order:
+  - A string already 6 mm past by the end of the move is plucked in passing, at the fraction where it slipped, with
+    delay = (f - f_first) x sdt (the glissando spread).
+  - The last string short of 6 mm is held. It bends with the finger without sound until it slips at 6 mm (velocity from
+    the pull speed). It goes back silently if the finger backs off 2 mm. It sounds softer (x d/6 mm) if the finger lifts
+    off sideways (reach x1.5).
+  - A string held by another fingertip stays with that fingertip.
+- **Scheduling (15.3, 17).** A move that makes more than one sound, or that continues a glissando this fingertip sounded
+  in the last 2 frames, is a sweep: its plucks go at `FrameNow + one DSP block + delay`, which keeps the spacing exact
+  even though the audio thread drains the batch a block later. Any other pluck uses `when = 0` (ASAP): a lone poke, one
+  slip, a lift-off, a desktop click or a playback pluck. The block is the engine's real DSP buffer (256 frames = 5.33 ms
+  at 48 kHz).
+- **Pluck.** 70 ms retrigger guard per string. A re-pluck releases the ringing voice (`Release(h, thud: false)`), then
+  calls `Pluck(i, vel, when, {u, speed, mode})` with vel = clamp((speed - .03)/1.2, .2, 1), and records the event. The
+  string's amp = .0012 + .0028 vel. It swings along the stroke (or across / through for playback), with flash 1, and its
+  blur starts (E8, below).
+- **Palm damping.** Two or more resting tips of one hand on two or more strings damp the strings under the hand: the span
+  lo..hi when three or more tips rest, else only the strings under the tips. Strings this hand plucked in the last
+  400 ms are skipped. Each ringing string gets `Damp(h, n)`, n = how many are ringing, so a whole hand makes a louder
+  "shh". The hand is stamped as playing.
+- **Visuals.**
+  - Blur (E8, experience.md section 10; `StringBlur.cs` `HarpBlur`): the envelope of the string's modal motion, the
+    triangle of height amp plucked at ampU as 8 modes b_n = 2 h sin(n pi p) / (n^2 pi^2 p (1 - p)), each decaying
+    with the sound's own tau_n (`IHarpSound.PartialTau` = `IAudioEngine.HarpPartialTau`), sampled at the 17 rings over
+    24 phases: up_j / lo_j. At t = 0 it is d'Alembert's parallelogram (widest at the pluck point above, at 1 - p below).
+    Every frame for 0.1 s after the pluck, then every other frame (alternate strings); a hand on the string fades it
+    with tau 35 ms; under 0.05 mm of swing it stops. `Amp` = amp x the fundamental's decay (diagnostics). There is
+    no per-frame alternating bow (it strobed at 45 Hz).
+  - Shape: the core = min(bend, 6 mm) tri(u, bendU) along (bendD, bendZ); the two edge copies add up_j / lo_j along the
+    stroke (ampD across the plane, ampZ through it).
+  - Mesh: three copies of every string, the cores first (index order = draw order), then the upper and the lower edges
+    (`EdgeStart(i, upper)`, `CopyVertexCount`); uv1.w is the vertex alpha: core 1 - .65 b, edges .45 b with
+    b = clamp01((up - lo) / (4 r)) (`ShownAlpha`). `MusicRoom/HarpStrings` is alpha-blended in the transparent queue
+    with ZWrite off for the colour; a depth-only first pass (`StringsDepth`, SRPDefaultUnlit) writes the cores' depth
+    (COLOR.a 1 on the cores, 0 on the edges), so a string still hides a finger behind it in VR and is not punched out by
+    the MR hand cut-out where it is in front of the real hand (experience.md 10: "ZWrite Off for the edge copies, core
+    first"). Still one draw call per pass.
+  - Upload: only the strings that moved are rewritten into one persistent `NativeArray<Vector3>`, uploaded with ONE
+    `Mesh.SetVertices` per frame (fixed bounds + 4 cm, no bounds pass); glows and alphas with one `SetUVs(1)`.
+  - Glow: purple #9e4dff (`LessonCue`; was #58dcff) x (.35 + .65 k) for a lesson target, then a lerp toward #ffc46a by .8 x .25 flash (E8: a quarter of
+    the former strength; `PluckFlashGain`), in linear RGB. It is
+    written into the string's vertices (uv1) and uploaded once when any glow changed. A highlight or playback pluck
+    after the harp's Tick is flushed in `LateUpdate`.
+  - Hover: a tip within 5 cm of the plane over a string (2 cm) shows a .07 x .016 glow on the string, along it, with
+    strength 1 - |z|/.05.
+- **Desktop (section 0).** `StringsHitPlane` is a 1.0 x 1.4 x 0.002 m `BoxCollider` on `Layers.PlaySurface` at
+  harp-local (-0.33, 0.72, 0). It is the click path, used only while `!App.IsPresenting`:
+  - A left press with no Shift/Alt (those belong to Layout) is the harp's when the nearest `PlaySurfaceMask` hit
+    (`Physics.Raycast`) is that collider. It plucks the nearest string within 2 cm (vel .7, through, .9 m/s, ASAP).
+  - While the button is held, the mouse is a pointer on that plane that sweeps the strings like a fingertip.
+  - A nearer play surface of another module takes the click.
+  - The foundation's `DesktopRigFallback.dragBlockMask` stops the look-around for that press.
+
+## The physical harp (10-upgrade/harp.md section 6, the new sound): deleted 2026-11-11
+
+The harp plays the classic sound only. The physical harp unit and its path in `HarpPlay` / `HarpSound` (`Physical`,
+`HarpVelocity`, `Touch`, `DampString`, the palm re-send, `StringAmplitude` and the measured swing) were deleted on
+2026-11-11 (the string blur follows today's harp's own partial decay, `HarpDecay`); `HarpPhysicalPlayTests` went with
+them. What follows is the history of what it changed.
+- **Velocity.** `HarpVelocity(speed) = clamp(ln(speed / 0.10) / ln 22, 0, 1)` (0.2 m/s -> .224, 0.75 -> .652, 2.2 -> 1)
+  for slips, crossings and lift-offs; a lift-off sounds as `HarpVelocity(speed d / CATCH_MAX)`; the desktop click is
+  `HarpVelocity(0.9) = .711`. `HarpPlay.Velocity(speed)` picks the curve of the sound that plays.
+- **Finger.** A fingertip that starts holding a string sends `Touch(i, down)` (the engine damps a held string, T60 30 ms;
+  its re-pluck starts at once). Backing off, sliding off silently or leaving sends `Touch(i, up)`; a sounding release
+  just plucks (the pluck lets the finger go).
+- **Re-pluck.** No `Release` of the ringing voice: the engine catches the string itself (a 4 ms fade to -30 dB).
+- **Stroke direction.** `PluckOptions.Ud / Uz` = |across|, |through| of the stroke (playback and the desktop: from the
+  mode), for the two polarisations.
+- **Palm.** Every string the hand covers is damped, ringing or not (a silent string then cannot ring in sympathy), when the
+  hand lands and every `PalmResendMs` (200 ms) while it rests (the engine's palm lasts 0.35 s per call): ringing voices
+  through `Damp(h, n)` (recorded as before), the others by string (`DampString(i, n)`).
+- **Visuals.** A string swings as the engine measures it (`StringAmplitude(i)` = VibScale sqrt(level), calibrated so a fresh
+  mf pluck matches today's .0012 + .0028 vel): sympathy, palms, fingers and catches show. The pluck's own estimate holds
+  for `PluckHoldSeconds` (30 ms) after the note sounds, then fades (35 ms) into the measurement. Flash and bend are
+  unchanged. Integration (both upgrades together): the measured swing sets the SIZE of E8's blur (below) and the blur keeps
+  its SHAPE, the 8 modes ageing with the new harp's own loop decays (`HarpPartialTau` answers from the unit while it
+  plays): `BlurGain` = measured / (h e^(-t / tau_1)), so `Amp` = the measured swing. A string that starts to ring with no
+  blur (sympathy) or rings up past `MaxBlurRegain` (2) x its decayed pluck gets a fresh blur of that height at its last
+  pluck point (the middle, through the plane, if it was never plucked). Under the palm or a finger the engine's
+  measurement, not the 35 ms visual fade, narrows it. Today's harp keeps E8 exactly (`StringAmplitude` = -1).
+- **Play point.** `HarpGeometry.PlayUMax` = .40 (was .70), for both sounds: the lesson glow and capsule sit at most 40 %
+  up the string (C3 ~28 cm, C4 ~10 cm lower), where a pluck keeps its even partials; B4 and up are unchanged.
+
+## Rendering and performance (draw budget harp <= 6, sections 14 and 17)
+
+- **5 draws (6 with the floor shadow):** the frame is 4 meshes combined per material (maple: soundbox, pillar, cap,
+  neck; spruce: soundboard; walnut: rib, base, 4 feet; brass: 22 pins). The 22 strings are 1 mesh. Since the
+  integration (2026-10-31) the contact shadow is Room's `RigShadows` entry (`MusicRoom/FloorDecal`, follows the rig on
+  the floor), so the harp builds no blob and there is exactly one under it. Measured by
+  `HarpVisualTests.TheHarpStaysInsideItsDrawBudget` (profiler `Draw Calls Count`, harp in view minus harp hidden,
+  Room's blob included): 5 in the integrated app.
+- **Handles:** the 12 frame parts stay as renderers with `forceRenderingOff` (no draw). Their transforms, meshes and
+  bounds give Layout one oriented box per part as grab handles.
+- **No `MaterialPropertyBlock` anywhere** (asserted in PlayMode). Woods are URP Lit clones with the shared textures
+  `SharedTextures` `Core/wood_maple` (repeat 2), `Core/wood_spruce` (4), `Core/wood_walnut` (2); smoothness =
+  1 - roughness (.65, .7, .2). Brass is `LitMetal`, smoothness .7.
+  The harp bakes no textures of its own. Headless boots skip the textures (visual only).
+- **Main thread:** `Tick` + `Hover` + the API allocate 0 B (`HarpAllocTests`: 96 frames of sweeps, catches, slips,
+  damps, highlights, playback and hover glows, with a positive calibration).
+- **Casters (MR only):** the maple and walnut draws (the soundbox, pillar, neck and base cast). Strings, pins,
+  soundboard and blob never cast.
+
+## Deliberate design choices
+
+- Harp-local Unity z is the right-handed design z negated (ARCHITECTURE.md 5); every product the logic forms is unchanged.
+- `lastPluck` starts at -infinity (-1 ms would block plucks in the first 70 ms of the app clock).
+- When the harp leaves the scene (`OnDisable`), held strings return silently and dwells restart (nothing stays frozen).
+- Isolated plucks are ASAP. Sweeps are block-aligned so their spacing survives the audio thread (scheduling every
+  pluck at `audio.now + delay` alone would let the audio thread's drift change it).
+- Strings: per-vertex lighting in a custom shader (a string is 1-3 px wide on the headset), designed as a lit
+  surface of roughness .5 + emissive.
+- Clear coat (maple .5, spruce .7) has no Quest equivalent. There is no walnut roughness map.
+
+## Tests
+
+EditMode (`Tests/EditMode/Harp`, 64):
+- `HarpGeometryTests` (12): string table, play points, neck centreline and tube vertices against the reference values,
+  soundbox, part transforms and boxes vs the reference, pins, string mesh, sphere / box meshes, outward winding after the
+  mirror, rig coordinates.
+- `HarpPlayTests` (29): velocity curve, constants, Side, glissando order and delays on the block-aligned base, the
+  .2 m/s threshold, catch / slip (an isolated slip is ASAP), back-off, lift-off, the poke takes the nearest string,
+  70 ms retrigger, resting, palm span / two tips / same string / own follow-through, held by another finger, leaving,
+  decay and damp, deformation, glow, hover, play zone, desktop click, voice expiry, playback (ASAP) and its recording.
+  Also: an isolated poke is ASAP while a sweep shares the base, a glissando continuing across frames keeps the base,
+  the mouse hand never plucks, rests or damps, and the logic runs with no engine.
+- `HarpReferenceCheckTests` (13): the harp reference checks (sections 1, 3, 4, 5, 6). Visibility from four seats with occluders, the
+  Quest view, 1.5 px width, reach. Every string is plucked by a poke and by a sweep, and no other string. Crossing
+  holds silently then slips; ringing swings and decays; back-off; lift-off is softer. Glissando up / down and spread;
+  the 1 cm / 2 cm zone; slow sweep; lingering; a poke between strings; palm damping; same speed gives the same
+  velocity; every pluck lights at once; hover behaves like the keys.
+- `HarpMaterialTests` (3): the `Harp/Strings` template and shader, the shader's SRP-Batcher / stereo structure, and
+  no texture provider of its own (Core woods with the harp's repeats: 2, 4, 2).
+- `HarpPhysicalPlayTests` (7): the physical harp's deltas on the same scripted fingertips (`FakeHarpSound.PhysicalMode`):
+  the curve, slips with the stroke direction and Touch down, back-off / leave = Touch up, the lift-off, no release on a
+  re-pluck, the desktop .711, the palm on every covered string with the 0.2 s re-sends, the engine-measured swing.
+
+PlayMode (`Tests/PlayMode/Harp`, 17 + 1 performance). Every fixture boots through `TestBoot` (fresh `MemorySettingsStore`, temp
+`DataPath`) with `manualFrames: true` (exactly 1/72 s per `_boot.Step`), and the instrument tests also use a scripted
+audio clock. Sounds are asserted on `AudioTestTap.Calls` only, never the Audio module's recipe `Commands`.
+- `HarpInstrumentTests` (11):
+  - registration (12 invisible handles filled once, 1 played part, 5 drawn renderers headless, the PlaySurface
+    collider, the source);
+  - the seat home after the first arrange;
+  - a scripted FakeHandSource sweep through the whole app;
+  - a one-sample sweep with the exact glissando spacing on the block-aligned base, then an isolated poke at `when = 0`;
+  - mouse-hand pointers never pluck;
+  - a hand laid on ringing strings (`Damp(h, 4)` on each string's own voice);
+  - playback / re-pluck release without thud / damp / highlight as vertex data;
+  - the desktop click on the PlaySurface collider (a nearer play surface wins), its drag, and the drag-block mask;
+  - play surface / zone / hover glow / shared textures / 6 drawn renderers;
+  - a held rig (an `IGrabService` probe) is not ticked: no sound, no glow, and it plays again on release;
+  - leaving the scene lets a held string go silently.
+- `HarpAllocTests` (1).
+- `HarpClassicPlayTests` (2, today's harp on the real audio thread): pokes through the module reach today's voices on
+  the Harp source (no unit handle, heard); 0 B on the module's path. `HarpLoadTests` (the unused unit offline) (`[Category("Performance")]`): CPU per block.
+- `HarpVisualTests` (2, `[Category("Graphics")]`, `test-play --gpu`):
+  - the draw budget (6 measured);
+  - PNGs in `Builds/Shots/harp/`: `harp-seated`, `harp-seated-left`, `harp-pluck-closeup`,
+    `harp-pluck-seat`, `harp-target`, `harp-hover`, `harp-single`.
+
+## Known gaps
+
+- Sound: today's harp (`StringSynth`) is the only harp sound since 2026-11-10; the physical harp unit was deleted on
+  2026-11-11.
+- Recorder events do not carry the stroke direction yet (harp.md 6: optional `ud, uz` on `TakeEvent.Harp`; it lives in
+  Core / Lessons): playback takes the direction from the mode (through = (0, 1), across = (1, 0)).
+- Lesson capsules and the recorder playback wiring belong to the Lessons module (see the CONTRACT-REQUESTS.md merge
+  notes).
+- The shadow blob is Room's (`RigShadows`, `FloorDecal`); `HarpInstrument.Blob` is always null.
+- Screenshots in this clone are lit by the Room stub plus two test lights (floor lamp, fire), so the wood reads darker
+  than in the full room. The final look depends on the Room module's lighting and probe.
+- Device-only (UNVERIFIED): how the 12 mm sweep zone and the 6 mm slip feel with Quest 3S hand tracking; the per-frame
+  ringing blur at 72 Hz; string visibility at 1-3 px with MSAA 4 and foveation; and the latency of an ASAP poke vs a
+  block-aligned sweep (`AudioEngine.LatencyProbe`).
+- This clone carries a local copy of the Audio start-up race fix (CONTRACT-REQUESTS.md 1). The Harp merge does not
+  include it; the Audio module's own fix must be merged.
+
+## 10-upgrade (experience.md E8)
+
+- Decays: `IAudioEngine.HarpPartialTau(stringIndex, partial)` returns `double` (integration: the harp module's member wins
+  over E8's `float` default): the new harp's loop decays while its unit plays (`IHarpStrings.HarpPartialTau`), else the
+  old synth's formula (`HarpDecay.ClassicPartialTau` = `HarpPartialDecay.OldTau`); a string's midi number is accepted too.
+  `EngineSound.PartialTau` casts it to float. Without an engine (the module's test doubles) the harp uses
+  `HarpPartialDecay.V2Tau`, the v2 design decay.
+- Tests: `EditMode/Harp/HarpBlurTests` (the old synth's tau table, the v2 decays against harp.md's targets and the
+  contract default, the 64-mode closed-form check, the G4 rows at t = 0 .. 2 s with alphas, the symmetry shortcuts
+  against a plain 24-phase sum, a C3 pluck that blurs widest near the pluck and stops after 5 .. 15 s), updated
+  `HarpPlayTests` / `HarpReferenceCheckTests` / `HarpVisualTests` / `HarpInstrumentTests` (blur instead of the alternating bow,
+  three copies, the quarter flash), `HarpAllocTests` (unchanged: plucks and blur updates allocate nothing), and
+  `PlayMode/Harp/HarpBlurShotsTests` (`--gpu`, `Builds/Shots/exp-world`: still / blur / 0.5 s later close-ups, a low and
+  a high C together, a glissando from the seat; since the integration its waits are real time too, because the physical
+  harp's swing follows the audio thread, and the widest swing is taken once the engine has heard the note).
+- Cost: 936 multiply-adds per ringing string per update (13 distinct phases of 24, rings 9..16 mirrored from 0..8; both
+  exact identities), 22 strings at half rate about 20 k a frame.
+
+
+## The many-instrument platform (12-new-instruments/platform.md 3.3, 13.3; phase 0)
+
+`HarpPlatform` (`HarpPlatform.cs`, registered by `HarpModule.Init`, `HarpModule.Platform`) is a thin forward over today's
+harp; nothing else in the module changed.
+
+| Service | Behaviour |
+|---|---|
+| `IStowable` (Kind Harp) | the harp has nothing to hide on display: `SetStowed(true, mount)` lets every held string go silently and ends a desktop drag (what leaving the scene does); `Stowed` |
+| `IInstrumentPlayback` | `harp` -> `PlaybackPluck(i, vel)` (no stroke recorded) or `PlaybackPluck(i, vel, u, speed, mode)`, `harpDamp` -> `PlaybackDamp(i)` (Lessons' classic lines, the same calls: tested); `ReleaseAll` and `CloseLane`: playback holds no string |
+| `IGuideAnchors` | `string.<i>` (0..21): string i's play point (`PlayPoint(i)`, where a seated player plucks), up = the string plane's normal on the player's side (the harp's local +z). Parsed without allocating; all 22 are in the descriptor |
+
+Conformance (`Tests/PlayMode/Harp/HarpPlatformTests`): `Rig.HomeSingle.x` is computed (the mean string midpoint) and is
+-0.29660, the descriptor's -0.2966. Measured against `Rig.Handles`, the neck's crest reaches 1.476 m, above the registry footprint's
+1.32 (`Tools/SoundLab/platform/registry.mjs`): `HarpDefinition`'s frame box now rises to 1.48 (the reference planner plans all 92 sets exactly as before with it).
+Margins: x +0.005 / -0.006, y +0.000 / +0.004, z -0.014 / +0.000.

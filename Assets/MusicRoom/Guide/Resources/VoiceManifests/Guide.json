@@ -1,0 +1,32 @@
+{
+ "tip_bring_grid": {
+  "file": "tip_bring_grid.wav",
+  "seconds": 3.004,
+  "rate": 22050
+ },
+ "tip_summon_far": {
+  "file": "tip_summon_far.wav",
+  "seconds": 3.17,
+  "rate": 22050
+ },
+ "tip_my_set": {
+  "file": "tip_my_set.wav",
+  "seconds": 3.164,
+  "rate": 22050
+ },
+ "tip_set_full": {
+  "file": "tip_set_full.wav",
+  "seconds": 3.229,
+  "rate": 22050
+ },
+ "tip_put_away": {
+  "file": "tip_put_away.wav",
+  "seconds": 2.468,
+  "rate": 22050
+ },
+ "tip_page_turn": {
+  "file": "tip_page_turn.wav",
+  "seconds": 3.068,
+  "rate": 22050
+ }
+}

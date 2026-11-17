@@ -1,0 +1,1118 @@
+{
+ "fe": {
+  "profileLo": {
+   "width": 0.5474,
+   "depth": 0.6690670628700355,
+   "shape": 0.4
+  },
+  "ratiosLo": [
+   1,
+   4.026,
+   9.981,
+   18.116,
+   27.762
+  ],
+  "profileHi": {
+   "width": 0.3877574834020015,
+   "depth": 0.5206638604881906,
+   "shape": 0.5
+  },
+  "ratiosHi": [
+   1,
+   4,
+   9.189,
+   14.397,
+   20.824
+  ],
+  "nodes1Lo": [
+   0.188,
+   0.812
+  ],
+  "nodes1Hi": [
+   0.211,
+   0.789
+  ],
+  "uniformTheory": [
+   1,
+   2.7565,
+   5.4039,
+   8.933
+  ],
+  "note": "uniform free-free Euler-Bernoulli 1 : 2.756 : 5.404 : 8.933, nodes .224 L (Fletcher & Rossing 1998 2.15); the FE reproduces these to 4 digits (design/fe check)"
+ },
+ "modes": [
+  {
+   "bar": "C3",
+   "f1": 130.81,
+   "f1Measured": 130.83,
+   "centsOff": 0.28,
+   "ratios": [
+    3.999,
+    9.998,
+    15.997
+   ],
+   "designRatios": [
+    4,
+    10,
+    16
+   ]
+  },
+  {
+   "bar": "F#3",
+   "f1": 185,
+   "f1Measured": 185.02,
+   "centsOff": 0.24,
+   "ratios": [
+    3.999,
+    9.999,
+    15.665
+   ],
+   "designRatios": [
+    4,
+    10,
+    15.667
+   ]
+  },
+  {
+   "bar": "C4",
+   "f1": 261.63,
+   "f1Measured": 261.63,
+   "centsOff": 0,
+   "ratios": [
+    4,
+    10,
+    15.333
+   ],
+   "designRatios": [
+    4,
+    10,
+    15.333
+   ]
+  },
+  {
+   "bar": "F#4",
+   "f1": 369.99,
+   "f1Measured": 370,
+   "centsOff": 0.04,
+   "ratios": [
+    4,
+    10,
+    15
+   ],
+   "designRatios": [
+    4,
+    10,
+    15
+   ]
+  },
+  {
+   "bar": "C5",
+   "f1": 523.25,
+   "f1Measured": 523.28,
+   "centsOff": 0.08,
+   "ratios": [
+    4,
+    10,
+    14.666
+   ],
+   "designRatios": [
+    4,
+    10,
+    14.667
+   ]
+  },
+  {
+   "bar": "F#5",
+   "f1": 739.99,
+   "f1Measured": 739.73,
+   "centsOff": -0.6,
+   "ratios": [
+    4.001,
+    9.603,
+    14.338
+   ],
+   "designRatios": [
+    4,
+    9.6,
+    14.333
+   ]
+  },
+  {
+   "bar": "C6",
+   "f1": 1046.5,
+   "f1Measured": 1046.2,
+   "centsOff": -0.5,
+   "ratios": [
+    4.001,
+    9.203,
+    14.011
+   ],
+   "designRatios": [
+    4,
+    9.2,
+    14
+   ]
+  }
+ ],
+ "decay": [
+  {
+   "bar": "C3",
+   "t60": [
+    2.01,
+    0.759,
+    0.257
+   ],
+   "designBarLike": 2.011,
+   "noTube": 4.092,
+   "ratioP2": 0.378
+  },
+  {
+   "bar": "F#3",
+   "t60": [
+    1.431,
+    0.52,
+    0.176
+   ],
+   "designBarLike": 1.431,
+   "noTube": 2.853,
+   "ratioP2": 0.364
+  },
+  {
+   "bar": "C4",
+   "t60": [
+    1.033,
+    0.348,
+    0.121
+   ],
+   "designBarLike": 1.033,
+   "noTube": 1.973,
+   "ratioP2": 0.337
+  },
+  {
+   "bar": "F#4",
+   "t60": [
+    0.755,
+    0.233,
+    0.086
+   ],
+   "designBarLike": 0.755,
+   "noTube": 1.348,
+   "ratioP2": 0.309
+  },
+  {
+   "bar": "C5",
+   "t60": [
+    0.56,
+    0.156,
+    0.076
+   ],
+   "designBarLike": 0.56,
+   "noTube": 0.906,
+   "ratioP2": 0.278
+  },
+  {
+   "bar": "F#5",
+   "t60": [
+    0.439,
+    0.106,
+    0.099
+   ],
+   "designBarLike": 0.439,
+   "noTube": 0.604,
+   "ratioP2": 0.241
+  },
+  {
+   "bar": "C6",
+   "t60": [
+    0.328,
+    0.079,
+    0.06
+   ],
+   "designBarLike": 0.328,
+   "noTube": 0.398,
+   "ratioP2": 0.24
+  }
+ ],
+ "evolution": {
+  "C3": [
+   661.18,
+   230.23,
+   141.81,
+   131.38
+  ],
+  "C4": [
+   332.59,
+   279.02,
+   263.12,
+   261.6
+  ],
+  "C5": [
+   525.85,
+   523.46,
+   523.28,
+   523.27
+  ],
+  "note": "spectral centroid (Hz) of 43 ms windows starting 20/60/150/400 ms after the stroke"
+ },
+ "velocity": {
+  "1": {
+   "lufs04": -15.06,
+   "centroid40ms": 716.27,
+   "contactMs": 0.729,
+   "Fmax": 360.66,
+   "speed": 4.35
+  },
+  "0.1": {
+   "lufs04": -39.66,
+   "centroid40ms": 269.02,
+   "contactMs": 1.979,
+   "Fmax": 9.36,
+   "speed": 0.26
+  },
+  "0.3": {
+   "lufs04": -29.92,
+   "centroid40ms": 351.15,
+   "contactMs": 1.292,
+   "Fmax": 39.99,
+   "speed": 0.76
+  },
+  "0.6": {
+   "lufs04": -21.71,
+   "centroid40ms": 484.67,
+   "contactMs": 0.938,
+   "Fmax": 138.4,
+   "speed": 2
+  },
+  "0.9": {
+   "lufs04": -16.49,
+   "centroid40ms": 651.36,
+   "contactMs": 0.771,
+   "Fmax": 295.43,
+   "speed": 3.7
+  }
+ },
+ "dynamics": {
+  "marimbaC4": {
+   "1": -15.06,
+   "0.05": -42.68,
+   "0.15": -36.74,
+   "0.3": -29.92,
+   "0.45": -25.21,
+   "0.6": -21.7,
+   "0.75": -18.88,
+   "0.9": -16.48
+  },
+  "pianoC4": {
+   "0.3": -30.17,
+   "0.6": -21.7,
+   "0.9": -15.69
+  },
+  "rangeMarimba_3_9": 13.44,
+  "rangePiano_3_9": 14.48
+ },
+ "position": {
+  "0.04": {
+   "p1": -18.93,
+   "p2re1": -16.4,
+   "p3re1": -62,
+   "lufs04": -23.61
+  },
+  "0.12": {
+   "p1": -24.86,
+   "p2re1": -28.65,
+   "p3re1": -71.21,
+   "lufs04": -30.54
+  },
+  "0.19": {
+   "p1": -56.63,
+   "p2re1": 18.35,
+   "p3re1": -24.35,
+   "lufs04": -33.04
+  },
+  "0.3": {
+   "p1": -21.36,
+   "p2re1": -10.22,
+   "p3re1": -56.74,
+   "lufs04": -23.76
+  },
+  "0.45": {
+   "p1": -16.49,
+   "p2re1": -20.36,
+   "p3re1": -57.98,
+   "lufs04": -21.71
+  },
+  "0.5": {
+   "p1": -16.13,
+   "p2re1": -137.04,
+   "p3re1": -58.04,
+   "lufs04": -21.8
+  }
+ },
+ "mallets": {
+  "soft": {
+   "contactMs": 1.563,
+   "centroid40ms": 336.17,
+   "lufs04": -21.89
+  },
+  "medium": {
+   "contactMs": 0.938,
+   "centroid40ms": 484.67,
+   "lufs04": -21.71
+  },
+  "hard": {
+   "contactMs": 0.438,
+   "centroid40ms": 1094.95,
+   "lufs04": -18.44
+  },
+  "finger": {
+   "contactMs": 2.063,
+   "centroid40ms": 280.29,
+   "lufs04": -23.17
+  }
+ },
+ "finger": {
+  "velFingertip06": 0.477,
+  "velMallet12": 0.501,
+  "fingerMinusMalletLU": [
+   -2.04,
+   -2.01,
+   -2.01,
+   -2.01,
+   -2.01,
+   -2,
+   -2,
+   -2.01,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2,
+   -2.01,
+   -2,
+   -2,
+   -2,
+   -1.98,
+   -2.04,
+   -3.25,
+   -4.54,
+   -5.83,
+   -7,
+   -7.92,
+   -8.5,
+   -8.89
+  ],
+  "rangeG3toFs5": [
+   -3.25,
+   -1.98
+  ],
+  "rangeFinger_3_9": 13.13,
+  "rangeMallet_3_9": 13.43
+ },
+ "handoff": [
+  {
+   "bar": "C3",
+   "mallet": "medium",
+   "vel": 0.3,
+   "nh": 63,
+   "d2AtHandoff": 0.001750703901052475,
+   "d2LocalMax": 0.002786971628665924,
+   "ratioToLocalMax": 0.628
+  },
+  {
+   "bar": "C4",
+   "mallet": "medium",
+   "vel": 0.6,
+   "nh": 46,
+   "d2AtHandoff": 0.006690919399261475,
+   "d2LocalMax": 0.021133244037628174,
+   "ratioToLocalMax": 0.317
+  },
+  {
+   "bar": "C4",
+   "mallet": "hard",
+   "vel": 1,
+   "nh": 20,
+   "d2AtHandoff": 0.025072194635868073,
+   "d2LocalMax": 0.27589625120162964,
+   "ratioToLocalMax": 0.091
+  },
+  {
+   "bar": "C5",
+   "mallet": "hard",
+   "vel": 0.8,
+   "nh": 18,
+   "d2AtHandoff": 0.07300369627773762,
+   "d2LocalMax": 0.164031982421875,
+   "ratioToLocalMax": 0.445
+  },
+  {
+   "bar": "C6",
+   "mallet": "hard",
+   "vel": 1,
+   "nh": 17,
+   "d2AtHandoff": 0.16437479853630066,
+   "d2LocalMax": 0.2327345609664917,
+   "ratioToLocalMax": 0.706
+  },
+  {
+   "bar": "F#3",
+   "mallet": "finger",
+   "vel": 0.6,
+   "nh": 91,
+   "d2AtHandoff": 0.00038460269570350647,
+   "d2LocalMax": 0.0012622252106666565,
+   "ratioToLocalMax": 0.305
+  }
+ ],
+ "lowFreq": [
+  {
+   "bar": "C3",
+   "mallet": "hard",
+   "energyBelow30HzDb": -73.16,
+   "meanOverRms": "-1.83e-5"
+  },
+  {
+   "bar": "C3",
+   "mallet": "medium",
+   "energyBelow30HzDb": -67.6,
+   "meanOverRms": "-3.57e-5"
+  },
+  {
+   "bar": "C4",
+   "mallet": "medium",
+   "energyBelow30HzDb": -64.36,
+   "meanOverRms": "-4.79e-5"
+  },
+  {
+   "bar": "C5",
+   "mallet": "hard",
+   "energyBelow30HzDb": -68.31,
+   "meanOverRms": "-3.08e-5"
+  },
+  {
+   "bar": "F#3",
+   "mallet": "finger",
+   "energyBelow30HzDb": -61.72,
+   "meanOverRms": "-6.70e-5"
+  }
+ ],
+ "aliasing": {
+  "highestModeHz": 14651.03,
+  "maxAllowed": 19200,
+  "energyAbove20kHzDb_C6_hard_edge": -149.1
+ },
+ "denormals": {
+  "subnormalStatesSeen": 0,
+  "finite": true,
+  "maxActiveBars": 24,
+  "activeAtEnd": 0,
+  "retired": 24,
+  "lastSecondPeak": 0,
+  "capped": 13
+ },
+ "stability": {
+  "events": 709,
+  "peak": 1.835,
+  "finite": true,
+  "avgBlockUs": 105.29,
+  "maxBlockUs": 1968.08,
+  "stats": {
+   "strikes": 595,
+   "injections": 595,
+   "droppedPlayers": 0,
+   "capped": 0,
+   "retired": 521,
+   "maxActive": 17,
+   "lateDropped": 0,
+   "work": 7
+  }
+ },
+ "damping": {
+  "handAt300ms": {
+   "before": -29.78,
+   "after150ms": -86.4,
+   "undampedAt470ms": -39.57,
+   "dropDb": 56.62
+  },
+  "deadStroke": {
+   "dampAtMs": 200,
+   "levelMute100msDb": -81.34,
+   "freeAtSameTimeDb": -30.91,
+   "lengthToMinus40dBms": 255,
+   "muteToMinus40dBms": 55
+  }
+ },
+ "roll": {
+  "first250ms": -19.73,
+  "at0_8to1_3s": -20.41,
+  "singleFirst250ms": -22.45,
+  "sustainGainDb": -0.68
+ },
+ "tail": [
+  {
+   "bar": "C3",
+   "nonFundamentalDb": -30.15
+  },
+  {
+   "bar": "F#3",
+   "nonFundamentalDb": -38.68
+  },
+  {
+   "bar": "C4",
+   "nonFundamentalDb": -47.28
+  },
+  {
+   "bar": "F#4",
+   "nonFundamentalDb": -51.25
+  },
+  {
+   "bar": "C5",
+   "nonFundamentalDb": -53.69
+  }
+ ],
+ "checks": [
+  {
+   "name": "FE tuned arch reaches 1:4:10 within 1 %",
+   "ok": true,
+   "detail": [
+    1,
+    4.026,
+    9.981,
+    18.116,
+    27.762
+   ]
+  },
+  {
+   "name": "fundamentals within 3 cents of equal temperament (A 440)",
+   "ok": true,
+   "detail": [
+    0.28,
+    0.24,
+    0,
+    0.04,
+    0.08,
+    -0.6,
+    -0.5
+   ]
+  },
+  {
+   "name": "measured 2nd partial within 1.5 % of 4.0",
+   "ok": true,
+   "detail": [
+    3.999,
+    3.999,
+    4,
+    4,
+    4,
+    4.001,
+    4.001
+   ]
+  },
+  {
+   "name": "fundamental T60 C3 between 1.6 and 2.6 s (patent US4411187: ~2 s at tenor C)",
+   "ok": true,
+   "detail": 2.01
+  },
+  {
+   "name": "fundamental T60 falls monotonically with pitch",
+   "ok": true,
+   "detail": [
+    2.01,
+    1.431,
+    1.033,
+    0.755,
+    0.56,
+    0.439,
+    0.328
+   ]
+  },
+  {
+   "name": "the resonator shortens the fundamental (every register)",
+   "ok": true,
+   "detail": [
+    [
+     2.01,
+     4.092
+    ],
+    [
+     1.431,
+     2.853
+    ],
+    [
+     1.033,
+     1.973
+    ],
+    [
+     0.755,
+     1.348
+    ],
+    [
+     0.56,
+     0.906
+    ],
+    [
+     0.439,
+     0.604
+    ],
+    [
+     0.328,
+     0.398
+    ]
+   ]
+  },
+  {
+   "name": "upper partials die first: measured T60 p2 < 0.5 x p1 on every bar; design T60 b4 < b3 < b2 < bar-like fundamental",
+   "ok": true,
+   "detail": [
+    [
+     2.01,
+     0.759,
+     0.257
+    ],
+    [
+     1.431,
+     0.52,
+     0.176
+    ],
+    [
+     1.033,
+     0.348,
+     0.121
+    ],
+    [
+     0.755,
+     0.233,
+     0.086
+    ],
+    [
+     0.56,
+     0.156,
+     0.076
+    ],
+    [
+     0.439,
+     0.106,
+     0.099
+    ],
+    [
+     0.328,
+     0.079,
+     0.06
+    ]
+   ]
+  },
+  {
+   "name": "the spectrum darkens as the note rings (centroid falls)",
+   "ok": true,
+   "detail": {
+    "C3": [
+     661.18,
+     230.23,
+     141.81,
+     131.38
+    ],
+    "C4": [
+     332.59,
+     279.02,
+     263.12,
+     261.6
+    ],
+    "C5": [
+     525.85,
+     523.46,
+     523.28,
+     523.27
+    ],
+    "note": "spectral centroid (Hz) of 43 ms windows starting 20/60/150/400 ms after the stroke"
+   }
+  },
+  {
+   "name": "louder AND brighter with stroke speed; contact shortens (Hertz)",
+   "ok": true,
+   "detail": {
+    "1": {
+     "lufs04": -15.06,
+     "centroid40ms": 716.27,
+     "contactMs": 0.729,
+     "Fmax": 360.66,
+     "speed": 4.35
+    },
+    "0.1": {
+     "lufs04": -39.66,
+     "centroid40ms": 269.02,
+     "contactMs": 1.979,
+     "Fmax": 9.36,
+     "speed": 0.26
+    },
+    "0.3": {
+     "lufs04": -29.92,
+     "centroid40ms": 351.15,
+     "contactMs": 1.292,
+     "Fmax": 39.99,
+     "speed": 0.76
+    },
+    "0.6": {
+     "lufs04": -21.71,
+     "centroid40ms": 484.67,
+     "contactMs": 0.938,
+     "Fmax": 138.4,
+     "speed": 2
+    },
+    "0.9": {
+     "lufs04": -16.49,
+     "centroid40ms": 651.36,
+     "contactMs": 0.771,
+     "Fmax": 295.43,
+     "speed": 3.7
+    }
+   }
+  },
+  {
+   "name": "dynamic range vel .3 -> .9 within 2 dB of the new piano",
+   "ok": true,
+   "detail": {
+    "marimbaC4": {
+     "1": -15.06,
+     "0.05": -42.68,
+     "0.15": -36.74,
+     "0.3": -29.92,
+     "0.45": -25.21,
+     "0.6": -21.7,
+     "0.75": -18.88,
+     "0.9": -16.48
+    },
+    "pianoC4": {
+     "0.3": -30.17,
+     "0.6": -21.7,
+     "0.9": -15.69
+    },
+    "rangeMarimba_3_9": 13.44,
+    "rangePiano_3_9": 14.48
+   }
+  },
+  {
+   "name": "register loudness within +-2 dB of the voicing tilt",
+   "ok": true,
+   "detail": [
+    -23.16,
+    -23.06,
+    -22.91,
+    -22.79,
+    -22.68,
+    -22.53,
+    -22.4,
+    -22.32,
+    -22.14,
+    -22.05,
+    -21.92,
+    -21.78,
+    -21.7,
+    -21.63,
+    -21.7,
+    -21.64,
+    -21.68,
+    -21.67,
+    -21.66,
+    -21.68,
+    -21.65,
+    -21.7,
+    -21.62,
+    -21.73,
+    -21.61,
+    -21.91,
+    -22.06,
+    -22.32,
+    -22.46,
+    -22.76,
+    -22.9,
+    -23.09,
+    -23.37,
+    -23.54,
+    -23.76,
+    -23.93,
+    -24.19
+   ]
+  },
+  {
+   "name": "centre strike: no 4th partial (antisymmetric mode node); node strike: weak fundamental",
+   "ok": true,
+   "detail": {
+    "0.04": {
+     "p1": -18.93,
+     "p2re1": -16.4,
+     "p3re1": -62,
+     "lufs04": -23.61
+    },
+    "0.12": {
+     "p1": -24.86,
+     "p2re1": -28.65,
+     "p3re1": -71.21,
+     "lufs04": -30.54
+    },
+    "0.19": {
+     "p1": -56.63,
+     "p2re1": 18.35,
+     "p3re1": -24.35,
+     "lufs04": -33.04
+    },
+    "0.3": {
+     "p1": -21.36,
+     "p2re1": -10.22,
+     "p3re1": -56.74,
+     "lufs04": -23.76
+    },
+    "0.45": {
+     "p1": -16.49,
+     "p2re1": -20.36,
+     "p3re1": -57.98,
+     "lufs04": -21.71
+    },
+    "0.5": {
+     "p1": -16.13,
+     "p2re1": -137.04,
+     "p3re1": -58.04,
+     "lufs04": -21.8
+    }
+   }
+  },
+  {
+   "name": "fingertip voicing: a 0.6 m/s tap within 4 LU of a 1.2 m/s mallet stroke on every bar G3-F#5, never louder; finger dynamic range within 2 dB of the mallet",
+   "ok": true,
+   "detail": {
+    "velFingertip06": 0.477,
+    "velMallet12": 0.501,
+    "fingerMinusMalletLU": [
+     -2.04,
+     -2.01,
+     -2.01,
+     -2.01,
+     -2.01,
+     -2,
+     -2,
+     -2.01,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2.01,
+     -2,
+     -2,
+     -2,
+     -1.98,
+     -2.04,
+     -3.25,
+     -4.54,
+     -5.83,
+     -7,
+     -7.92,
+     -8.5,
+     -8.89
+    ],
+    "rangeG3toFs5": [
+     -3.25,
+     -1.98
+    ],
+    "rangeFinger_3_9": 13.13,
+    "rangeMallet_3_9": 13.43
+   }
+  },
+  {
+   "name": "mallet hardness orders contact time and brightness (finger < soft < medium < hard)",
+   "ok": true,
+   "detail": {
+    "soft": {
+     "contactMs": 1.563,
+     "centroid40ms": 336.17,
+     "lufs04": -21.89
+    },
+    "medium": {
+     "contactMs": 0.938,
+     "centroid40ms": 484.67,
+     "lufs04": -21.71
+    },
+    "hard": {
+     "contactMs": 0.438,
+     "centroid40ms": 1094.95,
+     "lufs04": -18.44
+    },
+    "finger": {
+     "contactMs": 2.063,
+     "centroid40ms": 280.29,
+     "lufs04": -23.17
+    }
+   }
+  },
+  {
+   "name": "no step at the contact handoff (2nd difference at the handoff <= 1.2 x the local maximum)",
+   "ok": true,
+   "detail": [
+    0.628,
+    0.317,
+    0.091,
+    0.445,
+    0.706,
+    0.305
+   ]
+  },
+  {
+   "name": "no low-frequency push: energy below 30 Hz (8th-order) < -50 dB re total (drums v2 fix: -22 dB; lowest partial 131 Hz), |mean| < 1e-3 rms",
+   "ok": true,
+   "detail": [
+    {
+     "bar": "C3",
+     "mallet": "hard",
+     "energyBelow30HzDb": -73.16,
+     "meanOverRms": "-1.83e-5"
+    },
+    {
+     "bar": "C3",
+     "mallet": "medium",
+     "energyBelow30HzDb": -67.6,
+     "meanOverRms": "-3.57e-5"
+    },
+    {
+     "bar": "C4",
+     "mallet": "medium",
+     "energyBelow30HzDb": -64.36,
+     "meanOverRms": "-4.79e-5"
+    },
+    {
+     "bar": "C5",
+     "mallet": "hard",
+     "energyBelow30HzDb": -68.31,
+     "meanOverRms": "-3.08e-5"
+    },
+    {
+     "bar": "F#3",
+     "mallet": "finger",
+     "energyBelow30HzDb": -61.72,
+     "meanOverRms": "-6.70e-5"
+    }
+   ]
+  },
+  {
+   "name": "no aliasing: every live mode below 0.4 sr; energy above 20 kHz < -60 dB re total (C6 hard edge stroke)",
+   "ok": true,
+   "detail": {
+    "highestModeHz": 14651.03,
+    "maxAllowed": 19200,
+    "energyAbove20kHzDb_C6_hard_edge": -149.1
+   }
+  },
+  {
+   "name": "no subnormal state ever; every bar retires to exact zero in silence",
+   "ok": true,
+   "detail": {
+    "subnormalStatesSeen": 0,
+    "finite": true,
+    "maxActiveBars": 24,
+    "activeAtEnd": 0,
+    "retired": 24,
+    "lastSecondPeak": 0,
+    "capped": 13
+   }
+  },
+  {
+   "name": "60 s random workout: finite, peak < 2",
+   "ok": true,
+   "detail": {
+    "events": 709,
+    "peak": 1.835,
+    "finite": true,
+    "avgBlockUs": 105.29,
+    "maxBlockUs": 1968.08,
+    "stats": {
+     "strikes": 595,
+     "injections": 595,
+     "droppedPlayers": 0,
+     "capped": 0,
+     "retired": 521,
+     "maxActive": 17,
+     "lateDropped": 0,
+     "work": 7
+    }
+   }
+  },
+  {
+   "name": "a resting hand silences a ringing C4: 25..60 dB within 150 ms (quick, not a cut)",
+   "ok": true,
+   "detail": {
+    "before": -29.78,
+    "after150ms": -86.4,
+    "undampedAt470ms": -39.57,
+    "dropDb": 56.62
+   }
+  },
+  {
+   "name": "a dead stroke (mallet held down; muted at the 200 ms detection) is short: -40 dB within 120 ms of the mute (350 ms of the stroke); >= 25 dB under the free note 100 ms after the mute",
+   "ok": true,
+   "detail": {
+    "dampAtMs": 200,
+    "levelMute100msDb": -81.34,
+    "freeAtSameTimeDb": -30.91,
+    "lengthToMinus40dBms": 255,
+    "muteToMinus40dBms": 55
+   }
+  },
+  {
+   "name": "a roll sustains (level 0.8-1.3 s within -3..+6 dB of its first 250 ms: energy adds, never runs away)",
+   "ok": true,
+   "detail": {
+    "first250ms": -19.73,
+    "at0_8to1_3s": -20.41,
+    "singleFirst250ms": -22.45,
+    "sustainGainDb": -0.68
+   }
+  },
+  {
+   "name": "no metallic tail: after 0.3 s everything but the fundamental is >= 12 dB down (hard stroke)",
+   "ok": true,
+   "detail": [
+    {
+     "bar": "C3",
+     "nonFundamentalDb": -30.15
+    },
+    {
+     "bar": "F#3",
+     "nonFundamentalDb": -38.68
+    },
+    {
+     "bar": "C4",
+     "nonFundamentalDb": -47.28
+    },
+    {
+     "bar": "F#4",
+     "nonFundamentalDb": -51.25
+    },
+    {
+     "bar": "C5",
+     "nonFundamentalDb": -53.69
+    }
+   ]
+  }
+ ],
+ "summary": "23/23 pass"
+}

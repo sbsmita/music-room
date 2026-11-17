@@ -1,0 +1,1042 @@
+{
+ "revision": 2,
+ "constants": {
+  "HEAD_R": 0.017,
+  "FINGER_R": 0.008,
+  "SIDE_REACH": 0.004,
+  "END_REACH": 0.01,
+  "ARM_ABOVE": 0.02,
+  "ARM_ABOVE_FINGER": 0.012,
+  "ARM_SAMPLES": 2,
+  "MAX_PREV_MALLET": 0.3,
+  "MAX_PREV_FINGER": 0.1,
+  "V0_MALLET": 0.25,
+  "V1_MALLET": 2.8,
+  "V0_FINGER": 0.12,
+  "V1_FINGER": 1.5,
+  "VEL_EXP": 0.7,
+  "VEL_MIN": 0.05,
+  "APPROACH_MS": 50,
+  "JUMP_M": 0.15,
+  "JUMP_V": 14,
+  "SAME_BAR_MS": 3,
+  "OWNER_MS": 45,
+  "BAND_BELOW": 0.025,
+  "BAND_ABOVE": 0.01,
+  "DEAD_WINDOW_MS": 200,
+  "REST_MS": 150,
+  "STILL_WIN_MS": 60,
+  "DEAD_STILL": 0.15,
+  "STILL_SAMPLES": 2,
+  "BREAK_SAMPLES": 3,
+  "DEAD_LIFT": 0.02,
+  "LIFT_SAMPLES": 3,
+  "HAND_BAND": 0.012,
+  "HAND_STILL": 0.3,
+  "HAND_MS": 120,
+  "HAND_MIN_TIPS": 2,
+  "HAND_LIFT": 0.02,
+  "HAND_LIFT_MS": 30,
+  "PLAY_CLEAR": 0.02,
+  "DEFER_ABOVE": 0.015,
+  "DEFER_MS": 25,
+  "TIE": 0.1,
+  "ROLL_MIN": 4,
+  "ROLL_GAP_MS": 200,
+  "LOST_UNDAMP_MS": 500,
+  "FINGER_ONLY_N": 6,
+  "FINGER_ONLY_MS": 20000,
+  "OFFCENTRE_N": 10,
+  "OFFCENTRE_SHARE": 0.6,
+  "CENTRE_LO": 0.3,
+  "CENTRE_HI": 0.7,
+  "ACC_RATIO": 0.35,
+  "ACC_MIN": 0.05
+ },
+ "bars": [
+  {
+   "i": 0,
+   "midi": 48,
+   "name": "C3",
+   "natural": true,
+   "x": -0.542,
+   "z": 0,
+   "L": 0.4,
+   "w": 0.052,
+   "yTop": 0.7
+  },
+  {
+   "i": 1,
+   "midi": 49,
+   "name": "C#3",
+   "natural": false,
+   "x": -0.51317,
+   "z": 0.42171,
+   "L": 0.39341,
+   "w": 0.05167,
+   "yTop": 0.722
+  },
+  {
+   "i": 2,
+   "midi": 50,
+   "name": "D3",
+   "natural": true,
+   "x": -0.48433,
+   "z": 0,
+   "L": 0.38693,
+   "w": 0.05133,
+   "yTop": 0.7
+  },
+  {
+   "i": 3,
+   "midi": 51,
+   "name": "D#3",
+   "natural": false,
+   "x": -0.45583,
+   "z": 0.40875,
+   "L": 0.38056,
+   "w": 0.051,
+   "yTop": 0.722
+  },
+  {
+   "i": 4,
+   "midi": 52,
+   "name": "E3",
+   "natural": true,
+   "x": -0.42733,
+   "z": 0,
+   "L": 0.37429,
+   "w": 0.05067,
+   "yTop": 0.7
+  },
+  {
+   "i": 5,
+   "midi": 53,
+   "name": "F3",
+   "natural": true,
+   "x": -0.37083,
+   "z": 0,
+   "L": 0.36813,
+   "w": 0.05033,
+   "yTop": 0.7
+  },
+  {
+   "i": 6,
+   "midi": 54,
+   "name": "F#3",
+   "natural": false,
+   "x": -0.34283,
+   "z": 0.3901,
+   "L": 0.36207,
+   "w": 0.05,
+   "yTop": 0.722
+  },
+  {
+   "i": 7,
+   "midi": 55,
+   "name": "G3",
+   "natural": true,
+   "x": -0.31483,
+   "z": 0,
+   "L": 0.3561,
+   "w": 0.04967,
+   "yTop": 0.7
+  },
+  {
+   "i": 8,
+   "midi": 56,
+   "name": "G#3",
+   "natural": false,
+   "x": -0.28717,
+   "z": 0.37817,
+   "L": 0.35024,
+   "w": 0.04933,
+   "yTop": 0.722
+  },
+  {
+   "i": 9,
+   "midi": 57,
+   "name": "A3",
+   "natural": true,
+   "x": -0.2595,
+   "z": 0,
+   "L": 0.34447,
+   "w": 0.049,
+   "yTop": 0.7
+  },
+  {
+   "i": 10,
+   "midi": 58,
+   "name": "A#3",
+   "natural": false,
+   "x": -0.23217,
+   "z": 0.36663,
+   "L": 0.3388,
+   "w": 0.04867,
+   "yTop": 0.722
+  },
+  {
+   "i": 11,
+   "midi": 59,
+   "name": "B3",
+   "natural": true,
+   "x": -0.20483,
+   "z": 0,
+   "L": 0.33322,
+   "w": 0.04833,
+   "yTop": 0.7
+  },
+  {
+   "i": 12,
+   "midi": 60,
+   "name": "C4",
+   "natural": true,
+   "x": -0.15067,
+   "z": 0,
+   "L": 0.32773,
+   "w": 0.048,
+   "yTop": 0.7
+  },
+  {
+   "i": 13,
+   "midi": 61,
+   "name": "C#4",
+   "natural": false,
+   "x": -0.12383,
+   "z": 0.35003,
+   "L": 0.32233,
+   "w": 0.04767,
+   "yTop": 0.722
+  },
+  {
+   "i": 14,
+   "midi": 62,
+   "name": "D4",
+   "natural": true,
+   "x": -0.097,
+   "z": 0,
+   "L": 0.31702,
+   "w": 0.04733,
+   "yTop": 0.7
+  },
+  {
+   "i": 15,
+   "midi": 63,
+   "name": "D#4",
+   "natural": false,
+   "x": -0.0705,
+   "z": 0.33941,
+   "L": 0.3118,
+   "w": 0.047,
+   "yTop": 0.722
+  },
+  {
+   "i": 16,
+   "midi": 64,
+   "name": "E4",
+   "natural": true,
+   "x": -0.044,
+   "z": 0,
+   "L": 0.30667,
+   "w": 0.04667,
+   "yTop": 0.7
+  },
+  {
+   "i": 17,
+   "midi": 65,
+   "name": "F4",
+   "natural": true,
+   "x": 0.0085,
+   "z": 0,
+   "L": 0.30162,
+   "w": 0.04633,
+   "yTop": 0.7
+  },
+  {
+   "i": 18,
+   "midi": 66,
+   "name": "F#4",
+   "natural": false,
+   "x": 0.0345,
+   "z": 0.32413,
+   "L": 0.29665,
+   "w": 0.046,
+   "yTop": 0.722
+  },
+  {
+   "i": 19,
+   "midi": 67,
+   "name": "G4",
+   "natural": true,
+   "x": 0.0605,
+   "z": 0,
+   "L": 0.29176,
+   "w": 0.04567,
+   "yTop": 0.7
+  },
+  {
+   "i": 20,
+   "midi": 68,
+   "name": "G#4",
+   "natural": false,
+   "x": 0.08617,
+   "z": 0.31436,
+   "L": 0.28696,
+   "w": 0.04533,
+   "yTop": 0.722
+  },
+  {
+   "i": 21,
+   "midi": 69,
+   "name": "A4",
+   "natural": true,
+   "x": 0.11183,
+   "z": 0,
+   "L": 0.28223,
+   "w": 0.045,
+   "yTop": 0.7
+  },
+  {
+   "i": 22,
+   "midi": 70,
+   "name": "A#4",
+   "natural": false,
+   "x": 0.13717,
+   "z": 0.30491,
+   "L": 0.27758,
+   "w": 0.04467,
+   "yTop": 0.722
+  },
+  {
+   "i": 23,
+   "midi": 71,
+   "name": "B4",
+   "natural": true,
+   "x": 0.1625,
+   "z": 0,
+   "L": 0.27301,
+   "w": 0.04433,
+   "yTop": 0.7
+  },
+  {
+   "i": 24,
+   "midi": 72,
+   "name": "C5",
+   "natural": true,
+   "x": 0.21267,
+   "z": 0,
+   "L": 0.26851,
+   "w": 0.044,
+   "yTop": 0.7
+  },
+  {
+   "i": 25,
+   "midi": 73,
+   "name": "C#5",
+   "natural": false,
+   "x": 0.2375,
+   "z": 0.2913,
+   "L": 0.26409,
+   "w": 0.04367,
+   "yTop": 0.722
+  },
+  {
+   "i": 26,
+   "midi": 74,
+   "name": "D5",
+   "natural": true,
+   "x": 0.26233,
+   "z": 0,
+   "L": 0.25974,
+   "w": 0.04333,
+   "yTop": 0.7
+  },
+  {
+   "i": 27,
+   "midi": 75,
+   "name": "D#5",
+   "natural": false,
+   "x": 0.28683,
+   "z": 0.2826,
+   "L": 0.25547,
+   "w": 0.043,
+   "yTop": 0.722
+  },
+  {
+   "i": 28,
+   "midi": 76,
+   "name": "E5",
+   "natural": true,
+   "x": 0.31133,
+   "z": 0,
+   "L": 0.25126,
+   "w": 0.04267,
+   "yTop": 0.7
+  },
+  {
+   "i": 29,
+   "midi": 77,
+   "name": "F5",
+   "natural": true,
+   "x": 0.35983,
+   "z": 0,
+   "L": 0.24712,
+   "w": 0.04233,
+   "yTop": 0.7
+  },
+  {
+   "i": 30,
+   "midi": 78,
+   "name": "F#5",
+   "natural": false,
+   "x": 0.38383,
+   "z": 0.27008,
+   "L": 0.24305,
+   "w": 0.042,
+   "yTop": 0.722
+  },
+  {
+   "i": 31,
+   "midi": 79,
+   "name": "G5",
+   "natural": true,
+   "x": 0.40783,
+   "z": 0,
+   "L": 0.23905,
+   "w": 0.04167,
+   "yTop": 0.7
+  },
+  {
+   "i": 32,
+   "midi": 80,
+   "name": "G#5",
+   "natural": false,
+   "x": 0.4315,
+   "z": 0.26208,
+   "L": 0.23511,
+   "w": 0.04133,
+   "yTop": 0.722
+  },
+  {
+   "i": 33,
+   "midi": 81,
+   "name": "A5",
+   "natural": true,
+   "x": 0.45517,
+   "z": 0,
+   "L": 0.23124,
+   "w": 0.041,
+   "yTop": 0.7
+  },
+  {
+   "i": 34,
+   "midi": 82,
+   "name": "A#5",
+   "natural": false,
+   "x": 0.4785,
+   "z": 0.25433,
+   "L": 0.22743,
+   "w": 0.04067,
+   "yTop": 0.722
+  },
+  {
+   "i": 35,
+   "midi": 83,
+   "name": "B5",
+   "natural": true,
+   "x": 0.50183,
+   "z": 0,
+   "L": 0.22368,
+   "w": 0.04033,
+   "yTop": 0.7
+  },
+  {
+   "i": 36,
+   "midi": 84,
+   "name": "C6",
+   "natural": true,
+   "x": 0.548,
+   "z": 0,
+   "L": 0.22,
+   "w": 0.04,
+   "yTop": 0.7
+  }
+ ],
+ "accompanyVel": {
+  "rule": "min(lessonVel, max(ACC_MIN, ACC_RATIO x lastVel))",
+  "examples": [
+   {
+    "lessonVel": 0.28,
+    "lastVel": 0.6,
+    "vel": 0.21
+   },
+   {
+    "lessonVel": 0.28,
+    "lastVel": 0.4,
+    "vel": 0.14
+   },
+   {
+    "lessonVel": 0.28,
+    "lastVel": 0.2,
+    "vel": 0.07
+   },
+   {
+    "lessonVel": 0.3,
+    "lastVel": 0.1,
+    "vel": 0.05
+   }
+  ]
+ },
+ "cases": [
+  {
+   "name": "IX1 mallet mf stroke on C4 near the centre",
+   "frames": 25,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 55.55555555555556,
+     "type": "strike",
+     "bar": 12,
+     "note": "C4",
+     "vel": 0.6071,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX2 slow lowering (0.2 m/s) is silent and mutes 150 ms after it reaches the bar",
+   "frames": 91,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 555.5555555555555,
+     "type": "damp",
+     "kind": "mallet",
+     "bar": 16,
+     "u": 0.45,
+     "dead": false
+    },
+    {
+     "t": 922.2222222222222,
+     "type": "undamp",
+     "bar": 16,
+     "why": "lift"
+    }
+   ]
+  },
+  {
+   "name": "IX3 dead stroke: an f stroke on G4, the head held 10 mm under the plane for 0.4 s",
+   "frames": 57,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 33.333333333333336,
+     "type": "strike",
+     "bar": 19,
+     "note": "G4",
+     "vel": 0.9161,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 233.33333333333334,
+     "type": "damp",
+     "kind": "mallet",
+     "bar": 19,
+     "u": 0.45,
+     "dead": true
+    },
+    {
+     "t": 233.33333333333334,
+     "type": "signal",
+     "name": "marimba.deadStroke"
+    },
+    {
+     "t": 544.4444444444445,
+     "type": "undamp",
+     "bar": 19,
+     "why": "lift"
+    }
+   ]
+  },
+  {
+   "name": "IX3b the same with dead strokes off (lessons; before tip_marimba_dead): no mute",
+   "frames": 57,
+   "fps": 90,
+   "deadStrokes": false,
+   "events": [
+    {
+     "t": 33.333333333333336,
+     "type": "strike",
+     "bar": 19,
+     "note": "G4",
+     "vel": 0.9161,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX4 F#4 struck at its tip (u .04)",
+   "frames": 20,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 44.44444444444444,
+     "type": "strike",
+     "bar": 18,
+     "note": "F#4",
+     "vel": 0.7058,
+     "u": 0.04,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 44.44444444444444,
+     "type": "signal",
+     "name": "marimba.backRow"
+    }
+   ]
+  },
+  {
+   "name": "IX4b F#4 struck 6 mm in front of its near end (u -0.02): END_REACH plays it at u 0",
+   "frames": 20,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 44.44444444444444,
+     "type": "strike",
+     "bar": 18,
+     "note": "F#4",
+     "vel": 0.7058,
+     "u": 0,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 44.44444444444444,
+     "type": "signal",
+     "name": "marimba.backRow"
+    }
+   ]
+  },
+  {
+   "name": "IX5 stroke into the 6 mm gap between C4 and D4 picks the nearer bar",
+   "frames": 25,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 55.55555555555556,
+     "type": "strike",
+     "bar": 12,
+     "note": "C4",
+     "vel": 0.6071,
+     "u": 0.45,
+     "c": 1,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX6 roll on A4: alternating mallets about 10 strokes/s",
+   "frames": 90,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 33.333333333333336,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.42,
+     "c": 0,
+     "owner": "malletL",
+     "finger": false
+    },
+    {
+     "t": 133.33333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.55,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 233.33333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.42,
+     "c": 0,
+     "owner": "malletL",
+     "finger": false
+    },
+    {
+     "t": 333.3333333333333,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.55,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 333.3333333333333,
+     "type": "roll",
+     "bar": 21
+    },
+    {
+     "t": 333.3333333333333,
+     "type": "signal",
+     "name": "marimba.roll"
+    },
+    {
+     "t": 433.3333333333333,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.42,
+     "c": 0,
+     "owner": "malletL",
+     "finger": false
+    },
+    {
+     "t": 533.3333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.55,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 633.3333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.42,
+     "c": 0,
+     "owner": "malletL",
+     "finger": false
+    },
+    {
+     "t": 733.3333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.55,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    },
+    {
+     "t": 833.3333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.42,
+     "c": 0,
+     "owner": "malletL",
+     "finger": false
+    },
+    {
+     "t": 933.3333333333334,
+     "type": "strike",
+     "bar": 21,
+     "note": "A4",
+     "vel": 0.501,
+     "u": 0.55,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX7 a fingertip (no mallet) plays C5 softly",
+   "frames": 22,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 88.88888888888889,
+     "type": "strike",
+     "bar": 24,
+     "note": "C5",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    }
+   ]
+  },
+  {
+   "name": "IX8 a resting hand mutes D4 after 120 ms, lifting releases it",
+   "frames": 40,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 122.22222222222223,
+     "type": "damp",
+     "kind": "hand",
+     "bar": 14,
+     "u": 0.5,
+     "tips": 3
+    },
+    {
+     "t": 122.22222222222223,
+     "type": "signal",
+     "name": "marimba.mute"
+    },
+    {
+     "t": 333.3333333333333,
+     "type": "undamp",
+     "bar": 14,
+     "why": "hand lifted"
+    }
+   ]
+  },
+  {
+   "name": "IX9 tracking jump (27 m/s) never strikes",
+   "frames": 4,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": []
+  },
+  {
+   "name": "IX10 tracking returns below the plane: silent",
+   "frames": 5,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": []
+  },
+  {
+   "name": "IX11 a sideways sweep 2 cm under the plane plays nothing",
+   "frames": 30,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": []
+  },
+  {
+   "name": "IX12 velocity ladder point: 2.8 m/s on C4 gives vel 1",
+   "frames": 29,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 33.333333333333336,
+     "type": "strike",
+     "bar": 12,
+     "note": "C4",
+     "vel": 1,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX13 a soft VR stroke on E4 (0.6 m/s, 5 cm overshoot, 60 ms pause at the bottom) is a stroke, never a dead stroke",
+   "frames": 61,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 133.33333333333334,
+     "type": "strike",
+     "bar": 16,
+     "note": "E4",
+     "vel": 0.249,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX14 a full stroke at 9 m/s (10 cm per sample) on C4 gives vel 1",
+   "frames": 33,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 22.22222222222222,
+     "type": "strike",
+     "bar": 12,
+     "note": "C4",
+     "vel": 1,
+     "u": 0.45,
+     "c": 0,
+     "owner": "malletR",
+     "finger": false
+    }
+   ]
+  },
+  {
+   "name": "IX15 a fingertip tap-and-stay on E4 (two tips on the bar) sounds and never mutes itself",
+   "frames": 50,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 88.88888888888889,
+     "type": "strike",
+     "bar": 16,
+     "note": "E4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": -0.2,
+     "owner": "handR",
+     "finger": true
+    }
+   ]
+  },
+  {
+   "name": "IX16 index first: a lower middle tip over D4 waits one sample, the index plays E4, D4 never sounds",
+   "frames": 20,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 88.88888888888889,
+     "type": "strike",
+     "bar": 16,
+     "note": "E4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": -0.6,
+     "owner": "handR",
+     "finger": true
+    }
+   ]
+  },
+  {
+   "name": "IX17 a mallet resting on G4, 20 s with 6 mm head jitter: muted, no phantom strikes",
+   "frames": 1826,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 422.22222222222223,
+     "type": "damp",
+     "kind": "mallet",
+     "bar": 19,
+     "u": 0.45,
+     "dead": false
+    }
+   ]
+  },
+  {
+   "name": "IX18 six fingertip strokes, no mallet: the fingerOnly signal",
+   "frames": 228,
+   "fps": 90,
+   "deadStrokes": true,
+   "events": [
+    {
+     "t": 88.88888888888889,
+     "type": "strike",
+     "bar": 12,
+     "note": "C4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 511.1111111111111,
+     "type": "strike",
+     "bar": 14,
+     "note": "D4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 933.3333333333334,
+     "type": "strike",
+     "bar": 16,
+     "note": "E4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 1355.5555555555557,
+     "type": "strike",
+     "bar": 17,
+     "note": "F4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 1777.7777777777778,
+     "type": "strike",
+     "bar": 19,
+     "note": "G4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 2200,
+     "type": "strike",
+     "bar": 16,
+     "note": "E4",
+     "vel": 0.4775,
+     "u": 0.45,
+     "c": 0,
+     "owner": "handR",
+     "finger": true
+    },
+    {
+     "t": 2200,
+     "type": "signal",
+     "name": "marimba.fingerOnly"
+    }
+   ]
+  }
+ ]
+}

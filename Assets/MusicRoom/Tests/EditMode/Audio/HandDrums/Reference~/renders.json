@@ -1,0 +1,187 @@
+{
+ "files": {
+  "ladder-open": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-ladder-open.wav",
+   "seconds": 10.05,
+   "lufs": -18.3,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -26.01,
+   "appLevelTpDb": -8.9,
+   "gainAfterMasterDb": 7.7,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -0.5
+   },
+   "unitPeakDbFS": -0.9,
+   "dryPlrDb": 16.9,
+   "clickScore": 0.01
+  },
+  "ladder-bass": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-ladder-bass.wav",
+   "seconds": 10.05,
+   "lufs": -22.99,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -26.62,
+   "appLevelTpDb": -4.82,
+   "gainAfterMasterDb": 3.62,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -1.34
+   },
+   "unitPeakDbFS": 3.3,
+   "dryPlrDb": 21.4,
+   "clickScore": 0.01
+  },
+  "ladder-slap": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-ladder-slap.wav",
+   "seconds": 10.05,
+   "lufs": -26.85,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -26.86,
+   "appLevelTpDb": -1.21,
+   "gainAfterMasterDb": 0.01,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -0.36
+   },
+   "unitPeakDbFS": 6.8,
+   "dryPlrDb": 25.3,
+   "clickScore": 0.05
+  },
+  "techniques": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-techniques.wav",
+   "seconds": 19.62,
+   "lufs": -22.29,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -24.67,
+   "appLevelTpDb": -3.58,
+   "gainAfterMasterDb": 2.38,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -0.46
+   },
+   "unitPeakDbFS": 4.4,
+   "dryPlrDb": 20.9,
+   "clickScore": 1.52
+  },
+  "tumbao": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-tumbao.wav",
+   "seconds": 22.92,
+   "lufs": -23.36,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -25.23,
+   "appLevelTpDb": -3.07,
+   "gainAfterMasterDb": 1.87,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -1.16
+   },
+   "unitPeakDbFS": 4.9,
+   "dryPlrDb": 22,
+   "clickScore": 1.71
+  },
+  "tumbao-room": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-tumbao-room.wav",
+   "seconds": 22.92,
+   "lufs": -23.12,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -24.99,
+   "appLevelTpDb": -3.07,
+   "gainAfterMasterDb": 1.87,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -1.67
+   },
+   "unitPeakDbFS": 4.9,
+   "dryPlrDb": 22,
+   "clickScore": 1.71
+  },
+  "tumbao-app": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-tumbao-app.wav",
+   "seconds": 22.92,
+   "lufs": -25.24,
+   "truePeakDb": -3.32,
+   "appLevelLufs": -24.99,
+   "appLevelTpDb": -3.07,
+   "gainAfterMasterDb": -0.25,
+   "setBy": "app level (-0.25 dB)",
+   "masterAtAppLevel": {
+    "limMaxGrDb": 0,
+    "limPctOver1dB": 0,
+    "levMaxGrDb": -1.67
+   },
+   "unitPeakDbFS": 4.9,
+   "dryPlrDb": 22,
+   "clickScore": 1.71
+  },
+  "congaline": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-congaline.wav",
+   "seconds": 19.25,
+   "lufs": -23.28,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -23.08,
+   "appLevelTpDb": -1,
+   "gainAfterMasterDb": -0.2,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": -2.56,
+    "limPctOver1dB": 0.08,
+    "levMaxGrDb": -2.46
+   },
+   "unitPeakDbFS": 6.3,
+   "dryPlrDb": 23.9,
+   "clickScore": 1.38
+  },
+  "congaline-room": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-congaline-room.wav",
+   "seconds": 19.25,
+   "lufs": -22.83,
+   "truePeakDb": -1.2,
+   "appLevelLufs": -22.63,
+   "appLevelTpDb": -1,
+   "gainAfterMasterDb": -0.2,
+   "setBy": "true peak",
+   "masterAtAppLevel": {
+    "limMaxGrDb": -2.56,
+    "limPctOver1dB": 0.08,
+    "levMaxGrDb": -2.6
+   },
+   "unitPeakDbFS": 6.3,
+   "dryPlrDb": 23.9,
+   "clickScore": 1.38
+  },
+  "congaline-app": {
+   "path": "Builds/Listen/SoundLab/handdrums/handdrums-congaline-app.wav",
+   "seconds": 19.25,
+   "lufs": -22.88,
+   "truePeakDb": -1.25,
+   "appLevelLufs": -22.63,
+   "appLevelTpDb": -1,
+   "gainAfterMasterDb": -0.25,
+   "setBy": "app level (-0.25 dB)",
+   "masterAtAppLevel": {
+    "limMaxGrDb": -2.56,
+    "limPctOver1dB": 0.08,
+    "levMaxGrDb": -2.6
+   },
+   "unitPeakDbFS": 6.3,
+   "dryPlrDb": 23.9,
+   "clickScore": 1.38
+  }
+ },
+ "totalBytes": 50765408,
+ "note": "every file = direct path (head model) [+ room unit natural for -room/-app] -> MasterBusV2 at the app input gain (0 dB) -> one linear gain to -18 LUFS or -1.2 dBTP, whichever is lower (none for -app). Ladders: one file, one gain (relative levels kept).",
+ "totalMB": 50.8
+}

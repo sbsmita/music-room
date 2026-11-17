@@ -1,0 +1,103 @@
+{
+ "lesson": "marimba-first",
+ "rule": "accompaniment vel = min(written vel, max(0.05, 0.35 x the last live onset vel))",
+ "pass": true,
+ "rows": [
+  {
+   "mode": "finger",
+   "speedMs": 0.25,
+   "vel": 0.191,
+   "melodyLufs": -38.5,
+   "accompanimentLufs": -41.9,
+   "marginLU": 3.4,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": -7.6
+   }
+  },
+  {
+   "mode": "finger",
+   "speedMs": 0.4,
+   "vel": 0.327,
+   "melodyLufs": -32.2,
+   "accompanimentLufs": -39.2,
+   "marginLU": 7,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": -1.3
+   }
+  },
+  {
+   "mode": "finger",
+   "speedMs": 0.6,
+   "vel": 0.477,
+   "melodyLufs": -27.5,
+   "accompanimentLufs": -36.3,
+   "marginLU": 8.8,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": 3.5
+   }
+  },
+  {
+   "mode": "finger",
+   "speedMs": 0.9,
+   "vel": 0.671,
+   "melodyLufs": -23.2,
+   "accompanimentLufs": -33,
+   "marginLU": 9.8,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": 7.7
+   }
+  },
+  {
+   "mode": "mallet",
+   "speedMs": 0.5,
+   "vel": 0.197,
+   "melodyLufs": -36,
+   "accompanimentLufs": -41.8,
+   "marginLU": 5.8,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": -5
+   }
+  },
+  {
+   "mode": "mallet",
+   "speedMs": 0.8,
+   "vel": 0.342,
+   "melodyLufs": -30,
+   "accompanimentLufs": -38.9,
+   "marginLU": 8.9,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": 0.9
+   }
+  },
+  {
+   "mode": "mallet",
+   "speedMs": 1.2,
+   "vel": 0.501,
+   "melodyLufs": -25.4,
+   "accompanimentLufs": -35.9,
+   "marginLU": 10.4,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": 5.5
+   }
+  },
+  {
+   "mode": "mallet",
+   "speedMs": 2,
+   "vel": 0.768,
+   "melodyLufs": -20.1,
+   "accompanimentLufs": -31.6,
+   "marginLU": 11.5,
+   "oldFixed028": {
+    "accompanimentLufs": -30.9,
+    "marginLU": 10.9
+   }
+  }
+ ]
+}

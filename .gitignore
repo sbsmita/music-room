@@ -1,0 +1,14 @@
+Library/
+Temp/
+Logs/
+obj/
+UserSettings/
+Builds/
+.utmp/
+*.csproj
+*.sln
+*.apk
+*.aab
+MemoryCaptures/
+*_BurstDebugInformation_DoNotShip/
+Generated/Resources/Generated/**

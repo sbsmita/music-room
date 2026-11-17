@@ -1,0 +1,218 @@
+{
+ "constants": {
+  "DENT_MAX": 0.006,
+  "DENT_F": 400,
+  "DENT_EXTRA": 0.015,
+  "DENT_TAU": 0.025,
+  "REST_DENT": 0.0015,
+  "DENT_EPS": 0.00005
+ },
+ "fmaxTable": {
+  "palm": [
+   39.8,
+   88.7,
+   167.5,
+   240.7
+  ],
+  "heel": [
+   21.7,
+   50.2,
+   85.2,
+   112.5
+  ],
+  "fingers": [
+   23.3,
+   66.2,
+   120.5,
+   164.1
+  ],
+  "tips": [
+   14,
+   31.7,
+   52.1,
+   67.4
+  ],
+  "base": [
+   49.7,
+   136.4,
+   243.6,
+   325.2
+  ],
+  "pads": [
+   7.4,
+   17.6,
+   29.5,
+   38
+  ]
+ },
+ "depth": {
+  "palm": [
+   0.00099135,
+   0.00243035,
+   0.00355897,
+   0.00442386
+  ],
+  "heel": [
+   0.000688927,
+   0.00172718,
+   0.00237235,
+   0.00280289
+  ],
+  "fingers": [
+   0.00071897,
+   0.00203906,
+   0.00292084,
+   0.00351545
+  ],
+  "tips": [
+   0.000529632,
+   0.00131084,
+   0.00176611,
+   0.00206116
+  ],
+  "base": [
+   0.00113269,
+   0.00314633,
+   0.00445576,
+   0.00529914
+  ],
+  "pads": [
+   0.000361274,
+   0.000920922,
+   0.00125548,
+   0.00146145
+  ]
+ },
+ "vertices": [
+  {
+   "case": "bass palm u .8",
+   "ring": 0,
+   "seg": 0,
+   "dentM": 0.00341043
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 1,
+   "seg": 0,
+   "dentM": 0.00353007
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 3,
+   "seg": 0,
+   "dentM": 0.00303136
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 6,
+   "seg": 0,
+   "dentM": 0.00134942
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 9,
+   "seg": 0,
+   "dentM": 0.000257069
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 11,
+   "seg": 0,
+   "dentM": 0.0000331019
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 12,
+   "seg": 0,
+   "dentM": 0
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 6,
+   "seg": 12,
+   "dentM": 0.000881048
+  },
+  {
+   "case": "bass palm u .8",
+   "ring": 6,
+   "seg": 24,
+   "dentM": 0.000575243
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 0,
+   "seg": 0,
+   "dentM": 0.0000405159
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 1,
+   "seg": 0,
+   "dentM": 0.000127004
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 3,
+   "seg": 0,
+   "dentM": 0.000684579
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 6,
+   "seg": 0,
+   "dentM": 0.00216407
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 9,
+   "seg": 0,
+   "dentM": 0.00127787
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 11,
+   "seg": 0,
+   "dentM": 0.000466523
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 12,
+   "seg": 0,
+   "dentM": 0
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 6,
+   "seg": 12,
+   "dentM": 7.85847e-7
+  },
+  {
+   "case": "open fingers u .8",
+   "ring": 6,
+   "seg": 24,
+   "dentM": 4.93418e-10
+  }
+ ],
+ "spring": [
+  {
+   "t": 0,
+   "depth": 0.004
+  },
+  {
+   "t": 0.01,
+   "depth": 0.00375379
+  },
+  {
+   "t": 0.025,
+   "depth": 0.00294304
+  },
+  {
+   "t": 0.05,
+   "depth": 0.00162402
+  },
+  {
+   "t": 0.1,
+   "depth": 0.000366313
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+    "name": "MusicRoom.Gaze",
+    "rootNamespace": "MusicRoom.Gaze",
+    "references": [
+        "MusicRoom.Core",
+        "MusicRoom.Hands",
+        "Oculus.Interaction"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

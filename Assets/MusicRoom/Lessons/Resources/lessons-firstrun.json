@@ -1,0 +1,328 @@
+{
+ "generatedFrom": [
+  "the first-five lesson table (Docs/11-first-five/tutorials-audit.md section 3): piano-ode bars 5-8 (the answering phrase)",
+  "Docs/11-first-five/sunny-tour.md 2.5 (accompaniment)"
+ ],
+ "note": "The first run only (Sunny step S2-S3): not listed in the Lessons menu. Beethoven 1824, public domain.",
+ "tutorial": {
+  "SPEED": 0.18,
+  "TRAVEL": {
+   "piano": 0.35,
+   "drums": 0.35,
+   "harp": 0.3
+  },
+  "leadSeconds": {
+   "piano": 1.9444444444444444,
+   "drums": 1.9444444444444444,
+   "harp": 1.6666666666666667
+  }
+ },
+ "counts": {
+  "lessons": 1,
+  "piano": 1,
+  "drums": 0,
+  "harp": 0,
+  "events": 15,
+  "targets": 15
+ },
+ "lessons": [
+  {
+   "id": "piano-ode-first",
+   "instrument": "piano",
+   "title": "Ode to Joy",
+   "bpm": 108,
+   "secondsPerBeat": 0.5555555555555556,
+   "leadSeconds": 1.9444444444444444,
+   "beats": 16,
+   "seconds": 8.88888888888889,
+   "eventCount": 15,
+   "notes": 15,
+   "listNote": "15 notes",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0.0,
+     "duration": 0.5555555555555556,
+     "due": 1.9444444444444444,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "midi": 64,
+       "note": "E4"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.5555555555555556,
+     "duration": 0.5555555555555556,
+     "due": 2.5,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "midi": 64,
+       "note": "E4"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.1111111111111112,
+     "duration": 0.5555555555555556,
+     "due": 3.0555555555555554,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "midi": 65,
+       "note": "F4"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 1.6666666666666667,
+     "duration": 0.5555555555555556,
+     "due": 3.611111111111111,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "midi": 67,
+       "note": "G4"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 2.2222222222222223,
+     "duration": 0.5555555555555556,
+     "due": 4.166666666666667,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "midi": 67,
+       "note": "G4"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 2.7777777777777777,
+     "duration": 0.5555555555555556,
+     "due": 4.722222222222222,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "midi": 65,
+       "note": "F4"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 1,
+     "time": 3.3333333333333335,
+     "duration": 0.5555555555555556,
+     "due": 5.277777777777778,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "midi": 64,
+       "note": "E4"
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 7,
+     "len": 1,
+     "time": 3.8888888888888893,
+     "duration": 0.5555555555555556,
+     "due": 5.833333333333334,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "midi": 62,
+       "note": "D4"
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 8,
+     "len": 1,
+     "time": 4.444444444444445,
+     "duration": 0.5555555555555556,
+     "due": 6.388888888888889,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "midi": 60,
+       "note": "C4"
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 9,
+     "len": 1,
+     "time": 5.0,
+     "duration": 0.5555555555555556,
+     "due": 6.944444444444445,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "midi": 60,
+       "note": "C4"
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 10,
+     "len": 1,
+     "time": 5.555555555555555,
+     "duration": 0.5555555555555556,
+     "due": 7.5,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "midi": 62,
+       "note": "D4"
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 11,
+     "len": 1,
+     "time": 6.111111111111112,
+     "duration": 0.5555555555555556,
+     "due": 8.055555555555555,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "midi": 64,
+       "note": "E4"
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 12,
+     "len": 1.5,
+     "time": 6.666666666666667,
+     "duration": 0.8333333333333334,
+     "due": 8.61111111111111,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "midi": 62,
+       "note": "D4"
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 13.5,
+     "len": 0.5,
+     "time": 7.5,
+     "duration": 0.2777777777777778,
+     "due": 9.444444444444445,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "midi": 60,
+       "note": "C4"
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 14,
+     "len": 2,
+     "time": 7.777777777777779,
+     "duration": 1.1111111111111112,
+     "due": 9.722222222222223,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "midi": 60,
+       "note": "C4"
+      }
+     ]
+    }
+   ],
+   "options": [
+    "NoCountdown",
+    "Accompany",
+    "QuietMistakes"
+   ],
+   "accompany": [
+    {
+     "beat": 0,
+     "len": 4,
+     "midi": [
+      48,
+      52,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 4,
+     "len": 4,
+     "midi": [
+      47,
+      50,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 8,
+     "len": 4,
+     "midi": [
+      48,
+      52,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 12,
+     "len": 2,
+     "midi": [
+      47,
+      50,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 14,
+     "len": 5.4,
+     "midi": [
+      36,
+      48,
+      52,
+      55
+     ],
+     "vel": 0.28
+    }
+   ]
+  }
+ ]
+}

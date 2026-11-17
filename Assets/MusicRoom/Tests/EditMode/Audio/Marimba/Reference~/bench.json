@@ -1,0 +1,136 @@
+{
+ "node": "v26.7.0",
+ "machine": "Apple M5 Pro (dev Mac), scalar js-f32 reference",
+ "results": [
+  {
+   "name": "idle",
+   "avgUs": 0.35,
+   "p99Us": 0.58,
+   "maxUs": 8.46,
+   "avgLanes": 0,
+   "maxLanes": 0,
+   "strikes": 0,
+   "mainUsPerStrike": 0,
+   "maxActiveBars": 0,
+   "capped": 0,
+   "questAvgUs": 6,
+   "questMaxUs": 22,
+   "questFromNodeX010Us": 0
+  },
+  {
+   "name": "one note (C4 mf)",
+   "avgUs": 14.09,
+   "p99Us": 41.92,
+   "maxUs": 145.67,
+   "avgLanes": 6.09,
+   "maxLanes": 7,
+   "strikes": 1,
+   "mainUsPerStrike": 191.33,
+   "maxActiveBars": 1,
+   "capped": 0,
+   "questAvgUs": 6.6,
+   "questMaxUs": 23.2,
+   "questFromNodeX010Us": 1.4
+  },
+  {
+   "name": "lesson melody (C4-C5, 3 notes/s)",
+   "avgUs": 32.76,
+   "p99Us": 54.92,
+   "maxUs": 155.25,
+   "avgLanes": 20.71,
+   "maxLanes": 35,
+   "strikes": 32,
+   "mainUsPerStrike": 13.07,
+   "maxActiveBars": 5,
+   "capped": 0,
+   "questAvgUs": 8.1,
+   "questMaxUs": 27.9,
+   "questFromNodeX010Us": 3.3
+  },
+  {
+   "name": "two-bar roll, 24 strokes/s",
+   "avgUs": 23.14,
+   "p99Us": 26,
+   "maxUs": 72.83,
+   "avgLanes": 13.9,
+   "maxLanes": 14,
+   "strikes": 239,
+   "mainUsPerStrike": 6.19,
+   "maxActiveBars": 2,
+   "capped": 0,
+   "questAvgUs": 7.4,
+   "questMaxUs": 24.4,
+   "questFromNodeX010Us": 2.3
+  },
+  {
+   "name": "glissandi, every bar ringing (budget 2048: cap 37)",
+   "avgUs": 381.05,
+   "p99Us": 407.58,
+   "maxUs": 515.04,
+   "avgLanes": 255.59,
+   "maxLanes": 259,
+   "strikes": 1480,
+   "mainUsPerStrike": 3.18,
+   "maxActiveBars": 37,
+   "capped": 0,
+   "questAvgUs": 32.2,
+   "questMaxUs": 65.8,
+   "questFromNodeX010Us": 38.1
+  },
+  {
+   "name": "glissandi, every bar ringing (default budget 1200: cap 24)",
+   "avgUs": 261.77,
+   "p99Us": 287.54,
+   "maxUs": 558.42,
+   "avgLanes": 166.44,
+   "maxLanes": 168,
+   "strikes": 1480,
+   "mainUsPerStrike": 2.91,
+   "maxActiveBars": 24,
+   "capped": 1222,
+   "questAvgUs": 23,
+   "questMaxUs": 50.4,
+   "questFromNodeX010Us": 26.2
+  },
+  {
+   "name": "seated worst: both mallets 15 strokes/s each, random bars (budget 2048)",
+   "avgUs": 208.86,
+   "p99Us": 267.46,
+   "maxUs": 277.17,
+   "avgLanes": 138.67,
+   "maxLanes": 182,
+   "strikes": 299,
+   "mainUsPerStrike": 7.15,
+   "maxActiveBars": 26,
+   "capped": 0,
+   "questAvgUs": 20.2,
+   "questMaxUs": 52.8,
+   "questFromNodeX010Us": 20.9
+  }
+ ],
+ "mainThreadUsPerStrike": {
+  "medium": 5.9,
+  "hard": 3,
+  "soft": 5.3,
+  "finger": 5.9
+ },
+ "bytes": {
+  "audioState": {
+   "groups": 7104,
+   "flagsAndLevels": 592,
+   "strikeSlab": 133632,
+   "dampSlab": 4608,
+   "players": 256,
+   "actions": 3072,
+   "scratch": 5120
+  },
+  "mainTables": {
+   "lanePolesAndConsts": 9472,
+   "shapes": 4672,
+   "perBar": 14800
+  },
+  "totalAudio": 154384,
+  "totalMain": 28944
+ },
+ "note": "questAvgUs = mean live lanes x 256 x 0.40 ns (burst.md MB4 free, level 3) + 6 us overhead; questMaxUs uses 0.66 ns (no 4-group interleave) + playback; questFromNodeX010Us = Node x 0.10 (burst.md ratio)"
+}

@@ -1,0 +1,816 @@
+{
+ "ordinary": {
+  "strokes": 2160,
+  "deadStrokes": 2,
+  "share": 0.0009,
+  "deadWithPauseUpTo60ms": 0,
+  "missed": 0,
+  "doubles": 0,
+  "examples": [
+   {
+    "jitterMm": 4,
+    "v": 0.6,
+    "dCm": 2,
+    "dwellMs": 100,
+    "vr": 0.4
+   },
+   {
+    "jitterMm": 4,
+    "v": 0.6,
+    "dCm": 2,
+    "dwellMs": 100,
+    "vr": 0.4
+   }
+  ]
+ },
+ "deliberateDead": [
+  {
+   "jitterMm": 0,
+   "pressMm": 0,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 0,
+   "pressMm": 5,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 0,
+   "pressMm": 10,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 0,
+   "pressMm": 15,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 2,
+   "pressMm": 0,
+   "fired": 0.958,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 2,
+   "pressMm": 5,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 2,
+   "pressMm": 10,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 2,
+   "pressMm": 15,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 4,
+   "pressMm": 0,
+   "fired": 0.979,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 4,
+   "pressMm": 5,
+   "fired": 1,
+   "medianMsAfterStrike": 200
+  },
+  {
+   "jitterMm": 4,
+   "pressMm": 10,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 4,
+   "pressMm": 15,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 6,
+   "pressMm": 0,
+   "fired": 0.938,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 6,
+   "pressMm": 5,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 6,
+   "pressMm": 10,
+   "fired": 1,
+   "medianMsAfterStrike": 211
+  },
+  {
+   "jitterMm": 6,
+   "pressMm": 15,
+   "fired": 0.938,
+   "medianMsAfterStrike": 211
+  }
+ ],
+ "resting": [
+  {
+   "jitterMm": 2,
+   "restDepthMm": 0,
+   "arrivalTick": 0,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 2,
+   "restDepthMm": -10,
+   "arrivalTick": 0.152,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 4,
+   "restDepthMm": 0,
+   "arrivalTick": 0.0562,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 4,
+   "restDepthMm": -10,
+   "arrivalTick": 0,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 6,
+   "restDepthMm": 0,
+   "arrivalTick": 0.35,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 6,
+   "restDepthMm": -10,
+   "arrivalTick": 0.1548,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  },
+  {
+   "jitterMm": 8,
+   "restDepthMm": 0,
+   "arrivalTick": 0,
+   "phantomStrikes": 2,
+   "damps": 2,
+   "undamps": 1
+  },
+  {
+   "jitterMm": 8,
+   "restDepthMm": -10,
+   "arrivalTick": 0.1611,
+   "phantomStrikes": 0,
+   "damps": 1,
+   "undamps": 0
+  }
+ ],
+ "restingNote": "arrivalTick: the velocity of the first contact when jitter turns the last millimetres of a 0.2 m/s lowering into a fast crossing (a real mallet set down at 0.2 m/s also ticks); phantomStrikes: strikes after the mallet has settled",
+ "hard": [
+  {
+   "fps": 72,
+   "v": 4,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 72,
+   "v": 6,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 72,
+   "v": 8,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 72,
+   "v": 9,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 72,
+   "v": 10,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 90,
+   "v": 4,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 90,
+   "v": 6,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 90,
+   "v": 8,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 90,
+   "v": 9,
+   "strikes": 1,
+   "vel": 1
+  },
+  {
+   "fps": 90,
+   "v": 10,
+   "strikes": 1,
+   "vel": 1
+  }
+ ],
+ "fingerTapStay": [
+  {
+   "depthMm": 0,
+   "tips": 1,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": 0,
+   "tips": 2,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": 0,
+   "tips": 3,
+   "strikes": 1,
+   "damps": 1
+  },
+  {
+   "depthMm": -5,
+   "tips": 1,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -5,
+   "tips": 2,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -5,
+   "tips": 3,
+   "strikes": 1,
+   "damps": 1
+  },
+  {
+   "depthMm": -12,
+   "tips": 1,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -12,
+   "tips": 2,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -12,
+   "tips": 3,
+   "strikes": 1,
+   "damps": 1
+  },
+  {
+   "depthMm": -20,
+   "tips": 1,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -20,
+   "tips": 2,
+   "strikes": 1,
+   "damps": 0
+  },
+  {
+   "depthMm": -20,
+   "tips": 3,
+   "strikes": 1,
+   "damps": 0
+  }
+ ],
+ "handMute": [
+  {
+   "v": 0.08,
+   "tips": 3,
+   "damped": true
+  },
+  {
+   "v": 0.08,
+   "tips": 4,
+   "damped": true
+  },
+  {
+   "v": 0.3,
+   "tips": 3,
+   "damped": true
+  },
+  {
+   "v": 0.3,
+   "tips": 4,
+   "damped": true
+  },
+  {
+   "v": 0.6,
+   "tips": 3,
+   "damped": true
+  },
+  {
+   "v": 0.6,
+   "tips": 4,
+   "damped": true
+  }
+ ],
+ "neighbourTip": [
+  {
+   "middleTipLowerMm": 8,
+   "indexBarOnly": 1,
+   "otherBar": 0,
+   "nothing": 0
+  },
+  {
+   "middleTipLowerMm": 4,
+   "indexBarOnly": 1,
+   "otherBar": 0,
+   "nothing": 0
+  },
+  {
+   "middleTipLowerMm": 0,
+   "indexBarOnly": 1,
+   "otherBar": 0,
+   "nothing": 0
+  },
+  {
+   "middleTipLowerMm": -4,
+   "indexBarOnly": 1,
+   "otherBar": 0,
+   "nothing": 0
+  }
+ ],
+ "sharpTip": {
+  "aims": 400,
+  "missedBar": 10,
+  "uP10": 0,
+  "uMedian": 0.0407,
+  "uP90": 0.0797
+ },
+ "checks": [
+  {
+   "name": "ordinary strokes (0.6-4 m/s, 2-7 cm overshoot, 0-100 ms pause at the bottom, 0-6 mm head jitter): none missed, no double hits; no dead stroke with a pause up to 60 ms, at most 0.5 % with a 100 ms pause",
+   "ok": true,
+   "detail": {
+    "strokes": 2160,
+    "deadStrokes": 2,
+    "share": 0.0009,
+    "deadWithPauseUpTo60ms": 0,
+    "missed": 0,
+    "doubles": 0,
+    "examples": [
+     {
+      "jitterMm": 4,
+      "v": 0.6,
+      "dCm": 2,
+      "dwellMs": 100,
+      "vr": 0.4
+     },
+     {
+      "jitterMm": 4,
+      "v": 0.6,
+      "dCm": 2,
+      "dwellMs": 100,
+      "vr": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "name": "deliberate dead strokes (stroke, hold 0.3-0.45 s pressed 0-15 mm into the bar): fire >= 95 % at 0-4 mm head jitter and 0-10 mm press; >= 85 % at 6 mm jitter or a 15 mm press",
+   "ok": true,
+   "detail": [
+    {
+     "jitterMm": 0,
+     "pressMm": 0,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 0,
+     "pressMm": 5,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 0,
+     "pressMm": 10,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 0,
+     "pressMm": 15,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 2,
+     "pressMm": 0,
+     "fired": 0.958,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 2,
+     "pressMm": 5,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 2,
+     "pressMm": 10,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 2,
+     "pressMm": 15,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 4,
+     "pressMm": 0,
+     "fired": 0.979,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 4,
+     "pressMm": 5,
+     "fired": 1,
+     "medianMsAfterStrike": 200
+    },
+    {
+     "jitterMm": 4,
+     "pressMm": 10,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 4,
+     "pressMm": 15,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 6,
+     "pressMm": 0,
+     "fired": 0.938,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 6,
+     "pressMm": 5,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 6,
+     "pressMm": 10,
+     "fired": 1,
+     "medianMsAfterStrike": 211
+    },
+    {
+     "jitterMm": 6,
+     "pressMm": 15,
+     "fired": 0.938,
+     "medianMsAfterStrike": 211
+    }
+   ]
+  },
+  {
+   "name": "a mallet resting on a bar for 60 s with 2-6 mm head jitter: no phantom strikes after it settles; one mute, never toggled",
+   "ok": true,
+   "detail": [
+    {
+     "jitterMm": 2,
+     "restDepthMm": 0,
+     "arrivalTick": 0,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 2,
+     "restDepthMm": -10,
+     "arrivalTick": 0.152,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 4,
+     "restDepthMm": 0,
+     "arrivalTick": 0.0562,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 4,
+     "restDepthMm": -10,
+     "arrivalTick": 0,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 6,
+     "restDepthMm": 0,
+     "arrivalTick": 0.35,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 6,
+     "restDepthMm": -10,
+     "arrivalTick": 0.1548,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    },
+    {
+     "jitterMm": 8,
+     "restDepthMm": 0,
+     "arrivalTick": 0,
+     "phantomStrikes": 2,
+     "damps": 2,
+     "undamps": 1
+    },
+    {
+     "jitterMm": 8,
+     "restDepthMm": -10,
+     "arrivalTick": 0.1611,
+     "phantomStrikes": 0,
+     "damps": 1,
+     "undamps": 0
+    }
+   ]
+  },
+  {
+   "name": "hard strokes 4-10 m/s sound once at vel 1 (72 and 90 Hz)",
+   "ok": true,
+   "detail": [
+    {
+     "fps": 72,
+     "v": 4,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 72,
+     "v": 6,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 72,
+     "v": 8,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 72,
+     "v": 9,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 72,
+     "v": 10,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 90,
+     "v": 4,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 90,
+     "v": 6,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 90,
+     "v": 8,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 90,
+     "v": 9,
+     "strikes": 1,
+     "vel": 1
+    },
+    {
+     "fps": 90,
+     "v": 10,
+     "strikes": 1,
+     "vel": 1
+    }
+   ]
+  },
+  {
+   "name": "a fingertip tap-and-stay sounds once and does not mute itself (1-2 tips); 3 tips on the bar is a hand and may mute",
+   "ok": true,
+   "detail": [
+    {
+     "depthMm": 0,
+     "tips": 1,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": 0,
+     "tips": 2,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": 0,
+     "tips": 3,
+     "strikes": 1,
+     "damps": 1
+    },
+    {
+     "depthMm": -5,
+     "tips": 1,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -5,
+     "tips": 2,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -5,
+     "tips": 3,
+     "strikes": 1,
+     "damps": 1
+    },
+    {
+     "depthMm": -12,
+     "tips": 1,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -12,
+     "tips": 2,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -12,
+     "tips": 3,
+     "strikes": 1,
+     "damps": 1
+    },
+    {
+     "depthMm": -20,
+     "tips": 1,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -20,
+     "tips": 2,
+     "strikes": 1,
+     "damps": 0
+    },
+    {
+     "depthMm": -20,
+     "tips": 3,
+     "strikes": 1,
+     "damps": 0
+    }
+   ]
+  },
+  {
+   "name": "a flat hand (3-4 tips) lowered at 0.08-0.6 m/s mutes the bar",
+   "ok": true,
+   "detail": [
+    {
+     "v": 0.08,
+     "tips": 3,
+     "damped": true
+    },
+    {
+     "v": 0.08,
+     "tips": 4,
+     "damped": true
+    },
+    {
+     "v": 0.3,
+     "tips": 3,
+     "damped": true
+    },
+    {
+     "v": 0.3,
+     "tips": 4,
+     "damped": true
+    },
+    {
+     "v": 0.6,
+     "tips": 3,
+     "damped": true
+    },
+    {
+     "v": 0.6,
+     "tips": 4,
+     "damped": true
+    }
+   ]
+  },
+  {
+   "name": "the neighbouring tip: the bar under the index sounds in >= 99 % of taps (middle tip 0-8 mm lower)",
+   "ok": true,
+   "detail": [
+    {
+     "middleTipLowerMm": 8,
+     "indexBarOnly": 1,
+     "otherBar": 0,
+     "nothing": 0
+    },
+    {
+     "middleTipLowerMm": 4,
+     "indexBarOnly": 1,
+     "otherBar": 0,
+     "nothing": 0
+    },
+    {
+     "middleTipLowerMm": 0,
+     "indexBarOnly": 1,
+     "otherBar": 0,
+     "nothing": 0
+    },
+    {
+     "middleTipLowerMm": -4,
+     "indexBarOnly": 1,
+     "otherBar": 0,
+     "nothing": 0
+    }
+   ]
+  },
+  {
+   "name": "aiming a sharp at its tip (u .04) with 11 mm error: misses the bar in < 15 % of strokes (was every stroke in front of u 0)",
+   "ok": true,
+   "detail": {
+    "aims": 400,
+    "missedBar": 10,
+    "uP10": 0,
+    "uMedian": 0.0407,
+    "uP90": 0.0797
+   }
+  }
+ ],
+ "summary": "8/8 pass"
+}

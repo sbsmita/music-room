@@ -1,0 +1,19 @@
+{
+    "name": "MusicRoom.Audio",
+    "rootNamespace": "MusicRoom.Audio",
+    "references": [
+        "MusicRoom.Core",
+        "Meta.XR.Audio",
+        "Unity.Burst",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

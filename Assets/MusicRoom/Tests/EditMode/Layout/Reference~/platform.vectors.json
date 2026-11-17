@@ -1,0 +1,3509 @@
+{
+ "about": "platform.md section 12: expected values for SeatPlannerTests, StowPlanTests, CarouselTests, RaySummonPickTests, ControlStreamTests, GovernorTests, DrawBudgetModelTests. Seat frame / room frame = Unity (x right, z ahead of the default seat, yaw degrees clockwise from above). Poses rounded to 1e-4 m / deg. An instrument was retired from the app (2026-11-10): its entry, its sets, joins, rays and spot are dropped and the carousel steps follow the seven; the control vectors use the neutral prefix \"lane\". The VR room was turned to face the fire (2026-11-11, RoomFrame): the seat planner's room box is ROOM z -1.62..3.58 in the seat frame (the reference ROOM turned a half turn about the seat and slid 0.5 m back, 2026-11-12: the same plans and counts as the plain turn); every plan stays the same, only the candidate counts (nodes) of 14 sets changed (seat-planner.mjs re-run with the turned ROOM). The kit's rack toms and kick pad were spaced from the snare (2026-11-14, C# DrumSpec.Pieces / DrumsDefinition, Tools/SoundLab/platform/registry.mjs): their drums boxes follow and the three drums rays' dir follow the moved pick point; every plan, count and pick re-checked by the Layout tests. Stow spots, rays and furniture stay in room coordinates (the room frame).",
+ "constants": {
+  "slots": {
+   "Front": 0,
+   "FrontRight": 45,
+   "Right": 90,
+   "FrontLeft": -45,
+   "Left": -90,
+   "RightRear": 120,
+   "LeftRear": -120
+  },
+  "gap": 0.03,
+  "pushes": [
+   0,
+   0.05,
+   0.1,
+   0.15
+  ],
+  "maxSet": 3,
+  "table": {
+   "home": {
+    "x": -0.39,
+    "z": -0.21,
+    "yaw": -90
+   },
+   "alternate": {
+    "x": -0.25,
+    "z": -0.62,
+    "yaw": 180
+   },
+   "boxes": [
+    {
+     "cx": 0.04,
+     "cz": 0,
+     "hx": 0.22,
+     "hz": 0.17,
+     "y0": 0,
+     "y1": 0.68
+    }
+   ]
+  },
+  "control": {
+   "FRAME": 0.011111111111111112,
+   "PITCH_DB": 0.02,
+   "LEVEL_DB": 0.5,
+   "MIN_GAP": 0.03333333333333333,
+   "KEYFRAME": 0.25,
+   "LEVEL_ON": 0.01,
+   "LEVEL_OFF": 0.008,
+   "OFF_HOLD": 0.06,
+   "PREROLL": 0.05
+  }
+ },
+ "instruments": {
+  "piano": {
+   "name": "Piano",
+   "canonicalSlot": "Front",
+   "home": {
+    "x": 0,
+    "z": 0.45,
+    "yaw": 0
+   },
+   "single": {
+    "x": 0,
+    "z": 0.45,
+    "yaw": 0
+   },
+   "prefs": [
+    "Front",
+    "Left",
+    "Right"
+   ],
+   "reachMax": 0.62,
+   "playCentre": {
+    "x": 0,
+    "z": 0.05
+   },
+   "boxes": [
+    {
+     "cx": 0,
+     "cz": 0.15,
+     "hx": 0.66,
+     "hz": 0.17,
+     "y0": 0.62,
+     "y1": 0.95
+    },
+    {
+     "cx": -0.58,
+     "cz": 0.15,
+     "hx": 0.04,
+     "hz": 0.15,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": 0.58,
+     "cz": 0.15,
+     "hx": 0.04,
+     "hz": 0.15,
+     "y0": 0,
+     "y1": 0.62
+    }
+   ],
+   "stowFoot": {
+    "w": 1.34,
+    "d": 0.36
+   }
+  },
+  "drums": {
+   "name": "Drums",
+   "canonicalSlot": "Right",
+   "home": {
+    "x": 0.2,
+    "z": -0.26,
+    "yaw": 90
+   },
+   "single": {
+    "x": 0,
+    "z": 0.1,
+    "yaw": 0
+   },
+   "prefs": [
+    "Right",
+    "Left"
+   ],
+   "reachMax": 0.7,
+   "playCentre": {
+    "x": 0,
+    "z": 0.3
+   },
+   "boxes": [
+    {
+     "cx": 0,
+     "cz": 0.3,
+     "hx": 0.19,
+     "hz": 0.19,
+     "y0": 0.58,
+     "y1": 0.75
+    },
+    {
+     "cx": 0,
+     "cz": 0.3,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.58
+    },
+    {
+     "cx": -0.04,
+     "cz": 0.625,
+     "hx": 0.16,
+     "hz": 0.16,
+     "y0": 0.6599999999999999,
+     "y1": 0.89
+    },
+    {
+     "cx": -0.04,
+     "cz": 0.625,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.6599999999999999
+    },
+    {
+     "cx": 0.32,
+     "cz": 0.482,
+     "hx": 0.17500000000000002,
+     "hz": 0.17500000000000002,
+     "y0": 0.63,
+     "y1": 0.88
+    },
+    {
+     "cx": 0.32,
+     "cz": 0.482,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.63
+    },
+    {
+     "cx": 0.38,
+     "cz": 0.02,
+     "hx": 0.21000000000000002,
+     "hz": 0.21000000000000002,
+     "y0": 0.26,
+     "y1": 0.65
+    },
+    {
+     "cx": 0.38,
+     "cz": 0.02,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.26
+    },
+    {
+     "cx": -0.42,
+     "cz": 0.36,
+     "hx": 0.17,
+     "hz": 0.17,
+     "y0": 0.77,
+     "y1": 0.8300000000000001
+    },
+    {
+     "cx": -0.42,
+     "cz": 0.36,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.75
+    },
+    {
+     "cx": -0.39,
+     "cz": 0.58,
+     "hx": 0.21,
+     "hz": 0.21,
+     "y0": 0.99,
+     "y1": 1.05
+    },
+    {
+     "cx": -0.39,
+     "cz": 0.58,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.97
+    },
+    {
+     "cx": 0.48,
+     "cz": 0.27,
+     "hx": 0.22,
+     "hz": 0.22,
+     "y0": 1.01,
+     "y1": 1.07
+    },
+    {
+     "cx": 0.48,
+     "cz": 0.27,
+     "hx": 0.05,
+     "hz": 0.05,
+     "y0": 0,
+     "y1": 0.99
+    },
+    {
+     "cx": 0.12,
+     "cz": 0.9,
+     "hx": 0.3,
+     "hz": 0.21,
+     "y0": 0,
+     "y1": 0.59
+    },
+    {
+     "cx": 0.12,
+     "cz": 0.54,
+     "hx": 0.05,
+     "hz": 0.11,
+     "y0": 0,
+     "y1": 0.06
+    },
+    {
+     "cx": -0.29,
+     "cz": 0.19,
+     "hx": 0.1,
+     "hz": 0.1,
+     "y0": 0.57,
+     "y1": 0.63
+    },
+    {
+     "cx": -0.29,
+     "cz": 0.19,
+     "hx": 0.03,
+     "hz": 0.03,
+     "y0": 0,
+     "y1": 0.57
+    }
+   ],
+   "stowFoot": {
+    "w": 1.37,
+    "d": 1.31
+   }
+  },
+  "harp": {
+   "name": "Harp",
+   "canonicalSlot": "Left",
+   "home": {
+    "x": -0.78,
+    "z": -0.2,
+    "yaw": 83
+   },
+   "single": {
+    "x": -0.2966,
+    "z": 0.45,
+    "yaw": 180
+   },
+   "prefs": [
+    "Left",
+    "Right",
+    "FrontLeft",
+    "FrontRight"
+   ],
+   "reachMax": 0.95,
+   "playCentre": {
+    "x": -0.33,
+    "z": 0
+   },
+   "boxes": [
+    {
+     "cx": -0.33,
+     "cz": 0,
+     "hx": 0.48,
+     "hz": 0.11,
+     "y0": 0,
+     "y1": 0.08
+    },
+    {
+     "cx": -0.33,
+     "cz": 0,
+     "hx": 0.45,
+     "hz": 0.06,
+     "y0": 0.08,
+     "y1": 1.48
+    }
+   ],
+   "stowFoot": {
+    "w": 0.98,
+    "d": 0.26
+   }
+  },
+  "marimba": {
+   "name": "Marimba",
+   "canonicalSlot": "Front",
+   "home": {
+    "x": 0,
+    "z": 0.47,
+    "yaw": 0
+   },
+   "single": {
+    "x": 0,
+    "z": 0.47,
+    "yaw": 0
+   },
+   "prefs": [
+    "Front",
+    "Left",
+    "Right"
+   ],
+   "reachMax": 0.8,
+   "playCentre": {
+    "x": 0,
+    "z": 0.05
+   },
+   "boxes": [
+    {
+     "cx": -0.105,
+     "cz": 0.18,
+     "hx": 0.525,
+     "hz": 0.445,
+     "y0": 0.62,
+     "y1": 0.76
+    },
+    {
+     "cx": 0.525,
+     "cz": 0.145,
+     "hx": 0.105,
+     "hz": 0.275,
+     "y0": 0.62,
+     "y1": 0.76
+    },
+    {
+     "cx": 0,
+     "cz": 0.36,
+     "hx": 0.21,
+     "hz": 0.26,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": -0.42,
+     "cz": 0.3,
+     "hx": 0.21,
+     "hz": 0.32,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": 0.42,
+     "cz": 0.3,
+     "hx": 0.21,
+     "hz": 0.32,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": -0.605,
+     "cz": 0.215,
+     "hx": 0.035,
+     "hz": 0.41,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": 0.605,
+     "cz": 0.15,
+     "hx": 0.035,
+     "hz": 0.25,
+     "y0": 0,
+     "y1": 0.62
+    },
+    {
+     "cx": 0,
+     "cz": 0.25,
+     "hx": 0.64,
+     "hz": 0.37,
+     "y0": 0.76,
+     "y1": 1,
+     "air": true
+    },
+    {
+     "cx": 0,
+     "cz": -0.24,
+     "hx": 0.5,
+     "hz": 0.12,
+     "y0": 0.76,
+     "y1": 1.05,
+     "air": true
+    }
+   ],
+   "stowFoot": {
+    "w": 1.25,
+    "d": 0.88
+   }
+  },
+  "handdrums": {
+   "name": "Hand drums",
+   "canonicalSlot": "Front",
+   "home": {
+    "x": 0,
+    "z": 0.57,
+    "yaw": 0
+   },
+   "single": {
+    "x": 0,
+    "z": 0.57,
+    "yaw": 0
+   },
+   "prefs": [
+    "FrontRight",
+    "FrontLeft",
+    "Right",
+    "Left",
+    "Front"
+   ],
+   "reachMax": 0.62,
+   "playCentre": {
+    "x": 0,
+    "z": -0.05
+   },
+   "boxes": [
+    {
+     "cx": 0.005,
+     "cz": 0,
+     "hx": 0.36,
+     "hz": 0.165,
+     "y0": 0.62,
+     "y1": 0.81
+    },
+    {
+     "cx": 0.005,
+     "cz": 0.1025,
+     "hx": 0.36,
+     "hz": 0.2275,
+     "y0": 0,
+     "y1": 0.62
+    }
+   ],
+   "stowFoot": {
+    "w": 0.74,
+    "d": 0.5
+   }
+  },
+  "handpan": {
+   "name": "Handpan",
+   "canonicalSlot": "Front",
+   "home": {
+    "x": 0,
+    "z": 0.38,
+    "yaw": 0
+   },
+   "single": {
+    "x": 0,
+    "z": 0.38,
+    "yaw": 0
+   },
+   "prefs": [
+    "FrontLeft",
+    "FrontRight",
+    "Left",
+    "Right",
+    "Front"
+   ],
+   "reachMax": 0.62,
+   "playCentre": {
+    "x": 0,
+    "z": 0
+   },
+   "boxes": [
+    {
+     "cx": 0,
+     "cz": 0,
+     "hx": 0.272,
+     "hz": 0.24,
+     "y0": 0.62,
+     "y1": 0.88
+    },
+    {
+     "cx": 0,
+     "cz": 0.1875,
+     "hx": 0.315,
+     "hz": 0.1275,
+     "y0": 0,
+     "y1": 0.62
+    }
+   ],
+   "stowFoot": {
+    "w": 0.53,
+    "d": 0.53
+   }
+  },
+  "bowls": {
+   "name": "Singing bowls",
+   "canonicalSlot": "FrontLeft",
+   "home": {
+    "x": -0.46,
+    "z": 0.25,
+    "yaw": 0
+   },
+   "single": {
+    "x": -0.46,
+    "z": 0.25,
+    "yaw": 0
+   },
+   "prefs": [
+    "FrontLeft",
+    "FrontRight",
+    "Left",
+    "Right",
+    "Front"
+   ],
+   "reachMax": 0.62,
+   "playCentre": {
+    "x": 0,
+    "z": -0.016
+   },
+   "boxes": [
+    {
+     "cx": 0,
+     "cz": 0,
+     "hx": 0.205,
+     "hz": 0.145,
+     "y0": 0,
+     "y1": 0.61
+    },
+    {
+     "cx": 0,
+     "cz": 0,
+     "hx": 0.205,
+     "hz": 0.145,
+     "y0": 0.61,
+     "y1": 0.72
+    }
+   ],
+   "stowFoot": {
+    "w": 0.51,
+    "d": 0.18
+   }
+  }
+ },
+ "seatPlanner": {
+  "counts": {
+   "fits": {
+    "1": 7,
+    "2": 19,
+    "3": 22
+   },
+   "total": {
+    "1": 7,
+    "2": 21,
+    "3": 35
+   }
+  },
+  "sets": [
+   {
+    "set": [
+     "bowls"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "Front",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "drums",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.1,
+      "yaw": 0,
+      "reach": 0.4
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "handdrums",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.57,
+      "yaw": 0,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "handpan",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.38,
+      "yaw": 0,
+      "reach": 0.38
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Front",
+      "push": 0,
+      "x": -0.2966,
+      "z": 0.45,
+      "yaw": 180,
+      "reach": 0.4512
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "marimba",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.47,
+      "yaw": 0,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 0,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 18,
+    "cost": 0,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 24,
+    "cost": 0.25,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontRight",
+      "push": 0.05,
+      "x": 0.4384,
+      "z": 0.4384,
+      "yaw": 45,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 30,
+    "cost": 1.75,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontRight",
+      "push": 0.15,
+      "x": 0.3748,
+      "z": 0.3748,
+      "yaw": 45,
+      "reach": 0.53
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 36,
+    "cost": 2.25,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "marimba",
+      "slot": "Right",
+      "push": 0.05,
+      "x": 0.52,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handdrums",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 17,
+    "cost": 1.5,
+    "members": [
+     {
+      "id": "handdrums",
+      "slot": "FrontLeft",
+      "push": 0.1,
+      "x": -0.4738,
+      "z": 0.4738,
+      "yaw": -45,
+      "reach": 0.62
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handpan",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 19,
+    "cost": 4.25,
+    "members": [
+     {
+      "id": "handpan",
+      "slot": "Front",
+      "push": 0.05,
+      "x": 0,
+      "z": 0.43,
+      "yaw": 0,
+      "reach": 0.43
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handpan",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 56,
+    "cost": 3.25,
+    "members": [
+     {
+      "id": "handpan",
+      "slot": "FrontRight",
+      "push": 0.15,
+      "x": 0.3748,
+      "z": 0.3748,
+      "yaw": 45,
+      "reach": 0.53
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontLeft",
+      "push": 0.1,
+      "x": -0.4738,
+      "z": 0.4738,
+      "yaw": -45,
+      "reach": 0.62
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handpan",
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 77,
+    "cost": 3,
+    "members": [
+     {
+      "id": "handpan",
+      "slot": "FrontLeft",
+      "push": 0.15,
+      "x": -0.3748,
+      "z": 0.3748,
+      "yaw": -45,
+      "reach": 0.53
+     },
+     {
+      "id": "marimba",
+      "slot": "Right",
+      "push": 0.05,
+      "x": 0.52,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "bowls"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 16,
+    "cost": 0,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 11,
+    "cost": 0,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 12,
+    "cost": 0.25,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontRight",
+      "push": 0.05,
+      "x": 0.4384,
+      "z": 0.4384,
+      "yaw": 45,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 31,
+    "cost": 1.75,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontRight",
+      "push": 0.15,
+      "x": 0.3748,
+      "z": 0.3748,
+      "yaw": 45,
+      "reach": 0.53
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 17,
+    "cost": 0,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "marimba",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.47,
+      "yaw": 0,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "marimba",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 26,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "marimba",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 38,
+    "cost": 3.75,
+    "members": [
+     {
+      "id": "marimba",
+      "slot": "Right",
+      "push": 0.05,
+      "x": 0.52,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.57
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontLeft",
+      "push": 0.1,
+      "x": -0.4738,
+      "z": 0.4738,
+      "yaw": -45,
+      "reach": 0.62
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "bowls"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 19,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 11,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 19,
+    "cost": 2,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "handdrums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.57,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 35,
+    "cost": 3.5,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "handpan",
+      "slot": "Right",
+      "push": 0.1,
+      "x": 0.48,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.48
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "harp"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 16,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "marimba"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "bowls",
+     "handdrums",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 89,
+    "cost": 6.5,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.602,
+      "z": -0.1485,
+      "yaw": -45,
+      "reach": 0.612
+     },
+     {
+      "id": "handdrums",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.57,
+      "yaw": 0,
+      "reach": 0.52
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "handpan",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 72,
+    "cost": 3.25,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.602,
+      "z": -0.1485,
+      "yaw": -45,
+      "reach": 0.612
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontLeft",
+      "push": 0.15,
+      "x": -0.3748,
+      "z": 0.3748,
+      "yaw": -45,
+      "reach": 0.53
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "handpan",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 228,
+    "cost": 3.5,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.602,
+      "z": -0.1485,
+      "yaw": -45,
+      "reach": 0.612
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontLeft",
+      "push": 0.15,
+      "x": -0.3748,
+      "z": 0.3748,
+      "yaw": -45,
+      "reach": 0.53
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontRight",
+      "push": 0.05,
+      "x": 0.4384,
+      "z": 0.4384,
+      "yaw": 45,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "handpan",
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 100,
+    "cost": 5.5,
+    "members": [
+     {
+      "id": "bowls",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.602,
+      "z": -0.1485,
+      "yaw": -45,
+      "reach": 0.612
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontLeft",
+      "push": 0.15,
+      "x": -0.3748,
+      "z": 0.3748,
+      "yaw": -45,
+      "reach": 0.53
+     },
+     {
+      "id": "marimba",
+      "slot": "Right",
+      "push": 0.05,
+      "x": 0.52,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "bowls",
+     "marimba",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 26,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "bowls",
+     "marimba",
+     "handdrums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 108,
+    "cost": null,
+    "members": [],
+    "failed": "bowls"
+   },
+   {
+    "set": [
+     "handpan",
+     "handdrums",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 87,
+    "cost": 6.5,
+    "members": [
+     {
+      "id": "handpan",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.48,
+      "z": 0,
+      "yaw": -90,
+      "reach": 0.48
+     },
+     {
+      "id": "handdrums",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.57,
+      "yaw": 0,
+      "reach": 0.52
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "handpan",
+     "marimba",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 26,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "handpan",
+     "marimba",
+     "handdrums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 108,
+    "cost": null,
+    "members": [],
+    "failed": "handpan"
+   },
+   {
+    "set": [
+     "harp",
+     "bowls",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 20,
+    "cost": 0,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "bowls",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 21,
+    "cost": 0.25,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handdrums",
+      "slot": "FrontRight",
+      "push": 0.05,
+      "x": 0.4384,
+      "z": 0.4384,
+      "yaw": 45,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "bowls",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 40,
+    "cost": 1.75,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handpan",
+      "slot": "FrontRight",
+      "push": 0.15,
+      "x": 0.3748,
+      "z": 0.3748,
+      "yaw": 45,
+      "reach": 0.53
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "bowls",
+     "marimba"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 56,
+    "cost": 2.25,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "marimba",
+      "slot": "Right",
+      "push": 0.05,
+      "x": 0.52,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.57
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handdrums",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 32,
+    "cost": 4,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handdrums",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.57,
+      "yaw": 0,
+      "reach": 0.52
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handpan",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 33,
+    "cost": 4.25,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handpan",
+      "slot": "Front",
+      "push": 0.05,
+      "x": 0,
+      "z": 0.43,
+      "yaw": 0,
+      "reach": 0.43
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handpan",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 143,
+    "cost": 6.25,
+    "members": [
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handpan",
+      "slot": "Front",
+      "push": 0.05,
+      "x": 0,
+      "z": 0.43,
+      "yaw": 0,
+      "reach": 0.43
+     },
+     {
+      "id": "handdrums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.57,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "harp",
+     "handpan",
+     "marimba"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 142,
+    "cost": null,
+    "members": [],
+    "failed": "handpan"
+   },
+   {
+    "set": [
+     "harp",
+     "marimba",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 26,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "harp",
+     "marimba",
+     "handdrums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 142,
+    "cost": null,
+    "members": [],
+    "failed": "handdrums"
+   },
+   {
+    "set": [
+     "marimba",
+     "handdrums",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 26,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "piano",
+     "bowls",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 20,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "bowls",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 28,
+    "cost": 2,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handdrums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.57,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "bowls",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": 3.5,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     },
+     {
+      "id": "handpan",
+      "slot": "Right",
+      "push": 0.1,
+      "x": 0.48,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.48
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "bowls",
+     "marimba"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "piano",
+     "handdrums",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 51,
+    "cost": 3,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "handdrums",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.57,
+      "z": 0,
+      "yaw": -90,
+      "reach": 0.52
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "handpan",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 53,
+    "cost": 2.5,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "handpan",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.48,
+      "z": 0,
+      "yaw": -90,
+      "reach": 0.48
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "handpan",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": true,
+    "nodes": 125,
+    "cost": 4.5,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "handpan",
+      "slot": "Left",
+      "push": 0.1,
+      "x": -0.48,
+      "z": 0,
+      "yaw": -90,
+      "reach": 0.48
+     },
+     {
+      "id": "handdrums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.57,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "handpan",
+     "marimba"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "piano",
+     "harp",
+     "bowls"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 25,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "bowls",
+      "slot": "FrontLeft",
+      "push": 0,
+      "x": -0.46,
+      "z": 0.25,
+      "yaw": 0,
+      "reach": 0.5161
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "harp",
+     "drums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 20,
+    "cost": 0,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "drums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.2,
+      "z": -0.26,
+      "yaw": 90,
+      "reach": 0.5636
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "harp",
+     "handdrums"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 37,
+    "cost": 2,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handdrums",
+      "slot": "Right",
+      "push": 0,
+      "x": 0.57,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.52
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "harp",
+     "handpan"
+    ],
+    "fits": true,
+    "tableAlt": false,
+    "nodes": 55,
+    "cost": 3.5,
+    "members": [
+     {
+      "id": "piano",
+      "slot": "Front",
+      "push": 0,
+      "x": 0,
+      "z": 0.45,
+      "yaw": 0,
+      "reach": 0.5
+     },
+     {
+      "id": "harp",
+      "slot": "Left",
+      "push": 0,
+      "x": -0.78,
+      "z": -0.2,
+      "yaw": 83,
+      "reach": 0.8301
+     },
+     {
+      "id": "handpan",
+      "slot": "Right",
+      "push": 0.1,
+      "x": 0.48,
+      "z": 0,
+      "yaw": 90,
+      "reach": 0.48
+     }
+    ],
+    "failed": null
+   },
+   {
+    "set": [
+     "piano",
+     "harp",
+     "marimba"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "piano",
+     "marimba",
+     "drums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 38,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   },
+   {
+    "set": [
+     "piano",
+     "marimba",
+     "handdrums"
+    ],
+    "fits": false,
+    "tableAlt": false,
+    "nodes": 44,
+    "cost": null,
+    "members": [],
+    "failed": "marimba"
+   }
+  ]
+ },
+ "joins": [
+  {
+   "set": [
+    "piano",
+    "drums",
+    "harp"
+   ],
+   "add": "handpan",
+   "lastPlayed": {
+    "piano": 5,
+    "drums": 40,
+    "harp": 300
+   },
+   "action": "replace",
+   "replaced": "harp",
+   "result": [
+    "piano@Front",
+    "drums@Right",
+    "handpan@Left"
+   ]
+  },
+  {
+   "set": [
+    "piano",
+    "drums",
+    "harp"
+   ],
+   "add": "handpan",
+   "lastPlayed": {
+    "piano": 5,
+    "drums": 300,
+    "harp": 40
+   },
+   "action": "replace",
+   "replaced": "drums",
+   "result": [
+    "piano@Front",
+    "handpan@Right",
+    "harp@Left"
+   ]
+  },
+  {
+   "set": [
+    "piano",
+    "drums",
+    "harp"
+   ],
+   "add": "marimba",
+   "lastPlayed": {
+    "piano": 5,
+    "drums": 40,
+    "harp": 300
+   },
+   "action": "single",
+   "replaced": null,
+   "result": [
+    "marimba@Front"
+   ]
+  },
+  {
+   "set": [
+    "piano",
+    "drums"
+   ],
+   "add": "bowls",
+   "lastPlayed": {},
+   "action": "add",
+   "replaced": null,
+   "result": [
+    "piano@Front",
+    "drums@Right",
+    "bowls@FrontLeft"
+   ]
+  },
+  {
+   "set": [
+    "piano",
+    "drums"
+   ],
+   "add": "marimba",
+   "lastPlayed": {
+    "piano": 1,
+    "drums": 2
+   },
+   "action": "single",
+   "replaced": null,
+   "result": [
+    "marimba@Front"
+   ]
+  },
+  {
+   "set": [
+    "marimba",
+    "drums",
+    "harp"
+   ],
+   "add": "piano",
+   "lastPlayed": {
+    "marimba": 9,
+    "drums": 10,
+    "harp": 11
+   },
+   "action": "replace",
+   "replaced": "marimba",
+   "result": [
+    "piano@Front",
+    "drums@Right",
+    "harp@Left"
+   ]
+  }
+ ],
+ "carousel": {
+  "order": [
+   "piano",
+   "harp",
+   "bowls",
+   "handpan",
+   "marimba",
+   "handdrums",
+   "drums"
+  ],
+  "steps": [
+   {
+    "id": "piano",
+    "next": "harp",
+    "prev": "drums"
+   },
+   {
+    "id": "harp",
+    "next": "bowls",
+    "prev": "piano"
+   },
+   {
+    "id": "bowls",
+    "next": "handpan",
+    "prev": "harp"
+   },
+   {
+    "id": "handpan",
+    "next": "marimba",
+    "prev": "bowls"
+   },
+   {
+    "id": "marimba",
+    "next": "handdrums",
+    "prev": "handpan"
+   },
+   {
+    "id": "handdrums",
+    "next": "drums",
+    "prev": "marimba"
+   },
+   {
+    "id": "drums",
+    "next": "piano",
+    "prev": "handdrums"
+   }
+  ],
+  "skip": [
+   {
+    "from": "harp",
+    "dir": 1,
+    "loaded": [
+     "piano",
+     "drums",
+     "harp"
+    ],
+    "expect": "drums"
+   },
+   {
+    "from": "piano",
+    "dir": -1,
+    "loaded": [
+     "piano",
+     "drums",
+     "harp"
+    ],
+    "expect": "drums"
+   },
+   {
+    "from": "drums",
+    "dir": 1,
+    "loaded": [
+     "piano",
+     "harp",
+     "bowls",
+     "handpan",
+     "marimba",
+     "handdrums",
+     "drums"
+    ],
+    "expect": "piano"
+   }
+  ]
+ },
+ "stow": {
+  "spots": {
+   "piano": {
+    "id": "front-wall-right",
+    "mount": "floor",
+    "pose": {
+     "x": 1.78,
+     "z": 0.77,
+     "yaw": 0
+    },
+    "note": "against the front wall under the right painting, as an upright digital piano stands at home"
+   },
+   "harp": {
+    "id": "front-left-corner",
+    "mount": "floor",
+    "pose": {
+     "x": -3.06,
+     "z": 0.26,
+     "yaw": 90
+    },
+    "note": "standing in the corner beyond the lamp, strings to the room"
+   },
+   "drums": {
+    "id": "left-wall",
+    "mount": "floor",
+    "pose": {
+     "x": -2.06,
+     "z": -0.66,
+     "yaw": -90
+    },
+    "note": "along the left wall, throne side to the room, sticks on the snare"
+   },
+   "handpan": {
+    "id": "left-wall-bracket",
+    "mount": "wall",
+    "pose": {
+     "x": -3.06,
+     "z": -0.62,
+     "yaw": -90
+    },
+    "note": "hung on a wooden wall bracket above the drum kit, tone fields to the room",
+    "stowBoxes": [
+     {
+      "cx": 0,
+      "cz": 0,
+      "hx": 0.275,
+      "hz": 0.12,
+      "y0": 1.25,
+      "y1": 1.86
+     }
+    ]
+   },
+   "marimba": {
+    "id": "window-near",
+    "mount": "floor",
+    "pose": {
+     "x": 2.3,
+     "z": -0.8,
+     "yaw": 90
+    },
+    "note": "under the window, the frame along the wall, mallets on the bars"
+   },
+   "handdrums": {
+    "id": "window-far",
+    "mount": "floor",
+    "pose": {
+     "x": 2.42,
+     "z": -1.94,
+     "yaw": 90
+    },
+    "note": "by the far end of the window, 8.5 cm clear of the ivy hanging from the sill"
+   },
+   "bowls": {
+    "id": "window-sill",
+    "mount": "surface",
+    "pose": {
+     "x": 3.09,
+     "z": -0.62,
+     "yaw": 90
+    },
+    "note": "the three bowls in a row on the near half of the inside sill on their cushions, the stick in front (the stand hidden), clear of the ivy at the far end",
+    "stowBoxes": [
+     {
+      "cx": -0.01,
+      "cz": 0,
+      "hx": 0.255,
+      "hz": 0.09,
+      "y0": 0.63,
+      "y1": 0.735
+     }
+    ]
+   }
+  },
+  "validation": {
+   "ok": true,
+   "problems": [],
+   "spots": [
+    {
+     "id": "piano",
+     "spot": "front-wall-right",
+     "mount": "floor",
+     "pose": {
+      "x": 1.78,
+      "z": 0.77,
+      "yaw": 0
+     },
+     "distance": 1.959795907741416,
+     "bearing": 65.2656974709475
+    },
+    {
+     "id": "harp",
+     "spot": "front-left-corner",
+     "mount": "floor",
+     "pose": {
+      "x": -3.06,
+      "z": 0.26,
+      "yaw": 90
+     },
+     "distance": 3.1163600562194356,
+     "bearing": -79.08669654246913
+    },
+    {
+     "id": "bowls",
+     "spot": "window-sill",
+     "mount": "surface",
+     "pose": {
+      "x": 3.09,
+      "z": -0.62,
+      "yaw": 90
+     },
+     "distance": 3.1359011464011424,
+     "bearing": 101.40309626104111
+    },
+    {
+     "id": "handpan",
+     "spot": "left-wall-bracket",
+     "mount": "wall",
+     "pose": {
+      "x": -3.06,
+      "z": -0.62,
+      "yaw": -90
+     },
+     "distance": 3.122178726466504,
+     "bearing": -101.45389141609223
+    },
+    {
+     "id": "marimba",
+     "spot": "window-near",
+     "mount": "floor",
+     "pose": {
+      "x": 2.3,
+      "z": -0.8,
+      "yaw": 90
+     },
+     "distance": 2.4824383174612814,
+     "bearing": 108.79988515865269
+    },
+    {
+     "id": "handdrums",
+     "spot": "window-far",
+     "mount": "floor",
+     "pose": {
+      "x": 2.42,
+      "z": -1.94,
+      "yaw": 90
+     },
+     "distance": 3.0627601930285047,
+     "bearing": 129.30256922834118
+    },
+    {
+     "id": "drums",
+     "spot": "left-wall",
+     "mount": "floor",
+     "pose": {
+      "x": -2.06,
+      "z": -0.66,
+      "yaw": -90
+     },
+     "distance": 2.4505509584581175,
+     "bearing": -105.62423458118685
+    }
+   ]
+  },
+  "rays": [
+   {
+    "aim": "piano",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9191,
+     "y": -0.0582,
+     "z": 0.3897
+    },
+    "picked": "piano",
+    "angle": 0,
+    "firstHit": "piano"
+   },
+   {
+    "aim": "piano",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9382,
+     "y": -0.0582,
+     "z": 0.3411
+    },
+    "picked": "piano",
+    "angle": 2.9949,
+    "firstHit": "piano"
+   },
+   {
+    "aim": "piano",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.8974,
+     "y": -0.0582,
+     "z": 0.4373
+    },
+    "picked": "piano",
+    "angle": 2.9949,
+    "firstHit": "piano"
+   },
+   {
+    "aim": "harp",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9862,
+     "y": 0.1301,
+     "z": 0.1029
+    },
+    "picked": "harp",
+    "angle": 0,
+    "firstHit": "harp"
+   },
+   {
+    "aim": "harp",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9794,
+     "y": 0.1301,
+     "z": 0.1543
+    },
+    "picked": "harp",
+    "angle": 2.9745,
+    "firstHit": "harp"
+   },
+   {
+    "aim": "harp",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9902,
+     "y": 0.1301,
+     "z": 0.0511
+    },
+    "picked": "harp",
+    "angle": 2.9745,
+    "firstHit": "harp"
+   },
+   {
+    "aim": "bowls",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9533,
+     "y": -0.1039,
+     "z": -0.2837
+    },
+    "picked": "bowls",
+    "angle": 0,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "bowls",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9371,
+     "y": -0.1039,
+     "z": -0.3332
+    },
+    "picked": "bowls",
+    "angle": 2.9838,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "bowls",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9668,
+     "y": -0.1039,
+     "z": -0.2334
+    },
+    "picked": "bowls",
+    "angle": 2.9838,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "handpan",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9395,
+     "y": 0.2334,
+     "z": -0.2507
+    },
+    "picked": "handpan",
+    "angle": 0,
+    "firstHit": "handpan"
+   },
+   {
+    "aim": "handpan",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9513,
+     "y": 0.2334,
+     "z": -0.2012
+    },
+    "picked": "handpan",
+    "angle": 2.9171,
+    "firstHit": "handpan"
+   },
+   {
+    "aim": "handpan",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9251,
+     "y": 0.2334,
+     "z": -0.2995
+    },
+    "picked": "handpan",
+    "angle": 2.9171,
+    "firstHit": "handpan"
+   },
+   {
+    "aim": "marimba",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9099,
+     "y": -0.1131,
+     "z": -0.399
+    },
+    "picked": "marimba",
+    "angle": 0,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "marimba",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.8878,
+     "y": -0.1131,
+     "z": -0.4461
+    },
+    "picked": "marimba",
+    "angle": 2.9807,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "marimba",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.9296,
+     "y": -0.1131,
+     "z": -0.3509
+    },
+    "picked": "marimba",
+    "angle": 2.9807,
+    "firstHit": "marimba"
+   },
+   {
+    "aim": "handdrums",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.7183,
+     "y": -0.0756,
+     "z": -0.6917
+    },
+    "picked": "handdrums",
+    "angle": 0,
+    "firstHit": "handdrums"
+   },
+   {
+    "aim": "handdrums",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.6811,
+     "y": -0.0756,
+     "z": -0.7283
+    },
+    "picked": "handdrums",
+    "angle": 2.9914,
+    "firstHit": "handdrums"
+   },
+   {
+    "aim": "handdrums",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": 0.7535,
+     "y": -0.0756,
+     "z": -0.6531
+    },
+    "picked": "handdrums",
+    "angle": 2.9914,
+    "firstHit": "handdrums"
+   },
+   {
+    "aim": "drums",
+    "offDeg": 0,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9553,
+     "y": 0.007,
+     "z": -0.2956
+    },
+    "picked": "drums",
+    "angle": 0,
+    "firstHit": null
+   },
+   {
+    "aim": "drums",
+    "offDeg": 3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9695,
+     "y": 0.007,
+     "z": -0.2452
+    },
+    "picked": "drums",
+    "angle": 2.9999,
+    "firstHit": "drums"
+   },
+   {
+    "aim": "drums",
+    "offDeg": -3,
+    "origin": {
+     "x": 0.2,
+     "y": 1,
+     "z": 0.25
+    },
+    "dir": {
+     "x": -0.9385,
+     "y": 0.007,
+     "z": -0.3451
+    },
+    "picked": "drums",
+    "angle": 2.9999,
+    "firstHit": "drums"
+   }
+  ]
+ },
+ "control": {
+  "gestureSeed": 1,
+  "frames": 900,
+  "events": 242,
+  "soundingSeconds": 8.4667,
+  "ratePerSecond": 28.5827,
+  "error": {
+   "maxCents": 8.672,
+   "rmsCents": 1.7365,
+   "maxDb": 0.4103
+  },
+  "first": [
+   {
+    "t": 0.5222,
+    "type": "laneOn",
+    "lane": 0,
+    "u": 56.9896,
+    "vel": 0.0133,
+    "speed": 0
+   },
+   {
+    "t": 0.5556,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9997,
+    "vel": 0.0333,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.5889,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.987,
+    "vel": 0.0533,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.6222,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9968,
+    "vel": 0.0733,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.6556,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 57.008,
+    "vel": 0.0933,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.6889,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9936,
+    "vel": 0.1133,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.7222,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9907,
+    "vel": 0.1333,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.7556,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9863,
+    "vel": 0.1533,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.7889,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9978,
+    "vel": 0.1733,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.8222,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 57.0027,
+    "vel": 0.1933,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.8556,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 57.009,
+    "vel": 0.2133,
+    "speed": 0.0333
+   },
+   {
+    "t": 0.8889,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 56.9938,
+    "vel": 0.2333,
+    "speed": 0.0333
+   }
+  ],
+  "last": [
+   {
+    "t": 9.0111,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 57,
+    "vel": 0,
+    "speed": 0.0333
+   },
+   {
+    "t": 9.0444,
+    "type": "laneCtl",
+    "lane": 0,
+    "u": 57,
+    "vel": 0,
+    "speed": 0.0333
+   },
+   {
+    "t": 9.0444,
+    "type": "laneOff",
+    "lane": 0,
+    "u": 57,
+    "vel": 0,
+    "speed": 0
+   }
+  ],
+  "sections": {
+   "swell": 30,
+   "glide": 90,
+   "vibrato": 89,
+   "fall": 33
+  }
+ },
+ "budgets": {
+  "units": {
+   "piano": {
+    "draws": 10,
+    "stowed": 4,
+    "audioTyp": 0.2,
+    "audioWorst": 0.6,
+    "mem": 0.6,
+    "tex": 0,
+    "measured": "ARCH 19.41 (palms / 88 keys <= 0.6 avg)"
+   },
+   "drums": {
+    "draws": 21,
+    "stowed": 6,
+    "audioTyp": 0.35,
+    "audioWorst": 0.8,
+    "mem": 1,
+    "tex": 0.6,
+    "measured": "ARCH 19.42 (vrWorst < 0.8 avg)"
+   },
+   "harp": {
+    "draws": 5,
+    "stowed": 3,
+    "audioTyp": 0.08,
+    "audioWorst": 0.15,
+    "mem": 0.3,
+    "tex": 0,
+    "measured": "harp.md 11.3 (dense <= 150 us)"
+   },
+   "handpan": {
+    "draws": 4,
+    "stowed": 2,
+    "audioTyp": 0.08,
+    "audioWorst": 0.15,
+    "mem": 2,
+    "tex": 2,
+    "measured": "cap"
+   },
+   "handdrums": {
+    "draws": 6,
+    "stowed": 3,
+    "audioTyp": 0.08,
+    "audioWorst": 0.15,
+    "mem": 2,
+    "tex": 2,
+    "measured": "cap"
+   },
+   "marimba": {
+    "draws": 6,
+    "stowed": 3,
+    "audioTyp": 0.1,
+    "audioWorst": 0.2,
+    "mem": 2,
+    "tex": 1.5,
+    "measured": "cap"
+   },
+   "bowls": {
+    "draws": 5,
+    "stowed": 3,
+    "audioTyp": 0.08,
+    "audioWorst": 0.15,
+    "mem": 2,
+    "tex": 2,
+    "measured": "cap"
+   }
+  },
+  "scene": {
+   "roomDraws": 37,
+   "tableDeck": 15,
+   "menu": 4,
+   "sunny": 6,
+   "blocks": 1,
+   "glows": 1,
+   "hands": 2,
+   "contactShadows": 1,
+   "rigShadows": 1,
+   "raySummon": 2,
+   "mrPortals": 6,
+   "mrCatcher": 1,
+   "vrBudget": 150,
+   "mrBudget": 80,
+   "roomAudio3": 0.27,
+   "roomAudioPerGroup": 0.06,
+   "overhead": 0.1,
+   "audioTarget": 2,
+   "governorHigh": 1.6,
+   "governorLow": 1
+  },
+  "draws": {
+   "defaultVr": 120,
+   "worstVr": {
+    "set": [
+     "piano",
+     "handdrums",
+     "drums"
+    ],
+    "seat": 37,
+    "stowed": 14,
+    "fixed": 70,
+    "total": 121
+   },
+   "worstMr": {
+    "set": [
+     "piano",
+     "handdrums",
+     "drums"
+    ],
+    "seat": 37,
+    "fixed": 37,
+    "total": 74
+   }
+  },
+  "audio": {
+   "worstAll": 2.69,
+   "typAll": 1.44,
+   "newCaps": 0.7100000000000001
+  },
+  "governor": {
+   "busyWorst": {
+    "share": {
+     "drums": 1,
+     "piano": 0.4,
+     "marimba": 0.4,
+     "bowls": 0.4,
+     "harp": 0.4
+    },
+    "p99": 2.0723,
+    "log": [
+     2.6795,
+     2.5484,
+     2.4173,
+     2.2862,
+     2.1551,
+     2.1344,
+     2.1137,
+     2.093,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723,
+     2.0723
+    ]
+   },
+   "busyTypical": {
+    "share": {
+     "drums": 1,
+     "piano": 1,
+     "marimba": 1,
+     "bowls": 1
+    },
+    "p99": 1.334,
+    "log": [
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334,
+     1.334
+    ]
+   }
+  }
+ }
+}

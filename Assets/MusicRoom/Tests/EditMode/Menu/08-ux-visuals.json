@@ -1,0 +1,110 @@
+{
+ "about": "Visual constants for spec 08 (palm menu panel, summon ring, Sunny). Hand-transcribed reference values; each block names its spec section. Positions are Unity values: local +z points away from the player, +x is the player's right. Canvas values are px with the origin top-left, y down. Colours are sRGB CSS strings; 'k' is the hover fade 0..1.",
+ "panel": {
+  "source": "Docs/08-ux-lessons-menu-guide.md",
+  "faceSizeM": [0.32, 0.24],
+  "cylinderRadiusM": 0.8,
+  "segments": 32,
+  "canvasPx": [1024, 768],
+  "pxPerMetre": 3200,
+  "cornerRadiusPx": 64,
+  "font": "system-ui sans-serif; Unity TextMeshPro LiberationSans SDF (bold where marked)",
+  "palette": { "INK": "#f3ead8", "DIM": "rgba(243,234,216,0.55)", "CYAN": "#5fd8ff", "GREEN": "#5dff8a", "RED": "#ff5a5a", "AMBER": "#ffc46a", "ROSE": "#ff8ec4" },
+  "accentByScreen": { "home": "CYAN", "lessons": "CYAN", "courses": "CYAN", "lesson": "CYAN", "instruments": "AMBER", "recordings": "ROSE", "take": "ROSE" },
+  "backPlate": {
+   "sizeM": [0.3483, 0.2688], "localZ": 0.004, "texturePx": [512, 384],
+   "rect": { "insetPx": 12, "radiusPx": 34, "fill": "#0b0d14", "glow": "rgba(255,190,110,0.55)", "glowBlurPx": 14 },
+   "rim": { "color": "rgba(255,196,120,0.6)", "widthPx": 4, "insetPx": 2, "radiusPx": 32 }
+  },
+  "face": {
+   "gradientTopToBottom": [[0, "rgba(32,37,52,0.94)"], [0.55, "rgba(22,25,36,0.95)"], [1, "rgba(14,15,22,0.96)"]],
+   "unityAlpha": 1,
+   "sheen": { "heightPx": 220, "from": "rgba(255,255,255,0.07)", "to": "rgba(255,255,255,0)" },
+   "innerRim": { "color": "rgba(255,196,120,0.28)", "widthPx": 3, "insetPx": 2, "radiusPx": 62 }
+  },
+  "header": {
+   "heightPx": 110, "textCentreY": 57,
+   "title": { "x": 48, "fontPx": 52, "bold": true, "maxWidthPx": 604, "color": "INK on home; CYAN with the prefix '‹  ' on sub-screens" },
+   "note": { "rightX": 976, "fontPx": 40, "color": "DIM", "maxWidthPx": 400 },
+   "accentBar": { "x0": 48, "x1": 976, "y": 114, "h": 6, "radiusPx": 3, "gradient": ["accent", "rgba(243,234,216,0.05)"] },
+   "backRowHover": { "rect": [6, 6, 1012, 104], "radiusPx": 58, "fill": "rgba(95,216,255,0.22*k)" }
+  },
+  "row": {
+   "x0": 40, "x1": 984, "radius": "min(28, h/2)",
+   "fill": "rgba(243,234,216,0.06)",
+   "on": { "fill": "rgba(255,196,120,0.10)", "stroke": "rgba(255,196,120,0.55)", "widthPx": 3, "insetPx": 1.5, "iconAndNote": "AMBER, note bold" },
+   "hover": { "fill": "rgba(95,216,255,0.22*k)", "stroke": "rgba(95,216,255,k)", "widthPx": 4, "insetPx": 2, "fadeMs": 120 },
+   "icon": { "size": "min(100, h - 28)", "x": "x0 + 34", "verticalAlign": "centre" },
+   "label": { "x": "x0 + 34 + iconSize + 36 (x0 + 36 without an icon)", "maxWidth": "x1 - labelX - 330", "bold": true },
+   "note": { "rightX": "x1 - 36", "fontPx": 42, "color": "DIM" },
+   "labelFontPx": { "home": "64, shrinking by 2 to 44 until it fits", "lessons": 64, "courses": 50, "lesson": 56, "instruments": 52, "recordings": 50, "take": 52 },
+   "labelColour": { "default": "INK", "lessonStop": "RED", "summaryReplay": "GREEN", "takePlay": "GREEN", "takeDelete": "RED" }
+  },
+  "footer": { "y": 724, "fontPx": 38, "align": "centre", "color": "DIM" },
+  "progress": { "x0": 48, "x1": 976, "hPx": 24, "track": "rgba(243,234,216,0.15)", "fill": "CYAN, GREEN when done", "minFillPx": 24, "labelsDy": 50, "labelFontPx": 44, "left": "'H of T' INK", "right": "'Mistakes: N' RED if N > 0 else DIM" },
+  "list": { "top": 130, "bottom": 750, "pitch": 130, "rowH": 120, "minVisiblePx": 30, "maxRows": 24, "scrollbar": { "x": 998, "w": 10, "radiusPx": 5, "track": "rgba(243,234,216,0.12)", "thumb": "accent" } },
+  "screens": {
+   "source": "Docs/08-ux-lessons-menu-guide.md",
+   "rectFormat": "[x0, y0, x1, y1] canvas px",
+   "backRow": [0, 0, 1024, 110],
+   "home": [{ "id": "menu", "to": "lessons", "rect": [40, 132, 984, 260] }, { "id": "menu", "to": "instruments", "rect": [40, 272, 984, 400] }, { "id": "menu", "to": "recordings", "rect": [40, 412, 984, 540] }, { "id": "guide", "rect": [40, 552, 984, 680] }],
+   "homeWithRoomRowProposed": { "rowH": 100, "gap": 12, "top": 132, "order": ["lessons", "instruments", "recordings", "room", "guide"] },
+   "lessons": [{ "id": "inst", "inst": "piano", "rect": [40, 132, 984, 300] }, { "id": "inst", "inst": "drums", "rect": [40, 316, 984, 484] }, { "id": "inst", "inst": "harp", "rect": [40, 500, 984, 668] }],
+   "instruments": [{ "id": "layout", "mode": "all", "rect": [40, 130, 984, 230] }, { "id": "layout", "mode": "single", "inst": "piano", "rect": [40, 242, 984, 342] }, { "id": "layout", "mode": "single", "inst": "drums", "rect": [40, 354, 984, 454] }, { "id": "layout", "mode": "single", "inst": "harp", "rect": [40, 466, 984, 566] }, { "id": "lock", "rect": [40, 578, 984, 678] }],
+   "lessonRunning": [{ "id": "stop", "rect": [40, 640, 984, 750] }],
+   "lessonDone": [{ "id": "replay", "rect": [40, 440, 984, 560] }, { "id": "courses", "rect": [40, 590, 984, 710] }],
+   "take": [{ "id": "play", "rect": [40, 300, 984, 410] }, { "id": "tstop", "rect": [40, 430, 984, 540] }, { "id": "delete", "rect": [40, 560, 984, 670] }, { "id": "paint", "rect": [40, 682, 984, 752] }],
+   "courses": "list rows (see list)", "recordings": "list rows (see list)"
+  },
+  "icons": { "source": "Docs/08-ux-lessons-menu-guide.md", "box": 100, "strokeWidth": "max(4, 0.07*size)", "caps": "round", "kinds": ["piano", "drums", "harp", "recordings", "instruments", "lessons", "play", "stop", "delete", "back", "lock", "unlock"] },
+  "texts": {
+   "countdown": { "digit": { "fontPx": 220, "bold": true, "color": "CYAN", "y": 420 }, "getReady": { "text": "Get ready", "fontPx": 40, "color": "DIM", "y": 570 } },
+   "hint": { "y": 430, "fontPx": "120, or 80 when longer than 14 chars", "bold": true, "color": "#ffffff while waiting, else INK", "maxWidthPx": 944 },
+   "summary": { "title": { "text": "Lesson complete!", "fontPx": 64, "bold": true, "color": "GREEN", "y": 200 }, "line": { "fontPx": 44, "color": "INK", "y": 270 }, "progressY": 340 },
+   "progressY": 170,
+   "takeInfo": { "x": 48, "y": 200, "fontPx": 42, "color": "DIM" },
+   "recordingsEmpty": { "title": { "fontPx": 52, "bold": true, "y": 360 }, "line1": { "fontPx": 40, "color": "DIM", "y": 440 }, "line2": { "fontPx": 40, "color": "DIM", "y": 500 } }
+  }
+ },
+ "summonRing": { "source": "Docs/08-ux-lessons-menu-guide.md", "innerM": 0.028, "outerM": 0.036, "segments": 40, "color": "#5fd8ff", "blend": "additive", "doubleSided": true, "zwrite": false, "renderOrder": 6, "offsetAlongPalmNormalM": 0.03, "scale": "0.5 + 0.5k", "opacity": "0.15 + 0.65k" },
+ "sunny": {
+  "body": { "source": "Docs/08-ux-lessons-menu-guide.md", "radiusM": 0.045, "widthSegments": 20, "heightSegments": 14, "unlit": true, "renderOrder": 5, "uv": "phi = 2*pi*u, theta = pi*v (v from the top); Unity vertex (-r cos(phi) sin(theta), r cos(theta), -r sin(phi) sin(theta)); uv (u, 1 - v); the face (u = 0.25) is at local -z" },
+  "face": {
+   "source": "Docs/08-ux-lessons-menu-guide.md",
+   "texturePx": [512, 256],
+   "background": { "type": "radial", "centre": [128, 128], "r0": 10, "r1": 256, "stops": [[0, "#fff1a8"], [0.45, "#ffd45a"], [1, "#f59a2a"]] },
+   "cheeks": { "color": "rgba(255,130,90,0.35)", "centres": [[86, 145.92], [170, 145.92]], "radii": [13, 8] },
+   "eyes": { "color": "#3a2114", "centres": [[104, 107.52], [152, 107.52]], "radii": { "calm": [10, 11], "happy": [10, 12] }, "shine": { "color": "#ffffff", "offset": [3.5, -4], "r": 3.5 }, "shut": { "rectOffset": [-11, -2], "size": [22, 5] } },
+   "mouth": {
+    "stroke": "#3a2114", "widthPx": 5, "cap": "round",
+    "open": { "centre": [128, 151.04], "radii": { "calm": [12, 9], "happy": [15, 12] }, "fill": "#7a2a1a", "stroked": true },
+    "happyShut": { "arcCentre": [128, 140.8], "r": 20, "fromRadPi": 0.15, "toRadPi": 0.85, "fill": "#7a2a1a", "stroked": true },
+    "calmShut": { "arcCentre": [128, 143.36], "r": 14, "fromRadPi": 0.2, "toRadPi": 0.8, "stroked": true }
+   },
+   "arcNote": "canvas angles run clockwise from +x with y down, so 0.15..0.85 pi is the lower half: a smile",
+   "states": "mood calm|happy x eyes open|shut x mouth shut|open = 8"
+  },
+  "corona": { "source": "Docs/08-ux-lessons-menu-guide.md", "planeM": 0.234, "localZ": 0.027, "blend": "SrcAlpha One", "doubleSided": true, "zwrite": false, "renderOrder": 4 },
+  "bubble": {
+   "source": "Docs/08-ux-lessons-menu-guide.md",
+   "sizeM": [0.26, 0.115], "localPos": [0.0832, 0.1163, -0.01], "canvasPx": [768, 340], "ztest": "Always", "renderOrder": 6,
+   "box": { "rect": [10, 10, 758, 296], "cornerRadiusPx": 44, "corners": "quadratic", "tail": [[200, 296], [130, 334], [140, 296]], "fill": "rgba(255,250,238,0.96)", "stroke": "#f0b24a", "strokePx": 6 },
+   "text": { "color": "#3a2114", "bold": true, "centreY": 153, "maxWidthPx": 678, "lineHeight": 1.18, "fontPx": "54 down to 30 in steps of 4 until it wraps into 2 lines or fewer", "tmpShader": "TextMeshPro/Mobile/Distance Field Overlay" }
+  },
+  "light": { "source": "Docs/08-ux-lessons-menu-guide.md", "color": "#ffb866", "rangeM": 1.4, "intensity": "0.7 + 0.2 sin(2.1 t)", "leaving": "(1 - u) * 0.8", "hidden": 0, "sourceDecay": 2, "unityIntensity": "UNVERIFIED: tune by eye (the reference values are physical units)" },
+  "demo": {
+   "source": "Docs/08-ux-lessons-menu-guide.md",
+   "material": { "color": "#5fd8ff", "opacity": 0.5, "blend": "additive", "zwrite": false, "renderOrder": 7 },
+   "handRoot": [0.07, -0.05, -0.25],
+   "palmBoxM": [0.075, 0.085, 0.022],
+   "finger": { "capsuleRadiusM": 0.0085, "straightLength": "max(0.01, len - 0.017)", "centredAt": "len / 2 up the pivot", "pivotY": 0.0425, "pivotZ": 0 },
+   "fingers": [ { "name": "index", "x": 0.028, "len": 0.065 }, { "name": "middle", "x": 0.009, "len": 0.072 }, { "name": "ring", "x": -0.010, "len": 0.066 }, { "name": "little", "x": -0.029, "len": 0.052 } ],
+   "fingersSourceX": { "index": -0.028, "middle": -0.009, "ring": 0.010, "little": 0.029, "note": "the source frame puts the index on the far side from the thumb; Unity mirrors these (spec 08 section 8)" },
+   "thumb": { "pivot": [0.044, -0.015, -0.004], "len": 0.05, "leanZRad": -1.0 },
+   "curl": { "finger": "localRotation Euler(-1.5*k rad, 0, 0); the index uses its own k", "thumb": "Euler(-0.9*thumbK rad, 0, -1 rad)" },
+   "ring": { "localPos": [0, 0, -0.04], "same": "summonRing" },
+   "ghostPanel": { "pos": [0.07, -0.02, -0.08], "rectM": [0.13, 0.095], "rowLinesY": [0.0255, -0.0005, -0.0265], "rowLineHalfWidthM": 0.053, "opacity": 0.6, "rowPlate": { "sizeM": [0.11, 0.018], "pos": [0, 0.0125, -0.001], "opacity": "0.1 + 0.55 * clamp01((push - 0.7) / 0.3)" } },
+   "arrow": { "pos": [0.07, -0.125, -0.25], "dashedLine": { "fromX": 0.15, "toX": -0.13, "dash": 0.01, "gap": 0.012, "opacity": 0.8 }, "cone": { "r": 0.012, "h": 0.03, "sides": 10, "x": -0.155, "eulerDeg": [0, 0, 90] } }
+  }
+ }
+}

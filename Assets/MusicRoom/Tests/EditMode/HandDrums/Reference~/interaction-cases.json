@@ -1,0 +1,7410 @@
+{
+ "constants": {
+  "BAND": 0.004,
+  "ARM": 0.02,
+  "APPROACH_MS": 100,
+  "GROUP_V": 0.7,
+  "ARM_N": 2,
+  "OFF": 1.25,
+  "REACH": 1.08,
+  "V0": {
+   "palm": 0.3,
+   "fing": 0.25
+  },
+  "V1": 2,
+  "VEL_SPAN_MS": 50,
+  "VEL_MIN_N": 3,
+  "VEL_MAX_N": 6,
+  "GAP_MIN": 0.004,
+  "GAP_MAX": 0.2,
+  "DESC_N": 2,
+  "LAND_MS": 8,
+  "LAND_NEAR": 0.012,
+  "LAND_PALM_MS": 20,
+  "LAND_PALM_NEAR": 0.02,
+  "LAND_FLOOR": 0.006,
+  "HEEL_TILT": 0.015,
+  "HEEL_TIPS": 0.025,
+  "TOE_GRACE_MS": 80,
+  "REST_VEL_N": 3,
+  "CURL_DEG": 30,
+  "CURL_MIN": 12,
+  "PALM_MAX": 1,
+  "BASS_RHO": 0.8,
+  "TOUCH_U": 0.25,
+  "RIM_RHO": 0.95,
+  "FINGERS_OK": 3,
+  "VREST": 0.12,
+  "REST_MS": 14,
+  "REST_OUT": 0.01,
+  "LIFT_V": 0.3,
+  "LIFT_MS": 25,
+  "WINDOW_MS": 40,
+  "TOE_AFTER_MS": 60,
+  "MUTE_WITHIN_MS": 90,
+  "REST_DEPTH": 0.03,
+  "LOST_HOLD_MS": 150,
+  "TRACKED_MS": 25,
+  "LIFT_MAX": 0.06,
+  "LIFT_FADE": 0.09,
+  "LIFT_TAU": 0.025,
+  "LIFT_RHO": 1.05
+ },
+ "heads": [
+  {
+   "drum": 0,
+   "centre": [
+    -0.185,
+    0.75,
+    0.57
+   ],
+   "radius": 0.146,
+   "normal": [
+    0,
+    0.9659,
+    -0.2588
+   ]
+  },
+  {
+   "drum": 1,
+   "centre": [
+    0.19,
+    0.755,
+    0.57
+   ],
+   "radius": 0.156,
+   "normal": [
+    0,
+    0.9659,
+    -0.2588
+   ]
+  }
+ ],
+ "cases": [
+  {
+   "id": "C01-open",
+   "app": 72,
+   "tracker": 72,
+   "desc": "flat fingers land at the near edge, knuckles on the rim, palm off the head, 1.2 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C01-open",
+   "app": 90,
+   "tracker": 90,
+   "desc": "flat fingers land at the near edge, knuckles on the rim, palm off the head, 1.2 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C01-open",
+   "app": 72,
+   "tracker": 60,
+   "desc": "flat fingers land at the near edge, knuckles on the rim, palm off the head, 1.2 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C01-open",
+   "app": 90,
+   "tracker": 60,
+   "desc": "flat fingers land at the near edge, knuckles on the rim, palm off the head, 1.2 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 211.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 244.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C02-bass",
+   "app": 72,
+   "tracker": 72,
+   "desc": "flat palm lands in the centre, 1.0 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 180.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02-bass",
+   "app": 90,
+   "tracker": 90,
+   "desc": "flat palm lands in the centre, 1.0 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 177.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.537,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02-bass",
+   "app": 72,
+   "tracker": 60,
+   "desc": "flat palm lands in the centre, 1.0 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02-bass",
+   "app": 90,
+   "tracker": 60,
+   "desc": "flat palm lands in the centre, 1.0 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03-slap",
+   "app": 72,
+   "tracker": 72,
+   "desc": "cupped fingers, knuckles at the rim, only the tips land, 1.6 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "slap"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 152.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "slap",
+     "u": 0.834,
+     "v": 1.6,
+     "tStar": 152.57,
+     "patches": [
+      {
+       "part": "base",
+       "uScale": 0.8,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.035
+        }
+       ]
+      },
+      {
+       "part": "tips",
+       "uScale": 1,
+       "dly": 0.0008,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.613,
+         "theta": -0.26
+        },
+        {
+         "rho": 0.534,
+         "theta": -0.026
+        },
+        {
+         "rho": 0.635,
+         "theta": 0.184
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03-slap",
+   "app": 90,
+   "tracker": 90,
+   "desc": "cupped fingers, knuckles at the rim, only the tips land, 1.6 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "slap"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 155.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "slap",
+     "u": 0.834,
+     "v": 1.6,
+     "tStar": 152.57,
+     "patches": [
+      {
+       "part": "base",
+       "uScale": 0.8,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.035
+        }
+       ]
+      },
+      {
+       "part": "tips",
+       "uScale": 1,
+       "dly": 0.0008,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.613,
+         "theta": -0.26
+        },
+        {
+         "rho": 0.534,
+         "theta": -0.026
+        },
+        {
+         "rho": 0.635,
+         "theta": 0.184
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03-slap",
+   "app": 72,
+   "tracker": 60,
+   "desc": "cupped fingers, knuckles at the rim, only the tips land, 1.6 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "slap"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "slap",
+     "u": 0.834,
+     "v": 1.6,
+     "tStar": 152.57,
+     "patches": [
+      {
+       "part": "base",
+       "uScale": 0.8,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.035
+        }
+       ]
+      },
+      {
+       "part": "tips",
+       "uScale": 1,
+       "dly": 0.0008,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.613,
+         "theta": -0.26
+        },
+        {
+         "rho": 0.534,
+         "theta": -0.026
+        },
+        {
+         "rho": 0.635,
+         "theta": 0.184
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03-slap",
+   "app": 90,
+   "tracker": 60,
+   "desc": "cupped fingers, knuckles at the rim, only the tips land, 1.6 m/s",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "slap"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "slap",
+     "u": 0.834,
+     "v": 1.6,
+     "tStar": 152.57,
+     "patches": [
+      {
+       "part": "base",
+       "uScale": 0.8,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.035
+        }
+       ]
+      },
+      {
+       "part": "tips",
+       "uScale": 1,
+       "dly": 0.0008,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.613,
+         "theta": -0.26
+        },
+        {
+         "rho": 0.534,
+         "theta": -0.026
+        },
+        {
+         "rho": 0.635,
+         "theta": 0.184
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04-mute",
+   "app": 72,
+   "tracker": 72,
+   "desc": "an open stroke whose fingers stay on the head 0.3 s: a muted (closed) tone, then the lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "label": "mute"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "lift"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 222.2,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 527.8,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C04-mute",
+   "app": 90,
+   "tracker": 90,
+   "desc": "an open stroke whose fingers stay on the head 0.3 s: a muted (closed) tone, then the lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "label": "mute"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "lift"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 211.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 533.3,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C04-mute",
+   "app": 72,
+   "tracker": 60,
+   "desc": "an open stroke whose fingers stay on the head 0.3 s: a muted (closed) tone, then the lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "label": "mute"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "lift"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 236.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 541.7,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C04-mute",
+   "app": 90,
+   "tracker": 60,
+   "desc": "an open stroke whose fingers stay on the head 0.3 s: a muted (closed) tone, then the lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "label": "mute"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "lift"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 233.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 544.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C05-heel-toe",
+   "app": 72,
+   "tracker": 72,
+   "desc": "heel lands (palm and fingers up), stays, then the hand rocks forward: the fingertips land (palm skin 1 cm up while the heel rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "heel"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "stroke",
+     "kind": "toe"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 180.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "heel",
+     "u": 0.224,
+     "v": 0.5,
+     "tStar": 178.4,
+     "patches": [
+      {
+       "part": "heel",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.673,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 236.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 0,
+     "pts": [
+      {
+       "part": "heel",
+       "rho": 0.673,
+       "theta": 0
+      }
+     ]
+    },
+    {
+     "ms": 527.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "toe",
+     "u": 0.484,
+     "v": 0.871,
+     "tStar": 518.17,
+     "patches": [
+      {
+       "part": "pads",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.392,
+         "theta": -2.727
+        },
+        {
+         "rho": 0.426,
+         "theta": -3.109
+        },
+        {
+         "rho": 0.351,
+         "theta": 2.803
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 708.3,
+     "op": "lift",
+     "drum": 0,
+     "hand": 0
+    }
+   ]
+  },
+  {
+   "id": "C05-heel-toe",
+   "app": 90,
+   "tracker": 90,
+   "desc": "heel lands (palm and fingers up), stays, then the hand rocks forward: the fingertips land (palm skin 1 cm up while the heel rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "heel"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "stroke",
+     "kind": "toe"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "heel",
+     "u": 0.224,
+     "v": 0.5,
+     "tStar": 178.4,
+     "patches": [
+      {
+       "part": "heel",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.673,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 233.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 0,
+     "pts": [
+      {
+       "part": "heel",
+       "rho": 0.673,
+       "theta": 0
+      }
+     ]
+    },
+    {
+     "ms": 522.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "toe",
+     "u": 0.484,
+     "v": 0.871,
+     "tStar": 518.16,
+     "patches": [
+      {
+       "part": "pads",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.392,
+         "theta": -2.728
+        },
+        {
+         "rho": 0.426,
+         "theta": -3.109
+        },
+        {
+         "rho": 0.351,
+         "theta": 2.803
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 711.1,
+     "op": "lift",
+     "drum": 0,
+     "hand": 0
+    }
+   ]
+  },
+  {
+   "id": "C05-heel-toe",
+   "app": 72,
+   "tracker": 60,
+   "desc": "heel lands (palm and fingers up), stays, then the hand rocks forward: the fingertips land (palm skin 1 cm up while the heel rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "heel"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "stroke",
+     "kind": "toe"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "heel",
+     "u": 0.224,
+     "v": 0.5,
+     "tStar": 178.4,
+     "patches": [
+      {
+       "part": "heel",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.673,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 250,
+     "op": "rest",
+     "drum": 0,
+     "hand": 0,
+     "pts": [
+      {
+       "part": "heel",
+       "rho": 0.673,
+       "theta": 0
+      }
+     ]
+    },
+    {
+     "ms": 541.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "toe",
+     "u": 0.483,
+     "v": 0.87,
+     "tStar": 518.17,
+     "patches": [
+      {
+       "part": "pads",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.392,
+         "theta": -2.728
+        },
+        {
+         "rho": 0.426,
+         "theta": -3.109
+        },
+        {
+         "rho": 0.351,
+         "theta": 2.804
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 708.3,
+     "op": "lift",
+     "drum": 0,
+     "hand": 0
+    }
+   ]
+  },
+  {
+   "id": "C05-heel-toe",
+   "app": 90,
+   "tracker": 60,
+   "desc": "heel lands (palm and fingers up), stays, then the hand rocks forward: the fingertips land (palm skin 1 cm up while the heel rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "heel"
+    },
+    {
+     "op": "rest"
+    },
+    {
+     "op": "stroke",
+     "kind": "toe"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "heel",
+     "u": 0.224,
+     "v": 0.5,
+     "tStar": 178.4,
+     "patches": [
+      {
+       "part": "heel",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.673,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 244.4,
+     "op": "rest",
+     "drum": 0,
+     "hand": 0,
+     "pts": [
+      {
+       "part": "heel",
+       "rho": 0.673,
+       "theta": 0
+      }
+     ]
+    },
+    {
+     "ms": 533.3,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "toe",
+     "u": 0.483,
+     "v": 0.87,
+     "tStar": 518.17,
+     "patches": [
+      {
+       "part": "pads",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.392,
+         "theta": -2.728
+        },
+        {
+         "rho": 0.426,
+         "theta": -3.109
+        },
+        {
+         "rho": 0.351,
+         "theta": 2.804
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 711.1,
+     "op": "lift",
+     "drum": 0,
+     "hand": 0
+    }
+   ]
+  },
+  {
+   "id": "C06-flam",
+   "app": 72,
+   "tracker": 72,
+   "desc": "left then right open tone on the conga, 15 ms apart",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 180.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 177.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06-flam",
+   "app": 90,
+   "tracker": 90,
+   "desc": "left then right open tone on the conga, 15 ms apart",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 177.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 177.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06-flam",
+   "app": 72,
+   "tracker": 60,
+   "desc": "left then right open tone on the conga, 15 ms apart",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 177.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06-flam",
+   "app": 90,
+   "tracker": 60,
+   "desc": "left then right open tone on the conga, 15 ms apart",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "hand": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 162.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 177.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 211.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 0,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.745,
+       "theta": -0.677
+      }
+     ]
+    },
+    {
+     "ms": 244.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 0
+    }
+   ]
+  },
+  {
+   "id": "C07-roll",
+   "app": 72,
+   "tracker": 72,
+   "desc": "alternating hands, 12 strokes per second for 1 s (6 per hand), 5 cm lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 138.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 129.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 222.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 213.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 305.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 296.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 379.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 472.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 463.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 555.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 546.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 638.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 629.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 722.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 713.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 805.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 796.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 888.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 879.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 972.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 963.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1055.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 1046.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07-roll",
+   "app": 90,
+   "tracker": 90,
+   "desc": "alternating hands, 12 strokes per second for 1 s (6 per hand), 5 cm lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 133.3,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 129.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 222.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 213.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 300,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 296.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 379.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 466.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 463.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 555.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 546.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 633.3,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 629.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 722.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 713.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 800,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 796.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 888.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 879.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 966.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 963.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1055.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 1046.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07-roll",
+   "app": 72,
+   "tracker": 60,
+   "desc": "alternating hands, 12 strokes per second for 1 s (6 per hand), 5 cm lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 138.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 129.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 222.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 213.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 305.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 296.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 379.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 472.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 463.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 555.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 546.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 638.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 629.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 722.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 713.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 805.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 796.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 888.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 879.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 972.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 963.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1055.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 1046.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07-roll",
+   "app": 90,
+   "tracker": 60,
+   "desc": "alternating hands, 12 strokes per second for 1 s (6 per hand), 5 cm lift",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 133.3,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 129.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 222.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 213.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 300,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 296.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 379.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 466.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 463.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 555.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 546.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 633.3,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 629.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 722.2,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 713.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 800,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 796.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 888.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 879.75,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 966.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 963.08,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": -0.42
+        },
+        {
+         "rho": 0.855,
+         "theta": -0.551
+        },
+        {
+         "rho": 0.739,
+         "theta": -0.682
+        },
+        {
+         "rho": 0.624,
+         "theta": -0.813
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1055.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.79,
+     "v": 1.5,
+     "tStar": 1046.41,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.488
+        },
+        {
+         "rho": 0.872,
+         "theta": 0.628
+        },
+        {
+         "rho": 0.773,
+         "theta": 0.769
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.909
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C08-jitter",
+   "app": 72,
+   "tracker": 72,
+   "desc": "a hand laid on the head (0.08 m/s), then +-3 mm tracking jitter: it rests, never strikes, the damping is not re-sent every frame",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 277.8,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 347.2,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C08-jitter",
+   "app": 90,
+   "tracker": 90,
+   "desc": "a hand laid on the head (0.08 m/s), then +-3 mm tracking jitter: it rests, never strikes, the damping is not re-sent every frame",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 277.8,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 344.4,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C08-jitter",
+   "app": 72,
+   "tracker": 60,
+   "desc": "a hand laid on the head (0.08 m/s), then +-3 mm tracking jitter: it rests, never strikes, the damping is not re-sent every frame",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 291.7,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 347.2,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.438,
+       "theta": 0.064
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C08-jitter",
+   "app": 90,
+   "tracker": 60,
+   "desc": "a hand laid on the head (0.08 m/s), then +-3 mm tracking jitter: it rests, never strikes, the damping is not re-sent every frame",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 277.8,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.757,
+       "theta": -1.026
+      }
+     ]
+    },
+    {
+     "ms": 344.4,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.438,
+       "theta": 0.064
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C09-slow-place",
+   "app": 72,
+   "tracker": 72,
+   "desc": "a hand laid slowly (0.08 m/s) on a ringing drum: it damps, it does not strike",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 736.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 805.6,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C09-slow-place",
+   "app": 90,
+   "tracker": 90,
+   "desc": "a hand laid slowly (0.08 m/s) on a ringing drum: it damps, it does not strike",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 722.2,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.757,
+       "theta": -1.026
+      }
+     ]
+    },
+    {
+     "ms": 800,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C09-slow-place",
+   "app": 72,
+   "tracker": 60,
+   "desc": "a hand laid slowly (0.08 m/s) on a ringing drum: it damps, it does not strike",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 736.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 819.4,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C09-slow-place",
+   "app": 90,
+   "tracker": 60,
+   "desc": "a hand laid slowly (0.08 m/s) on a ringing drum: it damps, it does not strike",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 733.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.71,
+       "theta": -0.092
+      }
+     ]
+    },
+    {
+     "ms": 811.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.439,
+       "theta": -0.201
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C10-from-below",
+   "app": 72,
+   "tracker": 72,
+   "desc": "tracking returns with the hand below the head, then it rises: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 208.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.304,
+       "theta": -0.255
+      }
+     ]
+    },
+    {
+     "ms": 416.7,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C10-from-below",
+   "app": 90,
+   "tracker": 90,
+   "desc": "tracking returns with the hand below the head, then it rises: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 200,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.298,
+       "theta": -0.629
+      }
+     ]
+    },
+    {
+     "ms": 433.3,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C10-from-below",
+   "app": 72,
+   "tracker": 60,
+   "desc": "tracking returns with the hand below the head, then it rises: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 208.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.298,
+       "theta": -0.629
+      }
+     ]
+    },
+    {
+     "ms": 430.6,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C10-from-below",
+   "app": 90,
+   "tracker": 60,
+   "desc": "tracking returns with the hand below the head, then it rises: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 200,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "palm",
+       "rho": 0.05,
+       "theta": 0
+      },
+      {
+       "part": "fingers",
+       "rho": 0.298,
+       "theta": -0.629
+      }
+     ]
+    },
+    {
+     "ms": 411.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.342,
+       "theta": 2.365
+      }
+     ]
+    },
+    {
+     "ms": 444.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C11-lost-mid-stroke",
+   "app": 72,
+   "tracker": 72,
+   "desc": "the hand is lost during the down-swing and found below the head: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": []
+  },
+  {
+   "id": "C11-lost-mid-stroke",
+   "app": 90,
+   "tracker": 90,
+   "desc": "the hand is lost during the down-swing and found below the head: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 200,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 244.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C11-lost-mid-stroke",
+   "app": 72,
+   "tracker": 60,
+   "desc": "the hand is lost during the down-swing and found below the head: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 208.3,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 236.1,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C11-lost-mid-stroke",
+   "app": 90,
+   "tracker": 60,
+   "desc": "the hand is lost during the down-swing and found below the head: no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 200,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 244.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C12-low-finger-confidence",
+   "app": 72,
+   "tracker": 72,
+   "desc": "fingers low-confidence: a palm bass sounds, and an open stroke still sounds (the measured fingers line), never a slap",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "slap"
+   ],
+   "events": [
+    {
+     "ms": 180.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 763.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 762.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C12-low-finger-confidence",
+   "app": 90,
+   "tracker": 90,
+   "desc": "fingers low-confidence: a palm bass sounds, and an open stroke still sounds (the measured fingers line), never a slap",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "slap"
+   ],
+   "events": [
+    {
+     "ms": 177.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.537,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 766.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 762.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C12-low-finger-confidence",
+   "app": 72,
+   "tracker": 60,
+   "desc": "fingers low-confidence: a palm bass sounds, and an open stroke still sounds (the measured fingers line), never a slap",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "slap"
+   ],
+   "events": [
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 777.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 762.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C12-low-finger-confidence",
+   "app": 90,
+   "tracker": 60,
+   "desc": "fingers low-confidence: a palm bass sounds, and an open stroke still sounds (the measured fingers line), never a slap",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "slap"
+   ],
+   "events": [
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 766.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 762.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 811.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 844.4,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C13-palm-then-fingers",
+   "app": 72,
+   "tracker": 72,
+   "desc": "the palm lands, the fingers slap down 20 ms later: ONE bass stroke",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.59,
+     "v": 1.1,
+     "tStar": 164.43,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 222.2,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.757,
+       "theta": -1.026
+      }
+     ]
+    },
+    {
+     "ms": 277.8,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C13-palm-then-fingers",
+   "app": 90,
+   "tracker": 90,
+   "desc": "the palm lands, the fingers slap down 20 ms later: ONE bass stroke",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.59,
+     "v": 1.1,
+     "tStar": 164.43,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 211.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.224,
+       "theta": -0.179
+      }
+     ]
+    },
+    {
+     "ms": 266.7,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C13-palm-then-fingers",
+   "app": 72,
+   "tracker": 60,
+   "desc": "the palm lands, the fingers slap down 20 ms later: ONE bass stroke",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.59,
+     "v": 1.1,
+     "tStar": 164.43,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C13-palm-then-fingers",
+   "app": 90,
+   "tracker": 60,
+   "desc": "the palm lands, the fingers slap down 20 ms later: ONE bass stroke",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 166.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "bass",
+     "u": 0.59,
+     "v": 1.1,
+     "tStar": 164.43,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C14-rim-miss",
+   "app": 72,
+   "tracker": 72,
+   "desc": "the palm comes down on the rim / outside the head (rho 1.2): no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": []
+  },
+  {
+   "id": "C14-rim-miss",
+   "app": 90,
+   "tracker": 90,
+   "desc": "the palm comes down on the rim / outside the head (rho 1.2): no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": []
+  },
+  {
+   "id": "C14-rim-miss",
+   "app": 72,
+   "tracker": 60,
+   "desc": "the palm comes down on the rim / outside the head (rho 1.2): no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": []
+  },
+  {
+   "id": "C14-rim-miss",
+   "app": 90,
+   "tracker": 60,
+   "desc": "the palm comes down on the rim / outside the head (rho 1.2): no stroke",
+   "pass": true,
+   "why": [],
+   "expect": [],
+   "forbid": [
+    "stroke"
+   ],
+   "events": []
+  },
+  {
+   "id": "C15-too-slow",
+   "app": 72,
+   "tracker": 72,
+   "desc": "a 0.1 m/s touch: below V0, silent (it rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 361.1,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.528,
+       "theta": 0.052
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 777.8,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C15-too-slow",
+   "app": 90,
+   "tracker": 90,
+   "desc": "a 0.1 m/s touch: below V0, silent (it rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 366.7,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.528,
+       "theta": 0.052
+      }
+     ]
+    },
+    {
+     "ms": 388.9,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 788.9,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C15-too-slow",
+   "app": 72,
+   "tracker": 60,
+   "desc": "a 0.1 m/s touch: below V0, silent (it rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 375,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.528,
+       "theta": 0.052
+      }
+     ]
+    },
+    {
+     "ms": 402.8,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 791.7,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C15-too-slow",
+   "app": 90,
+   "tracker": 60,
+   "desc": "a 0.1 m/s touch: below V0, silent (it rests)",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "rest"
+    }
+   ],
+   "forbid": [
+    "stroke"
+   ],
+   "events": [
+    {
+     "ms": 366.7,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "tips",
+       "rho": 0.528,
+       "theta": 0.052
+      }
+     ]
+    },
+    {
+     "ms": 400,
+     "op": "rest",
+     "drum": 0,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.684,
+       "theta": 0.047
+      }
+     ]
+    },
+    {
+     "ms": 788.9,
+     "op": "lift",
+     "drum": 0,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C16-two-drums",
+   "app": 72,
+   "tracker": 72,
+   "desc": "left hand bass on the conga while the right hand plays two open tones on the tumba",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass",
+     "drum": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 180.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 182.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 569.4,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 562.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C16-two-drums",
+   "app": 90,
+   "tracker": 90,
+   "desc": "left hand bass on the conga while the right hand plays two open tones on the tumba",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass",
+     "drum": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 177.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "bass",
+     "u": 0.537,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 182.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 566.7,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 562.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C16-two-drums",
+   "app": 72,
+   "tracker": 60,
+   "desc": "left hand bass on the conga while the right hand plays two open tones on the tumba",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass",
+     "drum": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 194.4,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 182.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 569.4,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 562.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C16-two-drums",
+   "app": 90,
+   "tracker": 60,
+   "desc": "left hand bass on the conga while the right hand plays two open tones on the tumba",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "bass",
+     "drum": 0
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    },
+    {
+     "op": "stroke",
+     "kind": "open",
+     "drum": 1
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 0,
+     "kind": "bass",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 170.56,
+     "patches": [
+      {
+       "part": "palm",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.05,
+         "theta": 0
+        }
+       ]
+      },
+      {
+       "part": "pads",
+       "uScale": 0.6,
+       "dly": 0.004,
+       "shape": "points",
+       "pts": [
+        {
+         "rho": 0.752,
+         "theta": -2.93
+        },
+        {
+         "rho": 0.803,
+         "theta": -3.125
+        },
+        {
+         "rho": 0.717,
+         "theta": 2.978
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 188.9,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 182.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 566.7,
+     "op": "stroke",
+     "drum": 1,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.652,
+     "v": 1.2,
+     "tStar": 562.18,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.034
+        },
+        {
+         "rho": 0.837,
+         "theta": 0.039
+        },
+        {
+         "rho": 0.704,
+         "theta": 0.044
+        },
+        {
+         "rho": 0.572,
+         "theta": 0.048
+        }
+       ]
+      }
+     ],
+     "label": "mute"
+    },
+    {
+     "ms": 611.1,
+     "op": "rest",
+     "drum": 1,
+     "hand": 1,
+     "pts": [
+      {
+       "part": "fingers",
+       "rho": 0.719,
+       "theta": 0.044
+      }
+     ]
+    },
+    {
+     "ms": 644.4,
+     "op": "lift",
+     "drum": 1,
+     "hand": 1
+    }
+   ]
+  },
+  {
+   "id": "C18-overshoot",
+   "app": 72,
+   "tracker": 72,
+   "desc": "a hard open tone (2 m/s) that goes 40 mm through the head and turns smoothly: one open, no rest, no mute",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "rest",
+    "mute"
+   ],
+   "events": [
+    {
+     "ms": 138.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-overshoot",
+   "app": 90,
+   "tracker": 90,
+   "desc": "a hard open tone (2 m/s) that goes 40 mm through the head and turns smoothly: one open, no rest, no mute",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "rest",
+    "mute"
+   ],
+   "events": [
+    {
+     "ms": 144.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-overshoot",
+   "app": 72,
+   "tracker": 60,
+   "desc": "a hard open tone (2 m/s) that goes 40 mm through the head and turns smoothly: one open, no rest, no mute",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "rest",
+    "mute"
+   ],
+   "events": [
+    {
+     "ms": 152.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C18-overshoot",
+   "app": 90,
+   "tracker": 60,
+   "desc": "a hard open tone (2 m/s) that goes 40 mm through the head and turns smoothly: one open, no rest, no mute",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [
+    "rest",
+    "mute"
+   ],
+   "events": [
+    {
+     "ms": 155.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C17-speed",
+   "app": 72,
+   "tracker": 72,
+   "desc": "velocity from hand speed: 0.4 / 1.0 / 2.0 m/s open strokes give rising u",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 291.7,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.179,
+     "v": 0.4,
+     "tStar": 286.55,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 680.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 674.62,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1138.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 1137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C17-speed",
+   "app": 90,
+   "tracker": 90,
+   "desc": "velocity from hand speed: 0.4 / 1.0 / 2.0 m/s open strokes give rising u",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 288.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.179,
+     "v": 0.4,
+     "tStar": 286.55,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 677.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 674.62,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1144.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 1,
+     "v": 2,
+     "tStar": 1137.31,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C17-speed",
+   "app": 72,
+   "tracker": 60,
+   "desc": "velocity from hand speed: 0.4 / 1.0 / 2.0 m/s open strokes give rising u",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 305.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.179,
+     "v": 0.4,
+     "tStar": 286.55,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 694.4,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 674.62,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1152.8,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.872,
+     "v": 1.688,
+     "tStar": 1139.11,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C17-speed",
+   "app": 90,
+   "tracker": 60,
+   "desc": "velocity from hand speed: 0.4 / 1.0 / 2.0 m/s open strokes give rising u",
+   "pass": true,
+   "why": [],
+   "expect": [
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    },
+    {
+     "op": "stroke",
+     "kind": "open"
+    }
+   ],
+   "forbid": [],
+   "events": [
+    {
+     "ms": 300,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.179,
+     "v": 0.4,
+     "tStar": 286.55,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 688.9,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.553,
+     "v": 1,
+     "tStar": 674.62,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "ms": 1155.6,
+     "op": "stroke",
+     "drum": 0,
+     "hand": 1,
+     "kind": "open",
+     "u": 0.872,
+     "v": 1.688,
+     "tStar": 1139.11,
+     "patches": [
+      {
+       "part": "fingers",
+       "uScale": 1,
+       "dly": 0,
+       "shape": "line",
+       "pts": [
+        {
+         "rho": 0.97,
+         "theta": 0.037
+        },
+        {
+         "rho": 0.823,
+         "theta": 0.042
+        },
+        {
+         "rho": 0.675,
+         "theta": 0.047
+        },
+        {
+         "rho": 0.528,
+         "theta": 0.052
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "stat": {
+  "C03b-d slap v2 app72/trk72": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v3 app72/trk72": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v4 app72/trk72": {
+   "tally": {
+    "slap": 39,
+    "touch": 1
+   },
+   "pass": 0.975,
+   "ok": true
+  },
+  "C03b-d slap v2 app90/trk90": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v3 app90/trk90": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v4 app90/trk90": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v2 app72/trk60": {
+   "tally": {
+    "slap": 39,
+    "touch": 1
+   },
+   "pass": 0.975,
+   "ok": true
+  },
+  "C03b-d slap v3 app72/trk60": {
+   "tally": {
+    "slap": 39,
+    "touch": 1
+   },
+   "pass": 0.975,
+   "ok": true
+  },
+  "C03b-d slap v4 app72/trk60": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C03b-d slap v2 app90/trk60": {
+   "tally": {
+    "slap": 39,
+    "touch": 1
+   },
+   "pass": 0.975,
+   "ok": true
+  },
+  "C03b-d slap v3 app90/trk60": {
+   "tally": {
+    "slap": 39,
+    "touch": 1
+   },
+   "pass": 0.975,
+   "ok": true
+  },
+  "C03b-d slap v4 app90/trk60": {
+   "tally": {
+    "slap": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v2 app72/trk72": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v3 app72/trk72": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v4 app72/trk72": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v2 app90/trk90": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v3 app90/trk90": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v4 app90/trk90": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v2 app72/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v3 app72/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v4 app72/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v2 app90/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v3 app90/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C01b-d open v4 app90/trk60": {
+   "tally": {
+    "open": 40
+   },
+   "pass": 1,
+   "ok": true
+  },
+  "C08b hold -4mm centre app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm edge app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm centre app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm edge app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm centre app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm edge app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm centre app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm edge app72/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm centre app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm edge app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm centre app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm edge app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm centre app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm edge app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm centre app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm edge app72/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm centre app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm edge app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm centre app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm edge app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm centre app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm edge app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm centre app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm edge app90/trk60": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm centre app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold -4mm edge app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm centre app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 0mm edge app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm centre app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 6mm edge app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm centre app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C08b hold 12mm edge app90/trk30": {
+   "strokes": 0,
+   "kinds": "",
+   "seconds": 60,
+   "ok": true
+  },
+  "C09b placements centre app72/trk60": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements edge app72/trk60": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements centre app72/trk30": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements edge app72/trk30": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements centre app90/trk60": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements edge app90/trk60": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements centre app90/trk30": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C09b placements edge app90/trk30": {
+   "placements": 20,
+   "strokes": 0,
+   "kinds": "",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app72/trk30": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app72/trk30": {
+   "strokes": "bass(0.05)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app72/trk30": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app72/trk30": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app72/trk60": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app72/trk60": {
+   "strokes": "bass(0.05)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app72/trk60": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app72/trk60": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app72/trk72": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app72/trk72": {
+   "strokes": "bass(0.083)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app72/trk72": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app72/trk72": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app90/trk90": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app90/trk90": {
+   "strokes": "bass(0.05)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app90/trk90": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app90/trk90": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app90/trk60": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app90/trk60": {
+   "strokes": "bass(0.05)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app90/trk60": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app90/trk60": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  },
+  "C13b fingers-first v0.3 app90/trk30": {
+   "strokes": "open(0.083)",
+   "ok": true
+  },
+  "C13b palm-first v0.3 app90/trk30": {
+   "strokes": "bass(0.05)",
+   "ok": true
+  },
+  "C13b fingers-first v0.6 app90/trk30": {
+   "strokes": "open(0.324)",
+   "ok": true
+  },
+  "C13b palm-first v0.6 app90/trk30": {
+   "strokes": "bass(0.297)",
+   "ok": true
+  }
+ },
+ "low": [
+  {
+   "id": "C01-open",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C02-bass",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C03-slap",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C04-mute",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C05-heel-toe",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C06-flam",
+   "pass": false,
+   "why": [
+    "flam spacing 21.3 ms"
+   ]
+  },
+  {
+   "id": "C07-roll",
+   "pass": false,
+   "why": [
+    "expected {\"op\":\"stroke\",\"kind\":\"open\"}",
+    "strokes 7 != 12"
+   ]
+  },
+  {
+   "id": "C08-jitter",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C09-slow-place",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C10-from-below",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C11-lost-mid-stroke",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C12-low-finger-confidence",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C13-palm-then-fingers",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C14-rim-miss",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C15-too-slow",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C16-two-drums",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C18-overshoot",
+   "pass": true,
+   "why": []
+  },
+  {
+   "id": "C17-speed",
+   "pass": true,
+   "why": []
+  }
+ ],
+ "summary": {
+  "scripted": "72/72",
+  "statistical": "88/88"
+ },
+ "palmLift": {
+  "target": [
+   {
+    "depthM": -0.01,
+    "liftM": 0
+   },
+   {
+    "depthM": 0,
+    "liftM": 0
+   },
+   {
+    "depthM": 0.02,
+    "liftM": 0.02
+   },
+   {
+    "depthM": 0.06,
+    "liftM": 0.06
+   },
+   {
+    "depthM": 0.075,
+    "liftM": 0.03
+   },
+   {
+    "depthM": 0.09,
+    "liftM": 0
+   },
+   {
+    "depthM": 0.12,
+    "liftM": 0
+   }
+  ],
+  "trace": [
+   {
+    "ms": 152.8,
+    "liftMm": 0
+   },
+   {
+    "ms": 166.7,
+    "liftMm": 0
+   },
+   {
+    "ms": 180.6,
+    "liftMm": 0.56
+   },
+   {
+    "ms": 194.4,
+    "liftMm": 10.53
+   },
+   {
+    "ms": 208.3,
+    "liftMm": 6.98
+   },
+   {
+    "ms": 222.2,
+    "liftMm": 4.01
+   },
+   {
+    "ms": 236.1,
+    "liftMm": 2.3
+   },
+   {
+    "ms": 250,
+    "liftMm": 1.32
+   },
+   {
+    "ms": 263.9,
+    "liftMm": 0.76
+   },
+   {
+    "ms": 277.8,
+    "liftMm": 0.43
+   },
+   {
+    "ms": 291.7,
+    "liftMm": 0.25
+   }
+  ]
+ }
+}

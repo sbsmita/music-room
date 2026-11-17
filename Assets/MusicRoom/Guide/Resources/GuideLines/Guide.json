@@ -1,0 +1,34 @@
+{
+ "lines": [
+  {
+   "id": "tip_bring_grid",
+   "text": "Poke an instrument in Instruments to bring it here.",
+   "spoken": "Poke an instrument in Instruments to bring it here."
+  },
+  {
+   "id": "tip_summon_far",
+   "text": "Point at an instrument and pinch to bring it here.",
+   "spoken": "Point at an instrument and pinch to bring it here."
+  },
+  {
+   "id": "tip_my_set",
+   "text": "Open Instruments to choose which ones sit with you.",
+   "spoken": "Open Instruments to choose which ones sit with you."
+  },
+  {
+   "id": "tip_set_full",
+   "text": "Only three fit. The least played one goes back.",
+   "spoken": "Only three fit. The least played one goes back."
+  },
+  {
+   "id": "tip_put_away",
+   "text": "Poke a ticked instrument to put it back.",
+   "spoken": "Poke a ticked instrument to put it back."
+  },
+  {
+   "id": "tip_page_turn",
+   "text": "Swipe your hand sideways for the next instrument.",
+   "spoken": "Swipe your hand sideways for the next instrument."
+  }
+ ]
+}

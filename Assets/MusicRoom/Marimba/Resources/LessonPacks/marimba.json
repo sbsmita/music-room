@@ -1,0 +1,1612 @@
+{
+ "generatedFrom": "the marimba lesson table (Docs/12-new-instruments/marimba.md)",
+ "tunesFrom": "the first-five lesson table (Mary Had a Little Lamb, Twinkle Twinkle Little Star; public domain) and Docs/11-first-five/sunny-tour.md 2.5 (ODE answer phrase)",
+ "format": {
+  "targets": "marimba {i (0 = C3 .. 36 = C6, chromatic), midi, note, kind: \"roll\" | null, label: \"R\" | \"L\" | null (suggested mallet; never crossing the hands)}",
+  "accompany": "optional (first-run style, sunny-tour 2.5): [{beat, midi[], vel}], played through ILessonAccompany (request R6) at min(vel, max(0.05, 0.35 x the last live onset vel)), not scored, not recorded",
+  "options": "platform LessonOptions names (sunny-tour 7.4) applied when the lesson starts (request R6): Accompany, QuietMistakes"
+ },
+ "tutorial": {
+  "SPEED": 0.18,
+  "TRAVEL": {
+   "marimba": 0.3
+  },
+  "leadSeconds": {
+   "marimba": 1.6666666666666667
+  }
+ },
+ "counts": {
+  "lessons": 3,
+  "events": 83,
+  "targets": 83
+ },
+ "lessons": [
+  {
+   "id": "marimba-first",
+   "instrument": "marimba",
+   "title": "First notes",
+   "bpm": 80,
+   "secondsPerBeat": 0.75,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 16,
+   "seconds": 12,
+   "eventCount": 15,
+   "notes": 15,
+   "listNote": "15 notes",
+   "options": [
+    "Accompany",
+    "QuietMistakes"
+   ],
+   "accompany": [
+    {
+     "beat": 0,
+     "midi": [
+      48,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 4,
+     "midi": [
+      55,
+      59
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 8,
+     "midi": [
+      48,
+      55
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 12,
+     "midi": [
+      55,
+      59
+     ],
+     "vel": 0.28
+    },
+    {
+     "beat": 14,
+     "midi": [
+      48,
+      52,
+      55
+     ],
+     "vel": 0.3
+    }
+   ],
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.75,
+     "due": 1.6666666666666667,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.75,
+     "duration": 0.75,
+     "due": 2.416666666666667,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.5,
+     "duration": 0.75,
+     "due": 3.166666666666667,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 2.25,
+     "duration": 0.75,
+     "due": 3.916666666666667,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 3,
+     "duration": 0.75,
+     "due": 4.666666666666667,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 3.75,
+     "duration": 0.75,
+     "due": 5.416666666666667,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 1,
+     "time": 4.5,
+     "duration": 0.75,
+     "due": 6.166666666666667,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 7,
+     "len": 1,
+     "time": 5.25,
+     "duration": 0.75,
+     "due": 6.916666666666667,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 8,
+     "len": 1,
+     "time": 6,
+     "duration": 0.75,
+     "due": 7.666666666666667,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 9,
+     "len": 1,
+     "time": 6.75,
+     "duration": 0.75,
+     "due": 8.416666666666666,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 10,
+     "len": 1,
+     "time": 7.5,
+     "duration": 0.75,
+     "due": 9.166666666666666,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 11,
+     "len": 1,
+     "time": 8.25,
+     "duration": 0.75,
+     "due": 9.916666666666666,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 12,
+     "len": 1.5,
+     "time": 9,
+     "duration": 1.125,
+     "due": 10.666666666666666,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 13.5,
+     "len": 0.5,
+     "time": 10.125,
+     "duration": 0.375,
+     "due": 11.791666666666666,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 14,
+     "len": 2,
+     "time": 10.5,
+     "duration": 1.5,
+     "due": 12.166666666666666,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "marimba-mary",
+   "instrument": "marimba",
+   "title": "Mary Had a Little Lamb",
+   "bpm": 100,
+   "secondsPerBeat": 0.6,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 32,
+   "seconds": 19.2,
+   "eventCount": 26,
+   "notes": 26,
+   "listNote": "26 notes",
+   "handCrossings": 0,
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.6,
+     "due": 1.6666666666666667,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.6,
+     "duration": 0.6,
+     "due": 2.2666666666666666,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.2,
+     "duration": 0.6,
+     "due": 2.8666666666666667,
+     "hint": "Play C4 (left)",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 1.7999999999999998,
+     "duration": 0.6,
+     "due": 3.466666666666667,
+     "hint": "Play D4 (right)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 2.4,
+     "duration": 0.6,
+     "due": 4.066666666666666,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 3,
+     "duration": 0.6,
+     "due": 4.666666666666667,
+     "hint": "Play E4 (left)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 2,
+     "time": 3.5999999999999996,
+     "duration": 1.2,
+     "due": 5.266666666666667,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 8,
+     "len": 1,
+     "time": 4.8,
+     "duration": 0.6,
+     "due": 6.466666666666667,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 9,
+     "len": 1,
+     "time": 5.3999999999999995,
+     "duration": 0.6,
+     "due": 7.066666666666666,
+     "hint": "Play D4 (right)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 10,
+     "len": 2,
+     "time": 6,
+     "duration": 1.2,
+     "due": 7.666666666666667,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 12,
+     "len": 1,
+     "time": 7.199999999999999,
+     "duration": 0.6,
+     "due": 8.866666666666665,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 13,
+     "len": 1,
+     "time": 7.8,
+     "duration": 0.6,
+     "due": 9.466666666666667,
+     "hint": "Play G4 (right)",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 14,
+     "len": 2,
+     "time": 8.4,
+     "duration": 1.2,
+     "due": 10.066666666666666,
+     "hint": "Play G4 (left)",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 16,
+     "len": 1,
+     "time": 9.6,
+     "duration": 0.6,
+     "due": 11.266666666666666,
+     "hint": "Play E4 (left)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 17,
+     "len": 1,
+     "time": 10.2,
+     "duration": 0.6,
+     "due": 11.866666666666665,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 15,
+     "beat": 18,
+     "len": 1,
+     "time": 10.799999999999999,
+     "duration": 0.6,
+     "due": 12.466666666666665,
+     "hint": "Play C4 (left)",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 16,
+     "beat": 19,
+     "len": 1,
+     "time": 11.4,
+     "duration": 0.6,
+     "due": 13.066666666666666,
+     "hint": "Play D4 (right)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 17,
+     "beat": 20,
+     "len": 1,
+     "time": 12,
+     "duration": 0.6,
+     "due": 13.666666666666666,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 18,
+     "beat": 21,
+     "len": 1,
+     "time": 12.6,
+     "duration": 0.6,
+     "due": 14.266666666666666,
+     "hint": "Play E4 (left)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 19,
+     "beat": 22,
+     "len": 1,
+     "time": 13.2,
+     "duration": 0.6,
+     "due": 14.866666666666665,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 20,
+     "beat": 23,
+     "len": 1,
+     "time": 13.799999999999999,
+     "duration": 0.6,
+     "due": 15.466666666666665,
+     "hint": "Play E4 (left)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 21,
+     "beat": 24,
+     "len": 1,
+     "time": 14.399999999999999,
+     "duration": 0.6,
+     "due": 16.066666666666666,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 22,
+     "beat": 25,
+     "len": 1,
+     "time": 15,
+     "duration": 0.6,
+     "due": 16.666666666666668,
+     "hint": "Play D4 (right)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 23,
+     "beat": 26,
+     "len": 1,
+     "time": 15.6,
+     "duration": 0.6,
+     "due": 17.266666666666666,
+     "hint": "Play E4 (right)",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": "R"
+      }
+     ]
+    },
+    {
+     "k": 24,
+     "beat": 27,
+     "len": 1,
+     "time": 16.2,
+     "duration": 0.6,
+     "due": 17.866666666666667,
+     "hint": "Play D4 (left)",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    },
+    {
+     "k": 25,
+     "beat": 28,
+     "len": 4,
+     "time": 16.8,
+     "duration": 2.4,
+     "due": 18.46666666666667,
+     "hint": "Play C4 (left)",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": "L"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "marimba-twinkle-roll",
+   "instrument": "marimba",
+   "title": "Twinkle Twinkle (rolled)",
+   "bpm": 96,
+   "secondsPerBeat": 0.625,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 48,
+   "seconds": 30,
+   "eventCount": 42,
+   "notes": 42,
+   "listNote": "42 notes",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.625,
+     "due": 1.6666666666666667,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.625,
+     "duration": 0.625,
+     "due": 2.291666666666667,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.25,
+     "duration": 0.625,
+     "due": 2.916666666666667,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 1.875,
+     "duration": 0.625,
+     "due": 3.541666666666667,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 2.5,
+     "duration": 0.625,
+     "due": 4.166666666666667,
+     "hint": "Play A4",
+     "targets": [
+      {
+       "i": 21,
+       "midi": 69,
+       "note": "A4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 3.125,
+     "duration": 0.625,
+     "due": 4.791666666666667,
+     "hint": "Play A4",
+     "targets": [
+      {
+       "i": 21,
+       "midi": 69,
+       "note": "A4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 2,
+     "time": 3.75,
+     "duration": 1.25,
+     "due": 5.416666666666667,
+     "hint": "Roll G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 8,
+     "len": 1,
+     "time": 5,
+     "duration": 0.625,
+     "due": 6.666666666666667,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 9,
+     "len": 1,
+     "time": 5.625,
+     "duration": 0.625,
+     "due": 7.291666666666667,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 10,
+     "len": 1,
+     "time": 6.25,
+     "duration": 0.625,
+     "due": 7.916666666666667,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 11,
+     "len": 1,
+     "time": 6.875,
+     "duration": 0.625,
+     "due": 8.541666666666666,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 12,
+     "len": 1,
+     "time": 7.5,
+     "duration": 0.625,
+     "due": 9.166666666666666,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 13,
+     "len": 1,
+     "time": 8.125,
+     "duration": 0.625,
+     "due": 9.791666666666666,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 14,
+     "len": 2,
+     "time": 8.75,
+     "duration": 1.25,
+     "due": 10.416666666666666,
+     "hint": "Roll C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 16,
+     "len": 1,
+     "time": 10,
+     "duration": 0.625,
+     "due": 11.666666666666666,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 15,
+     "beat": 17,
+     "len": 1,
+     "time": 10.625,
+     "duration": 0.625,
+     "due": 12.291666666666666,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 16,
+     "beat": 18,
+     "len": 1,
+     "time": 11.25,
+     "duration": 0.625,
+     "due": 12.916666666666666,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 17,
+     "beat": 19,
+     "len": 1,
+     "time": 11.875,
+     "duration": 0.625,
+     "due": 13.541666666666666,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 18,
+     "beat": 20,
+     "len": 1,
+     "time": 12.5,
+     "duration": 0.625,
+     "due": 14.166666666666666,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 19,
+     "beat": 21,
+     "len": 1,
+     "time": 13.125,
+     "duration": 0.625,
+     "due": 14.791666666666666,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 20,
+     "beat": 22,
+     "len": 2,
+     "time": 13.75,
+     "duration": 1.25,
+     "due": 15.416666666666666,
+     "hint": "Roll D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 21,
+     "beat": 24,
+     "len": 1,
+     "time": 15,
+     "duration": 0.625,
+     "due": 16.666666666666668,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 22,
+     "beat": 25,
+     "len": 1,
+     "time": 15.625,
+     "duration": 0.625,
+     "due": 17.291666666666668,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 23,
+     "beat": 26,
+     "len": 1,
+     "time": 16.25,
+     "duration": 0.625,
+     "due": 17.916666666666668,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 24,
+     "beat": 27,
+     "len": 1,
+     "time": 16.875,
+     "duration": 0.625,
+     "due": 18.541666666666668,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 25,
+     "beat": 28,
+     "len": 1,
+     "time": 17.5,
+     "duration": 0.625,
+     "due": 19.166666666666668,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 26,
+     "beat": 29,
+     "len": 1,
+     "time": 18.125,
+     "duration": 0.625,
+     "due": 19.791666666666668,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 27,
+     "beat": 30,
+     "len": 2,
+     "time": 18.75,
+     "duration": 1.25,
+     "due": 20.416666666666668,
+     "hint": "Roll D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 28,
+     "beat": 32,
+     "len": 1,
+     "time": 20,
+     "duration": 0.625,
+     "due": 21.666666666666668,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 29,
+     "beat": 33,
+     "len": 1,
+     "time": 20.625,
+     "duration": 0.625,
+     "due": 22.291666666666668,
+     "hint": "Play C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 30,
+     "beat": 34,
+     "len": 1,
+     "time": 21.25,
+     "duration": 0.625,
+     "due": 22.916666666666668,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 31,
+     "beat": 35,
+     "len": 1,
+     "time": 21.875,
+     "duration": 0.625,
+     "due": 23.541666666666668,
+     "hint": "Play G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 32,
+     "beat": 36,
+     "len": 1,
+     "time": 22.5,
+     "duration": 0.625,
+     "due": 24.166666666666668,
+     "hint": "Play A4",
+     "targets": [
+      {
+       "i": 21,
+       "midi": 69,
+       "note": "A4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 33,
+     "beat": 37,
+     "len": 1,
+     "time": 23.125,
+     "duration": 0.625,
+     "due": 24.791666666666668,
+     "hint": "Play A4",
+     "targets": [
+      {
+       "i": 21,
+       "midi": 69,
+       "note": "A4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 34,
+     "beat": 38,
+     "len": 2,
+     "time": 23.75,
+     "duration": 1.25,
+     "due": 25.416666666666668,
+     "hint": "Roll G4",
+     "targets": [
+      {
+       "i": 19,
+       "midi": 67,
+       "note": "G4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 35,
+     "beat": 40,
+     "len": 1,
+     "time": 25,
+     "duration": 0.625,
+     "due": 26.666666666666668,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 36,
+     "beat": 41,
+     "len": 1,
+     "time": 25.625,
+     "duration": 0.625,
+     "due": 27.291666666666668,
+     "hint": "Play F4",
+     "targets": [
+      {
+       "i": 17,
+       "midi": 65,
+       "note": "F4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 37,
+     "beat": 42,
+     "len": 1,
+     "time": 26.25,
+     "duration": 0.625,
+     "due": 27.916666666666668,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 38,
+     "beat": 43,
+     "len": 1,
+     "time": 26.875,
+     "duration": 0.625,
+     "due": 28.541666666666668,
+     "hint": "Play E4",
+     "targets": [
+      {
+       "i": 16,
+       "midi": 64,
+       "note": "E4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 39,
+     "beat": 44,
+     "len": 1,
+     "time": 27.5,
+     "duration": 0.625,
+     "due": 29.166666666666668,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 40,
+     "beat": 45,
+     "len": 1,
+     "time": 28.125,
+     "duration": 0.625,
+     "due": 29.791666666666668,
+     "hint": "Play D4",
+     "targets": [
+      {
+       "i": 14,
+       "midi": 62,
+       "note": "D4",
+       "kind": null,
+       "label": null
+      }
+     ]
+    },
+    {
+     "k": 41,
+     "beat": 46,
+     "len": 2,
+     "time": 28.75,
+     "duration": 1.25,
+     "due": 30.416666666666668,
+     "hint": "Roll C4",
+     "targets": [
+      {
+       "i": 12,
+       "midi": 60,
+       "note": "C4",
+       "kind": "roll",
+       "label": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

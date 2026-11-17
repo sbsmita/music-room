@@ -1,0 +1,72 @@
+{
+ "tip_bowls_arrive": {
+  "file": "tip_bowls_arrive.wav",
+  "seconds": 3.942,
+  "rate": 22050
+ },
+ "tip_bowls_faster": {
+  "file": "tip_bowls_faster.wav",
+  "seconds": 3.299,
+  "rate": 22050
+ },
+ "tip_bowls_lesson": {
+  "file": "tip_bowls_lesson.wav",
+  "seconds": 2.265,
+  "rate": 22050
+ },
+ "tip_bowls_lesson_rub": {
+  "file": "tip_bowls_lesson_rub.wav",
+  "seconds": 2.501,
+  "rate": 22050
+ },
+ "tip_bowls_lip": {
+  "file": "tip_bowls_lip.wav",
+  "seconds": 2.378,
+  "rate": 22050
+ },
+ "tip_bowls_outside": {
+  "file": "tip_bowls_outside.wav",
+  "seconds": 2.803,
+  "rate": 22050
+ },
+ "tip_bowls_palm": {
+  "file": "tip_bowls_palm.wav",
+  "seconds": 3.338,
+  "rate": 22050
+ },
+ "tip_bowls_puja": {
+  "file": "tip_bowls_puja.wav",
+  "seconds": 2.664,
+  "rate": 22050
+ },
+ "tip_bowls_puja_use": {
+  "file": "tip_bowls_puja_use.wav",
+  "seconds": 3.872,
+  "rate": 22050
+ },
+ "tip_bowls_quiet": {
+  "file": "tip_bowls_quiet.wav",
+  "seconds": 2.306,
+  "rate": 22050
+ },
+ "tip_bowls_rub": {
+  "file": "tip_bowls_rub.wav",
+  "seconds": 3.279,
+  "rate": 22050
+ },
+ "tip_bowls_slower": {
+  "file": "tip_bowls_slower.wav",
+  "seconds": 3.118,
+  "rate": 22050
+ },
+ "tip_bowls_tap_rub": {
+  "file": "tip_bowls_tap_rub.wav",
+  "seconds": 3.259,
+  "rate": 22050
+ },
+ "tip_bowls_where": {
+  "file": "tip_bowls_where.wav",
+  "seconds": 2.156,
+  "rate": 22050
+ }
+}

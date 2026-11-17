@@ -1,0 +1,297 @@
+{
+ "about": "The music book on the piano rest (Docs/12-new-instruments/sheet.md 3.1), from the sheet lesson metadata: notation facts the lesson JSON does not carry. meter = time signature; unit = the note value of one lesson beat (4 quarter, 8 eighth); pickup = lesson beats before the first full bar; credit = printed top right (every tune is public domain); staves = 2 for two-hand music; bookSong + eventOffset = a lesson shown on another song page (its event k is the song event k + eventOffset); splitBelow = MIDI below which a two-staff lesson target without a hand goes to the bass staff. A piano lesson missing here prints in 4/4 from beat 0, credited Traditional.",
+ "book": {
+  "title": "Piano Songs",
+  "subtitle": "for the music room"
+ },
+ "lessons": [
+  {
+   "id": "piano-ode",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Ludwig van Beethoven"
+  },
+  {
+   "id": "piano-mary",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-twinkle",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-scale",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Exercise"
+  },
+  {
+   "id": "piano-frere",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-london",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-macdonald",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-jingle",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "James Lord Pierpont"
+  },
+  {
+   "id": "piano-row",
+   "meter": [
+    6,
+    8
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-baa",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-lullaby",
+   "meter": [
+    3,
+    4
+   ],
+   "unit": 4,
+   "pickup": 1,
+   "credit": "Johannes Brahms"
+  },
+  {
+   "id": "piano-auld",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 1,
+   "credit": "Traditional"
+  },
+  {
+   "id": "piano-birthday",
+   "meter": [
+    3,
+    4
+   ],
+   "unit": 4,
+   "pickup": 1,
+   "credit": "Mildred and Patty Hill"
+  },
+  {
+   "id": "piano-silent",
+   "meter": [
+    3,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Franz Xaver Gruber"
+  },
+  {
+   "id": "piano-elise",
+   "meter": [
+    3,
+    8
+   ],
+   "unit": 8,
+   "pickup": 1,
+   "credit": "Ludwig van Beethoven"
+  },
+  {
+   "id": "piano-ode-first",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Ludwig van Beethoven",
+   "staves": 2,
+   "cueNote": "Lower staff: played for you",
+   "bookSong": "piano-ode",
+   "eventOffset": 15
+  },
+  {
+   "id": "piano-ode-hands",
+   "meter": [
+    4,
+    4
+   ],
+   "unit": 4,
+   "pickup": 0,
+   "credit": "Ludwig van Beethoven",
+   "staves": 2
+  }
+ ],
+ "extraLessons": [
+  {
+   "id": "piano-ode-first",
+   "instrument": "piano",
+   "title": "Ode to Joy (first song)",
+   "bpm": 108,
+   "beats": 16,
+   "tune": "E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 D4:1.5 C4:0.5 C4:2",
+   "accompany": [
+    {
+     "beat": 0,
+     "len": 4,
+     "midi": [
+      48,
+      52,
+      55
+     ]
+    },
+    {
+     "beat": 4,
+     "len": 4,
+     "midi": [
+      47,
+      50,
+      55
+     ]
+    },
+    {
+     "beat": 8,
+     "len": 4,
+     "midi": [
+      48,
+      52,
+      55
+     ]
+    },
+    {
+     "beat": 12,
+     "len": 2,
+     "midi": [
+      47,
+      50,
+      55
+     ]
+    },
+    {
+     "beat": 14,
+     "len": 2,
+     "midi": [
+      36,
+      48,
+      52,
+      55
+     ]
+    }
+   ]
+  },
+  {
+   "id": "piano-ode-hands",
+   "instrument": "piano",
+   "title": "Ode to Joy (both hands)",
+   "bpm": 100,
+   "beats": 32,
+   "melodyFrom": "piano-ode",
+   "leftHand": [
+    {
+     "beat": 0,
+     "len": 4,
+     "note": "C3"
+    },
+    {
+     "beat": 4,
+     "len": 4,
+     "note": "G2"
+    },
+    {
+     "beat": 8,
+     "len": 4,
+     "note": "C3"
+    },
+    {
+     "beat": 12,
+     "len": 4,
+     "note": "G2"
+    },
+    {
+     "beat": 16,
+     "len": 4,
+     "note": "C3"
+    },
+    {
+     "beat": 20,
+     "len": 4,
+     "note": "G2"
+    },
+    {
+     "beat": 24,
+     "len": 4,
+     "note": "C3"
+    },
+    {
+     "beat": 28,
+     "len": 2,
+     "note": "G2"
+    },
+    {
+     "beat": 30,
+     "len": 2,
+     "note": "C3"
+    }
+   ]
+  }
+ ]
+}

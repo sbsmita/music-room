@@ -1,0 +1,415 @@
+{
+ "generatedFrom": "the singing bowls lesson table (Docs/12-new-instruments/bowls.md)",
+ "format": {
+  "targets": "LessonTarget {i (0 big G3, 1 middle C4, 2 small E4), midi, note, label, mode strike|rub, hold (rub: seconds of singing)}",
+  "strike": "a live strike on bowl i (the bowlHit marker the module posts with each live bowlStrike) of any kind (tap, palm, suede, wood) with vel >= 0.2 m/s; the touch-down tick of a slow placement (vel < 0.2) does not count",
+  "rub": "the Marker bowlSing {i, u seconds sung} with u >= hold; seconds accumulate while SingVelocity >= 0.15 m/s and the module reports rubbing on that bowl; lifting for more than 1 s keeps what was earned",
+  "stall": "after 8 s waiting on an event Sunny re-demos (tip_bowls_lesson / tip_bowls_lesson_rub); after 15 s any touch on the target bowl plays an audible 0.7 m/s strike (a strike target) or counts as sung (a rub target) and counts"
+ },
+ "tutorial": {
+  "SPEED": 0.18,
+  "TRAVEL": {
+   "bowls": 0.3
+  },
+  "leadSeconds": {
+   "bowls": 1.6666666666666667
+  }
+ },
+ "counts": {
+  "lessons": 3,
+  "bowls": 3,
+  "events": 16,
+  "targets": 16
+ },
+ "checks": [
+  {
+   "name": "at least 3 lessons",
+   "pass": true,
+   "n": 3
+  },
+  {
+   "name": "first lesson: one target at a time, 12-21 s at tempo",
+   "pass": true,
+   "seconds": 16.5
+  },
+  {
+   "name": "first lesson targets come 1.5 or 3 s apart",
+   "pass": true,
+   "times": [
+    0,
+    1.5,
+    3,
+    6,
+    7.5,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "at most 2 targets per event",
+   "pass": true
+  },
+  {
+   "name": "shortest gap >= 0.2 s, same-target repeat >= 0.25 s",
+   "pass": true
+  },
+  {
+   "name": "every lesson under 1 minute (with lead and the 3 s countdown)",
+   "pass": true,
+   "longest": 21.2
+  },
+  {
+   "name": "ids carry the bowls- prefix",
+   "pass": true
+  },
+  {
+   "name": "hints at most 21 characters",
+   "pass": true,
+   "longest": 19
+  },
+  {
+   "name": "a rub target's hold fits its event",
+   "pass": true
+  }
+ ],
+ "lessons": [
+  {
+   "id": "bowls-first",
+   "instrument": "bowls",
+   "title": "First ring",
+   "bpm": 40,
+   "secondsPerBeat": 1.5,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 11,
+   "seconds": 16.5,
+   "eventCount": 7,
+   "notes": 7,
+   "listNote": "7 rings",
+   "source": "pattern (no melody): big, middle, small, small, middle, big, middle; one target at a time, 1.5 or 3 s apart (0, 1.5, 3, 6, 7.5, 9, 12 s)",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 1.5,
+     "due": 1.6666666666666667,
+     "hint": "Tap the big bowl",
+     "targets": [
+      {
+       "i": 0,
+       "midi": 55,
+       "note": "G3",
+       "label": "Big bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 1.5,
+     "duration": 1.5,
+     "due": 3.166666666666667,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 2,
+     "time": 3,
+     "duration": 3,
+     "due": 4.666666666666667,
+     "hint": "Tap the small bowl",
+     "targets": [
+      {
+       "i": 2,
+       "midi": 64,
+       "note": "E4",
+       "label": "Small bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 4,
+     "len": 1,
+     "time": 6,
+     "duration": 1.5,
+     "due": 7.666666666666667,
+     "hint": "Tap the small bowl",
+     "targets": [
+      {
+       "i": 2,
+       "midi": 64,
+       "note": "E4",
+       "label": "Small bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 5,
+     "len": 1,
+     "time": 7.5,
+     "duration": 1.5,
+     "due": 9.166666666666666,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 6,
+     "len": 2,
+     "time": 9,
+     "duration": 3,
+     "due": 10.666666666666666,
+     "hint": "Tap the big bowl",
+     "targets": [
+      {
+       "i": 0,
+       "midi": 55,
+       "note": "G3",
+       "label": "Big bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 8,
+     "len": 3,
+     "time": 12,
+     "duration": 4.5,
+     "due": 13.666666666666666,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bowls-ding",
+   "instrument": "bowls",
+   "title": "Ding, dang, dong",
+   "bpm": 54,
+   "secondsPerBeat": 1.1111111111111112,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 9,
+   "seconds": 10,
+   "eventCount": 6,
+   "notes": 6,
+   "listNote": "6 rings",
+   "source": "Frere Jacques (manuscript c. 1780, public domain), last bar twice: C4 G3 C4; checked against piano-frere beats 24-31 in lessons-proposed.json",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 1.1111111111111112,
+     "due": 1.6666666666666667,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 1.1111111111111112,
+     "duration": 1.1111111111111112,
+     "due": 2.7777777777777777,
+     "hint": "Tap the big bowl",
+     "targets": [
+      {
+       "i": 0,
+       "midi": 55,
+       "note": "G3",
+       "label": "Big bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 2,
+     "time": 2.2222222222222223,
+     "duration": 2.2222222222222223,
+     "due": 3.8888888888888893,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 4,
+     "len": 1,
+     "time": 4.444444444444445,
+     "duration": 1.1111111111111112,
+     "due": 6.111111111111112,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 5,
+     "len": 1,
+     "time": 5.555555555555555,
+     "duration": 1.1111111111111112,
+     "due": 7.222222222222222,
+     "hint": "Tap the big bowl",
+     "targets": [
+      {
+       "i": 0,
+       "midi": 55,
+       "note": "G3",
+       "label": "Big bowl",
+       "mode": "strike"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 6,
+     "len": 3,
+     "time": 6.666666666666667,
+     "duration": 3.3333333333333335,
+     "due": 8.333333333333334,
+     "hint": "Tap the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "strike"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bowls-sing",
+   "instrument": "bowls",
+   "title": "Make it sing",
+   "bpm": 30,
+   "secondsPerBeat": 2,
+   "leadSeconds": 1.6666666666666667,
+   "beats": 8,
+   "seconds": 16,
+   "eventCount": 3,
+   "notes": 3,
+   "listNote": "2 songs and a ring",
+   "source": "technique lesson (no melody): the nearest (big) bowl sings for 3 s, the middle one for 3 s, a ring of the small one to end",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 3,
+     "time": 0,
+     "duration": 6,
+     "due": 1.6666666666666667,
+     "hint": "Rub the big bowl",
+     "targets": [
+      {
+       "i": 0,
+       "midi": 55,
+       "note": "G3",
+       "label": "Big bowl",
+       "mode": "rub",
+       "hold": 3
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 3,
+     "len": 3,
+     "time": 6,
+     "duration": 6,
+     "due": 7.666666666666667,
+     "hint": "Rub the middle bowl",
+     "targets": [
+      {
+       "i": 1,
+       "midi": 60,
+       "note": "C4",
+       "label": "Middle bowl",
+       "mode": "rub",
+       "hold": 3
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 6,
+     "len": 2,
+     "time": 12,
+     "duration": 4,
+     "due": 13.666666666666666,
+     "hint": "Tap the small bowl",
+     "targets": [
+      {
+       "i": 2,
+       "midi": 64,
+       "note": "E4",
+       "label": "Small bowl",
+       "mode": "strike"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

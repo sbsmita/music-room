@@ -1,0 +1,1223 @@
+{
+ "generatedBy": "the sheet reference engine's tests.mjs (Node prototype; frozen here)",
+ "style": {
+  "S": 4.9,
+  "letterCap": 5.8,
+  "letterBold": 0.035,
+  "titleCap": 7.6,
+  "titleBold": 0.03,
+  "subCap": 4.2,
+  "pageNumCap": 4.2,
+  "cueAlpha": 0.5,
+  "ink": 1
+ },
+ "page": {
+  "w": 320,
+  "h": 244,
+  "top": 13,
+  "bottom": 18,
+  "outer": 18,
+  "inner": 23
+ },
+ "pitches": [
+  {
+   "note": "C2",
+   "midi": 36,
+   "clef": "bass",
+   "p": -4,
+   "onLine": true,
+   "ledgers": 2,
+   "label": "C2"
+  },
+  {
+   "note": "G2",
+   "midi": 43,
+   "clef": "bass",
+   "p": 0,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "G"
+  },
+  {
+   "note": "B2",
+   "midi": 47,
+   "clef": "bass",
+   "p": 2,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "B"
+  },
+  {
+   "note": "C3",
+   "midi": 48,
+   "clef": "bass",
+   "p": 3,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "C3"
+  },
+  {
+   "note": "D3",
+   "midi": 50,
+   "clef": "bass",
+   "p": 4,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "D"
+  },
+  {
+   "note": "E3",
+   "midi": 52,
+   "clef": "bass",
+   "p": 5,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "E"
+  },
+  {
+   "note": "G3",
+   "midi": 55,
+   "clef": "treble",
+   "p": -5,
+   "onLine": false,
+   "ledgers": 2,
+   "label": "G"
+  },
+  {
+   "note": "G3",
+   "midi": 55,
+   "clef": "bass",
+   "p": 7,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "G"
+  },
+  {
+   "note": "C4",
+   "midi": 60,
+   "clef": "treble",
+   "p": -2,
+   "onLine": true,
+   "ledgers": 1,
+   "label": "C4"
+  },
+  {
+   "note": "D4",
+   "midi": 62,
+   "clef": "treble",
+   "p": -1,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "D"
+  },
+  {
+   "note": "E4",
+   "midi": 64,
+   "clef": "treble",
+   "p": 0,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "E"
+  },
+  {
+   "note": "F4",
+   "midi": 65,
+   "clef": "treble",
+   "p": 1,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "F"
+  },
+  {
+   "note": "G4",
+   "midi": 67,
+   "clef": "treble",
+   "p": 2,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "G"
+  },
+  {
+   "note": "G#4",
+   "midi": 68,
+   "clef": "treble",
+   "p": 2,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "G#"
+  },
+  {
+   "note": "A4",
+   "midi": 69,
+   "clef": "treble",
+   "p": 3,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "A"
+  },
+  {
+   "note": "B4",
+   "midi": 71,
+   "clef": "treble",
+   "p": 4,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "B"
+  },
+  {
+   "note": "C5",
+   "midi": 72,
+   "clef": "treble",
+   "p": 5,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "C5"
+  },
+  {
+   "note": "D5",
+   "midi": 74,
+   "clef": "treble",
+   "p": 6,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "D"
+  },
+  {
+   "note": "D#5",
+   "midi": 75,
+   "clef": "treble",
+   "p": 6,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "D#"
+  },
+  {
+   "note": "E5",
+   "midi": 76,
+   "clef": "treble",
+   "p": 7,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "E"
+  },
+  {
+   "note": "F5",
+   "midi": 77,
+   "clef": "treble",
+   "p": 8,
+   "onLine": true,
+   "ledgers": 0,
+   "label": "F"
+  },
+  {
+   "note": "G5",
+   "midi": 79,
+   "clef": "treble",
+   "p": 9,
+   "onLine": false,
+   "ledgers": 0,
+   "label": "G"
+  }
+ ],
+ "glyphPlacement": {
+  "pxPerStaffSpace": 12,
+  "rows": [
+   {
+    "note": "C2",
+    "headCentroidPx": 215.943,
+    "expectedPx": 216,
+    "ledgerRuns": 2
+   },
+   {
+    "note": "G2",
+    "headCentroidPx": 191.943,
+    "expectedPx": 192,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "B2",
+    "headCentroidPx": 179.943,
+    "expectedPx": 180,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "C3",
+    "headCentroidPx": 173.943,
+    "expectedPx": 174,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "D3",
+    "headCentroidPx": 167.943,
+    "expectedPx": 168,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "E3",
+    "headCentroidPx": 161.943,
+    "expectedPx": 162,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "G3",
+    "headCentroidPx": 221.943,
+    "expectedPx": 222,
+    "ledgerRuns": 2
+   },
+   {
+    "note": "G3",
+    "headCentroidPx": 149.943,
+    "expectedPx": 150,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "C4",
+    "headCentroidPx": 203.943,
+    "expectedPx": 204,
+    "ledgerRuns": 1
+   },
+   {
+    "note": "D4",
+    "headCentroidPx": 197.943,
+    "expectedPx": 198,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "E4",
+    "headCentroidPx": 191.943,
+    "expectedPx": 192,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "F4",
+    "headCentroidPx": 185.943,
+    "expectedPx": 186,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "G4",
+    "headCentroidPx": 179.943,
+    "expectedPx": 180,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "G#4",
+    "headCentroidPx": 179.943,
+    "expectedPx": 180,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "A4",
+    "headCentroidPx": 173.943,
+    "expectedPx": 174,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "B4",
+    "headCentroidPx": 167.943,
+    "expectedPx": 168,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "C5",
+    "headCentroidPx": 161.943,
+    "expectedPx": 162,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "D5",
+    "headCentroidPx": 155.943,
+    "expectedPx": 156,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "D#5",
+    "headCentroidPx": 155.943,
+    "expectedPx": 156,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "E5",
+    "headCentroidPx": 149.943,
+    "expectedPx": 150,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "F5",
+    "headCentroidPx": 143.943,
+    "expectedPx": 144,
+    "ledgerRuns": 0
+   },
+   {
+    "note": "G5",
+    "headCentroidPx": 137.943,
+    "expectedPx": 138,
+    "ledgerRuns": 0
+   }
+  ]
+ },
+ "pages": {
+  "ppm": 4.2,
+  "rows": [
+   {
+    "page": 2,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 47464.31,
+    "sha1": "e3a2181336ad0832ee771d3888553d7382869214"
+   },
+   {
+    "page": 3,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 43633.38,
+    "sha1": "b5f2a9682191cdd29c9c5645bd45e518cc4a1fea"
+   },
+   {
+    "page": 4,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 78514.43,
+    "sha1": "12733c5df164c448cfb19323bb7d9f6cb863435f"
+   },
+   {
+    "page": 5,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 77280.76,
+    "sha1": "54a7d9560c8c69e08a198524da1556f91bc49773"
+   },
+   {
+    "page": 6,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 109779.68,
+    "sha1": "fc2213aca551465e442098a5d58fb904613a6e39"
+   },
+   {
+    "page": 7,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 42918.65,
+    "sha1": "a642e930f18d60d5f7975c8e53737a5f49e4f224"
+   },
+   {
+    "page": 8,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 82921.63,
+    "sha1": "4579d433991a9cd7394828fc4863893d456211e4"
+   },
+   {
+    "page": 9,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 72176.51,
+    "sha1": "715186a9cbc655b6aac8e877e2652c7ef4db6829"
+   },
+   {
+    "page": 10,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 74048.09,
+    "sha1": "12cbf06c79f423da57adbf8089375f9acdb7c602"
+   },
+   {
+    "page": 11,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 54405.05,
+    "sha1": "9210f68070eb9a50c7f3a8db15aae5b8e5f1469b"
+   },
+   {
+    "page": 12,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 73700.66,
+    "sha1": "d57d96980731ae1c1bb1583cad19c857d5268b8e"
+   },
+   {
+    "page": 13,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 65431.65,
+    "sha1": "6c2e6a06da606d4cb3d9879eb09670f51117dc3d"
+   },
+   {
+    "page": 14,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 85048.33,
+    "sha1": "6d463c66577af5d7bc265dd0d191f2d9dca4d67f"
+   },
+   {
+    "page": 15,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 54434.92,
+    "sha1": "83356fcbab6bb07fa9fdea7b60c14b14f7f5db53"
+   },
+   {
+    "page": 16,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 68949.88,
+    "sha1": "b74a4a2c748168a48207480c477c4b2024fadfad"
+   },
+   {
+    "page": 17,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 66515.49,
+    "sha1": "97999c174e455bbcdde8485ee1418c2bc0460d2d"
+   },
+   {
+    "page": 18,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 81402.05,
+    "sha1": "c09e4b3659dbd394a77dbe5125d75f2cafc66247"
+   },
+   {
+    "page": 19,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 65754.2,
+    "sha1": "7f7ab26a15586f4cdd2ff259b42f888ba995b428"
+   },
+   {
+    "page": 20,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 78178.94,
+    "sha1": "b8c5b216711fad812ffee1b0a4b3600ff21c7919"
+   },
+   {
+    "page": 21,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 68392.26,
+    "sha1": "00d977abc192d6dc471ff5a95eb717e86e9f21a5"
+   },
+   {
+    "page": 22,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 79015.49,
+    "sha1": "7d2184c3a9118646555bf81a406a78df3884030e"
+   },
+   {
+    "page": 23,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 54448.57,
+    "sha1": "ec6f7c860db6ddc54a353ab79a450df5a64142e1"
+   },
+   {
+    "page": 24,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 72496.29,
+    "sha1": "4c00600ed698f7b021b913997b3f041f1a462114"
+   },
+   {
+    "page": 25,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 66435.93,
+    "sha1": "469eee2e050ccbd56ecce039b06c06377477ddc2"
+   },
+   {
+    "page": 26,
+    "w": 1344,
+    "h": 1025,
+    "inkSum": 137113.15,
+    "sha1": "a7a311d1b94756aea39cf5ac2817b5f32c5a4135"
+   }
+  ]
+ },
+ "eliseAccidentals": [
+  "0.5:sharp",
+  "1.5:sharp",
+  "3:natural",
+  "9:sharp",
+  "12.5:sharp",
+  "13.5:sharp",
+  "15:natural"
+ ],
+ "book": {
+  "songs": [
+   {
+    "id": "piano-ode",
+    "pages": [
+     4
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-mary",
+    "pages": [
+     5
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-twinkle",
+    "pages": [
+     6
+    ],
+    "lines": [
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-scale",
+    "pages": [
+     7
+    ],
+    "lines": [
+     4
+    ]
+   },
+   {
+    "id": "piano-frere",
+    "pages": [
+     8
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-london",
+    "pages": [
+     9
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-macdonald",
+    "pages": [
+     10
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-jingle",
+    "pages": [
+     12,
+     13
+    ],
+    "lines": [
+     4,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-row",
+    "pages": [
+     14
+    ],
+    "lines": [
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-baa",
+    "pages": [
+     16,
+     17
+    ],
+    "lines": [
+     2,
+     2,
+     2,
+     2
+    ]
+   },
+   {
+    "id": "piano-lullaby",
+    "pages": [
+     18,
+     19
+    ],
+    "lines": [
+     5,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-auld",
+    "pages": [
+     20,
+     21
+    ],
+    "lines": [
+     5,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": "piano-birthday",
+    "pages": [
+     22
+    ],
+    "lines": [
+     5,
+     4
+    ]
+   },
+   {
+    "id": "piano-silent",
+    "pages": [
+     24,
+     25
+    ],
+    "lines": [
+     6,
+     6,
+     6,
+     6
+    ]
+   },
+   {
+    "id": "piano-elise",
+    "pages": [
+     26
+    ],
+    "lines": [
+     4,
+     3,
+     2
+    ]
+   }
+  ],
+  "contents": [
+   {
+    "id": "piano-ode",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 29.6,
+    "y1": 51.1,
+    "firstPage": 4
+   },
+   {
+    "id": "piano-mary",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 51.1,
+    "y1": 72.6,
+    "firstPage": 5
+   },
+   {
+    "id": "piano-twinkle",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 72.6,
+    "y1": 94.1,
+    "firstPage": 6
+   },
+   {
+    "id": "piano-scale",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 94.1,
+    "y1": 115.6,
+    "firstPage": 7
+   },
+   {
+    "id": "piano-frere",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 115.6,
+    "y1": 137.1,
+    "firstPage": 8
+   },
+   {
+    "id": "piano-london",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 137.1,
+    "y1": 158.6,
+    "firstPage": 9
+   },
+   {
+    "id": "piano-macdonald",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 158.6,
+    "y1": 180.1,
+    "firstPage": 10
+   },
+   {
+    "id": "piano-jingle",
+    "page": 2,
+    "x0": 18,
+    "x1": 297,
+    "y0": 180.1,
+    "y1": 201.6,
+    "firstPage": 12
+   },
+   {
+    "id": "piano-row",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 15,
+    "y1": 36.5,
+    "firstPage": 14
+   },
+   {
+    "id": "piano-baa",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 36.5,
+    "y1": 58,
+    "firstPage": 16
+   },
+   {
+    "id": "piano-lullaby",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 58,
+    "y1": 79.5,
+    "firstPage": 18
+   },
+   {
+    "id": "piano-auld",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 79.5,
+    "y1": 101,
+    "firstPage": 20
+   },
+   {
+    "id": "piano-birthday",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 101,
+    "y1": 122.5,
+    "firstPage": 22
+   },
+   {
+    "id": "piano-silent",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 122.5,
+    "y1": 144,
+    "firstPage": 24
+   },
+   {
+    "id": "piano-elise",
+    "page": 3,
+    "x0": 23,
+    "x1": 302,
+    "y0": 144,
+    "y1": 165.5,
+    "firstPage": 26
+   }
+  ]
+ },
+ "odeLayout": {
+  "stretch": [
+   0.641325,
+   0.68098
+  ],
+  "notes": [
+   {
+    "sys": 0,
+    "k": 0,
+    "midi": 64,
+    "p": 0,
+    "x": 44.0216,
+    "y": 19.6
+   },
+   {
+    "sys": 0,
+    "k": 1,
+    "midi": 64,
+    "p": 0,
+    "x": 57.7124,
+    "y": 19.6
+   },
+   {
+    "sys": 0,
+    "k": 2,
+    "midi": 65,
+    "p": 1,
+    "x": 71.4033,
+    "y": 17.15
+   },
+   {
+    "sys": 0,
+    "k": 3,
+    "midi": 67,
+    "p": 2,
+    "x": 85.0942,
+    "y": 14.7
+   },
+   {
+    "sys": 0,
+    "k": 4,
+    "midi": 67,
+    "p": 2,
+    "x": 106.6247,
+    "y": 14.7
+   },
+   {
+    "sys": 0,
+    "k": 5,
+    "midi": 65,
+    "p": 1,
+    "x": 120.3156,
+    "y": 17.15
+   },
+   {
+    "sys": 0,
+    "k": 6,
+    "midi": 64,
+    "p": 0,
+    "x": 134.0065,
+    "y": 19.6
+   },
+   {
+    "sys": 0,
+    "k": 7,
+    "midi": 62,
+    "p": -1,
+    "x": 147.6974,
+    "y": 22.05
+   },
+   {
+    "sys": 0,
+    "k": 8,
+    "midi": 60,
+    "p": -2,
+    "x": 170.6812,
+    "y": 24.5
+   },
+   {
+    "sys": 0,
+    "k": 9,
+    "midi": 60,
+    "p": -2,
+    "x": 184.4102,
+    "y": 24.5
+   },
+   {
+    "sys": 0,
+    "k": 10,
+    "midi": 62,
+    "p": -1,
+    "x": 198.1011,
+    "y": 22.05
+   },
+   {
+    "sys": 0,
+    "k": 11,
+    "midi": 64,
+    "p": 0,
+    "x": 211.792,
+    "y": 19.6
+   },
+   {
+    "sys": 0,
+    "k": 12,
+    "midi": 64,
+    "p": 0,
+    "x": 232.8553,
+    "y": 19.6
+   },
+   {
+    "sys": 0,
+    "k": 13,
+    "midi": 62,
+    "p": -1,
+    "x": 248.5678,
+    "y": 22.05
+   },
+   {
+    "sys": 0,
+    "k": 14,
+    "midi": 62,
+    "p": -1,
+    "x": 263.4475,
+    "y": 22.05
+   },
+   {
+    "sys": 1,
+    "k": 15,
+    "midi": 64,
+    "p": 0,
+    "x": 30.3016,
+    "y": 19.6
+   },
+   {
+    "sys": 1,
+    "k": 16,
+    "midi": 64,
+    "p": 0,
+    "x": 44.839,
+    "y": 19.6
+   },
+   {
+    "sys": 1,
+    "k": 17,
+    "midi": 65,
+    "p": 1,
+    "x": 59.3764,
+    "y": 17.15
+   },
+   {
+    "sys": 1,
+    "k": 18,
+    "midi": 67,
+    "p": 2,
+    "x": 73.9138,
+    "y": 14.7
+   },
+   {
+    "sys": 1,
+    "k": 19,
+    "midi": 67,
+    "p": 2,
+    "x": 96.2063,
+    "y": 14.7
+   },
+   {
+    "sys": 1,
+    "k": 20,
+    "midi": 65,
+    "p": 1,
+    "x": 110.7437,
+    "y": 17.15
+   },
+   {
+    "sys": 1,
+    "k": 21,
+    "midi": 64,
+    "p": 0,
+    "x": 125.2811,
+    "y": 19.6
+   },
+   {
+    "sys": 1,
+    "k": 22,
+    "midi": 62,
+    "p": -1,
+    "x": 139.8185,
+    "y": 22.05
+   },
+   {
+    "sys": 1,
+    "k": 23,
+    "midi": 60,
+    "p": -2,
+    "x": 163.5642,
+    "y": 24.5
+   },
+   {
+    "sys": 1,
+    "k": 24,
+    "midi": 60,
+    "p": -2,
+    "x": 178.1016,
+    "y": 24.5
+   },
+   {
+    "sys": 1,
+    "k": 25,
+    "midi": 62,
+    "p": -1,
+    "x": 192.639,
+    "y": 22.05
+   },
+   {
+    "sys": 1,
+    "k": 26,
+    "midi": 64,
+    "p": 0,
+    "x": 207.1764,
+    "y": 19.6
+   },
+   {
+    "sys": 1,
+    "k": 27,
+    "midi": 62,
+    "p": -1,
+    "x": 229.2343,
+    "y": 22.05
+   },
+   {
+    "sys": 1,
+    "k": 28,
+    "midi": 60,
+    "p": -2,
+    "x": 245.9183,
+    "y": 24.5
+   },
+   {
+    "sys": 1,
+    "k": 29,
+    "midi": 60,
+    "p": -2,
+    "x": 262.4859,
+    "y": 24.5
+   }
+  ],
+  "systemHeights": [
+   45.3048,
+   45.3048
+  ]
+ },
+ "glyphRasters": {
+  "pxPerStaffSpace": 12,
+  "glyphs": {
+   "trebleClef": {
+    "w": 38,
+    "h": 94,
+    "origin": [
+     18.98453460997835,
+     58.21997859262092
+    ],
+    "inkSum": 780.38,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCyPvKRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAef3rnOv+bQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAID/0BoAHuD9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABg/9sVAAAAPP/BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALfbyKQAAAAAA1fwJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXQ/1wAAAAAAADA/yEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAef++AAAAAAAAANP/IwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABr0/0QAAAAAAAAF9/8RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlf/gAQAAAAAAADf/7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABT2/48AAAAAAAAAe/+6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcP//SAAAAAAAAADO/3gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADC//wNAAAAAAAATf/9IgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/n/zwAAAAAAAA7g/6UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1//+eAAAAAAAAo//0HgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGf//4IAAAAAAFf//3EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlv//ewAAAAAQ6f/JAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC///+GAAAAAIX//TIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOD//6AAAAAI7P+oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9v//xgAAAFb//zsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH////yAgAArv/aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPr///8mAAr2/4MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4v///1sAS///NAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4////mQCP/+kBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3////oBcz/qQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN/////9f+/9uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4////+v//zkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK///////9CwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACn+/////90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL3/////uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS//////rEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0f////+OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABT//////kkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHM/////7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEf//////0kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ///////3AkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv////////hwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADb////////6MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO///w//////NBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+//8xzf////96AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAED//yYg6/////grAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQf//JQBF/P///8kDAAAAAAAAAAAAAAAAAAAAAAAAAAAACUR5o8Hb//9hBwCA/////3MAAAAAAAAAAAAAAAAAAAAAAAABSq72///////////rhBXE////9SEAAAAAAAAAAAAAAAAAAAAANsz/////+q5thv//x/b/7IL0////sgAAAAAAAAAAAAAAAAAAAGz7/////6wgAAA4//8uDW3p/+//////SAAAAAAAAAAAAAAAAAB2//////VdAAAAADH//zYAABS+///////SAwAAAAAAAAAAAAAAZv/////mMgAAAAAAJ///PwAAAAi+//j///9bAAAAAAAAAAAAAET7////3CAAAAAAAAAc//9LAAAAABLh8M///9YCAAAAAAAAAAAb6/////IlAAAAAAAAAA///1cAAAAAAEj/meD//00AAAAAAAAAALf/////bwAAAAAAAAACG/7/ZgAAAAAAAL7uTP//tgAAAAAAAABT/////+MGAAAAAAA8sPP///+eAAAAAAAAVv9Lvv/8FQAAAAAAAdX/////fAAAAAAAeP3/9Mf2//9pAAAAAAAT/4Re//9cAAAAAABC//////8hAAAAAHD//GwIAM///+wMAAAAAADwpQ/5/5gAAAAAAJX/////1AAAAAAy+/+PAAAAvf///2gAAAAAAOixALj/xQAAAAAAzf////+UAAAAALf//yUAAACq////ygAAAAAC+KgAcv/lAAAAAADu/////2EAAAAP/P/oAAAAAJf/////FQAAACf/iQA3//kAAAAAAP3/////QAAAACX//9wAAAAAhP///9sFAAAAdP9PAAv+/wMAAAAA+/////8yAAAACPj//BUAAABw//pADwAAAA/l6ggAAO7+AQAAAADp/////zUAAAAAq///ewAAAFr//w8AAAAEsv9pAAAA6O8AAAAAAMj/////SgAAAAAv/P/yIwAAQv//JgAADLH/sAEAAAX60gAAAAAAmf////90AAAAAACB///bNQAq//8/AETa/8ILAAAAM/+kAAAAAABb/////7kAAAAAAAKm////zZv//7DK//+mCQAAAAB6/2MAAAAAABP6/////CUAAAAAAAOE+v/////////bVwAAAAAAAdX5FQAAAAAAAK7/////qgAAAAAAAAAfc6S78//BPAIAAAAAAABI/6YAAAAAAAAAPP//////RQAAAAAAAAAAAAC//6oAAAAAAAAABND8KwAAAAAAAAAAqf/////iFAAAAAAAAAAAAKP/xQAAAAAAAACE/5AAAAAAAAAAAAAP0v/////FDQAAAAAAAAAAiP/hAAAAAAAAaf7QCQAAAAAAAAAAAAAUxP/////RLAAAAAAAAABs//oCAAAAEpz/3BwAAAAAAAAAAAAAAAAFg/r////8qT4BAAAAAFH//xgAH4Tu/78XAAAAAAAAAAAAAAAAAAAAKLL//////+CSVCcPPv//nMf9/+loAgAAAAAAAAAAAAAAAAAAAAAAADi2/v///////////////9NtCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmdrLb9f//++n+/6YqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOL/hgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvv+nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZ/8kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHT/6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUP//CgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAw//8iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCQAAAAAAABj//zUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9y//+vy4AAAAADP//PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPj/////7yQAAAAP//85AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC+////////ogAAACH//yYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfj////////cAAAAN//+CwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7////////9IAAABW/+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACg////////gwAAAIv/qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjd/////8wMAAAQ5v9UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCE7v/hEAAAKM3/0QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAk1//Yh7L7/98kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOoP3//+2JDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkgzBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+   },
+   "bassClef": {
+    "w": 37,
+    "h": 49,
+    "origin": [
+     13.76,
+     15.146064541993834
+    ],
+    "inkSum": 357.481,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALHKjy+j8/+3Hgh4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+xP/////////////4ewMAAAAAAAAAAAAAAAAAAAAAAAAAAAiX/vWZRyEqWqr5//////++FQAAAAAAAAAAAAAAAAAAAAAAABHG/54XAAAAAAAAGpT7/////9wkAAAAAAAAAAAAAAAAAAAAAArJ9VMAAAAAAAAAAAAALND/////5SQAAAAAJFcnAAAAAAAAAACZ+EAAAAAAAAAAAAAAAAAR2v/////dFAAAWPv//GEAAAAAAAAs/X8AAAAAAAAAAAAAAAAAAD7//////7YBAOH////qAAAAAAAAlP8lAAAAAAAAAAAAAAAAAAAAu///////XADx////+AMAAAAAAeb9AwAAAAAAAAAAAAAAAAAAAFL//////90Dj////5kAAAAAAC///NPov1AAAAAAAAAAAAAAAAAH8f//////RQNpom4EAAAAAABv////////fQAAAAAAAAAAAAAAAKr//////4sAAAAAAAAAAAAAq/////////0vAAAAAAAAAAAAAABj//////+5AAAAAAAAAAAAAOH/////////hQAAAAAAAAAAAAAALv//////1AAAAAAAAAAAAAD4/////////50AAAAAAAAAAAAAABb//////94AAAAAAAAAAAAA1P////////94AAAAAAAAAAAAAAAU///////YAAAAAAAAAAAAAGv////////0GgAAAAAAAAAAAAAAIv//////xgAAAAAAAAAAAAABnv/////1TQAAAAAAAAAAAAAAAED//////6cAJFcnAAAAAAAAAABGma2EHwAAAAAAAAAAAAAAAABq//////9+WPv//GEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoP//////TOH////qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOL//////hPx////+AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3//////9AAj////5kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7//////+HAANpom4EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzP//////LwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJv//////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIf//////jwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArr/////6EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1/////+MSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZ8P////s/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtP////92AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdv////+tAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/v////ZDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG+j////zLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMn////5SQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaj////1SwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI/////lNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIf///++GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5f///t9AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAErr//+I8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKtv//7gTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS/H//IIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABePz/yDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPrP/RUgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA43c9QAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABW41wBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEg4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "noteheadBlack": {
+    "w": 19,
+    "h": 16,
+    "origin": [
+     9.26198212966558,
+     7.97520174903586
+    ],
+    "inkSum": 134.252,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdfsfw/+26XgMAAAAAAAAAAAiL+f/////////IFQAAAAAAABDH/////////////8EBAAAAAAK8////////////////QQAAAABd/////////////////3sAAAAAw/////////////////96AAAAAPX/////////////////RgAAAADy////////////////2QMAAAAAtv//////////////+z8AAAAAADj7////////////+VcAAAAAAAAAVPP/////////zDMAAAAAAAAAAAAag8rr7dObRQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "noteheadHalf": {
+    "w": 19,
+    "h": 16,
+    "origin": [
+     9.26198212966558,
+     7.97520174903586
+    ],
+    "inkSum": 90.826,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdfsfw/+26XgMAAAAAAAAAAAiL+f/////////IFQAAAAAAABDH/////+yLQiV0/8EBAAAAAAK8////+4oNAAAAAPb/QQAAAABd////6z4AAAAAADT//3sAAAAAw///6yoAAAAAAATD//96AAAAAPX//kUAAAAAAAGa////RgAAAADy/7UAAAAAAAuo////2QMAAAAAtv99AAAAAEfa////+z8AAAAAADj72UY4bMn/////+VcAAAAAAAAAVPP/////////zDMAAAAAAAAAAAAag8rr7dObRQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "sharp": {
+    "w": 18,
+    "h": 34,
+    "origin": [
+     8.600000000000001,
+     17
+    ],
+    "inkSum": 158.821,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//UgAAAAAAAAAAAAAAAAAAAB//UgAAAAAAAAAAABOfMwAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgACBQAAAAAAAB//UgAAAB//nKfrMwAAAAAAAB//UgtLkNf/////MwAAAAAAAkj/2/n/////////MwAAAACn6//////////////oJgAAAAD///////////r/mS8BAAAAAAD//////tGMRif/UgAAAAAAAAD/6LL/WwAAAB//UgAAAAAAAAAvAR//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//eXS6LQAAAAAAAB//UgAYXar/////MwAAAAAAACT/uNH+////////MwAAAAB0uvf/////////////MAAAAAD/////////////vGIdAAAAAAD///////m/eVD/UgAAAAAAAAD//97/fQsAAB//UgAAAAAAAABiHR//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAAB//UgAAAAAAAAAAAB//UgAAABOfMwAAAAAAAAAAAB//UgAAAAAAAAAAAAAAAAAAAB//UgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "natural": {
+    "w": 13,
+    "h": 38,
+    "origin": [
+     6.08,
+     18.799999999999997
+    ],
+    "inkSum": 107.429,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP9wAAAAAAAAAAAAAAD/cAAAAAAAAAAAAAAA/3AAAAAAAAAAAAAAAP9wAAAAAAAAAAAAAAD/cAAAAAAAAAAAAAAA/3AAAAAAAAAAAAAAAP9wAAAAAAAAAAAAAAD/cAAAAAAAAAAAAAAA/3AAAAAAAAAAAAAAAP9wAAACN4LOKAAAAAD/gFWg6v///ykAAAAA//////////8pAAAAAP//////////KQAAAAD////yrWFf/ykAAAAA/7dDBgAAR/8pAAAAAP9wAAAAAEf/KQAAAAD/cAAAAABH/ykAAAAA/3AAAAAAR/8pAAAAAP9wAAACN57/KQAAAAD/gFWg6v///ykAAAAA//////////8pAAAAAP//////////KQAAAAD////yrWFf/ykAAAAA2o9DBgAAR/8pAAAAAAAAAAAAAEf/KQAAAAAAAAAAAABH/ykAAAAAAAAAAAAAR/8pAAAAAAAAAAAAAEf/KQAAAAAAAAAAAABH/ykAAAAAAAAAAAAAR/8pAAAAAAAAAAAAAEf/KQAAAAAAAAAAAABH/ykAAAAAAAAAAAAAR/8pAAAAAAAAAAAAAC2fGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+   },
+   "restQuarter": {
+    "w": 17,
+    "h": 41,
+    "origin": [
+     6.983818533680991,
+     20.6
+    ],
+    "inkSum": 156.385,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiSAAAAAAAAAAAAAAAAAAAAJz3bgMAAAAAAAAAAAAAAAAAR///zzQAAAAAAAAAAAAAAAAZ////+UoAAAAAAAAAAAAAAADt////8DQAAAAAAAAAAAAAAKf/////8EAAAAAAAAAAAAAAKvb/////90gAAAAAAAAAAAAAY///////9CoAAAAAAAAAAAAAof//////tgAAAAAAAAAAAAAN1Pf////7BgAAAAAAAAAAAAALfv////IDAAAAAAAAAAAAAACU///0YAAAAAAAAAAAAAAAXv7/lAkAAAAAAAAAAAAAAE774iQAAAAAAAAAAAAAAABA9+ooAAAAAAAAAAAAAAAAM/HxMwAAAAAAAAAAAAAAACjq90AAAAAAAAAAAAAAAAAt4vtOAAAAAAAAAAAAAAAAAIv/4kYBAAAAAAAAAAAAAAAAF/D//9ppAwAAAAAAAAAAAAAAmP////+xAwAAAAAAAAAAAABS//////+LAAAAAAAAAAAAABH5//////5QAAAAAAAAAAAAAJX//////+8kAAAAAAAAAAAAB73//////9QIAAAAAAAAAAAWVvb//////1oAAAAAAAR01///////////XwAAAAAAkP//+7pxQcb//9cMAAAAAADv/7gcAAAABVJaCwAAAAAAAPr/ggAAAAAAAAAAAAAAAAAA1P/TAAAAAAAAAAAAAAAAAACM//9LAAAAAAAAAAAAAAAAACf9/9gIAAAAAAAAAAAAAAAAAJL//5QAAAAAAAAAAAAAAAAAA4n7/2sAAAAAAAAAAAAAAAAAACmu/WMAAAAAAAAAAAAAAAAAAABVeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "flag8": {
+    "w": 17,
+    "h": 40,
+    "origin": [
+     2,
+     2
+    ],
+    "inkSum": 92.634,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAAD/SAAAAAAAAAAAAAAAAAAAAP/UBQAAAAAAAAAAAAAAAAAA//+DAAAAAAAAAAAAAAAAAAD///xFAAAAAAAAAAAAAAAAAP///+wjAAAAAAAAAAAAAAAA/////9cRAAAAAAAAAAAAAAD//////74FAAAAAAAAAAAAAP///////5sAAAAAAAAAAAAA/////////2oAAAAAAAAAAACV////////+TMAAAAAAAAAAABV8P//////1ggAAAAAAAAAAAAiy///////fwAAAAAAAAAAAAAHlv/////1GQAAAAAAAAAAAAAAZvv///+LAAAAAAAAAAAAAAAAS/f//+4IAAAAAAAAAAAAAAAASPr//1EAAAAAAAAAAAAAAAAAZP//mgAAAAAAAAAAAAAAAAAApv/VAAAAAAAAAAAAAAAAAAAV8PsGAAAAAAAAAAAAAAAAAACC/yEAAAAAAAAAAAAAAAAAABr8MwAAAAAAAAAAAAAAAAAAAMQ6AAAAAAAAAAAAAAAAAAAAhjYAAAAAAAAAAAAAAAAAAABcJwAAAAAAAAAAAAAAAAAAAEIPAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAFFwAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+   },
+   "label_C4": {
+    "w": 65,
+    "h": 68,
+    "emPx": 50.582256919801274,
+    "inkSum": 968.723,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEFGVy+D0////8N65fkILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ7/8//////////////////OQIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPMD////////////////////////8oA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHf9////////////////////////////3DMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeh////////////////////////////////+EoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsf//////////////////////////////////8i4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHf/////////////////////////////////////4RQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA++//////////////upodpWHSSwf7/////////////kQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtn////////////ZYgoAAAAAAAAAKJP9///////////4IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABS////////////uA8AAAAAAAAAAAAAAE/0//////////+hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMj//////////60EAAAAAAAAAAAAAAAAAED+//////////wsAAAAAAAAAAAAAA9QUFBQUBMAAAAAAAAAAAAAAAA2///////////rFQAAAAAAAAAAAAAAAAAAAKP////////3rzkAAAAAAAAAAAAAov//////PQAAAAAAAAAAAAAAAHn//////////14AAAAAAAAAAAAAAAAAAAAAGvL///atWQ0AAAAAAAAAAAAAAFD///////89AAAAAAAAAAAAAAAAt//////////uBQAAAAAAAAAAAAAAAAAAAAAAcKxYDAAAAAAAAAAAAAAAAAAV6P///////z0AAAAAAAAAAAAAAAPx/////////6IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKv/////////PQAAAAAAAAAAAAAAJv//////////UwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABZ//////////89AAAAAAAAAAAAAAA6//////////8rAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGe3//////////z0AAAAAAAAAAAAAAEz//////////xUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC0////////////PQAAAAAAAAAAAAAAXv/////////7AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY/////////////89AAAAAAAAAAAAAABr/////////+4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/x/////+/Y/////z0AAAAAAAAAAAAAAF7//////////QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvf//////X9D/////PQAAAAAAAAAAAAAATv//////////GgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGz//////7EA4/////89AAAAAAAAAAAAAAA+//////////8xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl9f/////rFwD2/////z0AAAAAAAAAAAAAACL//////////2MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8X//////1YACf//////PQAAAAAAAAAAAAAAAez/////////tgAAAAAAAAAAAAAAAAAAAAAAAABbmyEAAAAAAAB1//////+oAAAc//////89AAAAAAAAAAAAAAAAt//////////5EAAAAAAAAAAAAAAAAAAAAAAAF+3/+pshAAAAK/j/////5xMAAC///////z0AAAAAAAAAAAAAAACA//////////9/AAAAAAAAAAAAAAAAAAAAAACs//////qbIQXM//////9NAAAAQf//////PQAAAAAAAAAAAAAAACj+//////////krAAAAAAAAAAAAAAAAAAAAU//////////6yP//////z1VgZnCe//////+egIBhAAAAAAAAAAAAAMP//////////8oNAAAAAAAAAAAAAAAAACjo/////////////////////////////////////8IAAAAAAAAAAAAAX////////////88bAAAAAAAAAAAAAAA57P//////////1///////////////////////////wgAAAAAAAAAAAAAF0f///////////+NhCAAAAAAAAAASfPX///////////lL///////////////////////////CAAAAAAAAAAAAAAA6/f/////////////rkWpLM0xum/T/////////////iyT//////////////////////////8IAAAAAAAAAAAAAAACV/////////////////////////////////////8sLFp+fn5+fn5+fn5+fv///////tp+feQAAAAAAAAAAAAAAAASx///////////////////////////////////dFwAAAAAAAAAAAAAAAABV//////89AAAAAAAAAAAAAAAAAAAAAAi9////////////////////////////////5ScAAAAAAAAAAAAAAAAAAFX//////z0AAAAAAAAAAAAAAAAAAAAAAAiQ/v///////////////////////////7kWAAAAAAAAAAAAAAAAAAAAVf//////PQAAAAAAAAAAAAAAAAAAAAAAAABG4/////////////////////////N6AgAAAAAAAAAAAAAAAAAAAABV//////89AAAAAAAAAAAAAAAAAAAAAAAAAAAHYdL//////////////////+6BEwAAAAAAAAAAAAAAAAAAAAAAAFX//////z0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAATp7uPL////////+05BODAAAAAAAAAAAAAAAAAAAAAAAAAAAFUBAQEBADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEkNj8sGAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "label_D#": {
+    "w": 62,
+    "h": 68,
+    "emPx": 50.582256919801274,
+    "inkSum": 1059.846,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6j4+Pj4+Pj4+Pj4+Pj4FvXk0iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANn////////////////////////nrXMaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2f////////////////////////////qkNAAAAAAAAAAAAAAAAAAAI7+/v44AAAC0v7+6AwAAAAAAAAAAAADZ////////////////////////////////shUAAAAAAAAAAAAAAABg////jgAAIv///8wAAAAAAAAAAAAAANn/////////////////////////////////5UIAAAAAAAAAAAAAAJf///9XAABZ////lQAAAAAAAAAAAAAA2f///////////////////////////////////WoAAAAAAAAAAAAAz////yAAAJD///9eAAAAAAAAAAAAAADZ/////////////////////////////////////E0AAAAAAAAAAAv7///nAAAAx////ycAAAAAAAAAAAAAANn/////////2b+/v7/G2/X/////////////////9DIAAAAAAAAAP////7EAAAb3///tAQAAAAAAAAAAAAAA2f////////9oAAAAAAAAAAs9keP/////////////2QQAAHCAgIC0////w4CAk////+KAgFcAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAmHy////////////YQAA4P//////////////////////rwAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAACHM///////////fBgDg//////////////////////+vAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAABvq//////////9cAOD//////////////////////68AAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAAEb+/////////6QAVGBgl////8NgYHD////mYGBgQgAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAAAAAMX/////////5wEAAACE////cgAARv///6sAAAAAAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAAAAAav//////////LAAAALr///87AAB8////dQAAAAAAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAAAAU/f////////95MDAw7v///TgwMLz///9nMDArAAAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAAAAAADp/////////////////////////////////+cAAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAAAAAAND/////////////////////////////////5wAAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAAAAAt//////////////////////////////////nAAAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAAAAAACs/////////+Cvr/T///+0r6/i////ya+vr58AAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAAAAAAMP/////////kQAH+f//6wAAAMT///8uAAAAAAAAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAAAAA3P////////+AADX///+3AAAE9v//8wMAAAAAAAAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAAAAAAD0/////////24Aav///4IAADH///+/AAAAAAAAAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAAAAANP//////////RwCe////TgAAZ////4gAAAAAAAAAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAAACK//////////0QANP///8ZAACc////UQAAAAAAAAAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAAAAAeD/////////1AAJ7O/v1wAAAMPv7+8aAAAAAAAAAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAAAAABs//////////+RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZ/////////2gAAAAAAAAAAAAAAAAAJPT//////////ywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANn/////////aAAAAAAAAAAAAAAAAB3Q///////////CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2f////////9oAAAAAAAAAAAAAAA/6f///////////1EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZ/////////2gAAAAAAAAAAARQtv3///////////+0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANn/////////vY+Pj4+PlbDO7///////////////8h0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2f////////////////////////////////////xXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZ///////////////////////////////////+YgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANn/////////////////////////////////+GUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2f///////////////////////////////9EuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZ/////////////////////////////+d6BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANn/////////////////////////+sRfBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo7+/v7+/v7+/v7+/v7+/uqiWfEIKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   },
+   "label_G": {
+    "w": 47,
+    "h": 68,
+    "emPx": 50.582256919801274,
+    "inkSum": 818.439,
+    "r8": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMQCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEmJxdvu////+uvWpXA7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPLb7///////////////////ifRkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPb7/////////////////////////+nwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXn9/////////////////////////////8QgAAAAAAAAAAAAAAAAAAAAAAAAAAqp/////////////////////////////////+EaAAAAAAAAAAAAAAAAAAAAAAADuv///////////////////////////////////9APAAAAAAAAAAAAAAAAAAAAAIT//////////////////////////////////////6sAAAAAAAAAAAAAAAAAAABN/v/////////////tp4hsVmiBnOT//////////////0AAAAAAAAAAAAAAAAAABeH////////////PWwgAAAAAAAAAAj+8////////////zwMAAAAAAAAAAAAAAABf////////////pAgAAAAAAAAAAAAAAAOA/f//////////ZAAAAAAAAAAAAAAAAdT//////////5QBAAAAAAAAAAAAAAAAAACQ///////////oDAAAAAAAAAAAAABB///////////dCgAAAAAAAAAAAAAAAAAAAAnX//////u/cygAAAAAAAAAAAAAAIL//////////0cAAAAAAAAAAAAAAAAAAAAAADX77KNXEAAAAAAAAAAAAAAAAAAAwP/////////iAQAAAAAAAAAAAAAAAAAAAAAAACUDAAAAAAAAAAAAAAAAAAAAAAf3/////////5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALf//////////RwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA//////////8jAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFL//////////w0AAAAAAAAAAAkwMDAwMDAwMDAwMDAwMDAwMDAFAAAAAAAAAAAAZP/////////2AAAAAAAAAAAALv///////////////////////xsAAAAAAAAAAABx/////////+cAAAAAAAAAAAAu////////////////////////GwAAAAAAAAAAAGP/////////+QEAAAAAAAAAAC7///////////////////////8bAAAAAAAAAAAAU///////////EwAAAAAAAAAALv///////////////////////xsAAAAAAAAAAABC//////////8qAAAAAAAAAAAu////////////////////////GwAAAAAAAAAAACX//////////1YAAAAAAAAAAC7///////////////////////8bAAAAAAAAAAAAAe3/////////qAAAAAAAAAAALv///////////////////////xsAAAAAAAAAAAAAt//////////zCAAAAAAAAAAOUFBQUFBQUFBQUNn/////////GwAAAAAAAAAAAAB9//////////9pAAAAAAAAAAAAAAAAAAAAAAAAx/////////8bAAAAAAAAAAAAACP+//////////EdAAAAAAAAAAAAAAAAAAAAAADH/////////xsAAAAAAAAAAAAAALv//////////7oGAAAAAAAAAAAAAAAAAAAAAMj/////////GwAAAAAAAAAAAAAAVP///////////8EUAAAAAAAAAAAAAAAAAAWG/v////////8bAAAAAAAAAAAAAAACxf///////////91YBgAAAAAAAAAAAA5z4////////////xsAAAAAAAAAAAAAAAAr+f/////////////pjWNGKCk8UoLD+f//////////////GwAAAAAAAAAAAAAAAAB9/////////////////////////////////////////9sNAAAAAAAAAAAAAAAAAAGY//////////////////////////////////////+5EQAAAAAAAAAAAAAAAAAAAAKg////////////////////////////////////jAMAAAAAAAAAAAAAAAAAAAAAAAJ09///////////////////////////////6FoAAAAAAAAAAAAAAAAAAAAAAAAAAAAry///////////////////////////6XMKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRrT9///////////////////9zXMLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACJnot3/////////9dyhWxUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkbLD43IgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+   }
+  }
+ },
+ "readability": {
+  "home": {
+   "minStaffSpacePx": 6.81,
+   "minLetterCapPx": 8.06
+  },
+  "fitted": {
+   "minStaffSpacePx": 7.52,
+   "minLetterCapPx": 8.9
+  }
+ }
+}

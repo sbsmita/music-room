@@ -1,0 +1,44 @@
+{
+ "lines": [
+  {
+   "id": "tip_book",
+   "text": "This is your songbook. The letters match the keys.",
+   "spoken": "This is your songbook. The letters match the keys."
+  },
+  {
+   "id": "tip_book_marker",
+   "text": "The warm mark in the book shows your next note.",
+   "spoken": "The warm mark in the book shows your next note."
+  },
+  {
+   "id": "tip_book_contents",
+   "text": "Tap a song's name in the book to start it.",
+   "spoken": "Tap a song's name in the book to start it."
+  },
+  {
+   "id": "tip_book_contents_desk",
+   "text": "Click a song's name in the book to start it.",
+   "spoken": "Click a song's name in the book to start it."
+  },
+  {
+   "id": "tip_book_turn",
+   "text": "Tap a page's bottom corner to turn the page.",
+   "spoken": "Tap a page's bottom corner to turn the page."
+  },
+  {
+   "id": "tip_book_turn_desk",
+   "text": "Click a page's bottom corner to turn the page.",
+   "spoken": "Click a page's bottom corner to turn the page."
+  },
+  {
+   "id": "tip_book_ribbon",
+   "text": "Tap the red ribbon to go back to the song list.",
+   "spoken": "Tap the red ribbon to go back to the song list."
+  },
+  {
+   "id": "tip_book_ribbon_desk",
+   "text": "Click the red ribbon to go back to the song list.",
+   "spoken": "Click the red ribbon to go back to the song list."
+  }
+ ]
+}

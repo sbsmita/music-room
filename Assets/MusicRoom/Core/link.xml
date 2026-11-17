@@ -1,0 +1,25 @@
+<!-- Module discovery instantiates IAppModule / provider types by reflection (ModuleDiscovery). IL2CPP's managed
+     stripper would otherwise remove classes that nothing references statically, so every MusicRoom assembly is
+     preserved whole. Stage-3 modules need no edits here: new assemblies are listed once, now. -->
+<linker>
+  <assembly fullname="MusicRoom.Core" preserve="all"/>
+  <assembly fullname="MusicRoom.Hands" preserve="all"/>
+  <assembly fullname="MusicRoom.Audio" preserve="all"/>
+  <assembly fullname="MusicRoom.Piano" preserve="all"/>
+  <assembly fullname="MusicRoom.Drums" preserve="all"/>
+  <assembly fullname="MusicRoom.Harp" preserve="all"/>
+  <assembly fullname="MusicRoom.Room" preserve="all"/>
+  <assembly fullname="MusicRoom.Layout" preserve="all"/>
+  <assembly fullname="MusicRoom.Menu" preserve="all"/>
+  <assembly fullname="MusicRoom.Lessons" preserve="all"/>
+  <assembly fullname="MusicRoom.Guide" preserve="all"/>
+  <assembly fullname="MusicRoom.MR" preserve="all"/>
+  <!-- the many-instrument platform (12-new-instruments/platform.md section 2): listed once, in phase 0 -->
+  <assembly fullname="MusicRoom.Handpan" preserve="all"/>
+  <assembly fullname="MusicRoom.HandDrums" preserve="all"/>
+  <assembly fullname="MusicRoom.Marimba" preserve="all"/>
+  <assembly fullname="MusicRoom.Bowls" preserve="all"/>
+  <assembly fullname="MusicRoom.Sheet" preserve="all"/>
+  <!-- look and pinch (2026-11-13): the module is found by reflection like every other -->
+  <assembly fullname="MusicRoom.Gaze" preserve="all"/>
+</linker>

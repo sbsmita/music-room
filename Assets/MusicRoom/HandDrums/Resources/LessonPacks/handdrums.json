@@ -1,0 +1,959 @@
+{
+ "generatedFrom": "the hand drums lesson table (Docs/12-new-instruments/handdrums.md)",
+ "format": {
+  "targets": "handdrums {kind: conga|tumba, zone: any|open|bass|slap|heel|toe, label, hand?: L|R} (platform 7.1 LessonTarget.zone / hand); zone any = every stroke on that drum counts; the hand is also in the hint"
+ },
+ "tutorial": {
+  "SPEED": 0.18,
+  "TRAVEL": {
+   "handdrums": 0.35
+  },
+  "leadSeconds": {
+   "handdrums": 1.9444444444444444
+  }
+ },
+ "counts": {
+  "lessons": 3,
+  "events": 52
+ },
+ "checks": [
+  {
+   "id": "handdrums-first",
+   "bars": 4,
+   "events": 16,
+   "seconds": 12,
+   "withCountdownAndLead": 16.94,
+   "minEventGap": 0.75,
+   "minSameHandGap": null,
+   "maxTargets": 1
+  },
+  {
+   "id": "handdrums-bass-tone",
+   "bars": 4,
+   "events": 16,
+   "seconds": 12,
+   "withCountdownAndLead": 16.94,
+   "minEventGap": 0.75,
+   "minSameHandGap": null,
+   "maxTargets": 1
+  },
+  {
+   "id": "handdrums-tumbao",
+   "bars": 4,
+   "events": 20,
+   "seconds": 12.63,
+   "withCountdownAndLead": 17.58,
+   "minEventGap": 0.395,
+   "minSameHandGap": 0.395,
+   "maxTargets": 1
+  }
+ ],
+ "lessons": [
+  {
+   "id": "handdrums-first",
+   "instrument": "handdrums",
+   "title": "First taps",
+   "bpm": 80,
+   "secondsPerBeat": 0.75,
+   "leadSeconds": 1.9444444444444444,
+   "beats": 16,
+   "seconds": 12,
+   "eventCount": 16,
+   "notes": 16,
+   "listNote": "16 taps",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.75,
+     "due": 1.9444444444444444,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.75,
+     "duration": 0.75,
+     "due": 2.6944444444444446,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.5,
+     "duration": 0.75,
+     "due": 3.4444444444444446,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 2.25,
+     "duration": 0.75,
+     "due": 4.194444444444445,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 3,
+     "duration": 0.75,
+     "due": 4.944444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 3.75,
+     "duration": 0.75,
+     "due": 5.694444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 1,
+     "time": 4.5,
+     "duration": 0.75,
+     "due": 6.444444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 7,
+     "len": 1,
+     "time": 5.25,
+     "duration": 0.75,
+     "due": 7.194444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 8,
+     "len": 1,
+     "time": 6,
+     "duration": 0.75,
+     "due": 7.944444444444445,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 9,
+     "len": 1,
+     "time": 6.75,
+     "duration": 0.75,
+     "due": 8.694444444444445,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 10,
+     "len": 1,
+     "time": 7.5,
+     "duration": 0.75,
+     "due": 9.444444444444445,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 11,
+     "len": 1,
+     "time": 8.25,
+     "duration": 0.75,
+     "due": 10.194444444444445,
+     "hint": "Tap the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 12,
+     "len": 1,
+     "time": 9,
+     "duration": 0.75,
+     "due": 10.944444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 13,
+     "len": 1,
+     "time": 9.75,
+     "duration": 0.75,
+     "due": 11.694444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 14,
+     "len": 1,
+     "time": 10.5,
+     "duration": 0.75,
+     "due": 12.444444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    },
+    {
+     "k": 15,
+     "beat": 15,
+     "len": 1,
+     "time": 11.25,
+     "duration": 0.75,
+     "due": 13.194444444444445,
+     "hint": "Tap the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "any",
+       "label": "Tap"
+      }
+     ]
+    }
+   ],
+   "meter": "4/4",
+   "unit": "q",
+   "credit": "A steady pulse (no source)"
+  },
+  {
+   "id": "handdrums-bass-tone",
+   "instrument": "handdrums",
+   "title": "Bass and tone",
+   "bpm": 80,
+   "secondsPerBeat": 0.75,
+   "leadSeconds": 1.9444444444444444,
+   "beats": 16,
+   "seconds": 12,
+   "eventCount": 16,
+   "notes": 16,
+   "listNote": "16 strokes",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.75,
+     "due": 1.9444444444444444,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.75,
+     "duration": 0.75,
+     "due": 2.6944444444444446,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.5,
+     "duration": 0.75,
+     "due": 3.4444444444444446,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 1,
+     "time": 2.25,
+     "duration": 0.75,
+     "due": 4.194444444444445,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 4,
+     "len": 1,
+     "time": 3,
+     "duration": 0.75,
+     "due": 4.944444444444445,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 5,
+     "len": 1,
+     "time": 3.75,
+     "duration": 0.75,
+     "due": 5.694444444444445,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 6,
+     "len": 1,
+     "time": 4.5,
+     "duration": 0.75,
+     "due": 6.444444444444445,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 7,
+     "len": 1,
+     "time": 5.25,
+     "duration": 0.75,
+     "due": 7.194444444444445,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 8,
+     "len": 1,
+     "time": 6,
+     "duration": 0.75,
+     "due": 7.944444444444445,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 9,
+     "len": 1,
+     "time": 6.75,
+     "duration": 0.75,
+     "due": 8.694444444444445,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 10,
+     "len": 1,
+     "time": 7.5,
+     "duration": 0.75,
+     "due": 9.444444444444445,
+     "hint": "Open on the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 11,
+     "len": 1,
+     "time": 8.25,
+     "duration": 0.75,
+     "due": 10.194444444444445,
+     "hint": "Open on the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 12,
+     "len": 1,
+     "time": 9,
+     "duration": 0.75,
+     "due": 10.944444444444445,
+     "hint": "Bass on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "bass",
+       "label": "Bass"
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 13,
+     "len": 1,
+     "time": 9.75,
+     "duration": 0.75,
+     "due": 11.694444444444445,
+     "hint": "Open on the left drum",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 14,
+     "len": 1,
+     "time": 10.5,
+     "duration": 0.75,
+     "due": 12.444444444444445,
+     "hint": "Open on the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    },
+    {
+     "k": 15,
+     "beat": 15,
+     "len": 1,
+     "time": 11.25,
+     "duration": 0.75,
+     "due": 13.194444444444445,
+     "hint": "Open on the right drum",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open"
+      }
+     ]
+    }
+   ],
+   "meter": "4/4",
+   "unit": "q",
+   "credit": "Bass and open tone exercise (no source)"
+  },
+  {
+   "id": "handdrums-tumbao",
+   "instrument": "handdrums",
+   "title": "Tumbao",
+   "bpm": 76,
+   "secondsPerBeat": 0.7894736842105263,
+   "leadSeconds": 1.9444444444444444,
+   "beats": 16,
+   "seconds": 12.631578947368421,
+   "eventCount": 20,
+   "notes": 20,
+   "listNote": "20 strokes",
+   "events": [
+    {
+     "k": 0,
+     "beat": 0,
+     "len": 1,
+     "time": 0,
+     "duration": 0.7894736842105263,
+     "due": 1.9444444444444444,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 1,
+     "beat": 1,
+     "len": 1,
+     "time": 0.7894736842105263,
+     "duration": 0.7894736842105263,
+     "due": 2.7339181286549707,
+     "hint": "Slap on the left drum, right hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "slap",
+       "label": "Slap",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 2,
+     "beat": 2,
+     "len": 1,
+     "time": 1.5789473684210527,
+     "duration": 0.7894736842105263,
+     "due": 3.523391812865497,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 3,
+     "beat": 3,
+     "len": 0.5,
+     "time": 2.3684210526315788,
+     "duration": 0.39473684210526316,
+     "due": 4.312865497076023,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 4,
+     "beat": 3.5,
+     "len": 0.5,
+     "time": 2.763157894736842,
+     "duration": 0.39473684210526316,
+     "due": 4.707602339181286,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 5,
+     "beat": 4,
+     "len": 1,
+     "time": 3.1578947368421053,
+     "duration": 0.7894736842105263,
+     "due": 5.10233918128655,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 6,
+     "beat": 5,
+     "len": 1,
+     "time": 3.947368421052632,
+     "duration": 0.7894736842105263,
+     "due": 5.8918128654970765,
+     "hint": "Slap on the left drum, right hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "slap",
+       "label": "Slap",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 7,
+     "beat": 6,
+     "len": 1,
+     "time": 4.7368421052631575,
+     "duration": 0.7894736842105263,
+     "due": 6.681286549707602,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 8,
+     "beat": 7,
+     "len": 0.5,
+     "time": 5.526315789473684,
+     "duration": 0.39473684210526316,
+     "due": 7.470760233918129,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 9,
+     "beat": 7.5,
+     "len": 0.5,
+     "time": 5.921052631578948,
+     "duration": 0.39473684210526316,
+     "due": 7.865497076023392,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 10,
+     "beat": 8,
+     "len": 1,
+     "time": 6.315789473684211,
+     "duration": 0.7894736842105263,
+     "due": 8.260233918128655,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 11,
+     "beat": 9,
+     "len": 1,
+     "time": 7.105263157894737,
+     "duration": 0.7894736842105263,
+     "due": 9.049707602339181,
+     "hint": "Slap on the left drum, right hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "slap",
+       "label": "Slap",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 12,
+     "beat": 10,
+     "len": 1,
+     "time": 7.894736842105264,
+     "duration": 0.7894736842105263,
+     "due": 9.839181286549708,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 13,
+     "beat": 11,
+     "len": 0.5,
+     "time": 8.68421052631579,
+     "duration": 0.39473684210526316,
+     "due": 10.628654970760234,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 14,
+     "beat": 11.5,
+     "len": 0.5,
+     "time": 9.078947368421053,
+     "duration": 0.39473684210526316,
+     "due": 11.023391812865498,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 15,
+     "beat": 12,
+     "len": 1,
+     "time": 9.473684210526315,
+     "duration": 0.7894736842105263,
+     "due": 11.41812865497076,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 16,
+     "beat": 13,
+     "len": 1,
+     "time": 10.263157894736842,
+     "duration": 0.7894736842105263,
+     "due": 12.207602339181287,
+     "hint": "Slap on the left drum, right hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "slap",
+       "label": "Slap",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 17,
+     "beat": 14,
+     "len": 1,
+     "time": 11.052631578947368,
+     "duration": 0.7894736842105263,
+     "due": 12.997076023391813,
+     "hint": "Heel on the left drum, left hand",
+     "targets": [
+      {
+       "kind": "conga",
+       "zone": "heel",
+       "label": "Heel",
+       "hand": "L"
+      }
+     ]
+    },
+    {
+     "k": 18,
+     "beat": 15,
+     "len": 0.5,
+     "time": 11.842105263157896,
+     "duration": 0.39473684210526316,
+     "due": 13.78654970760234,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    },
+    {
+     "k": 19,
+     "beat": 15.5,
+     "len": 0.5,
+     "time": 12.236842105263158,
+     "duration": 0.39473684210526316,
+     "due": 14.181286549707602,
+     "hint": "Open on the right drum, right hand",
+     "targets": [
+      {
+       "kind": "tumba",
+       "zone": "open",
+       "label": "Open",
+       "hand": "R"
+      }
+     ]
+    }
+   ],
+   "meter": "4/4",
+   "unit": "q",
+   "credit": "Traditional Afro-Cuban tumbao (public domain)"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "tip_handpan_arrive": {
+  "file": "tip_handpan_arrive.wav",
+  "seconds": 2.926,
+  "rate": 22050
+ },
+ "tip_handpan_lift": {
+  "file": "tip_handpan_lift.wav",
+  "seconds": 2.985,
+  "rate": 22050
+ },
+ "tip_handpan_ding": {
+  "file": "tip_handpan_ding.wav",
+  "seconds": 2.081,
+  "rate": 22050
+ },
+ "tip_handpan_gentle": {
+  "file": "tip_handpan_gentle.wav",
+  "seconds": 3.413,
+  "rate": 22050
+ },
+ "tip_handpan_spot": {
+  "file": "tip_handpan_spot.wav",
+  "seconds": 2.5,
+  "rate": 22050
+ },
+ "tip_handpan_mute": {
+  "file": "tip_handpan_mute.wav",
+  "seconds": 2.424,
+  "rate": 22050
+ },
+ "tip_handpan_slap": {
+  "file": "tip_handpan_slap.wav",
+  "seconds": 2.678,
+  "rate": 22050
+ },
+ "tip_handpan_tak": {
+  "file": "tip_handpan_tak.wav",
+  "seconds": 2.49,
+  "rate": 22050
+ },
+ "tip_handpan_loop": {
+  "file": "tip_handpan_loop.wav",
+  "seconds": 3.171,
+  "rate": 22050
+ }
+}

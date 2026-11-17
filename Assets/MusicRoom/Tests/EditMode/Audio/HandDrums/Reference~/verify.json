@@ -1,0 +1,1184 @@
+{
+ "checks": [
+  {
+   "id": "M1",
+   "desc": "head modes re the head (0,1) vs ideal membrane ratios, max error",
+   "value": 0.005,
+   "pass": true,
+   "src": "R92"
+  },
+  {
+   "id": "M2",
+   "desc": "(1,1)/tone ratio, conga and tumba (air-coupled tone; ideal 1.594)",
+   "value": [
+    1.479,
+    1.478
+   ],
+   "pass": true,
+   "src": "R92 trend"
+  },
+  {
+   "id": "S10",
+   "desc": "conga open tone: tone partial over the next strongest (0-400 ms) dB",
+   "value": 11.4,
+   "pass": true,
+   "src": "R00: one pitch \"many dB louder\""
+  },
+  {
+   "id": "S20",
+   "desc": "conga bass (0-400 ms): strongest partial (Hz) and the 3-4x partial re it (dB, 0..-8)",
+   "value": {
+    "f": 78,
+    "harmonicDb": -0.9,
+    "harmonicHz": 261.8
+   },
+   "pass": true,
+   "src": "R00: bass ~70 Hz, 280 Hz \"almost as loud\""
+  },
+  {
+   "id": "S30",
+   "desc": "conga slap: same fundamental as the open tone (dB re open)",
+   "value": -2.6,
+   "pass": true,
+   "src": "R00: slap shares the 240 Hz peak"
+  },
+  {
+   "id": "S40",
+   "desc": "conga slap: 1-8 kHz energy re open (first 50 ms, dB) and c50 ratio",
+   "value": {
+    "dB": 8.5,
+    "c50": 2
+   },
+   "pass": true,
+   "src": "DJW: slap energy in higher partials; UBC djembe: slap centroid ~2.4x the tone (v2: the first-set 8 dB / 1.6x restored)"
+  },
+  {
+   "id": "H10",
+   "desc": "conga slap: energy above 4 kHz re all, first 50 ms (dB)",
+   "value": -18.6,
+   "pass": true,
+   "src": "critique H4 (v1: -34 to -37 dB); Thomann: the slap is bright, cutting"
+  },
+  {
+   "id": "H20",
+   "desc": "conga slap crack: 2-7 kHz peak-to-median per 1/3 octave, 5-60 ms (dB): band mean, max",
+   "value": {
+    "mean": 9.6,
+    "max": 12,
+    "bands": [
+     6.8,
+     12,
+     6.4,
+     9.5,
+     11.1,
+     11.6
+    ]
+   },
+   "pass": true,
+   "src": "critique H4 (v1: 18-50 dB, separate ringing lines); decaying noise: mean 7.5, max p99 12.6"
+  },
+  {
+   "id": "H30a",
+   "desc": "conga slap u 0.8: the air pop's share of the peak (dB)",
+   "value": -11.6,
+   "pass": true,
+   "src": "critique H4 (v1: -1.4 to -5.9 dB, a click on a dull tone)"
+  },
+  {
+   "id": "H30b",
+   "desc": "conga slap u 1: the air pop's share of the peak (dB)",
+   "value": -10.4,
+   "pass": true,
+   "src": "critique H4 (v1: -1.4 to -5.9 dB, a click on a dull tone)"
+  },
+  {
+   "id": "S50",
+   "desc": "conga slap: (1,1) and (2,1) re the fundamental, slap minus open (dB)",
+   "value": {
+    "m11": 2.5,
+    "m21": 8.9
+   },
+   "pass": true,
+   "src": "DJ: M3/M4 dominate the slap"
+  },
+  {
+   "id": "S11",
+   "desc": "tumba open tone: tone partial over the next strongest (0-400 ms) dB",
+   "value": 12.2,
+   "pass": true,
+   "src": "R00: one pitch \"many dB louder\""
+  },
+  {
+   "id": "S21",
+   "desc": "tumba bass (0-400 ms): strongest partial (Hz) and the 3-4x partial re it (dB, 0..-8)",
+   "value": {
+    "f": 69.9,
+    "harmonicDb": -1.2,
+    "harmonicHz": 196.3
+   },
+   "pass": true,
+   "src": "R00: bass ~70 Hz, 280 Hz \"almost as loud\""
+  },
+  {
+   "id": "S31",
+   "desc": "tumba slap: same fundamental as the open tone (dB re open)",
+   "value": -1.9,
+   "pass": true,
+   "src": "R00: slap shares the 240 Hz peak"
+  },
+  {
+   "id": "S41",
+   "desc": "tumba slap: 1-8 kHz energy re open (first 50 ms, dB) and c50 ratio",
+   "value": {
+    "dB": 9.6,
+    "c50": 2.11
+   },
+   "pass": true,
+   "src": "DJW: slap energy in higher partials; UBC djembe: slap centroid ~2.4x the tone (v2: the first-set 8 dB / 1.6x restored)"
+  },
+  {
+   "id": "H11",
+   "desc": "tumba slap: energy above 4 kHz re all, first 50 ms (dB)",
+   "value": -18.3,
+   "pass": true,
+   "src": "critique H4 (v1: -34 to -37 dB); Thomann: the slap is bright, cutting"
+  },
+  {
+   "id": "H21",
+   "desc": "tumba slap crack: 2-7 kHz peak-to-median per 1/3 octave, 5-60 ms (dB): band mean, max",
+   "value": {
+    "mean": 9.2,
+    "max": 12.9,
+    "bands": [
+     7.9,
+     8.1,
+     6.7,
+     10.5,
+     9.3,
+     12.9
+    ]
+   },
+   "pass": true,
+   "src": "critique H4 (v1: 18-50 dB, separate ringing lines); decaying noise: mean 7.5, max p99 12.6"
+  },
+  {
+   "id": "H31a",
+   "desc": "tumba slap u 0.8: the air pop's share of the peak (dB)",
+   "value": -7,
+   "pass": true,
+   "src": "critique H4 (v1: -1.4 to -5.9 dB, a click on a dull tone)"
+  },
+  {
+   "id": "H31b",
+   "desc": "tumba slap u 1: the air pop's share of the peak (dB)",
+   "value": -6.2,
+   "pass": true,
+   "src": "critique H4 (v1: -1.4 to -5.9 dB, a click on a dull tone)"
+  },
+  {
+   "id": "S51",
+   "desc": "tumba slap: (1,1) and (2,1) re the fundamental, slap minus open (dB)",
+   "value": {
+    "m11": 0.3,
+    "m21": 7.7
+   },
+   "pass": true,
+   "src": "DJ: M3/M4 dominate the slap"
+  },
+  {
+   "id": "S6",
+   "desc": "tap at the rim vs the centre: 0-200 ms spectral centroid (Hz)",
+   "value": {
+    "centre": 249,
+    "rim": 279
+   },
+   "pass": true,
+   "src": "HW14: higher pitch at the rim (>= 10 %, above the centroid JND; first set 20 %)"
+  },
+  {
+   "id": "B10",
+   "desc": "stroke balance re open, A-weighted dB (conga, u .8): slap +1..+3, bass -6..+2, heel < -4, toe/touch < -6",
+   "value": {
+    "slap": 2.5,
+    "bass": -4.8,
+    "heel": -11.3,
+    "toe": -10.2,
+    "touch": -13.3,
+    "mute": -5.6
+   },
+   "pass": true,
+   "src": "design (§2.10); v2: both drums (critique M1), slap 1-3 dB louder (critique H4; Thomann: the loudest stroke)"
+  },
+  {
+   "id": "B11",
+   "desc": "stroke balance re open, A-weighted dB (tumba, u .8): slap +1..+3, bass -6..+2, heel < -4, toe/touch < -6",
+   "value": {
+    "slap": 2.2,
+    "bass": -4,
+    "heel": -12.5,
+    "toe": -9.2,
+    "touch": -12,
+    "mute": -5.8
+   },
+   "pass": true,
+   "src": "design (§2.10); v2: both drums (critique M1), slap 1-3 dB louder (critique H4; Thomann: the loudest stroke)"
+  },
+  {
+   "id": "B20",
+   "desc": "conga bass at u 1 re the open tone at u .8, A-weighted (dB)",
+   "value": 0.1,
+   "pass": true,
+   "src": "critique M1 (v1 tumba: +12 dB A: the palm was driven at 3.6 m/s for a 2 m/s hand)"
+  },
+  {
+   "id": "B21",
+   "desc": "tumba bass at u 1 re the open tone at u .8, A-weighted (dB)",
+   "value": 3.5,
+   "pass": true,
+   "src": "critique M1 (v1 tumba: +12 dB A: the palm was driven at 3.6 m/s for a 2 m/s hand)"
+  },
+  {
+   "id": "D-open",
+   "desc": "open ladder u .15->.95: A-weighted range dB, monotonic, attack 1-8 kHz share gain (dB), c50 ratio",
+   "value": {
+    "range": 22.1,
+    "hfGain": 10.5,
+    "c50": [
+     258,
+     307
+    ]
+   },
+   "pass": true,
+   "src": "design; W06 trend (louder = brighter) for the open tone; v2 bass by centroid, slap not duller (see 2.11)"
+  },
+  {
+   "id": "D-bass",
+   "desc": "bass ladder u .15->.95: A-weighted range dB, monotonic, attack 1-8 kHz share gain (dB), c50 ratio",
+   "value": {
+    "range": 20,
+    "hfGain": -1.5,
+    "c50": [
+     100,
+     144
+    ]
+   },
+   "pass": true,
+   "src": "design; W06 trend (louder = brighter) for the open tone; v2 bass by centroid, slap not duller (see 2.11)"
+  },
+  {
+   "id": "D-slap",
+   "desc": "slap ladder u .15->.95: A-weighted range dB, monotonic, attack 1-8 kHz share gain (dB), c50 ratio",
+   "value": {
+    "range": 16.6,
+    "hfGain": -1.2,
+    "c50": [
+     691,
+     594
+    ]
+   },
+   "pass": true,
+   "src": "design; W06 trend (louder = brighter) for the open tone; v2 bass by centroid, slap not duller (see 2.11)"
+  },
+  {
+   "id": "C1",
+   "desc": "palm contact ms at u .2 / 1 (longer than a stick; shorter when harder)",
+   "value": [
+    10.31,
+    6.6
+   ],
+   "pass": true,
+   "src": "W06 trend (sticks 3-6 ms)"
+  },
+  {
+   "id": "C2",
+   "desc": "slap fingertip contact ms at u .8 (< 2 ms) and < flat fingers",
+   "value": [
+    1.17,
+    2.63
+   ],
+   "pass": true,
+   "src": "design"
+  },
+  {
+   "id": "G1",
+   "desc": "glide of the tone after a hard palm bass u 1 (cents, 15-45 ms re 0.5-0.8 s, heterodyne; 10..60)",
+   "value": 10.7,
+   "pass": true,
+   "src": "R92: dT ~ amplitude^2; bass drum ~10 % at full blow"
+  },
+  {
+   "id": "G2",
+   "desc": "glide grows with force: bass u .5 < u 1, and an open tone glides less than a bass",
+   "value": [
+    0.7,
+    10.7,
+    0
+   ],
+   "pass": true,
+   "src": "R92"
+  },
+  {
+   "id": "T1",
+   "desc": "muted (closed) tone: tone partial drop 10-40 ms -> 150-180 ms, open vs muted (dB)",
+   "value": {
+    "openDrop10to150msDb": 9.6,
+    "muteDrop10to150msDb": 65.6,
+    "openToneT60": 0.85
+   },
+   "pass": true,
+   "src": "technique: fingers stay = short pitched pop"
+  },
+  {
+   "id": "T2",
+   "desc": "open tone T60 of the tone partial (s; design 0.85 +-20 %)",
+   "value": 0.85,
+   "pass": true,
+   "src": "design (§2.4)"
+  },
+  {
+   "id": "T40",
+   "desc": "conga tail after 0.5 s: tone over the next partial (dB), longest partial T60 re the tone's",
+   "value": {
+    "toneOverNextDb": 25.5,
+    "t60Ratio": 0.75
+   },
+   "pass": true,
+   "src": "platform 10.3 adapted (no metallic tail)"
+  },
+  {
+   "id": "T41",
+   "desc": "tumba tail after 0.5 s: tone over the next partial (dB), longest partial T60 re the tone's",
+   "value": {
+    "toneOverNextDb": 39.2,
+    "t60Ratio": 0.75
+   },
+   "pass": true,
+   "src": "platform 10.3 adapted (no metallic tail)"
+  },
+  {
+   "id": "T3",
+   "desc": "resting palm on a ringing drum: tone drop 100 ms after laying the hand (dB)",
+   "value": 79.7,
+   "pass": true,
+   "src": "technique: a resting hand mutes"
+  },
+  {
+   "id": "Q1",
+   "desc": "DC: |mean| / rms over the first 60 ms, worst stroke at u 1",
+   "value": 0.01,
+   "pass": true,
+   "src": "critic H1 (drums)"
+  },
+  {
+   "id": "Q2",
+   "desc": "low-frequency push: energy below 30 Hz re all, first 0.5 s (Hann), worst stroke (dB)",
+   "value": -54.1,
+   "pass": true,
+   "src": "critic H1 (drums)"
+  },
+  {
+   "id": "Q3",
+   "desc": "non-finite samples in a 7 s two-hand passage",
+   "value": 0,
+   "pass": true,
+   "src": "port rule"
+  },
+  {
+   "id": "Q4",
+   "desc": "click score outside onsets (max |d2x| / local rms; white noise ~ 8)",
+   "value": {
+    "score": 2.11,
+    "atSec": 6.09
+   },
+   "pass": true,
+   "src": "drums §10.4 metric"
+  },
+  {
+   "id": "Q5",
+   "desc": "energy above 20 kHz (fraction)",
+   "value": "4.36e-7",
+   "pass": true,
+   "src": "aliasing"
+  },
+  {
+   "id": "Q6",
+   "desc": "subnormal states after 12 s of decay; active groups left",
+   "value": {
+    "subnormal": 0,
+    "activeGroups": 0
+   },
+   "pass": true,
+   "src": "burst.md §6"
+  },
+  {
+   "id": "Q7",
+   "desc": "two renders bit-identical",
+   "value": true,
+   "pass": true,
+   "src": "burst.md §7"
+  },
+  {
+   "id": "V1",
+   "desc": "8 identical open tones: loudness spread (dB) and the highest consecutive attack correlation (> 600 Hz, 20 ms)",
+   "value": {
+    "spread": 1.99,
+    "maxCorr": 0.985
+   },
+   "pass": true,
+   "src": "drums §10.5 (no two strokes alike; a pitched head correlates more than a snare: first set 0.97)"
+  },
+  {
+   "id": "F1",
+   "desc": "two hands, open tones 0/1/3/10/25 ms apart: level re one stroke (dB, -6..+6.5: the head adds or cancels)",
+   "value": {
+    "0": 5.6,
+    "1": 1.2,
+    "3": 3.7,
+    "10": 1.4,
+    "25": -0.7
+   },
+   "pass": true,
+   "src": "drums A2 rule"
+  },
+  {
+   "id": "P",
+   "desc": "loudness parity: tone phrase open-open-slap-open (conga, u .55, 108 bpm) vs the piano mf reference, dry (LU)",
+   "value": 0,
+   "pass": true,
+   "src": "platform 10.3; v2 tone phrase, +-1 LU (critique M1)"
+  },
+  {
+   "id": "P2",
+   "desc": "open-only phrases re the piano mf reference, conga / tumba (LU)",
+   "value": [
+    0.33,
+    0.66
+   ],
+   "pass": true,
+   "src": "critique M1 (v1: -3.5 / -3.2 LU)"
+  },
+  {
+   "id": "SW",
+   "desc": "flat hand at 1.5 m/s, palm rho 0-1.35, curl/pitch varied, through the live stroke logic: strokes at u >= .5 more than 6 dB A under the open tone",
+   "value": {
+    "fails": 0,
+    "worst": -5.3,
+    "tally": {
+     "bass": 130,
+     "open": 165,
+     "slap": 21,
+     "touch": 10,
+     "none": 10
+    }
+   },
+   "pass": true,
+   "src": "critique H3 (v1: a quiet \"touch\" ring at rho .70-.85)"
+  },
+  {
+   "id": "BS",
+   "desc": "budget: two-hand slap roll on both drums, Share 0.4 vs 1: Work ratio, active groups <= cap, click score outside onsets",
+   "value": {
+    "ratio": 0.436,
+    "maxActive": 36,
+    "cap": 37,
+    "click": 0.02
+   },
+   "pass": true,
+   "src": "platform 10.3 UnitShareTests"
+  },
+  {
+   "id": "R1",
+   "desc": "not over-wet: impulse DRR at the seat, mean of the two ears, with the requested -1 dB room send (dB; provisional row, per ear, C50 and late energy in R.room)",
+   "value": {
+    "conga": 6.3,
+    "tumba": 5,
+    "provisional": [
+     5.3,
+     4
+    ],
+    "bothEarsProvisional": [
+     5.9,
+     4.5
+    ],
+    "programme": [
+     2.4,
+     2.6
+    ]
+   },
+   "pass": true,
+   "src": "platform 10.3 (piano +6.1 +-2 dB); review item 13"
+  }
+ ],
+ "modes": {
+  "conga": {
+   "a": 0.146,
+   "sigma": 1.35,
+   "tensionNperM": 11627,
+   "waveSpeed": 92.8,
+   "headOwn01": 243.3,
+   "tone": 261.6,
+   "bass": 78,
+   "A2": 300,
+   "counts": {
+    "total": 170,
+    "groups": 43,
+    "head": 41,
+    "dense": 120
+   },
+   "ratios": [
+    {
+     "mode": "(1,1)",
+     "f": 386.9,
+     "ratioReTone": 1.479,
+     "ideal": 1.594,
+     "reOwn01": 1.59
+    },
+    {
+     "mode": "(2,1)",
+     "f": 519.8,
+     "ratioReTone": 1.987,
+     "ideal": 2.136,
+     "reOwn01": 2.136
+    },
+    {
+     "mode": "(0,2)",
+     "f": 559.7,
+     "ratioReTone": 2.14,
+     "ideal": 2.296,
+     "reOwn01": 2.301
+    },
+    {
+     "mode": "(3,1)",
+     "f": 646.4,
+     "ratioReTone": 2.471,
+     "ideal": 2.653,
+     "reOwn01": 2.657
+    },
+    {
+     "mode": "(1,2)",
+     "f": 710.6,
+     "ratioReTone": 2.716,
+     "ideal": 2.917,
+     "reOwn01": 2.921
+    },
+    {
+     "mode": "(4,1)",
+     "f": 768.8,
+     "ratioReTone": 2.939,
+     "ideal": 3.156,
+     "reOwn01": 3.16
+    },
+    {
+     "mode": "(2,2)",
+     "f": 854.1,
+     "ratioReTone": 3.265,
+     "ideal": 3.501,
+     "reOwn01": 3.511
+    },
+    {
+     "mode": "(0,3)",
+     "f": 880.4,
+     "ratioReTone": 3.365,
+     "ideal": 3.6,
+     "reOwn01": 3.619
+    },
+    {
+     "mode": "(5,1)",
+     "f": 890.4,
+     "ratioReTone": 3.404,
+     "ideal": 3.652,
+     "reOwn01": 3.66
+    }
+   ]
+  },
+  "tumba": {
+   "a": 0.156,
+   "sigma": 1.35,
+   "tensionNperM": 7452,
+   "waveSpeed": 74.3,
+   "headOwn01": 182.3,
+   "tone": 196,
+   "bass": 70,
+   "A2": 250,
+   "counts": {
+    "total": 194,
+    "groups": 49,
+    "head": 62,
+    "dense": 120
+   },
+   "ratios": [
+    {
+     "mode": "(1,1)",
+     "f": 289.7,
+     "ratioReTone": 1.478,
+     "ideal": 1.594,
+     "reOwn01": 1.59
+    },
+    {
+     "mode": "(2,1)",
+     "f": 388.7,
+     "ratioReTone": 1.983,
+     "ideal": 2.136,
+     "reOwn01": 2.132
+    },
+    {
+     "mode": "(0,2)",
+     "f": 419.4,
+     "ratioReTone": 2.14,
+     "ideal": 2.296,
+     "reOwn01": 2.301
+    },
+    {
+     "mode": "(3,1)",
+     "f": 484.1,
+     "ratioReTone": 2.47,
+     "ideal": 2.653,
+     "reOwn01": 2.656
+    },
+    {
+     "mode": "(1,2)",
+     "f": 532.8,
+     "ratioReTone": 2.718,
+     "ideal": 2.917,
+     "reOwn01": 2.923
+    },
+    {
+     "mode": "(4,1)",
+     "f": 576.6,
+     "ratioReTone": 2.942,
+     "ideal": 3.156,
+     "reOwn01": 3.163
+    },
+    {
+     "mode": "(2,2)",
+     "f": 639.7,
+     "ratioReTone": 3.264,
+     "ideal": 3.501,
+     "reOwn01": 3.509
+    },
+    {
+     "mode": "(0,3)",
+     "f": 659.6,
+     "ratioReTone": 3.365,
+     "ideal": 3.6,
+     "reOwn01": 3.619
+    },
+    {
+     "mode": "(5,1)",
+     "f": 667.6,
+     "ratioReTone": 3.406,
+     "ideal": 3.652,
+     "reOwn01": 3.663
+    }
+   ]
+  }
+ },
+ "contact": {
+  "palm": [
+   {
+    "u": 0.2,
+    "V": 0.61,
+    "ms": 10.31,
+    "Fmax": 39.8
+   },
+   {
+    "u": 0.5,
+    "V": 1.21,
+    "ms": 8.77,
+    "Fmax": 88.7
+   },
+   {
+    "u": 0.8,
+    "V": 2,
+    "ms": 7.63,
+    "Fmax": 167.5
+   },
+   {
+    "u": 1,
+    "V": 2.6,
+    "ms": 6.6,
+    "Fmax": 240.7
+   }
+  ],
+  "heel": [
+   {
+    "u": 0.2,
+    "V": 0.4,
+    "ms": 10.29,
+    "Fmax": 21.7
+   },
+   {
+    "u": 0.5,
+    "V": 0.83,
+    "ms": 8.75,
+    "Fmax": 50.2
+   },
+   {
+    "u": 0.8,
+    "V": 1.28,
+    "ms": 7.96,
+    "Fmax": 85.2
+   },
+   {
+    "u": 1,
+    "V": 1.6,
+    "ms": 7.54,
+    "Fmax": 112.5
+   }
+  ],
+  "fingers": [
+   {
+    "u": 0.2,
+    "V": 0.89,
+    "ms": 4.35,
+    "Fmax": 23.3
+   },
+   {
+    "u": 0.5,
+    "V": 2.18,
+    "ms": 3.06,
+    "Fmax": 66.2
+   },
+   {
+    "u": 0.8,
+    "V": 3.55,
+    "ms": 2.63,
+    "Fmax": 120.5
+   },
+   {
+    "u": 1,
+    "V": 4.5,
+    "ms": 2.46,
+    "Fmax": 164.1
+   }
+  ],
+  "tips": [
+   {
+    "u": 0.2,
+    "V": 1.35,
+    "ms": 1.25,
+    "Fmax": 14
+   },
+   {
+    "u": 0.5,
+    "V": 3.01,
+    "ms": 1.21,
+    "Fmax": 31.7
+   },
+   {
+    "u": 0.8,
+    "V": 4.78,
+    "ms": 1.17,
+    "Fmax": 52.1
+   },
+   {
+    "u": 1,
+    "V": 6,
+    "ms": 1.13,
+    "Fmax": 67.4
+   }
+  ],
+  "base": [
+   {
+    "u": 0.2,
+    "V": 0.68,
+    "ms": 5.79,
+    "Fmax": 49.7
+   },
+   {
+    "u": 0.5,
+    "V": 1.51,
+    "ms": 4.54,
+    "Fmax": 136.4
+   },
+   {
+    "u": 0.8,
+    "V": 2.39,
+    "ms": 3.13,
+    "Fmax": 243.6
+   },
+   {
+    "u": 1,
+    "V": 3,
+    "ms": 2.83,
+    "Fmax": 325.2
+   }
+  ],
+  "pads": [
+   {
+    "u": 0.2,
+    "V": 0.4,
+    "ms": 6.58,
+    "Fmax": 7.4
+   },
+   {
+    "u": 0.5,
+    "V": 0.83,
+    "ms": 5.38,
+    "Fmax": 17.6
+   },
+   {
+    "u": 0.8,
+    "V": 1.28,
+    "ms": 4.81,
+    "Fmax": 29.5
+   },
+   {
+    "u": 1,
+    "V": 1.6,
+    "ms": 4.58,
+    "Fmax": 38
+   }
+  ]
+ },
+ "ladder": {
+  "open": [
+   {
+    "u": 0.15,
+    "aDb": -22.1,
+    "kDb": -21,
+    "c50": 258,
+    "hfShareDb": -27.5,
+    "peakDb": -21.3
+   },
+   {
+    "u": 0.35,
+    "aDb": -12.2,
+    "kDb": -11.5,
+    "c50": 274,
+    "hfShareDb": -20.8,
+    "peakDb": -12.8
+   },
+   {
+    "u": 0.55,
+    "aDb": -6.8,
+    "kDb": -6.4,
+    "c50": 287,
+    "hfShareDb": -17.7,
+    "peakDb": -7.6
+   },
+   {
+    "u": 0.75,
+    "aDb": -3.1,
+    "kDb": -2.8,
+    "c50": 297,
+    "hfShareDb": -17.1,
+    "peakDb": -3.5
+   },
+   {
+    "u": 0.95,
+    "aDb": 0,
+    "kDb": 0,
+    "c50": 307,
+    "hfShareDb": -17.1,
+    "peakDb": 0
+   }
+  ],
+  "bass": [
+   {
+    "u": 0.15,
+    "aDb": -20,
+    "kDb": -16.7,
+    "c50": 100,
+    "hfShareDb": -26.7,
+    "peakDb": -16.2
+   },
+   {
+    "u": 0.35,
+    "aDb": -10.9,
+    "kDb": -10.2,
+    "c50": 130,
+    "hfShareDb": -28.3,
+    "peakDb": -9.7
+   },
+   {
+    "u": 0.55,
+    "aDb": -6.2,
+    "kDb": -5.9,
+    "c50": 137,
+    "hfShareDb": -31.4,
+    "peakDb": -4.5
+   },
+   {
+    "u": 0.75,
+    "aDb": -3.8,
+    "kDb": -3.4,
+    "c50": 130,
+    "hfShareDb": -29.5,
+    "peakDb": -0.5
+   },
+   {
+    "u": 0.95,
+    "aDb": 0,
+    "kDb": 0,
+    "c50": 144,
+    "hfShareDb": -28.2,
+    "peakDb": 2.9
+   }
+  ],
+  "slap": [
+   {
+    "u": 0.15,
+    "aDb": -16.6,
+    "kDb": -17.4,
+    "c50": 691,
+    "hfShareDb": -7.6,
+    "peakDb": -12.4
+   },
+   {
+    "u": 0.35,
+    "aDb": -10,
+    "kDb": -10.5,
+    "c50": 655,
+    "hfShareDb": -8,
+    "peakDb": -5
+   },
+   {
+    "u": 0.55,
+    "aDb": -5.7,
+    "kDb": -5.9,
+    "c50": 618,
+    "hfShareDb": -8.5,
+    "peakDb": -0.2
+   },
+   {
+    "u": 0.75,
+    "aDb": -2.6,
+    "kDb": -2.6,
+    "c50": 599,
+    "hfShareDb": -8.8,
+    "peakDb": 3.4
+   },
+   {
+    "u": 0.95,
+    "aDb": 0,
+    "kDb": 0,
+    "c50": 594,
+    "hfShareDb": -8.8,
+    "peakDb": 6.3
+   }
+  ]
+ },
+ "glide": {
+  "open@0.5": {
+   "earlyHz": 261.4,
+   "lateHz": 261.6,
+   "cents": -1.3
+  },
+  "open@1": {
+   "earlyHz": 261.59,
+   "lateHz": 261.6,
+   "cents": 0
+  },
+  "bass@0.5": {
+   "earlyHz": 261.71,
+   "lateHz": 261.6,
+   "cents": 0.7
+  },
+  "bass@1": {
+   "earlyHz": 263.23,
+   "lateHz": 261.6,
+   "cents": 10.7
+  }
+ },
+ "balance": {
+  "conga": {
+   "openK": -18.1,
+   "strokes": {
+    "open": {
+     "kDb": 0,
+     "aDb": 0,
+     "c50": 299,
+     "peakDb": -2.5,
+     "plr": 15.6
+    },
+    "slap": {
+     "kDb": -0.2,
+     "aDb": 2.5,
+     "c50": 597,
+     "peakDb": 4.2,
+     "plr": 22.5
+    },
+    "bass": {
+     "kDb": -1.2,
+     "aDb": -4.8,
+     "c50": 130,
+     "peakDb": 0.4,
+     "plr": 19.7
+    },
+    "mute": {
+     "kDb": -5.7,
+     "aDb": -5.6,
+     "c50": 297,
+     "peakDb": -2.7,
+     "plr": 21.2
+    },
+    "slapClosed": {
+     "kDb": -3.6,
+     "aDb": -0.1,
+     "c50": 711,
+     "peakDb": 4.2,
+     "plr": 26
+    },
+    "heel": {
+     "kDb": -7,
+     "aDb": -11.3,
+     "c50": 121,
+     "peakDb": -5.1,
+     "plr": 20
+    },
+    "toe": {
+     "kDb": -9.3,
+     "aDb": -10.2,
+     "c50": 264,
+     "peakDb": -12.6,
+     "plr": 14.9
+    },
+    "touch": {
+     "kDb": -12.8,
+     "aDb": -13.3,
+     "c50": 274,
+     "peakDb": -14.6,
+     "plr": 16.3
+    }
+   }
+  },
+  "tumba": {
+   "openK": -18.1,
+   "strokes": {
+    "open": {
+     "kDb": 0,
+     "aDb": 0,
+     "c50": 229,
+     "peakDb": -3.4,
+     "plr": 14.8
+    },
+    "slap": {
+     "kDb": -0.6,
+     "aDb": 2.2,
+     "c50": 484,
+     "peakDb": 1.9,
+     "plr": 20.7
+    },
+    "bass": {
+     "kDb": -0.8,
+     "aDb": -4,
+     "c50": 103,
+     "peakDb": 0.4,
+     "plr": 19.3
+    },
+    "mute": {
+     "kDb": -6.4,
+     "aDb": -5.8,
+     "c50": 229,
+     "peakDb": -3.4,
+     "plr": 21.2
+    },
+    "slapClosed": {
+     "kDb": -4.4,
+     "aDb": 0,
+     "c50": 600,
+     "peakDb": 1.9,
+     "plr": 24.4
+    },
+    "heel": {
+     "kDb": -7.7,
+     "aDb": -12.5,
+     "c50": 91,
+     "peakDb": -5.9,
+     "plr": 19.9
+    },
+    "toe": {
+     "kDb": -8.1,
+     "aDb": -9.2,
+     "c50": 196,
+     "peakDb": -12.5,
+     "plr": 13.7
+    },
+    "touch": {
+     "kDb": -11.4,
+     "aDb": -12,
+     "c50": 206,
+     "peakDb": -15.2,
+     "plr": 14.4
+    }
+   }
+  }
+ },
+ "decay": {
+  "openDrop10to150msDb": 9.6,
+  "muteDrop10to150msDb": 65.6,
+  "openToneT60": 0.85
+ },
+ "variation": {
+  "loudnessSpreadDb": 1.99,
+  "corr": [
+   0.608,
+   0.624,
+   0.978,
+   0.961,
+   0.985,
+   0.973,
+   0.837
+  ]
+ },
+ "flam": {
+  "0": 5.6,
+  "1": 1.2,
+  "3": 3.7,
+  "10": 1.4,
+  "25": -0.7
+ },
+ "budget": {
+  "share1": {
+   "work": 304054,
+   "maxActive": 91,
+   "cap": 92
+  },
+  "share04": {
+   "work": 132459,
+   "maxActive": 36,
+   "cap": 37,
+   "shedGroups": 60
+  },
+  "workRatio": 0.436,
+  "clickScoreShare04": 0.02
+ },
+ "room": {
+  "conga": {
+   "L": {
+    "DRR": 7.6,
+    "C50": 14.8,
+    "lateAfter80reDirect": -18.4
+   },
+   "R": {
+    "DRR": 3,
+    "C50": 11.2,
+    "lateAfter80reDirect": -13.8
+   },
+   "DRRbothEars": 5.9,
+   "DRRmeanOfEars": 5.3,
+   "DRRmeanOfEarsRequested": 6.3
+  },
+  "tumba": {
+   "L": {
+    "DRR": 2,
+    "C50": 10.4,
+    "lateAfter80reDirect": -12.8
+   },
+   "R": {
+    "DRR": 6,
+    "C50": 13.5,
+    "lateAfter80reDirect": -16.8
+   },
+   "DRRbothEars": 4.5,
+   "DRRmeanOfEars": 4,
+   "DRRmeanOfEarsRequested": 5
+  },
+  "tumbaoProgrammeDRR": [
+   2.4,
+   2.6
+  ],
+  "requestedSendDb": -1
+ }
+}
