@@ -258,6 +258,35 @@ namespace MusicRoom.Tests.PlayMode
             Debug.Log($"[Ghost] harp: {plucks} plucks, a fingertip at each string (worst {worst * 1000f:F1} mm)");
         }
 
+        /// <summary>2026-11-18, headset: "drums shows sometimes only one hand in recordings". Playback stages the kit out to
+        /// one side of the player; the hands were chosen from the player's head, so every piece was on the same side and
+        /// one hand played every hit. They follow the kit's own stool now (GhostHands.DrumSeat): the hat goes to the left
+        /// hand, the floor tom to the right, the snare to whichever is free, and both stay up together while the kit plays.</summary>
+        [UnityTest]
+        public IEnumerator AKitStagedOffToOneSidePlaysWithBothHands()
+        {
+            yield return Boot(InstrumentKind.Drums);
+            var drums = App.Get<IDrumsApi>();
+            Transform head = App.Head;
+            Vector3 aside = head.position + head.right * 1.4f + head.forward * 1.2f;
+            aside.y = drums.Root.position.y;
+            List<TakeEvent> beat = DrumBeat(1.0f, 3);
+            double start = _audio;
+            Assert.IsTrue(Recorder.PlayEvents(beat, 7.5));
+            int both = 0, frames = 0;
+            while (_audio < start + 6.5)
+            {
+                drums.Root.position = aside;   // held off to the right, still facing the way it faced
+                Frame();
+                if (_audio < start + 1.6 || _audio > start + 6.0) continue;
+                frames++;
+                if (Ghost.Alpha(InstrumentKind.Drums, 0) > 0.5f && Ghost.Alpha(InstrumentKind.Drums, 1) > 0.5f) both++;
+            }
+            Assert.That((drums.Root.position - aside).magnitude, Is.LessThan(0.01f), "the kit stayed off to the side");
+            Assert.That(both, Is.GreaterThan(frames * 0.9f), $"both drum hands up while the kit plays ({both}/{frames} frames)");
+            Debug.Log($"[Ghost] staged kit: both hands up {both}/{frames} frames");
+        }
+
         // ------------------------------------------------------------------------------------------------ never input
 
         [UnityTest]

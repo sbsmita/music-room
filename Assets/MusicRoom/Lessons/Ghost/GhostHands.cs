@@ -396,9 +396,19 @@ namespace MusicRoom.Lessons.Ghost
 
         float AnchorRadius(InstrumentKind kind, int key) => _anchorHas[(int)kind, key] > 0 ? _anchorUp[(int)kind, key].magnitude : 0.1f;
 
-        /// <summary>The player's head in the instrument's frame (at the seat), else a place in front of it.</summary>
+        /// <summary>The ghost drummer sits at the kit's own stool (kit-local: the kit stands KIT_FORWARD in front of its seat,
+        /// a seated head's height), facing +z with +x to its right, wherever the kit is. Playback stages the kit out to one
+        /// side of the player (LayoutModule.Stage): read from the player's head, every piece was then on the same side and
+        /// one hand played every hit (2026-11-18, headset). The kit's frame gives the hat and crash to the left hand, the
+        /// toms, floor and ride to the right, and the snare to whichever hand is free.</summary>
+        public static readonly Vector3 DrumSeat = new Vector3(0f, 1.15f, -0.10f);
+        static bool IsKit(InstrumentKind kind) => kind == InstrumentKind.Drums;
+
+        /// <summary>The player's head in the instrument's frame (at the seat), else a place in front of it. The drums: their
+        /// own stool (DrumSeat).</summary>
         Vector3 PlayerLocal(InstrumentKind kind)
         {
+            if (IsKit(kind)) return DrumSeat;
             Transform root = _root[(int)kind];
             Transform head = _app.Head;
             if (root != null && head != null && _layout != null && _layout.PlaceOf(kind) == InstrumentPlace.Seat) return root.InverseTransformPoint(head.position);
@@ -407,6 +417,7 @@ namespace MusicRoom.Lessons.Ghost
 
         Vector3 RightLocal(InstrumentKind kind)
         {
+            if (IsKit(kind)) return Vector3.right;
             Transform root = _root[(int)kind];
             Transform head = _app.Head;
             if (root != null && head != null && _layout != null && _layout.PlaceOf(kind) == InstrumentPlace.Seat)
@@ -482,6 +493,9 @@ namespace MusicRoom.Lessons.Ghost
                 GhostTrack tr = TrackAt(i);
                 int k = i >> 1;
                 bool want = tr != null && _shown[k] && tr.Count > 0 && (_playing ? tr.Active(now, Linger, Appear) : true);
+                // A drummer keeps both sticks up: while one drum hand plays, the other stays, resting above its last hit.
+                if (!want && _playing && IsKit((InstrumentKind)k) && tr != null && tr.Count > 0 && _shown[k])
+                    want = _tracks[i ^ 1].Count > 0 && _tracks[i ^ 1].Active(now, Linger, Appear);
                 float target = want && _playing ? 1f : 0f;
                 float a = _alpha[i];
                 a = target > a ? Mathf.Min(target, a + dt / FadeIn) : Mathf.Max(target, a - dt / FadeOut);

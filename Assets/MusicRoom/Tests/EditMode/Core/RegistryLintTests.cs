@@ -38,7 +38,7 @@ namespace MusicRoom.Tests.Core
             ["Lessons/LessonHints.cs"] = (6, "the classic hints"),
             // Lessons: the ghost hands play each instrument's own way (the piano's ten-finger fingering, the kit's sticks, the
             // harp's pluck, a mallet, a rub), like the tutorial's classic paths; a tested choreography (GhostHandsPlayTests).
-            ["Lessons/Ghost/GhostHands.cs"] = (21, "the ghost hands' per-instrument playing (fingering, sticks, pluck, mallet, rub)"),
+            ["Lessons/Ghost/GhostHands.cs"] = (22, "the ghost hands' per-instrument playing (fingering, sticks, pluck, mallet, rub; the drummer's own stool)"),
             // Guide: the deck walkthrough's song (drums, harp, piano in layers), a tested script.
             ["Guide/DeckGuide.cs"] = (4, "the deck walkthrough's classic song"),
             // Guide (first five): the first run and the tour's tips teach the classic three by name (tested scripts:
