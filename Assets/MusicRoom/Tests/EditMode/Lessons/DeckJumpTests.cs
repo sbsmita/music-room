@@ -125,6 +125,39 @@ namespace MusicRoom.Tests.Lessons
             Assert.That(_rec.State, Is.EqualTo(RecorderState.Playing), "no REC started over the playback");
         }
 
+        // 2026-11-18 headset log: "record on top of 'Take 23' at 1.1 s" then "deck REC pressed: the playback stops" 0.2 s later,
+        // and each PLAY logged twice 0.1 s apart: one poke pressed twice (the fingertip wobbled at the edge, or a second
+        // finger of the same poke arrived), so record on top started and stopped at once.
+        [Test]
+        public void OnePokeWithAWobbleOrASecondFingerPressesOnce()
+        {
+            RecordTake();
+            Vector3 play = World(DeckButton.Play, 0.08f), overPlay = World(DeckButton.Play, 0.15f);
+            TipAt(overPlay); TipAt(overPlay);
+            TipAt(play);
+            Assert.That(_rec.State, Is.EqualTo(RecorderState.Playing));
+            TipAt(overPlay); TipAt(overPlay);
+            // REC while it plays: record on top. The fingertip wobbles 5 mm past the press zone's edge and back, twice.
+            Vector3 rec = World(DeckButton.Rec, 0.08f), overRec = World(DeckButton.Rec, 0.15f);
+            Vector3 edge = rec + _deck.Root.TransformDirection(new Vector3(TapeDeck.PressR + 0.005f, 0f, 0f));
+            int presses = _deck.Presses;
+            TipAt(rec);
+            Assert.IsTrue(_rec.RecordingOnTop, "REC records on top of the playing take");
+            TipAt(edge); TipAt(rec); TipAt(edge); TipAt(rec);
+            // a second finger of the same poke arrives on REC 0.1 s later
+            Pointer second = _hand.Pointers[1];
+            second.WasActive = second.Active = true;
+            second.Prev = second.Tip = rec;
+            for (int i = 0; i < 6; i++) TipAt(rec);
+            second.Active = second.WasActive = false;
+            Assert.That(_deck.Presses - presses, Is.EqualTo(1), "one poke, one press");
+            Assert.IsTrue(_rec.RecordingOnTop, "still recording on top");
+            // The fingertip leaves, and a while later a real second poke ends it.
+            for (int i = 0; i < 40; i++) TipAt(overRec);
+            TipAt(rec);
+            Assert.IsFalse(_rec.RecordingOnTop, "a real second REC ends it");
+        }
+
         [Test]
         public void AHandMovingWithTheDeckStillPressesAsBefore()
         {

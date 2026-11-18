@@ -52,8 +52,8 @@ namespace MusicRoom.Tests.PlayMode.Guide
         void Step(int n = 1, float dt = Dt) { for (int i = 0; i < n; i++) { _t += dt; _boot.Step(dt); } }
         DeckGuide G => _guide.DeckGuide;
 
-        // The walkthrough starts from Sunny's menu page ("Make a song in layers"); the deck's GUIDE starts the quick show
-        // (DeckQuickShowTests) and ends either.
+        // The walkthrough ("Make a song in layers", no menu row since 2026-11-18); the deck's GUIDE starts the long song
+        // (DeckLongSongTests) and ends either.
         void StartWalkthrough()
         {
             _guide.StartDeckWalkthrough();

@@ -178,13 +178,15 @@ namespace MusicRoom.Tests.PlayMode
             var take = new List<TakeEvent>();
             for (int i = 0; i < 10; i++) { TakeEvent e = TakeEvent.Drum(i % 3 == 0 ? "kick" : i % 3 == 1 ? "snare" : "crash", 0.8f, 0.3f, "head", false); e.t = 0.05f + 0.2f * i; take.Add(e); }
             Assert.IsTrue(Recorder.PlayEvents(take, 2.2));
-            Step(0.3f);
+            // the kit steps back for the show (2026-11-18, StageFarther, a glide of about a second): a star born after it
+            // stands still
+            Step(1.5f);
             IDrumsApi drums = App.Get<IDrumsApi>();
-            int first = Live().First();
-            Vector3 from = Sky.Model.Stars[first].From;
+            int newest = Live().Last();
+            Vector3 from = Sky.Model.Stars[newest].From;
             float nearPiece = drums.Pieces.Where(p => p.Transform != null).Min(p => (p.Transform.position + Vector3.up * 0.05f - from).magnitude);
             Assert.That(nearPiece, Is.LessThan(0.01f), "born from the piece that was hit");
-            Step(3.5f);
+            Step(2.3f);
             Assert.That(Sky.Model.TotalMade, Is.EqualTo(10));
             Assert.IsFalse(Sky.Model.Current.Room, "framed for mixed reality");
             foreach (int i in Live())

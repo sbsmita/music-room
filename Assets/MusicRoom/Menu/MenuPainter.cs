@@ -187,8 +187,8 @@ namespace MusicRoom.Menu
             }
         }
 
-        /// <summary>The Sunny screen: the header, its four rows (Show me around, Tips, Make a song in layers, Tips while I
-        /// play: On in amber) and the footer. It was painted as the Instruments grid, which draws only tiles and the grid's
+        /// <summary>The Sunny screen: the header, its rows (Show me around, Tips, Make a long song, Loop a beat, Tips while I
+        /// play: On in amber, Look and pinch) and the footer. It was painted as the Instruments grid, which draws only tiles and the grid's
         /// bottom row: on the headset the screen showed its header and nothing else.</summary>
         static void DrawGuide(IMenuCanvas c, MenuController m)
         {

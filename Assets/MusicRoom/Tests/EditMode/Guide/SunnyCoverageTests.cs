@@ -319,7 +319,8 @@ namespace MusicRoom.Tests.Guide
             // The old quick tour's own lines (2026-11-04), said by nothing since the fast tour (2026-11-16): kept, with their
             // clips, until the user says to delete them (TUNE-FASTTOUR.md). Listed so this check stays a real leftover check.
             foreach (string id in FirstRun.RetiredLines) yield return id;
-            foreach (string id in DeckGuide.QuickLines) yield return id;   // the deck's quick show (GUIDE)
+            foreach (string id in DeckGuide.QuickLines) yield return id;   // the deck's loop show ("Loop a beat")
+            foreach (string id in DeckGuide.LongLines) yield return id;    // the deck's long song (GUIDE, "Make a long song")
             foreach (TourTip t in TourTips.All)
             {
                 if (t.TextOnly != null) continue;

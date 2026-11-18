@@ -14,9 +14,10 @@ namespace MusicRoom.Layout
 {
     public sealed partial class LayoutModule
     {
-        /// <summary>The band: the playing surface's near edge at most ReachBand (0.30 m, one foot) horizontally from the chest
-        /// point; the pull aims a little inside it (ReachTarget) so tracking jitter and the resolver's 1 cm gaps keep it in.</summary>
-        public const float ReachBand = 0.30f, ReachTarget = 0.27f, ChestDown = 0.25f, ChestBack = 0.10f;
+        /// <summary>The band: the playing surface's near edge at most ReachBand (0.45 m, 1.5 ft since 2026-11-18; was 0.30)
+        /// horizontally from the chest point. The pull aims at ReachTarget, then the playing room (PlayRoomNear) moves it out
+        /// to about 0.39 m.</summary>
+        public const float ReachBand = 0.45f, ReachTarget = 0.27f, ChestDown = 0.25f, ChestBack = 0.10f;
 
         /// <summary>Boots pull instruments into the reach band. The PlayMode tests that compare the placement solver with its
         /// frozen reference layouts turn it off for their boot (the reference poses are the seat homes).</summary>
@@ -43,9 +44,25 @@ namespace MusicRoom.Layout
             return best;
         }
 
+        /// <summary>A little room in front of the player (2026-11-18, headset: "intruments are appearing very near. keep little
+        /// diff of may half foot"): after the pull, an instrument whose playing surface's near edge is closer than
+        /// PlayRoomNear to the chest point moves straight out (along the line from the head to its play centre) by up to
+        /// PlayRoomMax, never so far that its play centre leaves the descriptor's Seat.ReachMax (still played seated); only an
+        /// instrument alone in front (One alone, a My set of one: My set keeps the planner's slots). Measured (DeckFrontTests, Part 3 of TUNE-DECK-FRONT):
+        /// the near edge 0.21-0.27 m before, about 0.34-0.39 m now; the harp (0.44 m, kept by the eye clearance) does not move.</summary>
+        public const float PlayRoomNear = 0.39f, PlayRoomMax = 0.30f;
+
+        /// <summary>While a recording plays back by itself in the VR room, the instruments it brought stand this much farther
+        /// out (m, 3 ft, 2026-11-18 evening: "make all the instruments more far ... may be 3 feets"; was 0.45, then 0.60 m)
+        /// and side by side on an arc in view (LayoutModule.Stage PushShowOut) so the player watches them play (2026-11-18: "when we play recording ... place all intruments little
+        /// far like 2 feets ... or 1 and half feet"). Back at the playing distance the moment the player plays along (record on
+        /// top, a loop overdub, REC) or takes the layout over, and the player's own layout comes back when it ends.</summary>
+        public const float StageFarther = 0.90f;
+
         /// <summary>Moves a seat-frame default pose of an instrument toward the player, along the line from its play centre
-        /// to the head, until its playing surface's near edge is within ReachTarget of the chest point. Never moves it
-        /// farther; leaves the side table, the menu and rigs without played parts alone.</summary>
+        /// to the head, until its playing surface's near edge is within ReachTarget of the chest point; then out again by the
+        /// playing room (PlayRoomNear / PlayRoomMax). Leaves the
+        /// side table, the menu and rigs without played parts alone.</summary>
         void PullIntoReach(Rig r, ref Vector3 home, float yawDeg)
         {
             if (!ReachBandOn || r == null || !IsRowRig(r.Id)) return;
@@ -55,13 +72,27 @@ namespace MusicRoom.Layout
             for (int k = 0; k < 4; k++)
             {
                 float d = NearEdge(e, home, yawDeg);
-                if (!(d > ReachTarget + 0.002f) || float.IsInfinity(d)) return;
+                if (!(d > ReachTarget + 0.002f) || float.IsInfinity(d)) break;
                 LayoutMath.RotY(c.x, c.y, yawDeg * Mathf.Deg2Rad, out float cx, out float cz);
                 Vector2 b = ComfortCodec.Bearing(new Vector2(home.x + cx, home.z + cz));
                 float step = d - ReachTarget;
                 home.x -= b.x * step;
                 home.z -= b.y * step;
             }
+            float near = NearEdge(e, home, yawDeg);
+            if (float.IsInfinity(near)) return;
+            LayoutMath.RotY(c.x, c.y, yawDeg * Mathf.Deg2Rad, out float px, out float pz);
+            Vector2 centre = new Vector2(home.x + px, home.z + pz);
+            Vector2 dir = ComfortCodec.Bearing(centre);
+            // The playing room only for an instrument alone in front (One alone, a My set of one), straight ahead. My set keeps
+            // the planner's slots: moving its front member out made the resolver push a side member into the side table.
+            bool alone = _mode == LayoutMode.Single || (_plan != null && _plan.Single);
+            float room = alone && dir.y >= 0.9f ? Mathf.Clamp(PlayRoomNear - near, 0f, PlayRoomMax) : 0f;
+            InstrumentDescriptor desc = _app?.Registry?.Get(KindOf(r.Id));
+            if (desc?.Seat != null && desc.Seat.ReachMax > 0f) room = Mathf.Min(room, Mathf.Max(0f, desc.Seat.ReachMax - centre.magnitude));
+            if (room <= 0f) return;
+            home.x += dir.x * room;
+            home.z += dir.y * room;
         }
 
         /// <summary>One alone's default pose of an instrument (seat frame): its single home with its play centre (the piano's

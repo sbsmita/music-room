@@ -71,7 +71,8 @@ namespace MusicRoom.Tests.Guide
             // The fast first-timer tour (2026-11-16): fast_snow, fast_move, fast_set, fast_rec, fast_saved, fast_recenter, fast_bye added.
             // The tune buddies removed (2026-11-17): tip_dance_buddies retired.
             // Record on top (2026-11-17): tip_record_on_top added.
-            Assert.That(FirstFiveLines.Ids.Length, Is.EqualTo(93));
+            // The deck's long song (2026-11-18): long_intro, long_rec_drums, long_rec_piano, long_rec_harp, long_stop, long_show added.
+            Assert.That(FirstFiveLines.Ids.Length, Is.EqualTo(99));
             Assert.That(FirstFiveLines.Ids[0], Is.EqualTo("start_help"), "the first run's lines first");
             foreach (string id in FirstFiveLines.Ids)
             {

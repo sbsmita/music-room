@@ -205,7 +205,10 @@ namespace MusicRoom.Menu
         public const string SunnyTitle = "Sunny", SunnyNote = "Tour and tips";
         public const string TourLabel = "Show me around", TourNote = "A quick tour, under a minute";
         public const string TipsLabel = "Tips";
-        public const string LayersLabel = "Make a song in layers", LayersNote = "On the tape deck";
+        public const string LayersLabel = "Make a long song", LayersNote = "Record part on top of part";
+        public const string LoopShowLabel = "Loop a beat", LoopShowNote = "A one-minute loop show";
+        /// <summary>The Sunny screen with six rows (Look and pinch there too): a little tighter, so all fit above the footer.</summary>
+        public const float GuideTightH = 86f, GuideTightGap = 8f;
         public const string TipsOnLabel = "Tips while I play", TipsOnOn = "On: Sunny helps", TipsOnOff = "Off: only from here";
         public const string LookPinchLabel = "Look and pinch", LookPinchOn = "On: look, then pinch", LookPinchOff = "Off: poke only";
         public const string SunnyFooter = "Poke Sunny anytime to skip", TipsFooter = "Poke a tip to hear it again";

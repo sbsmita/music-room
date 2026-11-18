@@ -108,6 +108,10 @@ namespace MusicRoom.Lessons
             public Vector3 Rest, LocalPosition;
             public BoxCollider Click;
             public readonly List<Pointer> Held = new List<Pointer>(4);
+            /// <summary>When a fingertip last pressed it (the deck's clock; -inf before).</summary>
+            public float LastPress = float.NegativeInfinity;
+            /// <summary>Every fingertip has been ClearMargin away from it since its last press (a new poke may press at once).</summary>
+            public bool Cleared = true;
             public float Travel => Peg ? PegTravel : CapTravel;
             public float R => Peg ? PressR : CapPressR;
             public float YMax => Peg ? PressYMax : CapPressYMax;
@@ -556,12 +560,21 @@ namespace MusicRoom.Lessons
             }
         }
 
-        bool Inside(Control b, Vector3 tip)
+        bool Inside(Control b, Vector3 tip, float margin = 0f)
         {
             Vector3 l = _root.InverseTransformPoint(tip);
-            float dx = l.x - b.X, dz = l.z - b.Z, r = b.R;
-            return dx * dx + dz * dz < r * r && l.y < b.YMax && l.y > PressYMin;
+            float dx = l.x - b.X, dz = l.z - b.Z, r = b.R + margin;
+            return dx * dx + dz * dz < r * r && l.y < b.YMax + margin && l.y > PressYMin - margin;
         }
+
+        // One poke, one press (2026-11-18 headset log: "record on top ... at 1.1 s" then "deck REC pressed" 0.2 s later, and
+        // every PLAY logged twice 0.1 s apart: the user's REC started recording on top and stopped it at once, "nothing new was
+        // played"). A fingertip wobbling at a control's edge left and came back, or a second finger of the same poke arrived a
+        // moment later, and each counted as a new press. Now: a fingertip lets go of a control only once it is ReleaseMargin
+        // clear of its press zone; a control is pressed only by the first fingertip in it; and a control pressed in the last
+        // RepressSeconds ignores another press unless every fingertip went ClearMargin away from it in between (a real second
+        // tap: the finger lifted off and came down again).
+        public const float ReleaseMargin = 0.012f, RepressSeconds = 0.5f, ClearMargin = 0.02f;
 
         /// <summary>Presses, travel, reels, lamps.</summary>
         public void Tick(IReadOnlyList<Pointer> pointers, float dt)
@@ -578,25 +591,31 @@ namespace MusicRoom.Lessons
             for (int bi = 0; bi < ControlCount; bi++)
             {
                 Control b = _controls[bi];
+                bool near = false;
                 for (int i = 0; i < pointers.Count; i++)
                 {
                     Pointer p = pointers[i];
-                    if (!p.Active || !p.WasActive) continue;
+                    if (!p.Active || !p.WasActive) { b.Held.Remove(p); continue; }   // a lost fingertip holds nothing
+                    if (!near && (desk == null || !desk.IsMouse(p)) && Inside(b, p.Tip, ClearMargin)) near = true;
                     if (desk != null && desk.IsMouse(p)) continue;              // the mouse hand never presses: clicks do
                     if (Inside(b, p.Tip))
                     {
                         if (!b.Held.Contains(p))
                         {
+                            bool first = b.Held.Count == 0;
                             b.Held.Add(p);
-                            if (!pressing) continue;
+                            if (!pressing || !first || (_time - b.LastPress < RepressSeconds && !b.Cleared)) continue;
+                            b.LastPress = _time;
+                            b.Cleared = false;
                             Press(b.Id);
                             // The press moved the deck (PLAY's playback brought its instruments and the table moved at once):
                             // nothing more is pressed this frame, and the fingertips are where they are now.
                             if (MovedFrom(pos, rot)) { pressing = false; Reseat(pointers, desk); }
                         }
                     }
-                    else b.Held.Remove(p);
+                    else if (!Inside(b, p.Tip, ReleaseMargin)) b.Held.Remove(p);
                 }
+                if (!near) b.Cleared = true;
                 float target = b.Held.Count > 0 || Latched(b.Id) ? 1f : 0f;
                 if (b.Depth != target)
                 {

@@ -46,7 +46,8 @@ export const LINES = {
   fast_rec: 'Press REC to record, then PLAY to hear it.',
   fast_saved: 'Your recordings are saved here.',
   fast_recenter: 'Recenter with Reset view or pinch and hold both hands.',
-  fast_bye: 'Press GUIDE for a one-minute song. Have fun!',
+  // 2026-11-18: GUIDE makes a long song now (record on top), not a one-minute loop.
+  fast_bye: 'Press GUIDE to make a song with me. Have fun!',
   // Said by tips (the first run's old steps, now tips only): the skip hint, the drum, the nod, the harp, the palm.
   poke_me: 'Tip: poke me anytime to skip.',
   drum_vr: 'Now tap the drum on your right.',
@@ -85,12 +86,20 @@ export const LINES = {
   tip_loop_click: 'Press CLICK to keep a steady beat.',
   tip_loop_tidy: 'TIDY gently evens out your timing.',
   tip_loop_saved: 'Your loop is saved in Recordings.',
-  // 2026-11-14: GUIDE starts Sunny's quick show (DeckGuide, about a minute); the full walkthrough is "Make a song in layers".
+  // 2026-11-18: GUIDE starts Sunny's long song (DeckGuide.LongSong, record on top); the loop show is "Loop a beat".
   tip_deck_guide: "Press GUIDE and we'll make a magic song together.",
   // The quick show's own lines (Guide/DeckGuide.cs; the rest reuses the walkthrough's): snow on, then PLAY for the show.
   quick_snow: "Let's make magic! Flip the SNOW switch.",
   quick_play: 'Saved! Now press PLAY and watch the magic.',
   quick_wow: 'Wow! Look, your song fills the whole room.',
+  // The long song's own lines (Guide/DeckGuide.cs, 2026-11-18: GUIDE and "Make a long song"): REC and a part, STOP,
+  // PLAY and REC on top for the next part; the PLAY between parts reuses tip_take, the finale's wonder quick_wow.
+  long_intro: "Let's make a long song, one part at a time.",
+  long_rec_drums: 'Press REC, then play the drums.',
+  long_rec_piano: 'Now press REC and play the piano on top.',
+  long_rec_harp: 'Press REC again and add the harp on top.',
+  long_stop: "Press STOP when you're done.",
+  long_show: 'Now press PLAY. Sit back and watch!',
   // Said once a playback has sounded for a moment (Room/Decor/ListenBackPulse.cs asks for it): the room listens back and the
   // butterflies come (only for a playback, never while recording: 2026-11-11).
   tip_listen_back: 'Sit back and watch the butterflies dance to your song.',
@@ -98,7 +107,8 @@ export const LINES = {
   // fire and flowers follow what you record (the butterflies wait for the playback).
   tip_record_glow: 'Keep playing! The room comes alive while you record.',
   // Said the first time a playback brings its instruments in front of the player (Layout/LayoutModule.Stage.cs asks for it).
-  tip_play_brings: 'Your recording brings its instruments to you.',
+  // 2026-11-18: the stage spreads them out in an arc a little away from the player while it plays, then brings them back.
+  tip_play_brings: 'Sit back! Your instruments step out to play for you.',
   // Said the first time the snowy window joins in with a playback, the player looking at it (Room/Decor/WindowShow.cs
   // asks for it): the snow gusts on the notes and northern lights fill the sky.
   tip_window_show: 'Even the snow and the sky dance to your song.',
@@ -194,5 +204,10 @@ export const SPOKEN = {
   tip_record_on_top: 'Press rec while it plays to add a part on top.',
   fast_snow: 'Flip snow for snow all around you. Fire and wind too!',
   fast_rec: 'Press rec to record, then play to hear it.',
-  fast_bye: 'Press guide for a one-minute song. Have fun!',
+  fast_bye: 'Press guide to make a song with me. Have fun!',
+  long_rec_drums: 'Press rec, then play the drums.',
+  long_rec_piano: 'Now press rec and play the piano on top.',
+  long_rec_harp: 'Press rec again and add the harp on top.',
+  long_stop: "Press stop when you're done.",
+  long_show: 'Now press play. Sit back and watch!',
 };

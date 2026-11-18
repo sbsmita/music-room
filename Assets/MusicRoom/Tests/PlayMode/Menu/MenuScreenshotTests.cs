@@ -284,7 +284,7 @@ namespace MusicRoom.Tests.PlayMode.Menu
             yield return OpenSettled(m, MenuScreen.Guide);
             yield return Settle(m);
             Assert.That(m.Screen, Is.EqualTo(MenuScreen.Guide));
-            Assert.That(ctl.RowCount, Is.EqualTo(6), "back, Show me around, Tips, Make a song in layers, Tips while I play, Look and pinch");
+            Assert.That(ctl.RowCount, Is.EqualTo(7), "back, Show me around, Tips, Make a long song, Loop a beat, Tips while I play, Look and pinch");
             var sunny = Read(m.FaceTexture, true);
             Save(sunny, "canvas-sunny");
             for (int i = 1; i < ctl.RowCount; i++)

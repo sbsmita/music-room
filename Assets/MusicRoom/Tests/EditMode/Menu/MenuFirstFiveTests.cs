@@ -130,7 +130,7 @@ namespace MusicRoom.Tests.Menu
             Assert.That(r.Ctl.Row(g).Note, Is.EqualTo("Tour and tips"));
             r.Tap(g);
             Assert.That(r.Ctl.Screen, Is.EqualTo(MenuScreen.Guide));
-            Assert.That(r.Labels(1), Is.EqualTo("Show me around,Tips,Make a song in layers,Tips while I play*"));
+            Assert.That(r.Labels(1), Is.EqualTo("Show me around,Tips,Make a long song,Loop a beat,Tips while I play*"));
             Assert.That(r.Ctl.Row(2).Note, Is.EqualTo("1 of 12 heard"));
             Assert.That(r.Ctl.Footer, Is.EqualTo("Poke Sunny anytime to skip"));
             r.Tap(r.RowNamed(RowKind.TipsOn));
@@ -158,7 +158,7 @@ namespace MusicRoom.Tests.Menu
             r.Tap(r.RowNamed(RowKind.Guide));
             Assert.That(r.Ctl.Screen, Is.EqualTo(MenuScreen.Guide));
             RecordingCanvas c = r.Paint();
-            Assert.That(r.Ctl.RowCount, Is.EqualTo(5));
+            Assert.That(r.Ctl.RowCount, Is.EqualTo(6));
             for (int i = 1; i < r.Ctl.RowCount; i++)
             {
                 MenuRow row = r.Ctl.Row(i);
@@ -186,17 +186,25 @@ namespace MusicRoom.Tests.Menu
             Assert.IsTrue(r.Paint().Has("Tip number 0"));
             r.Tap(0);
             Assert.That(r.Ctl.Screen, Is.EqualTo(MenuScreen.Guide), "back to the Sunny screen");
-            // Make a song in layers: Sunny's deck walkthrough (the panel goes away).
+            // Make a long song: Sunny's long song on the deck, as GUIDE starts it (the panel goes away).
             int hides = r.Host.Hides;
             r.Tap(r.RowNamed(RowKind.Layers));
-            Assert.That(r.Guide.DeckGuides, Is.EqualTo(1), "the tape deck walkthrough starts");
+            Assert.That(r.Guide.LongSongs, Is.EqualTo(1), "the long song starts");
+            Assert.That(r.Guide.LoopShows + r.Guide.DeckGuides, Is.EqualTo(0));
+            r.Ctl.SetShown(true);
+            r.Ctl.Go(MenuScreen.Guide);
+            r.Frame();
+            // Loop a beat: the one-minute loop show.
+            r.Tap(r.RowNamed(RowKind.LoopShow));
+            Assert.That(r.Guide.LoopShows, Is.EqualTo(1), "the loop show starts");
+            Assert.That(r.Guide.LongSongs, Is.EqualTo(1));
             r.Ctl.SetShown(true);
             r.Ctl.Go(MenuScreen.Guide);
             r.Frame();
             // Show me around: the quick tour again (the panel goes away first; the tour opens it itself).
             r.Tap(r.RowNamed(RowKind.Tour));
             Assert.That(tour.Starts, Is.EqualTo(1), "Show me around replays the tour");
-            Assert.That(r.Host.Hides, Is.EqualTo(hides + 2));
+            Assert.That(r.Host.Hides, Is.EqualTo(hides + 3));
         }
 
         [Test]

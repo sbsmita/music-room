@@ -1,7 +1,7 @@
 // The deck guide's watchdog (2026-11-16 headset test: "in tape deck sunny guide. sunny just pauses and forget to guide on
 // buttons. then i have to poke him. but newcomer will not know this." The long walkthrough needed two pokes: a player who
 // played the harp while Sunny waited for LOOP kept resetting its clock, so it never showed LOOP again nor moved on).
-// Both runs (the quick show and the walkthrough) are driven by adversarial players: one who does nothing, one who plays
+// Every run (the loop show, the walkthrough and, since 2026-11-18, the long song GUIDE starts) is driven by adversarial players: one who does nothing, one who plays
 // notes but never presses what Sunny shows, one who presses the wrong controls, one who cancels every loop, one who ends
 // every playback at once, one who puts the instrument away while the clicks wait, and a slow one. For every one, measured
 // from outside the guide (Sunny's caption, the ghost hand's demo restarting or moving), whenever the run waits for the
@@ -70,6 +70,7 @@ namespace MusicRoom.Tests.PlayMode.Guide
                     // Plays what the step is about, never a deck control (the headset log: the harp while Sunny waits for LOOP).
                     if (t - _acted < 0.5) return;
                     _acted = t;
+                    _noteAt = t;
                     switch ((int)(t * 2) % 3)
                     {
                         case 0: App.Current.Get<IDrumsApi>().PlaybackHit("snare", 0.7f, new DrumStrikeInfo { Pos = 0.3f, Zone = "head" }); break;
@@ -101,17 +102,19 @@ namespace MusicRoom.Tests.PlayMode.Guide
                 case Player.EndsPlaybacks:
                     // PLAY whenever Sunny shows it, and STOP a moment after any playback starts.
                     if (t - _acted < 0.6) return;
-                    if (Rec.State == RecorderState.Playing && (st == LoopStatus.Off || st == LoopStatus.Looping) && (G.Step == DeckGuideStep.Watch || G.Step == DeckGuideStep.Play))
+                    if (Rec.State == RecorderState.Playing && (st == LoopStatus.Off || st == LoopStatus.Looping)
+                        && (G.Step == DeckGuideStep.Watch || G.Step == DeckGuideStep.Play || G.Step == DeckGuideStep.LongRec))
                     { _acted = t; _m.Deck.Press(DeckButton.Stop); }
                     else if (G.Pointing == LoopControl.Play) { _acted = t; _m.Deck.Press(DeckButton.Play); }
                     return;
                 case Player.HidesInstrument:
                     // While the clicks wait (or a layer is armed), the instrument goes: another one alone.
                     if (t - _acted < 2.0) return;
-                    if (st == LoopStatus.Waiting || st == LoopStatus.Armed || (G.Pointing == LoopControl.Loop && st == LoopStatus.Off))
+                    if (st == LoopStatus.Waiting || st == LoopStatus.Armed || (G.Pointing == LoopControl.Loop && st == LoopStatus.Off)
+                        || (G.Step == DeckGuideStep.LongPart && G.ShowingInstrument))
                     {
                         _acted = t;
-                        bool drums = G.Step == DeckGuideStep.Drums || G.Step == DeckGuideStep.Beat;
+                        bool drums = G.Step == DeckGuideStep.Drums || G.Step == DeckGuideStep.Beat || (G.LongSong && G.Part == 0);
                         InstrumentKind away = drums ? InstrumentKind.Harp : InstrumentKind.Drums;
                         Layout.Set(LayoutMode.Single, away);
                         if (G.Pointing == LoopControl.Loop) _m.Deck.Press(DeckButton.Loop);
@@ -123,28 +126,37 @@ namespace MusicRoom.Tests.PlayMode.Guide
                     _acted = t;
                     if (G.PointingSnow) App.Current.Get<IAmbienceSwitches>().Set(AmbienceKind.Snow, true);
                     else if (G.Pointing.HasValue) _m.Deck.Press(TapeDeck.ButtonOf(G.Pointing.Value, 0));
-                    else if (st == LoopStatus.Waiting || st == LoopStatus.Overdubbing || st == LoopStatus.RecordingFirst)
+                    else if (st == LoopStatus.Waiting || st == LoopStatus.Overdubbing || st == LoopStatus.RecordingFirst || G.Step == DeckGuideStep.LongPart)
+                    {
+                        _noteAt = t;
                         App.Current.Get<IDrumsApi>().PlaybackHit("kick", 0.7f, new DrumStrikeInfo { Pos = 0.3f, Zone = "head" });
+                    }
                     return;
             }
         }
 
+        // The player's last note (a long song's part is busy while the player plays it).
+        double _noteAt = -100;
+
         // Runs one guide with one player; returns (seconds, longest stretch with nothing new from Sunny while it waited).
-        void Run(bool quick, Player p)
+        void Run(DeckRun run, Player p)
         {
+            bool quick = run == DeckRun.Loop;
             if (quick)
             {
                 IAmbienceSwitches sw = App.Current.Get<IAmbienceSwitches>();
                 if (sw.Get(AmbienceKind.Snow)) sw.Set(AmbienceKind.Snow, false);
                 Step(3);
-                _guide.ToggleDeckGuide();
+                _guide.StartLoopShow();
             }
+            else if (run == DeckRun.LongSong) _guide.ToggleDeckGuide();   // the deck's GUIDE
             else _guide.StartDeckWalkthrough();
             Assert.IsTrue(G.Running);
-            Assert.That(G.Quick, Is.EqualTo(quick));
+            Assert.That(G.Run, Is.EqualTo(run));
             Sunny s = _guide.Sunny;
-            float limit = (quick ? DeckGuide.QuickRedemoSeconds : DeckGuide.RedemoSeconds) + 0.75f;
-            double bound = quick ? 220 : 650, start = _t, stall = 0, worst = 0;
+            float limit = DeckGuide.NudgeLimit(run) + 0.25f;
+            double bound = quick ? 220 : run == DeckRun.LongSong ? 420 : 650, start = _t, stall = 0, worst = 0;
+            _noteAt = -100;
             string worstAt = "";
             int line = s.LineVersion;
             float demoT = s.DemoT;
@@ -168,17 +180,18 @@ namespace MusicRoom.Tests.PlayMode.Guide
                 // playing back for them to watch): the run is not waiting on them.
                 bool busy = st == LoopStatus.RecordingFirst || st == LoopStatus.Overdubbing || st == LoopStatus.Armed
                     || (G.Step == DeckGuideStep.Watch && G.ShowStarted && Rec.State == RecorderState.Playing)
-                    || (G.Step == DeckGuideStep.Play && Rec.State == RecorderState.Playing);
+                    || (G.Step == DeckGuideStep.Play && Rec.State == RecorderState.Playing)
+                    || (G.Step == DeckGuideStep.LongPart && _t - start - _noteAt < 1.0);   // the player is playing their part
                 if (G.Step != step) trace.Append($" {G.Step}@{_t - start:F0}");
                 line = s.LineVersion; demoT = s.DemoT; kind = s.DemoKind; anchor = s.PressAnchor; step = G.Step;
                 if (nudge || busy) { stall = 0; continue; }
                 stall += Dt;
                 if (stall > worst) { worst = stall; worstAt = $"{G.Step} loop {st} rec {Rec.State} demo {s.DemoKind} line '{s.LineId}' idle {G.Idle:F1}"; }
                 Assert.That(stall, Is.LessThanOrEqualTo(limit),
-                    $"{(quick ? "quick show" : "walkthrough")}, {p}: Sunny said and showed nothing new for {stall:F1} s in {worstAt} (steps:{trace})");
+                    $"{run}, {p}: Sunny said and showed nothing new for {stall:F1} s in {worstAt} (steps:{trace})");
             }
             double took = _t - start;
-            Debug.Log($"[Guide] watchdog {(quick ? "quick show" : "walkthrough")} with {p}: {took:F0} s, longest quiet wait {worst:F1} s ({worstAt}), " +
+            Debug.Log($"[Guide] watchdog {run} with {p}: {took:F0} s, longest quiet wait {worst:F1} s ({worstAt}), " +
                       $"skips {G.Skips}, give-ups {G.GiveUps}, assists {G.Assists}, steps:{trace}");
             Assert.IsFalse(G.Running, $"{p}: the run finishes by itself (still in {G.Step} after {took:F0} s; steps:{trace})");
             Assert.That(_guide.Sunny.State, Is.EqualTo(SunnyState.Leave).Or.EqualTo(SunnyState.Gone));
@@ -188,11 +201,14 @@ namespace MusicRoom.Tests.PlayMode.Guide
         IEnumerator RunBoth(Player p)
         {
             yield return Boot();
-            Run(quick: true, p);
+            Run(DeckRun.Loop, p);
             // Between the runs: the deck quiet again (a loop the show left playing stops; the layout back).
             if (Looper.Active || Rec.State != RecorderState.Idle) Rec.Stop();
             Step(80);
-            Run(quick: false, p);
+            Run(DeckRun.Walkthrough, p);
+            if (Looper.Active || Rec.State != RecorderState.Idle) Rec.Stop();
+            Step(80);
+            Run(DeckRun.LongSong, p);
         }
 
         [UnityTest] public IEnumerator NobodyPlaying() => RunBoth(Player.Nobody);

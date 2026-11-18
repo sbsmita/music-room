@@ -12,7 +12,8 @@
 //   - what the player changes meanwhile stays: a layout chosen in the menu (with their own My set), an instrument moved,
 //     Reset view, REC;
 //   - a looping playback keeps its instruments until it stops, an overdub onto it too;
-//   - a recording whose instruments are all in front already moves nothing;
+//   - a recording whose instruments are all in front already keeps the layout; they step back StageFarther for the show
+//     (2026-11-18) and stand exactly where they stood after it;
 //   - Sunny is asked for tip_play_brings;
 //   - the frames of a stage (its glides in, the wait, the glides back) allocate nothing.
 using System.Collections;
@@ -166,9 +167,37 @@ namespace MusicRoom.Tests.PlayMode.Integration
             if (ahead)
             {
                 Assert.That(Vector3.Dot(d, seat.Forward), Is.GreaterThan(0.1f), $"{k} in front of the seat: {why}");
-                Assert.That(Mathf.Abs(Vector3.Dot(d, seat.Right)), Is.LessThan(0.5f), $"{k} straight ahead, not toward the gaze: {why}");
+                // in view ahead of the seat (the show's arc since 2026-11-18 puts several side by side within 35 deg)
+                Assert.That(Mathf.Abs(Vector3.SignedAngle(seat.Forward, d, Vector3.up)), Is.LessThan(35f), $"{k} ahead, not toward the gaze: {why}");
             }
-            Assert.That(d.magnitude, Is.LessThan(1.6f), $"{k} within reach of the seat: {why}");
+            Assert.That(d.magnitude, Is.LessThan(_layout.PlaybackStaged ? 3f : 1.6f), $"{k} within reach of the seat (the show: in the room before it): {why}");
+        }
+
+        /// <summary>The show's arc (2026-11-18): every staged instrument's play centre within 35 deg of the seat's forward line
+        /// and at least 0.6 m farther than where it stood to be played, all side by side (none touches another, none in front of
+        /// another's line), the whole arc inside the view (its bodies' edges within 50 deg).</summary>
+        void AssertShowArc(RigId[] ids, Dictionary<RigId, Pose2> own, string why)
+        {
+            SeatFrame seat = _layout.Seat;
+            var angles = new List<float>();
+            foreach (RigId id in ids)
+            {
+                Rig r = _app.Get<IRigRegistry>().Get(id);
+                RigEntry e = _layout.Placement.Entry(r);
+                _layout.Placement.Pose(e);
+                Vector3 c = PlacementSolver.CentreWorld(e) - seat.Head;
+                c.y = 0f;
+                float ang = Vector3.SignedAngle(seat.Forward, c, Vector3.up);
+                Vector3 o = own[id].P - seat.Head; o.y = 0f;
+                Debug.Log($"[Farther] show {why}: {id} play centre {ang:+0.0;-0.0} deg, {c.magnitude:F2} m (group {o.magnitude:F2} -> {Vector3.Distance(new Vector3(r.Group.position.x, 0f, r.Group.position.z), new Vector3(seat.Head.x, 0f, seat.Head.z)):F2} m)");
+                Assert.That(Mathf.Abs(ang), Is.LessThan(35f), $"{id} in view without turning ({ang:F1} deg): {why}");
+                Assert.That(Vector3.Distance(new Vector3(r.Group.position.x, 0f, r.Group.position.z), new Vector3(seat.Head.x, 0f, seat.Head.z)) - o.magnitude, Is.GreaterThan(0.5f), $"{id} farther out: {why}");
+                foreach (RigId other in ids)
+                    if (other != id) Assert.IsFalse(PlacementSolver.Touch(e, _layout.Placement.Entry(_app.Get<IRigRegistry>().Get(other)), 0f), $"{id} clear of {other}: {why}");
+                angles.Add(ang);
+            }
+            angles.Sort();
+            for (int i = 1; i < angles.Count; i++) Assert.That(angles[i] - angles[i - 1], Is.GreaterThan(12f), "side by side, not one behind another: " + why);
         }
 
         // ------------------------------------------------------------------------------------------------ the reproduction
@@ -391,16 +420,56 @@ namespace MusicRoom.Tests.PlayMode.Integration
             AssertAt(own, RigId.Drums, "after the loop");
         }
 
+        /// <summary>The playing distance and the show's (2026-11-18): One alone piano opens with the keys' near edge about 0.39 m
+        /// from the chest; a piano take steps it StageFarther (0.45 m) out while it plays by itself; recording on top of it brings
+        /// it back to the playing distance at once (the player plays along); the player's own layout is back after.</summary>
         [UnityTest]
-        public IEnumerator ARecordingWhoseInstrumentsAreInFrontMovesNothingAndSunnyIsAsked()
+        public IEnumerator AShowStandsFartherAndRecordingOnTopBringsItBackToPlay()
+        {
+            yield return Boot("single", InstrumentKind.Piano);
+            Rig piano = RigOf(InstrumentKind.Piano);
+            var own = Poses();
+            float play = _layout.ReachOf(piano);
+            Debug.Log($"[Farther] piano alone: keys' near edge {play:F3} m from the chest");
+            Assert.That(play, Is.InRange(LayoutModule.PlayRoomNear - 0.03f, LayoutModule.ReachBand), "the playing distance");
+            Assert.IsTrue(Rec.PlayEvents(PianoAndDrums(12f, drums: false), 12.5));
+            Assert.IsTrue(_layout.PlaybackStaged, "the show");
+            Assert.IsTrue(_layout.StageFar);
+            Settle();
+            float show = _layout.ReachOf(piano);
+            Debug.Log($"[Farther] piano while its take plays: {show:F3} m");
+            Assert.That(show - play, Is.EqualTo(LayoutModule.StageFarther).Within(0.05f), "StageFarther out for the show");
+            AssertShowArc(new[] { RigId.Piano }, own, "the piano alone");
+            Seconds(2f);
+            Assert.IsTrue(Rec.CanRecordOnTop, "record on top is possible");
+            Assert.IsTrue(Rec.RecordOnTop());
+            Step(2);
+            Assert.IsFalse(_layout.StageFar, "the player plays along");
+            Assert.That(_layout.StageNears, Is.EqualTo(1));
+            Settle();
+            float along = _layout.ReachOf(piano);
+            Debug.Log($"[Farther] piano while recording on top: {along:F3} m");
+            Assert.That(along, Is.EqualTo(play).Within(0.02f), "back at the playing distance");
+            Rec.Stop();
+            UntilBack();
+            Assert.That(_layout.ReachOf(piano), Is.EqualTo(play).Within(0.02f), "at the playing distance after");
+        }
+
+        [UnityTest]
+        public IEnumerator ARecordingWhoseInstrumentsAreInFrontStepsBackAndSunnyIsAsked()
         {
             yield return Boot("all", InstrumentKind.Piano);   // the default My set: piano, drums, harp
             var own = Poses();
             Assert.IsTrue(Rec.PlayEvents(PianoAndDrums(2f), 2.5));
-            Assert.IsFalse(_layout.PlaybackStaged, "everything it plays is in front already");
+            Assert.IsTrue(_layout.PlaybackStaged, "everything it plays is in front already: they step back for the show");
+            Assert.That(_layout.Mode, Is.EqualTo(LayoutMode.All), "the layout stays");
+            Assert.That(_layout.MySet, Is.EquivalentTo(new[] { InstrumentKind.Piano, InstrumentKind.Drums, InstrumentKind.Harp }), "the set stays");
+            Settle();
+            AssertShowArc(new[] { RigId.Piano, RigId.Drums, RigId.Harp }, own, "My set's three");
+            AssertAt(own, RigId.Table, "the side table stays");
             UntilBack();
-            foreach (RigId id in new[] { RigId.Piano, RigId.Drums, RigId.Harp, RigId.Table }) AssertAt(own, id, "nothing moved");
-            Assert.That(_layout.Stagings, Is.EqualTo(0));
+            foreach (RigId id in new[] { RigId.Piano, RigId.Drums, RigId.Harp, RigId.Table }) AssertAt(own, id, "back where it stood");
+            Assert.That(_layout.Stagings, Is.EqualTo(1));
             // One alone harp: a piano take brings the piano, and Sunny says it once.
             _layout.Set(LayoutMode.Single, InstrumentKind.Harp);
             Settle();

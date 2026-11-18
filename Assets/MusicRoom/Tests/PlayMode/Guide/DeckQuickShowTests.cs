@@ -1,4 +1,4 @@
-// The deck's GUIDE button starts Sunny's quick show (Guide/DeckGuide.cs, Quick): SNOW on -> LOOP and a drum beat -> LOOP and
+// Sunny's menu page "Loop a beat" starts Sunny's loop show (Guide/DeckGuide.cs, Quick; until 2026-11-18 the deck's GUIDE did): SNOW on -> LOOP and a drum beat -> LOOP and
 // a second instrument on top -> STOP (saved) -> PLAY (the playback show: RecordingPlaybackEvent + PlaybackNoteEvent) -> a
 // line of wonder -> "Have fun!". In the booted app with the scripted audio clock and manual frames:
 //   - a prompt player (acting ~0.6 s after each ask) is through it all within 60 s of simulated time, with no skip, give-up
@@ -124,9 +124,9 @@ namespace MusicRoom.Tests.PlayMode.Guide
         double PlayPromptly(bool expectSnow)
         {
             double start = _t;
-            Poke(DeckButton.Guide);
-            Assert.IsTrue(G.Running, "GUIDE starts it");
-            Assert.IsTrue(G.Quick, "GUIDE starts the quick show");
+            _guide.StartLoopShow();
+            Assert.IsTrue(G.Running, "Loop a beat starts it");
+            Assert.IsTrue(G.Quick, "Loop a beat starts the loop show");
             Assert.IsTrue(_guide.DeckGuideRunning);
             Step(2);
             Assert.That(_m.Deck.CapGlow(DeckButton.Guide), Is.EqualTo(TapeDeck.Selected), "GUIDE's light is on while it runs");
@@ -216,7 +216,7 @@ namespace MusicRoom.Tests.PlayMode.Guide
             if (Switches.Get(AmbienceKind.Snow)) Switches.Set(AmbienceKind.Snow, false);
             Step(5);
             double start = _t;
-            Poke(DeckButton.Guide);
+            _guide.StartLoopShow();
             Assert.IsTrue(G.Running && G.Quick);
             const float big = 1f / 20f;
             int frames = 0;
@@ -240,7 +240,7 @@ namespace MusicRoom.Tests.PlayMode.Guide
             layout.Set(LayoutMode.Single, InstrumentKind.Harp);
             if (!Switches.Get(AmbienceKind.Snow)) Switches.Set(AmbienceKind.Snow, true);
             Step(30);
-            Poke(DeckButton.Guide);
+            _guide.StartLoopShow();
             Assert.That(G.Step, Is.EqualTo(DeckGuideStep.Beat), "it snows already: straight to the beat");
             Assert.That(layout.Current, Is.EqualTo(InstrumentKind.Drums), "the drums come in");
             StepUntil(() => G.Pointing == LoopControl.Loop, 8f, "LOOP");
@@ -277,7 +277,7 @@ namespace MusicRoom.Tests.PlayMode.Guide
             yield return Boot();
             _m.Looper.Configure(110, 4, false);
             Step(2);
-            Poke(DeckButton.Guide);
+            _guide.StartLoopShow();
             Assert.That(Looper.Bpm, Is.EqualTo(DeckGuide.QuickBpm));
             Assert.That(Looper.Bars, Is.EqualTo(DeckGuide.QuickBars));
             Poke(DeckButton.Guide);                         // GUIDE again: it ends

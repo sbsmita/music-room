@@ -76,7 +76,7 @@
  },
  "fast_bye": {
   "file": "fast_bye.wav",
-  "seconds": 3.21,
+  "seconds": 3.142,
   "rate": 22050
  },
  "poke_me": {
@@ -239,6 +239,36 @@
   "seconds": 3.344,
   "rate": 22050
  },
+ "long_intro": {
+  "file": "long_intro.wav",
+  "seconds": 3.124,
+  "rate": 22050
+ },
+ "long_rec_drums": {
+  "file": "long_rec_drums.wav",
+  "seconds": 2.203,
+  "rate": 22050
+ },
+ "long_rec_piano": {
+  "file": "long_rec_piano.wav",
+  "seconds": 2.732,
+  "rate": 22050
+ },
+ "long_rec_harp": {
+  "file": "long_rec_harp.wav",
+  "seconds": 2.776,
+  "rate": 22050
+ },
+ "long_stop": {
+  "file": "long_stop.wav",
+  "seconds": 1.546,
+  "rate": 22050
+ },
+ "long_show": {
+  "file": "long_show.wav",
+  "seconds": 2.966,
+  "rate": 22050
+ },
  "tip_listen_back": {
   "file": "tip_listen_back.wav",
   "seconds": 3.379,
@@ -251,7 +281,7 @@
  },
  "tip_play_brings": {
   "file": "tip_play_brings.wav",
-  "seconds": 2.542,
+  "seconds": 3.678,
   "rate": 22050
  },
  "tip_window_show": {

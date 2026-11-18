@@ -60,10 +60,10 @@ namespace MusicRoom.Room.Decor
             public int Slot;
             public Color32[] Pixels;
             public Task Compose;
+            /// <summary>Uploaded: its picture is on the atlas. A frame is drawn only then, never an empty one (2026-11-18: "dont
+            /// show empty frame in start. looks bad", "i dont want to see empty frame"): at the start a saved painting's frame goes
+            /// up when its picture is painted; a new one's when the swirl reveals it.</summary>
             public bool Revealed, Uploaded;
-            /// <summary>Saved from an earlier session: its frame goes up only once its picture is painted (2026-11-18: "dont show
-            /// empty frame in start. looks bad").</summary>
-            public bool FromSave;
             public float Seconds;
             public int Notes;
         }
@@ -442,7 +442,7 @@ namespace MusicRoom.Room.Decor
         }
 
         /// <summary>The swirl starts: the pending painting gets its slot (a new one, its old one, or the oldest painting's) in
-        /// the place shown now, its frame goes up with blank paper, it is saved. False when there is nothing to hang or no
+        /// the place shown now (its frame goes up with its picture, at the reveal), it is saved. False when there is nothing to hang or no
         /// slot. The frame's picture centre, half axes and outward normal come back in WORLD space.</summary>
         public bool BeginHang(bool room, out Vector3 centre, out Vector3 right, out Vector3 up, out Vector3 normal)
         {
@@ -474,7 +474,6 @@ namespace MusicRoom.Room.Decor
             while (_entries.Count > Max) Remove(_entries[0]);
             e.Revealed = false;
             e.Uploaded = false;
-            e.FromSave = false;   // hung now by the swirl: its frame shows blank paper until the swirl arrives
             ClearSlot(e.Slot);
             Save();
             ReserveHung(_room);
@@ -566,7 +565,7 @@ namespace MusicRoom.Room.Decor
             var saved = new List<(int, string)>();
             Parse(_app.Settings?.GetString(Key, "") ?? "", saved);
             foreach (var (slot, id) in saved)
-                if (Find(id) == null) _entries.Add(new Entry { Id = id, Slot = slot, Revealed = true, FromSave = true, Name = "", Date = "" });
+                if (Find(id) == null) _entries.Add(new Entry { Id = id, Slot = slot, Revealed = true, Name = "", Date = "" });
             _loaded = true;
             if (lib.Available != true || saved.Count == 0) return;
             LoadPictures(lib);
@@ -668,7 +667,8 @@ namespace MusicRoom.Room.Decor
         {
             if (e.Pixels == null || e.Slot < 0 || e.Uploaded) return;
             e.Uploaded = true;
-            if (e.FromSave) _dirty = true;   // a saved painting's frame goes up now, with its picture
+            _dirty = true;   // its frame goes up now, with its picture
+            EnsureMaterials();
             if (_atlas == null) return;
             SlotRect(e.Slot, out int x, out int y);
             _atlas.SetPixels32(x, y, GalleryPicture.Width, GalleryPicture.Height, e.Pixels);
@@ -756,7 +756,7 @@ namespace MusicRoom.Room.Decor
             foreach (Entry e in _entries)
             {
                 if (e.Slot < 0 || e.Slot >= p.Slots.Count || p.Slots[e.Slot].Wall < 0) continue;
-                if (e.FromSave && !e.Uploaded) continue;   // never an empty frame at the start: it waits for its picture
+                if (!e.Uploaded) continue;   // never an empty frame: it goes up with its picture
                 Slot s = p.Slots[e.Slot];
                 Frame(gold, brass, pics, s, e.Slot, space);
                 labels.Add((s, e.Name ?? "", e.Date ?? ""));

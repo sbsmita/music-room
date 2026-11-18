@@ -170,7 +170,7 @@ namespace MusicRoom.Tests.PlayMode.Integration
             return new Vector2(s.x, s.z);
         }
 
-        void AssertFront(InstrumentKind k, string how)
+        void AssertFront(InstrumentKind k, string how, float farther = 0f)
         {
             Assert.That(_layout.Mode, Is.EqualTo(LayoutMode.Single), how);
             Assert.That(_layout.Current, Is.EqualTo(k), how);
@@ -182,7 +182,7 @@ namespace MusicRoom.Tests.PlayMode.Integration
             Assert.That(s.y, Is.GreaterThan(0.05f), $"{how}: {k} in front of the eyes");
             if (_first.TryGetValue(k, out Vector2 f))
             {
-                Assert.That(s.y, Is.EqualTo(f.y).Within(MaxDrift), $"{how}: {k} as far ahead as every time before from this seat");
+                Assert.That(s.y, Is.EqualTo(f.y + farther).Within(farther > 0f ? 0.03f : MaxDrift), $"{how}: {k} as far ahead as every time before from this seat{(farther > 0f ? " (+ the show's StageFarther)" : "")}");
                 Assert.That(s.x, Is.EqualTo(f.x).Within(MaxDrift), $"{how}: {k} no sideways drift from swap to swap");
             }
             else _first[k] = s;
@@ -228,7 +228,7 @@ namespace MusicRoom.Tests.PlayMode.Integration
                 InstrumentKind take = kinds[(kinds.IndexOf(own) + 2) % kinds.Count];
                 WhileLookingAway(() => _app.Events.Publish(new RecordingPlaybackEvent { Started = true, Kinds = 1u << (int)take }));
                 Assert.IsTrue(_layout.PlaybackStaged, "the playback brought its instrument");
-                AssertFront(take, "a playback of " + take);
+                AssertFront(take, "a playback of " + take, LayoutModule.StageFarther);   // the show stands farther out (2026-11-18)
                 _app.Events.Publish(new RecordingPlaybackEvent { Started = false, Kinds = 1u << (int)take });
                 Step(Mathf.CeilToInt(1.3f / Dt));
                 Settle();

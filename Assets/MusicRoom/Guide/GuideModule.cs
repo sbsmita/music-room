@@ -408,23 +408,31 @@ namespace MusicRoom.Guide
 
         public bool DeckGuideRunning => DeckGuide != null && DeckGuide.Running;
 
-        /// <summary>The deck's GUIDE button: starts the quick show (the tour or a tip in progress gives way), or ends whichever
-        /// deck guide runs.</summary>
+        /// <summary>The deck's GUIDE button: starts the long song (record on top, part by part; the tour or a tip in progress
+        /// gives way), or ends whichever deck guide runs.</summary>
         public void ToggleDeckGuide()
         {
             if (DeckGuide == null) return;
             if (DeckGuide.Running) DeckGuide.End();
-            else { YieldToDeckGuide(); DeckGuide.Start(quick: true); }   // first five: the first run and a tip give way
+            else { YieldToDeckGuide(); DeckGuide.Start(DeckRun.LongSong); }   // first five: the first run and a tip give way
             Sync();
         }
 
-        /// <summary>"Make a song in layers": the full walkthrough (a quick show in progress ends first).</summary>
-        public void StartDeckWalkthrough()
+        /// <summary>"Make a long song" (Sunny's menu page): the long song (another deck guide in progress ends first).</summary>
+        public void StartLongSong() => StartDeck(DeckRun.LongSong);
+
+        /// <summary>"Loop a beat" (Sunny's menu page): the one-minute loop show.</summary>
+        public void StartLoopShow() => StartDeck(DeckRun.Loop);
+
+        /// <summary>"Make a song in layers": the full looper walkthrough (no menu row since 2026-11-18; tests and tools).</summary>
+        public void StartDeckWalkthrough() => StartDeck(DeckRun.Walkthrough);
+
+        void StartDeck(DeckRun run)
         {
             if (DeckGuide == null) return;
             if (DeckGuide.Running) DeckGuide.End();
             YieldToDeckGuide();
-            DeckGuide.Start(quick: false);
+            DeckGuide.Start(run);
             Sync();
         }
 

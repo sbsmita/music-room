@@ -231,8 +231,10 @@ namespace MusicRoom.Tests.Menu
         public void Toggle() { if (Present) Dismiss(); else Start(); }
         public float Tip(string id) { Tips.Add(id); Seen.Add(id); return 2f; }
         public bool TipSeen(string id) => Seen.Contains(id);
-        public int DeckGuides;
+        public int DeckGuides, LongSongs, LoopShows;
         public void ToggleDeckGuide() => DeckGuides++;
+        public void StartLongSong() => LongSongs++;
+        public void StartLoopShow() => LoopShows++;
     }
 
     sealed class FakeMr : IMixedReality

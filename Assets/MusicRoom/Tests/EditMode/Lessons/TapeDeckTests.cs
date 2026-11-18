@@ -187,7 +187,7 @@ namespace MusicRoom.Tests.Lessons
             void Probe(Vector3 local, bool expect, string why)
             {
                 int before = _deck.Presses;
-                TipAt(new Vector3(local.x, 0.13f, local.z));
+                TipAt(new Vector3(local.x, 0.13f, local.z), TapeDeck.RepressSeconds);   // a new poke, not a repeat of the last one
                 TipAt(new Vector3(local.x, 0.13f, local.z));
                 TipAt(local);
                 Assert.That(_deck.Presses - before, Is.EqualTo(expect ? 1 : 0), why);

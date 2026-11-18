@@ -73,10 +73,11 @@ namespace MusicRoom.Layout
             int n = 0;
             if (settings.GetInt(KeyMigratedStabilise, 0) == 1)
             {
-                n += Drop(settings, AppSettings.ComfortKey(LayoutMode.All, InstrumentKind.Piano));
-                n += Drop(settings, AppSettings.ArrangeKey(LayoutMode.All, InstrumentKind.Piano));
                 foreach (InstrumentKind k in System.Enum.GetValues(typeof(InstrumentKind)))
                 {
+                    // My set's keys (named by its lead) and each One alone's: every kind, so no instrument is named here
+                    n += Drop(settings, AppSettings.ComfortKey(LayoutMode.All, k));
+                    n += Drop(settings, AppSettings.ArrangeKey(LayoutMode.All, k));
                     n += Drop(settings, AppSettings.ComfortKey(LayoutMode.Single, k));
                     n += Drop(settings, AppSettings.ArrangeKey(LayoutMode.Single, k));
                 }

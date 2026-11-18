@@ -90,7 +90,7 @@ namespace MusicRoom.Guide
             new TourFeature("looper.click", C, "CLICK"),
             new TourFeature("looper.tidy", C, "TIDY"),
             new TourFeature("looper.saved", C, "Loops saved to Recordings"),
-            new TourFeature("looper.guide", M, "GUIDE: the one-minute song show; Make a song in layers: the walkthrough"),
+            new TourFeature("looper.guide", M, "GUIDE and Make a long song: the long song, record on top part by part; Loop a beat: the one-minute loop show"),
             // G. layout
             new TourFeature("layout.pageturn", G, "Page-turn swipe"),
             new TourFeature("layout.seat", G, "Seat turn"),

@@ -19,8 +19,8 @@
 //                         lit and pressed: "Your recordings are saved here."
 //   7          Recenter   Reset view lit and pressed: "Poke Reset view or pinch both hands and hold to recenter."; the menu
 //                         closes and the ghost hand pinches beside Sunny
-//   8          Bye        the menu back as the player had it; the ghost finger on the deck's GUIDE: "Press GUIDE for a
-//                         one-minute song. Have fun!", then "Bye!"
+//   8          Bye        the menu back as the player had it; the ghost finger on the deck's GUIDE: "Press GUIDE to make
+//                         a song with me. Have fun!", then "Bye!"
 // Nothing is ever changed: the ghost finger is not an input (no switch flips, Move instruments stays off, the layout and
 // the deck untouched). A thing that is not here (no switch panel, no deck, no menu, nothing on display) is described by
 // the line without pointing. The old quick tour's steps (SunnyOff, OpenMenu, Single, Record, Lessons, Drum: 2026-11-04)

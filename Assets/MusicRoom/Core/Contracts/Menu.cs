@@ -5,7 +5,7 @@ namespace MusicRoom.Core
 {
     /// <summary>Start = the launch panel ("Play here" / "Play in my room"); Arrange = the floating Done / Reset buttons of
     /// "Move instruments" (never the palm panel's screen).</summary>
-    /// <summary>First five: Guide = the Sunny screen (the tour again, tips, Make a song in layers, Tips while I play), Tips =
+    /// <summary>First five: Guide = the Sunny screen (the tour again, tips, Make a long song, Loop a beat, Tips while I play), Tips =
     /// its list of every tip.</summary>
     public enum MenuScreen { Home = 0, Lessons, Courses, Lesson, Instruments, Recordings, Take, Start, Arrange, Guide, Tips }
 

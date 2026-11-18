@@ -1087,7 +1087,11 @@ namespace MusicRoom.Menu
                     break;
                 case RowKind.Layers:
                     _host?.Hide();
-                    if (Guide != null && !Guide.DeckGuideRunning) Guide.StartDeckWalkthrough();   // the full walkthrough (GUIDE: the quick show)
+                    if (Guide != null) Guide.StartLongSong();     // the long song (as GUIDE starts it; a deck guide running ends first)
+                    break;
+                case RowKind.LoopShow:
+                    _host?.Hide();
+                    if (Guide != null) Guide.StartLoopShow();     // the one-minute loop show
                     break;
                 case RowKind.Stop:
                 case RowKind.Courses:
@@ -1202,14 +1206,16 @@ namespace MusicRoom.Menu
 
         // ---------------------------------------------------------------- first five: the Sunny screen and its tips
 
-        /// <summary>The Sunny screen (sunny-tour.md 3.3): the tour again, the Tips list, the deck walkthrough (which builds a
-        /// song in layers), and "Tips while I play".</summary>
+        /// <summary>The Sunny screen (sunny-tour.md 3.3): every tour Sunny gives: the tour again ("Show me around"), the Tips
+        /// list, the long song ("Make a long song", as the deck's GUIDE), the loop show ("Loop a beat"), then "Tips while I
+        /// play" and "Look and pinch".</summary>
         int GuideRows()
         {
             int n = BackRow(0, MenuStyle.SunnyTitle);
             HeaderNote = MenuStyle.SunnyNote;
             Footer = MenuStyle.SunnyFooter;
-            float h = MenuStyle.MidH, gap = MenuStyle.MidGap, y = MenuStyle.MidTop;
+            bool tight = Look != null;   // six rows
+            float h = tight ? MenuStyle.GuideTightH : MenuStyle.MidH, gap = tight ? MenuStyle.GuideTightGap : MenuStyle.MidGap, y = MenuStyle.MidTop;
             var r = Put(ref n, RowKind.Tour, MenuStyle.RowX0, y, MenuStyle.RowX1, y + h);
             r.Label = MenuStyle.TourLabel; r.Note = MenuStyle.TourNote; r.Icon = IconKind.Play;
             y += h + gap;
@@ -1219,6 +1225,9 @@ namespace MusicRoom.Menu
             y += h + gap;
             r = Put(ref n, RowKind.Layers, MenuStyle.RowX0, y, MenuStyle.RowX1, y + h);
             r.Label = MenuStyle.LayersLabel; r.Note = MenuStyle.LayersNote; r.Icon = IconKind.Recordings;
+            y += h + gap;
+            r = Put(ref n, RowKind.LoopShow, MenuStyle.RowX0, y, MenuStyle.RowX1, y + h);
+            r.Label = MenuStyle.LoopShowLabel; r.Note = MenuStyle.LoopShowNote; r.Icon = IconKind.Play;
             y += h + gap;
             r = Put(ref n, RowKind.TipsOn, MenuStyle.RowX0, y, MenuStyle.RowX1, y + h);
             bool on = Tour == null || Tour.TipsEnabled;

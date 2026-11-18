@@ -11,14 +11,17 @@ namespace MusicRoom.Menu
     /// The many-instrument platform (platform.md 5) adds Tile (an Instruments grid tile; the Lessons grid's tiles stay Inst),
     /// Option (a row of an instrument's options page) and Options (the "Options" chip on an at-seat tile).
     /// First five: Next (the lesson after this one), and the Sunny screen's Tour, Tip (one row of the Tips list), TipsOn
-    /// ("Tips while I play") and Layers ("Make a song in layers": the tape deck walkthrough). Trash: the bin beside each
+    /// ("Tips while I play") and Layers ("Make a long song": Sunny's long song on the tape deck, record on top; until
+    /// 2026-11-18 "Make a song in layers"). Trash: the bin beside each
     /// take of the Recordings list (poke once: "Delete?", again within 3 s: the take is deleted).</summary>
     public enum RowKind : byte { None, Back, Menu, Guide, Room, Setup, Inst, Course, Layout, Take, Play, TStop, Delete, Stop, Replay, Courses,
         Arrange, Exit, PlayHere, PlayRoom, Done, Reset, Tile, Option, Options, Next, Tour, Tip, TipsOn, Layers, Hands, ResetView, Trash,
         /// <summary>A recording's page: "Keep painting" On / Off (the notes' painting on the walls stays until the next playback).</summary>
         Paint,
         /// <summary>The Sunny page: "Look and pinch" On / Off (ILookAndPinch, the Gaze module).</summary>
-        LookPinch }
+        LookPinch,
+        /// <summary>The Sunny page: "Loop a beat" (Sunny's one-minute loop show on the tape deck).</summary>
+        LoopShow }
 
     /// <summary>Icon kinds. Guide, Room and Setup draw nothing (the 'guide' icon is blank)
     /// but still take the icon's space, so every home label lines up. Sound, Move, Exit, House, Check and Undo came later.</summary>
@@ -86,7 +89,7 @@ namespace MusicRoom.Menu
             PlayRoom = "playRoom", Done = "done", Reset = "reset", Back = "back", Course = "course",
             Take = "take", Play = "play", TStop = "tstop", Delete = "delete", Stop = "stop", Replay = "replay", Courses = "courses",
             Next = "next", Tour = "tour", Tips = "tips", Tip = "tip", TipsOn = "tipsOn", Layers = "layers", Hands = "hands",
-            ResetView = "resetView", Paint = "paint", LookPinch = "lookPinch";
+            ResetView = "resetView", Paint = "paint", LookPinch = "lookPinch", LoopShow = "loopShow";
 
         /// <summary>The id a shown row answers to (a Menu row: the screen it opens; any other: its RowId).</summary>
         public static string IdOf(MenuRow r) => r == null ? null : r.Id == RowKind.Menu ? OfScreen(r.To) : r.RowId;
@@ -127,6 +130,7 @@ namespace MusicRoom.Menu
                 case RowKind.ResetView: return ResetView;
                 case RowKind.Paint: return Paint;
                 case RowKind.LookPinch: return LookPinch;
+                case RowKind.LoopShow: return LoopShow;
                 default: return "";
             }
         }
@@ -175,6 +179,7 @@ namespace MusicRoom.Menu
                 case RowKind.Trash: return "recordings.delete";
                 case RowKind.Paint: return "recordings.paint";
                 case RowKind.LookPinch: return "gaze.pinch";
+                case RowKind.LoopShow: return "looper.guide";
                 default: return null;
             }
         }

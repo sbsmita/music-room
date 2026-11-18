@@ -77,8 +77,8 @@
   },
   {
    "id": "fast_bye",
-   "text": "Press GUIDE for a one-minute song. Have fun!",
-   "spoken": "Press guide for a one-minute song. Have fun!"
+   "text": "Press GUIDE to make a song with me. Have fun!",
+   "spoken": "Press guide to make a song with me. Have fun!"
   },
   {
    "id": "poke_me",
@@ -241,6 +241,36 @@
    "spoken": "Wow! Look, your song fills the whole room."
   },
   {
+   "id": "long_intro",
+   "text": "Let's make a long song, one part at a time.",
+   "spoken": "Let's make a long song, one part at a time."
+  },
+  {
+   "id": "long_rec_drums",
+   "text": "Press REC, then play the drums.",
+   "spoken": "Press rec, then play the drums."
+  },
+  {
+   "id": "long_rec_piano",
+   "text": "Now press REC and play the piano on top.",
+   "spoken": "Now press rec and play the piano on top."
+  },
+  {
+   "id": "long_rec_harp",
+   "text": "Press REC again and add the harp on top.",
+   "spoken": "Press rec again and add the harp on top."
+  },
+  {
+   "id": "long_stop",
+   "text": "Press STOP when you're done.",
+   "spoken": "Press stop when you're done."
+  },
+  {
+   "id": "long_show",
+   "text": "Now press PLAY. Sit back and watch!",
+   "spoken": "Now press play. Sit back and watch!"
+  },
+  {
    "id": "tip_listen_back",
    "text": "Sit back and watch the butterflies dance to your song.",
    "spoken": "Sit back and watch the butterflies dance to your song."
@@ -252,8 +282,8 @@
   },
   {
    "id": "tip_play_brings",
-   "text": "Your recording brings its instruments to you.",
-   "spoken": "Your recording brings its instruments to you."
+   "text": "Sit back! Your instruments step out to play for you.",
+   "spoken": "Sit back! Your instruments step out to play for you."
   },
   {
    "id": "tip_window_show",

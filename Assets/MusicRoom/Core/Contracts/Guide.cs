@@ -23,13 +23,19 @@ namespace MusicRoom.Core
         /// 0 when it is not said (already heard, unknown, or Sunny busy with the tour). The default (no Guide module) says
         /// nothing. Instruments call it for tips whose trigger is TipTrigger.Manual.</summary>
         float Tip(string id) => 0f;
-        /// <summary>The tape deck's GUIDE button: start Sunny's quick show of the deck (about a minute: snow on, a drum loop
-        /// and a second layer, STOP, PLAY for the playback show), or end whichever deck guide runs. The default does nothing.</summary>
+        /// <summary>The tape deck's GUIDE button: start Sunny's long song (about a minute and a half: REC and a part, STOP,
+        /// PLAY and REC on top for the next part, three parts, then PLAY for the playback show), or end whichever deck guide
+        /// runs. The default does nothing.</summary>
         void ToggleDeckGuide() { }
-        /// <summary>"Make a song in layers" (Sunny's menu page): the full hands-on walkthrough of the deck (recording, playing
-        /// back, looping drums, harp and piano in layers, mute, undo, clear). The default: ToggleDeckGuide.</summary>
+        /// <summary>"Make a long song" (Sunny's menu page): the long song, as GUIDE starts it. The default: ToggleDeckGuide.</summary>
+        void StartLongSong() => ToggleDeckGuide();
+        /// <summary>"Loop a beat" (Sunny's menu page): the one-minute loop show (snow on, a drum loop and a second layer, STOP,
+        /// PLAY for the playback show). The default: ToggleDeckGuide.</summary>
+        void StartLoopShow() => ToggleDeckGuide();
+        /// <summary>"Make a song in layers": the full hands-on looper walkthrough (recording, playing back, looping drums, harp
+        /// and piano in layers, mute, undo, clear); no menu row since 2026-11-18. The default: ToggleDeckGuide.</summary>
         void StartDeckWalkthrough() => ToggleDeckGuide();
-        /// <summary>A deck guide (the quick show or the walkthrough) runs (the GUIDE button's light).</summary>
+        /// <summary>A deck guide (the long song, the loop show or the walkthrough) runs (the GUIDE button's light).</summary>
         bool DeckGuideRunning => false;
         /// <summary>The tip (or line) was said once (persisted, musicroom.tipsSeen). The default: false.</summary>
         bool TipSeen(string id) => false;

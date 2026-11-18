@@ -143,13 +143,17 @@ namespace MusicRoom.Tests.PlayMode
             Assert.That(e.Id, Is.EqualTo(rec.id));
             Assert.That(e.Name, Is.EqualTo("Take 1 · 0:08"));
             Assert.That(e.Date, Is.Not.Empty, "the local date on the plaque");
-            Assert.IsNotNull(Gallery.RoomObject, "the frame is up");
-            Assert.IsTrue(Gallery.PicturesRenderer(true).enabled);
+            // never an empty frame (2026-11-18): while the splashes swirl and the picture is not painted, no frame is up
+            Renderer early = Gallery.PicturesRenderer(true);
+            Assert.IsTrue(e.Uploaded || early == null || !early.enabled, "no empty frame while the swirl flies");
             Assert.That(App.Settings.GetString(PaintGallery.Key, ""), Does.Contain(rec.id), "saved");
             Step(WallPaint.GatherSeconds + 0.2f);
             Assert.That(Paint.Gather, Is.EqualTo(-1f), "the swirl is over");
             Assert.IsFalse(Paint.RoomLayer.GatherMeshRenderer.enabled);
             yield return Until(() => e.Uploaded, 20f, "the picture shows in the frame");
+            Step(0.1f);   // the frame goes up on the next Decor tick, with its picture
+            Assert.IsNotNull(Gallery.RoomObject, "the frame is up");
+            Assert.IsTrue(Gallery.PicturesRenderer(true).enabled);
             Step(WallPaint.FadeSeconds + 0.5f);
             Assert.That(Paint.Splashes, Is.EqualTo(0), "the walls clean again (Keep painting off)");
             Assert.That(Paint.State, Is.EqualTo(WallPaint.Phase.Idle));
